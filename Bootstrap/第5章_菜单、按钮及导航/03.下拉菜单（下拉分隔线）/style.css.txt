@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-07T14:24:06+08:00
+
+====== style.css ======
+Created Tuesday 07 June 2016
+
+/*源码bootstrap.css文件第3034行～第3039行*/
+.dropdown-menu .divider {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}

@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-07T09:55:16+08:00
+
+====== 23.按钮状态——禁用状态 ======
+Created Tuesday 07 June 2016
+{{./53b36e9d0001132e02690107.jpg}}
+
+== 元素标签中添加“disabled”属性的方法是可以禁止元素的默认行为的。 ==
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>按钮状态——禁用状态</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+<body>
+	<button class="btn btn-primary btn-lg btn-block" type="button" __disabled="disabled"__>通过disabled属性禁用按钮</button> 
+	<button class="btn btn-primary btn-block __disabled__" type="button">通过添加类名disabled禁用按钮</button>
+	<button class="btn btn-primary btn-sm btn-block" type="button">未禁用的按钮</button>
+	<button type="reset" class="btn btn-primary btn-sm btn-block disabled">重置</button>
+</body>
+</html>

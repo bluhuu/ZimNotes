@@ -1,0 +1,39 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-06T15:56:04+08:00
+
+====== 11.代码（二） ======
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>代码</title>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+
+<body>
+高度超出340px，就会在Y轴出现滚动条
+<!--下面是代码任务部分-->
+__<pre class="pre-scrollable">__
+<ol>
+	<li>....</li>
+	<li>....</li>
+	<li>....</li>
+	<li>....</li>
+	<li>....</li>
+	<li>....</li>
+	<li>....</li>
+	<li>....</li>
+	<li>....</li>
+	<li>....</li>
+	<li>....</li>
+	<li>....</li>
+	<li>....</li>
+	<li>....</li>
+</ol>
+__</pre>__
+</body>
+</html>
+
+=== 说明： ===
+pre标签上添加类名“.pre-scrollable”，就可以控制代码块区域最大高度为**340px**，一旦超出这个高度，就会在**Y轴出现滚动条**。

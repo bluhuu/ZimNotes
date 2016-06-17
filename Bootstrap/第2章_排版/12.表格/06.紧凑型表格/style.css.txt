@@ -1,0 +1,19 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-06T16:50:19+08:00
+
+====== style.css ======
+
+== bootstrap.css文件第1442行~第1449行： ==
+
+== 单元格的内距由8px调至5px ==
+
+.table-condensed > thead > tr > th,
+.table-condensed > tbody > tr > th,
+.table-condensed > tfoot > tr > th,
+.table-condensed > thead > tr > td,
+.table-condensed > tbody > tr > td,
+.table-condensed > tfoot > tr > td {
+padding: __5px__;
+}
+

@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-07T10:09:19+08:00
+
+====== 25.图标（一） ======
+Created Tuesday 07 June 2016
+
+== 图标都是使用CSS3的@font-face属性配合字体来实现的icon效果。 ==
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图标</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+<body>
+	<span __class="glyphicon glyphicon-search"__></span>
+	<span __class="glyphicon glyphicon-asterisk"__></span>
+	<span __class="glyphicon glyphicon-plus"__></span>
+	<span __class="glyphicon glyphicon-cloud"__></span>
+	</body>
+</html>
+{{./53db0e5b0001aff810560855.jpg}}

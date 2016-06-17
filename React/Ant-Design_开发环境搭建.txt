@@ -1,0 +1,110 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-07T08:38:39+08:00
+
+====== Ant-Design 开发环境搭建 ======
+
+=== nodejs 安装 ===
+http://nodejs.cn/
+
+=== git 工具安装 ===
+https://git-for-windows.github.io/
+注：右键即可打开‘Git Bash’命令工具，后面会在此工具上运行命令 或 win下的CMD
+
+=== 注册淘宝源及命令： ===
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+
+=== 常用环境（全局 -g） ===
+npm install babel -g
+npm install webpack -g
+npm install webpack-dev-server -g
+
+=== 常用环境（本地）（–save 命令用于将包添加至 package.json） ===
+npm install react --save
+npm install react-dom --save
+npm install babel-core
+npm install babel-loader
+npm install babel-preset-react
+npm install babel-preset-es2015
+
+=== 安装ant ===
+cnpm install antd 或 npm install antd
+
+=== 安装脚手架工具 ===
+cnpm install antd-init -g
+
+=== 创建一个项目 ===
+mkdir antd-demo && cd antd-demo
+antd-init --type plain-react
+
+=== 使用组件 ===
+直接用下面的代码替换 src/entries/index.js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { DatePicker, message } from 'antd';
+class App extends React.Component {
+  constructor(props) {
+	super(props);
+	this.state = {
+	  date: '',
+	};
+  }
+  handleChange(date) {
+	message.info('您选择的日期是: ' + date.toString());
+	this.setState({ date });
+  }
+  render() {
+	return (
+	  <div style={{ width: 400, margin: '100px auto' }}>
+		<DatePicker onChange={value => this.handleChange(value)} />
+		<div style={{ marginTop: 20 }}>当前日期：{this.state.date.toString()}</div>
+	  </div>
+	);
+  }
+}
+ReactDOM.render(<App />, document.getElementById('root'));
+
+=== 调试 ===
+npm start
+访问 http://127.0.0.1:8989
+
+=== 构建和部署 ===
+npm run build
+入口文件会构建到 dist 目录中，可以部署到不同环境中进行引用。
+
+=== 代理（跨域） ===
+1.修改：\antd-demo\proxy.config.js，根据个人机器修改(192.168.20.206)：
+module.exports = {
+	'http://192.168.20.206:8989/elink_scm_web/*': 'http://192.168.20.206:8080',
+	'http://192.168.20.206:8080/elink_scm_web/*': 'http://192.168.20.206:8080',
+};
+2.chrome 安装“SwitchyOmega”插件
+2.1 +新建情景模式… 
+	2.1.1 名称：dora-plugin-proxy 景模式的类型:代理服务器
+	2.1.2 代理协议:HTTP 代理服务器:192.168.20.206 代理端口:8989
+2.2 自动切换
+	切换规则 -> 添加条件：
+		条件类型：域名通配符
+		条件设置：192.168.20.206*
+		情景模式：dora-plugin-proxy
+2.3 插件按钮选择“自动切换”
+注：目的webserver与tomcat跨域合并
+
+=== IE8支持 ===
+1.打开 package.json
+修改 dependency version.
+- "react": "^15.0.2",
+- "react-dom": "^15.0.2",
+- "react-router": "^2.0.1",
++ "react": "0.14.x",
++ "react-dom": "0.14.x",
++ "react-router": "2.3.x"
+去除 hmr plugin.
+- "start": "dora -p 8001 --plugins   \"webpack,hmr,proxy,livereload?enableJs=false&injectHost=127.0.0.1,browser-history?index=/src/entries/index.html\"",
++ "start": "dora -p 8001 --plugins   \"webpack,proxy,livereload?enableJs=false&injectHost=127.0.0.1,browser-history?index=/src/entries/index.html\"",
+2.打开 webpack.config.js, and enable es3ify-loader
+// Enable this if you have to support IE8.
++ webpackConfig.module.loaders.unshift({
++   test: /\.jsx?$/,
++   loader: 'es3ify-loader',
++ });

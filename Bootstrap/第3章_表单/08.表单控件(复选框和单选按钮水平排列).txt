@@ -1,0 +1,35 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-06T21:26:38+08:00
+
+====== 08.表单控件(复选框和单选按钮水平排列) ======
+Created 星期一 06 六月 2016
+{{./53b2649f00011bae01920069.jpg}}
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>表单控件(复选框和单选按钮水平排列)</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+
+<body>
+<form role="form">
+    <div class="form-group">
+        <label __class="checkbox-inline"__><input type="checkbox"  value="option1">游戏</label>
+        <label class="checkbox-inline"><input type="checkbox"  value="option2">摄影</label>
+        <label class="checkbox-inline"><input type="checkbox"  value="option3">旅游</label>
+    </div>
+    <div class="form-group">
+        <label __class="radio-inline"__><input type="radio" name="sex" value="male">男性</label>
+        <label class="radio-inline"><input type="radio" name="sex" value="female">女性</label>
+        <label class="radio-inline"><input type="radio" name="sex" value="neutral">中性</label>
+    </div>
+</form>
+</body>
+</html>
+
+=== 说明： ===
+Bootstrap框架也做了这方面的考虑：
+1、如果checkbox需要水平排列，只需要在label标签上添加类名__“checkbox-inline”__
+2、如果radio需要水平排列，只需要在label标签上添加类名__“radio-inline”__

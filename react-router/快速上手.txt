@@ -1,0 +1,100 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-16T15:49:40+08:00
+
+====== 快速上手 ======
+Created Thursday 16 June 2016
+
+=== 引用 ===
+var Router = ReactRouter;
+var Route = ReactRouter.Route;
+var RouteHandler = ReactRouter.RouteHandler;
+var Link = ReactRouter.Link;
+var StateMixin = ReactRouter.State;
+**var DefaultRoute = ReactRouter.DefaultRoute;**
+**var Redirect = ReactRouter.Redirect;**
+
+=== 应用入口 ===
+var App = React.createClass({  
+  render: function() {
+	return (
+	  <div className="app">
+		<nav>
+		  <__Link__ to="movies">电影</Link>
+		  <__Link__ to="books">图书</Link>
+		</nav>
+		<section>
+		  <__RouteHandler__ />
+		</section>
+	  </div>
+	);
+  }
+});
+/**
+ * 电影列表组件
+ */
+var Movies = React.createClass({
+  render: function() {
+	return (
+	  <ul>
+		<li key={1}><__Link__ __to="movie"__ __params={{id: 1}}__>煎饼侠</Link></li>
+		<li key={2}><Link to="movie"  __params={{id: 2}}__>捉妖记</Link></li>
+		<li key={3}><Link to="movie"  __params={{id: 3}}__>西游记之大圣归来</Link></li>
+	  </ul>
+	);
+  }
+});
+/**
+ * 单部电影组件
+ */
+var Movie = React.createClass({
+  mixins: [StateMixin],
+
+  render: function() {
+	return (
+	  <article>
+	   <h1>这里是电影 id 为 __{this.getParams().id}__ 的详情介绍</h1>
+	  </article>
+	);
+  }
+});
+1. **Link** 组件是 ReactRouter 提供的对 <a> 标签进行封装的组件。它接受的 props 有 to、params 和 query。
+	* __to__ 可以是一个路由的名称，也可以是一个完整的 http 地址
+	* __params__ 和 __query__ 的区别：
+		* params 定义的是**「路由」**中的参数，比如 /movies/:id ，params 为 id
+		* query 是 **「URL」**中的参数，是跟在 URL 中**「**__?__**」**后面的
+	* 组件指向的路由被激活时，Link组件会自动添加一个值为 __active__ 的 className
+2. **RouteHandler** 组件它代表着当前路由匹配到的 React 组件
+
+=== 定义路由 ===
+var routes = (  
+  <**Route** **handler**={App}>
+	<Route name="movies" handler={Movies} />
+	<Route name="movie" path="/movie/:id" handler={Movie} />
+	<Route name="books" handler={Books} />
+	<**Route** **name**="book" **path**="/book/**:**id" **handler**={Book} [[/>]]
+	//<**DefaultRoute** handler={Books} [[/>]]
+	<**Redirect** to="movies" />
+  </Route>
+);
+1. **Route** 组件页面路由的基础，可以嵌套
+	* props 包括 name、path、handler 等等
+		* __name__ 路由名称，可以通过 <__Link to=__"路由的名称"> 来生成一个跳转到该路由的链接
+		* __path__ 当前路由对应的 url，默认为 name 对应的值；如果 name 也不指定，那默认是 / 
+			* path支持 __params__ 就是上面的例子中 __:__ 后面跟着的名称
+		* __handler __<Route name="movies" handler={Movie} /> 指向 /movies 的路由，当该路由激活时，调用 **Movies** 这个组件进行渲染
+
+=== 将匹配的路由渲染到 DOM ===
+**Router**.**run**(__routes__, Router.HashLocation, function(Root){  
+  React.render(<Root />, document.body);
+});
+1. Router 即 ReactRouter，run 方法接受 3 个参数
+	* 第一个参数必填，路由规则
+	* 第二个参数选填，路由的实现
+		* Router.HashLocation 使用 hash 变化来实现路由，反映在浏览器的地址栏中就是类似 xxx.com/#/movies 这样的地址，兼容 IE 8
+		* Router.HistoryLocation 更高级，但不兼容 IE 8
+	* 最后一个参数是一个回调函数，当前路由中需要渲染的根节点组件，在这里就是 <App /> 这个组件（虽然名字叫做 Root，但在本例中 Root 指的就是 App）
+
+=== 首页 ===
+* **DefaultRoute **它的 handler 是 Index 组件，即我们希望用户在默认打开页面时看到的组件内容
+* **Redirect **自动被重定向到了 /movies 。Redirect 同时接受 from 这个 props，可以指定当什么规则下才进行重定向

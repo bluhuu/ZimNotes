@@ -1,0 +1,32 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-07T05:36:06+08:00
+
+====== 11.表单控件状态(焦点状态) ======
+Created 星期二 07 六月 2016
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>表单控件状态——焦点状态</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<form role="form" class="form-horizontal">
+  <div class="form-group">
+    <div class="col-xs-6">
+      <input class="__form-control__ input-lg" type="text" placeholder="不是焦点状态下效果">
+    </div>
+    <div class="col-xs-6">
+      <input class="form-control input-lg" type="text" placeholder="焦点点状态下效果">
+    </div>
+  </div> 
+</form>        
+</body>
+</html>
+
+=== 说明： ===
+焦点状态是通过伪类“__:focus__”来实现，删除了outline的默认样式，重新添加阴影效果。

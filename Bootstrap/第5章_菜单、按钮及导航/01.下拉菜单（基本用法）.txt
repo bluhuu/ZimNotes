@@ -1,0 +1,50 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-07T13:17:56+08:00
+
+====== 01.下拉菜单（基本用法） ======
+Created Tuesday 07 June 2016
+
+== Bootstrap框架中的下拉菜单组件是一个独立的组件，根据不同的版本，它对应的文件： ==
+  ☑  LESS版本：对应的源码文件为 dropdowns.less
+  ☑  Sass版本：对应的源码文件为 _dropdowns.scss
+  ☑  编译后的Bootstrap版本：查看bootstrap.css文件第3004行～第3130行
+在使用Bootstrap框架的下拉菜单时，必须调用Bootstrap框架提供的__bootstrap.js__文件。当然，如果你使用的是未编译版本，在js文件夹下你能找到一个名为“dropdown.js”的文件。
+
+=== 使用方法： ===
+
+== 1、使用一个名为“dropdown”的容器包裹了整个下拉菜单元素，示例中为: ==
+<div class="dropdown"></div>
+
+== 2、使用了一个<button>按钮做为父菜单，并且定义类名“dropdown-toggle”和自定义“data-toggle”属性，且值必须和最外容器类名一致，此示例为: ==
+data-toggle="dropdown"
+
+== 3、下拉菜单项使用一个ul列表，并且定义一个类名为“dropdown-menu”，此示例为: ==
+<ul class="dropdown-menu">
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>下拉菜单</title>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+ __<div class="dropdown">__
+  <__button__ class="btn btn-default __dropdown-toggle__" type="button" id="dropdownMenu1" __data-toggle="dropdown"__>
+	选择你喜欢的水果
+	<span class="caret"></span>
+  </button>
+  <__ul__ __class="dropdown-menu"__ role="menu" aria-labelledby="dropdownMenu1">
+	<li role="presentation"><a role="menuitem" tabindex="-1" href="#">苹果</a></li>
+	<li role="presentation"><a role="menuitem" tabindex="-1" href="#">香蕉</a></li>
+	<li role="presentation"><a role="menuitem" tabindex="-1" href="#">梨</a></li>
+	<li role="presentation"><a role="menuitem" tabindex="-1" href="#">桃</a></li>
+  </ul>
+</div> 
+  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> 
+</body>
+</html>

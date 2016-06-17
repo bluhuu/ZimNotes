@@ -1,0 +1,30 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-07T09:34:28+08:00
+
+====== style.css ======
+Created Tuesday 07 June 2016
+
+/*源码查阅bootstrap.css文件中第2319行～第2339行*/
+
+.btn-lg,
+.btn-group-lg> .btn {
+padding: 10px 16px;
+font-size: 18px;
+line-height: 1.33;
+border-radius: 6px;
+}
+.btn-sm,
+.btn-group-sm> .btn {
+padding: 5px 10px;
+font-size: 12px;
+line-height: 1.5;
+border-radius: 3px;
+}
+.btn-xs,
+.btn-group-xs> .btn {
+padding: 1px 5px;
+font-size: 12px;
+line-height: 1.5;
+border-radius: 3px;
+}

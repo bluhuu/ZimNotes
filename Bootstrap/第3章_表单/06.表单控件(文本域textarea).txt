@@ -1,0 +1,25 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-06T21:06:58+08:00
+
+====== 06.表单控件(文本域textarea) ======
+Created 星期一 06 六月 2016
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>表单控件——下拉选择框select元素</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+<body>
+<form role="form">
+  <div class="form-group">
+    <textarea class="form-control" __rows="3"__></textarea>
+  </div>
+</form>    
+</body>
+</html>
+
+=== 说明：	 ===
+文本域和原始使用方法一样，设置rows可定义其高度，设置cols可以设置其宽度。但如果textarea元素中添加了类名“form-control”类名，则无需设置cols属性。因为Bootstrap框架中的__“form-control”样式的表单控件宽度为100%或auto__。

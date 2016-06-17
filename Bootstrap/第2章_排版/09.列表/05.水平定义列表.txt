@@ -1,0 +1,38 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-06T15:36:29+08:00
+
+====== 05.水平定义列表 ======
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>水平定义列表</title>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+
+<body>
+<dl __class="dl-horizontal"__>
+	<dt>W3cplus</dt>
+	<dd>一个致力于推广国内前端行业的技术博客。它以探索为己任，不断活跃在行业技术最前沿，努力提供高质量前端技术博文</dd>
+	<dt>慕课网</dt>
+	<dd>一个专业的，真心实意在做培训的网站</dd>
+	<dt>我来测试一个标题，我来测试一个标题</dt>
+	<dd>我在写一个水平定义列表的效果，我在写一个水平定义列表的效果</dd>
+</dl>
+<!--下面是代码任务部分-->
+<dl __class="dl-horizontal"__>
+	__<dt>__标题一：__</dt>__
+	__<dd>__描述内容__</dd>__
+	__<dt>__标题一：__</dt>__
+	__<dd>__描述内容__</dd>__
+__</dl>__
+</body>
+</html>
+
+== 宽屏下的效果（屏幕大于768px）： ==
+
+{{./53ad0ff90001418208740117.jpg}}
+
+== 当你缩小你的浏览器屏幕时，水平定义列表将回复到原始的状态： ==
+{{./53ad10270001db6f06200172.jpg}}

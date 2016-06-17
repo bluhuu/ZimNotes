@@ -1,0 +1,91 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-07T12:58:18+08:00
+
+====== style.css ======
+Created Tuesday 07 June 2016
+
+=== Bootstrap仅通过设置left和right来实现定位效果。在boostrap.css文件的第1127行~第1204行可以看到具体的代码： ===
+
+.col-md-pull-12 {
+	right: 100%;
+  }
+  .col-md-pull-11 {
+	right: 91.66666667%;
+  }
+  .col-md-pull-10 {
+	right: 83.33333333%;
+  }
+  .col-md-pull-9 {
+	right: 75%;
+  }
+  .col-md-pull-8 {
+	right: 66.66666667%;
+  }
+  .col-md-pull-7 {
+	right: 58.33333333%;
+  }
+  .col-md-pull-6 {
+	right: 50%;
+  }
+  .col-md-pull-5 {
+	right: 41.66666667%;
+  }
+
+  .col-md-pull-4 {
+	right: 33.33333333%;
+  }
+
+  .col-md-pull-3 {
+	right: 25%;
+  }
+
+  .col-md-pull-2 {
+	right: 16.66666667%;
+  }
+  .col-md-pull-1 {
+	right: 8.33333333%;
+  }
+  .col-md-pull-0 {
+	right: 0;
+  }
+
+  .col-md-push-12 {
+	left: 100%;
+  }
+  .col-md-push-11 {
+	left: 91.66666667%;
+  }
+  .col-md-push-10 {
+	left: 83.33333333%;
+  }
+  .col-md-push-9 {
+	left: 75%;
+  }
+  .col-md-push-8 {
+	left: 66.66666667%;
+  }
+  .col-md-push-7 {
+	left: 58.33333333%;
+  }
+  .col-md-push-6 {
+	left: 50%;
+  }
+  .col-md-push-5 {
+	left: 41.66666667%;
+  }
+  .col-md-push-4 {
+	left: 33.33333333%;
+  }
+  .col-md-push-3 {
+	left: 25%;
+  }
+  .col-md-push-2 {
+	left: 16.66666667%;
+  }
+  .col-md-push-1 {
+	left: 8.33333333%;
+  }
+  .col-md-push-0 {
+	left: 0;
+  }

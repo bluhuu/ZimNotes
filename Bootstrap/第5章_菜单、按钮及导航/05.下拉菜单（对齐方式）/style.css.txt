@@ -1,0 +1,29 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-07T14:45:32+08:00
+
+====== style.css ======
+Created Tuesday 07 June 2016
+
+== /*源码请查看bootstrap.css文件第3030行～第3033行和3082行～第3085行*/ ==
+.dropdown-menu.pull-right {
+  right: 0;
+  left: auto;
+}
+.dropdown-menu-right {
+  right: 0;
+  left: auto;
+}
+
+__同时一定要为.dropdown添加float:leftcss样式。__
+__.dropdown{__
+__  float: left;__
+__}__
+
+
+== 默认效果: ==
+/*请查看bootstrap.css文件第3086行～第3089行*/
+.dropdown-menu-left {
+  right: auto;
+  left: 0;
+}

@@ -1,0 +1,51 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-06T16:24:10+08:00
+
+====== 01.表格行的类 ======
+__千万注意，你的<table>元素中一定不能缺少类名“table”__
+{{./53ad213f0001b08807340508.jpg}}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>表格行的类</title>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+
+<body>
+<table __class="table table-bordered"__>
+  <thead>
+	<tr>
+	  <th>类名</th>
+	  <th>描述</th>
+	</tr>
+  </thead>
+  <tbody>
+	<tr __class="active"__>
+	  <td>.active</td>
+	  <td>表示当前活动的信息</td>
+	</tr>
+	<tr __class="success"__>
+	  <td>.success</td>
+	  <td>表示成功或者正确的行为</td>
+	</tr>
+	<tr __class="info"__>
+	  <td>.info</td>
+	  <td>表示中立的信息或行为</td>
+	</tr>
+	<tr __class="warning"__>
+	  <td>.warning</td>
+	  <td>表示警告，需要特别注意</td>
+	</tr>
+	<tr __class="danger"__>
+	  <td>.danger</td>
+	  <td>表示危险或者可能是错误的行为</td>
+	</tr>
+  </tbody>
+</table> 
+</body>
+</html>
+
+== 悬浮状态: ==
+<table class="table-hover">

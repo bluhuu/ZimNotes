@@ -1,0 +1,58 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-07T05:30:02+08:00
+
+====== style.css ======
+Created 星期二 07 六月 2016
+
+=== 源码请查阅bootstrap.css文件第1795~第1824行： ===
+{{../53b269860001e43f02260101.jpg}}
+.input-sm {
+height: 30px;
+padding: 5px 10px;
+font-size: 12px;
+line-height: 1.5;
+border-radius: 3px;
+}
+select.input-sm {
+height: 30px;
+line-height: 30px;
+}
+textarea.input-sm,
+select[multiple].input-sm {
+height: auto;
+}
+.input-lg {
+height: 46px;
+padding: 10px 16px;
+font-size: 18px;
+line-height: 1.33;
+border-radius: 6px;
+}
+select.input-lg {
+height: 46px;
+line-height: 46px;
+}
+textarea.input-lg,
+select[multiple].input-lg {
+height: auto;
+}
+
+
+从上面的源码中不难发现，不管是“input-sm”还是“input-lg”仅对控件高度做了处理。
+但往往很多时候，我们需要控件__宽度__也要做一定的变化处理。这个时候就要借住__Bootstrap框架的网格系统__。所以你要控制表单宽度，可以像下面这样使用：
+{{../53b26a6a00018cba02420078.jpg}}
+<form role="form" class="form-horizontal">
+  <div class="form-group">
+  <div class="col-xs-4">
+    <input class="form-control input-lg" type="text" placeholder=".col-xs-4">
+  </div>
+  <div class="col-xs-4">
+    <input class="form-control input-lg" type="text" placeholder=".col-xs-4">
+  </div>
+  <div class="col-xs-4">
+    <input class="form-control input-lg" type="text" placeholder=".col-xs-4">
+  </div>
+  </div>
+    …
+</form>

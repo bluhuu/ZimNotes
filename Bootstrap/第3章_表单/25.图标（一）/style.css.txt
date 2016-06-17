@@ -1,0 +1,37 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-07T10:09:36+08:00
+
+====== style.css ======
+Created Tuesday 07 June 2016
+
+== Bootstrap框架将内部样式也提取出来： ==
+1、LESS版本：对应源文件为glyphicons.less文件
+2、Sass版本：对应源文件为_glyphicons.scss文件
+3、编译后的Bootstrap版本：查看bootstrap.css文件第2375行～第2992行
+
+== 原理分析： ==
+Bootstrap框架中的图标都是字体图标，其实现原理就是通过@font-face属性加载了字体。
+
+== /*源码请查看bootstrap.css文件第2357行～第2380行*/ ==
+@font-face {
+font-family: 'Glyphicons Halflings';
+src: url('../fonts/glyphicons-halflings-regular.eot');
+src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+== /*源码请查看bootstrap.css文件第2381行～第2992行*/ ==
+.glyphicon {
+position: relative;
+top: 1px;
+display: inline-block;
+font-family: 'Glyphicons Halflings';
+font-style: normal;
+font-weight: normal;
+line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.glyphicon-asterisk:before {
+content: "\2a";
+}

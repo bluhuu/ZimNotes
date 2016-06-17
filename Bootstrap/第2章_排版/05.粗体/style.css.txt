@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-06T14:36:41+08:00
+
+====== style.css ======
+
+== /*源码查看bootstrap.css文件第55行~第58行*/ ==
+b,strong {
+  font-weight: bold; /*文本加粗*/
+}
+

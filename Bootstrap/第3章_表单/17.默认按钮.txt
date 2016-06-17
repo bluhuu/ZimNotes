@@ -1,0 +1,18 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-07T08:56:08+08:00
+
+====== 17.默认按钮 ======
+Created Tuesday 07 June 2016
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>默认按钮</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+<body>
+	<button class="btn btn-default" type="button">默认按钮</button>
+</body>
+</html>

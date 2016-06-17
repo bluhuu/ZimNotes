@@ -1,0 +1,22 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-06T14:39:40+08:00
+
+====== 06.斜体 ======
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>斜体</title>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+
+<body>
+<p>我在慕课网上跟<em>大漠</em>一起学习<i>Bootstrap</i>的使用。我一定要学会<i>Bootstrap</i>。</p>
+<!--下面是任务部分-->
+<p>我正在学习__<em>__Bootstrap__</em>__。我发现__<i>__Bootstrap__</i>__真的好强大。</p>
+</body>
+</html>
+
+== 其它： ==
+font-style:italic;

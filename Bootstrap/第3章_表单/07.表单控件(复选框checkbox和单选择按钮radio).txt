@@ -1,0 +1,35 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-06T21:10:25+08:00
+
+====== 07.表单控件(复选框checkbox和单选择按钮radio) ======
+Created 星期一 06 六月 2016
+{{./53b25edb0001faae02520102.jpg}}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单控件——表单控件大小</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+<body>
+<form role="form">
+    <h3>案例1</h3>
+    <div class="__checkbox__">
+        <label><input type="checkbox" value="">记住密码</label>
+    </div>
+    <div class="__radio__">
+        <label><input type="radio" name="optionsRadios" id="optionsRadios1" value="love" checked>喜欢</label>
+    </div>
+    <div class="__radio__">
+        <label><input type="radio" name="optionsRadios" id="optionsRadios2" value="hate">不喜欢</label>
+    </div>
+</form>
+</body>
+</html>
+
+=== 说明： ===
+从上面的示例，我们可以得知：
+1、不管是checkbox还是radio都使用label包起来了
+2、checkbox连同label标签放置在一个名为“.checkbox”的容器内
+3、radio连同label标签放置在一个名为“.radio”的容器内

@@ -1,0 +1,49 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-07T10:04:00+08:00
+
+====== 24.图像 ======
+Created Tuesday 07 June 2016
+{{./53b36fc300017b1e02980139.jpg}}
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图像</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+  <div class="row">
+	<div class="col-sm-4">
+	  <img   alt="140x140" src="http://placehold.it/140x140">
+		<div>默认图片</div>
+	</div>
+	<div class="col-sm-4">
+	  <img  __class="img-rounded"__ alt="140x140" src="http://placehold.it/140x140"> 
+		<div>圆角图片</div>
+	</div>
+	<div class="col-sm-4">
+	  <img  __class="img-circle"__ alt="140x140" src="http://placehold.it/140x140">
+		<div>圆形图片</div>
+	</div>
+	  <div class="row">
+		<div class="col-sm-6">
+		  <img  __class="img-thumbnail"__ alt="140x140" src="http://placehold.it/140x140"> 
+			<div>缩略图</div>
+		</div>
+		<div class="col-sm-6">
+		  <img  __class="img-responsive"__ alt="140x140" src="http://placehold.it/140x140" /> 
+		  <div>响应式图片</div>
+		</div>
+	  </div>
+  </div>
+</div> 
+</body>
+</html>
+
+== 图像的样式风格提供以下几种风格： ==
+1、img-responsive：响应式图片，主要针对于响应式设计
+2、img-rounded：圆角图片
+3、img-circle：圆形图片
+4、img-thumbnail：缩略图片

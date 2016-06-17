@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-06T21:26:53+08:00
+
+====== style.css ======
+Created 星期一 06 六月 2016
+
+=== 实现源码请查看bootstrap.css文件第1767行～第1780行： ===
+
+.radio-inline,
+.checkbox-inline {
+display: inline-block;
+padding-left: 20px;
+margin-bottom: 0;
+font-weight: normal;
+vertical-align: middle;
+cursor: pointer;
+}
+.radio-inline + .radio-inline,
+.checkbox-inline + .checkbox-inline {
+margin-top: 0;
+margin-left: 10px;
+}

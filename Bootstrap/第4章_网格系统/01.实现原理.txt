@@ -1,0 +1,66 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-07T10:41:53+08:00
+
+====== 01.实现原理 ======
+Created Tuesday 07 June 2016
+
+== Bootstrap框架中的网格系统就是将容器平分成12份。 ==
+在使用的时候大家可以根据实际情况重新编译LESS（或Sass）源码来修改12这个数值（也就是换成24或32，当然你也可以分成更多，但不建议这样使用）。
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>实现原理</title>
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="__container__">
+  <div class="__row__">
+	<div class="col-md-1">.col-md-1</div>
+	<div class="col-md-1">.col-md-1</div>
+	<div class="col-md-1">.col-md-1</div>
+	<div class="col-md-1">.col-md-1</div>
+	<div class="col-md-1">.col-md-1</div>
+	<div class="col-md-1">.col-md-1</div>
+	<div class="col-md-1">.col-md-1</div>
+	<div class="col-md-1">.col-md-1</div>
+	<div class="col-md-1">.col-md-1</div>
+	<div class="col-md-1">.col-md-1</div>
+	<div class="col-md-1">.col-md-1</div>
+	<div class="col-md-1">.col-md-1</div>
+  </div>
+  <div class="__row__">
+	<div class="col-md-1">.col-md-1</div>
+	<div class="col-md-1">.col-md-1</div>
+	<div class="col-md-1">.col-md-1</div>
+	<div class="col-md-1">.col-md-1</div>
+	<div class="col-md-1">.col-md-1</div>
+	<div class="col-md-1">.col-md-1</div>
+	<div class="col-md-1">.col-md-1</div>
+	<div class="col-md-1">.col-md-1</div>
+	<div class="col-md-1">.col-md-1</div>
+	<div class="col-md-1">.col-md-1</div>
+	<div class="col-md-1">.col-md-1</div>
+	<div class="col-md-1">.col-md-1</div>
+  </div>
+	<div class="__row__">
+	<div class="col-md-1">.col-md-1</div>
+	<div class="col-md-1">.col-md-1</div>
+	<div class="col-md-1">.col-md-1</div>
+	<div class="col-md-1">.col-md-1</div>
+	<div class="col-md-1">.col-md-1</div>
+	<div class="col-md-1">.col-md-1</div>
+	<div class="col-md-1">.col-md-1</div>
+	<div class="col-md-1">.col-md-1</div>
+	<div class="col-md-1">.col-md-1</div>
+	<div class="col-md-1">.col-md-1</div>
+	<div class="col-md-1">.col-md-1</div>
+	<div class="col-md-1">.col-md-1</div>
+  </div>
+</div>
+</body>
+</html>

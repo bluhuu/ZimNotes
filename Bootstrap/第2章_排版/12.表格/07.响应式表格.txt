@@ -1,0 +1,56 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-06T16:53:57+08:00
+
+====== 07.响应式表格 ======
+{{./53ad2eab0001c55105540130.jpg}}
+{{./53ad2f540001847402420197.jpg}}
+
+== Bootstrap提供了一个容器，容器类名“.table-responsive”,然后将<table class="table">置于容器中，这样表格也就具有响应式效果: ==
+当你的浏览器可视区域小于768px时，表格底部会出现水平滚动条。当你的浏览器可视区域大于768px时，表格底部水平滚动条就会消失
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>响应式表格</title>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+
+<body>
+__<div class="table-responsive">__
+   <table class="table table-bordered">
+   <thead>
+	 <tr>
+	   <th>表格标题</th>
+	   <th>表格标题</th>
+	   <th>表格标题</th>
+	 </tr>
+   </thead>
+   <tbody>
+	 <tr>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	 </tr>
+	 <tr>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	 </tr>
+	 <tr>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	 </tr>
+	 <tr>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	 </tr>
+   </tbody>
+ </table>
+__</div>__
+</body>
+</html>
+

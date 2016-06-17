@@ -1,0 +1,50 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-07T14:49:47+08:00
+
+====== 06.下拉菜单（菜单项状态） ======
+Created Tuesday 07 June 2016
+
+下拉菜单项的默认的状态（不用设置）有悬浮状态（:hover）和焦点状态（:focus）：
+
+还有当前状态（.active）和禁用状态（.disabled）。
+
+{{./53e44d0d000131d208720446.jpg}}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>菜单项状态</title>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+<body>
+<div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+	下拉菜单
+	<span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+	<li role="presentation" __class="active"__><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+	<li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+	<li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+	<li role="presentation" __class="divider"__></li>
+	<li role="presentation" __class="disabled"__><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+  </ul>
+</div> 
+<br>
+<br>
+<div class="dropdown">
+	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+		水果
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu">
+		<li class="active"><a>香蕉</a></li>
+		<li><a>苹果</a></li>
+		<li class="disabled"><a>taozi</a></li>
+	</ul>
+</div>
+  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> 
+</body>
+</html>

@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-06T16:41:47+08:00
+
+====== style.css ======
+
+== bootstrap.css文件第1465行~第1468行： ==
+
+.table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th {
+background-color: #f9f9f9;
+}
+

@@ -1,0 +1,34 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-06T14:29:43+08:00
+
+====== style.css ======
+
+== /*源码查看bootstrap.css文件第470行~480行*/ ==
+.lead {
+margin-bottom: 20px;
+font-size: 16px;
+font-weight: 200;
+line-height: 1.4;
+}
+@media (min-width: 768px) {/*大中型浏览器字体稍大*/
+.lead {
+font-size: 21px;
+  }
+}
+
+== /*源码查看bootstrap.css文件第55行~第58行*/ ==
+b,strong {
+  font-weight: bold; /*文本加粗*/
+}
+
+== /*源码查看bootstrap.css文件第481行~第484行*/ ==
+small,.small {
+  font-size: 85%; /*标准字体的85%,也就是14px * 0.85px，差不多12px*/
+}
+
+== /*源码查看bootstrap.css第485行~第487行*/ ==
+cite {
+font-style: normal;
+}
+

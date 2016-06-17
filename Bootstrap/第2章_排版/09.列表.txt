@@ -1,0 +1,63 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-06T15:03:00+08:00
+
+====== 09.列表 ======
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>列表--简介</title>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+
+<body>
+<ul>
+	<li>无序列表信息1</li>
+	<li>无序列表信息2</li>
+	<li>无序列表信息3</li>
+</ul>
+<ol>
+	<li>有序列表信息1</li>
+	<li>有序列表信息2</li>
+	<li>有序列表信息3</li>
+</ol>
+<dl>
+	<dt>定义列表标题</dt>
+	<dd>定义列表信息1</dd>
+	<dd>定义列表信息2</dd>
+</dl>
+</body>
+</html>
+
+=== HTML 主要有三种：有序列表、无序列表和定义列表： ===
+
+== 无序列表 ==
+<ul>
+	<li>…</li>
+</ul>
+
+== 有序列表 ==
+<ol>
+	<li>…</li>
+</ol>
+
+== 定义列表 ==
+<dl>
+	<dt>…</dt>
+	<dd>…</dd>
+</dl>
+
+=== Bootstrap根据平时的使用情形提供了六种形式的列表： ===
+
+   __☑  普通列表__
+
+__   ☑  有序列表__
+
+__   ☑  去点列表__
+
+__   ☑  内联列表__
+
+__   ☑  描述列表__
+
+__   ☑  水平描述列表__

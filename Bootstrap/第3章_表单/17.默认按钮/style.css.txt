@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-07T08:56:22+08:00
+
+====== style.css ======
+Created Tuesday 07 June 2016
+
+== /*源码请查阅bootstrap.css文件第2040行～第2044行*/ ==
+.btn-default {
+color: #333;
+background-color: #fff;
+border-color: #ccc;
+}

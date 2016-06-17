@@ -1,0 +1,20 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-05T15:01:39+08:00
+
+====== 其它 ======
+Created 星期日 05 六月 2016
+
+==== sublime ====
+sudo add-apt-repository ppa:webupd8team/sublime-text-3
+sudo apt-get update
+sudo apt-get install sublime-text-installer
+中文：
+sudo apt-get update && sudo apt-get upgrade
+git clone https://github.com/lyfeyaj/sublime-text-imfix.git
+cd sublime-text-imfix
+[[./sublime-imfix]]
+
+==== ubuntu16 ====
+gsettings set com.canonical.Unity.Launcher launcher-position Bottom
+gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ launcher-minimize-window true

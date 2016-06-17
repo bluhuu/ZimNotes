@@ -1,0 +1,35 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-06T21:23:01+08:00
+
+====== style.css ======
+Created 星期一 06 六月 2016
+
+在Bootstrap框架中，主要借助__“.checkbox”__和__“.radio”__样式，来处理复选框、单选按钮与标签的对齐方式。
+源码请查看bootstrap.css文件第1742行～第1762行：
+
+.radio,
+.checkbox {
+display: block;
+min-height: 20px;
+padding-left: 20px;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+.radio label,
+.checkbox label {
+display: inline;
+font-weight: normal;
+cursor: pointer;
+}
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+float: left;
+margin-left: -20px;
+}
+.radio + .radio,
+.checkbox + .checkbox {
+margin-top: -5px;
+}

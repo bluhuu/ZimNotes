@@ -1,0 +1,41 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-06T20:59:22+08:00
+
+====== 05.表单控件(下拉选择框select) ======
+Created 星期一 06 六月 2016
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>表单控件——下拉选择框select元素</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+<body>
+<form role="form">
+  <div class="form-group">
+    <select class="form-control"> 
+      <option>1</option> 
+      <option>2</option> 
+      <option>3</option> 
+      <option>4</option> 
+      <option>5</option> 
+      </select>
+  </div>
+  <div class="form-group">
+      <select __multiple__ class="form-control"> 
+        <option>1</option> 
+        <option>2</option> 
+        <option>3</option> 
+        <option>4</option> 
+        <option>5</option> 
+      </select>
+  </div>
+
+</form>   
+</body>
+</html>
+
+=== 说明： ===
+Bootstrap框架中的下拉选择框使用和原始的一致，多行选择设置multiple属性的值为multiple。Bootstrap框架会为这些元素提供统一的样式风格。

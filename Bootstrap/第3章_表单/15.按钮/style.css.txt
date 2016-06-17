@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-07T08:47:46+08:00
+
+====== style.css ======
+Created Tuesday 07 June 2016
+
+== Bootstrap框架的按钮也是一个独立部分，对应的代码： ==
+1. LESS版本：查看源文件buttons.less
+2. Sass版本：查看源文件_buttons.scss
+3. 已编译版本：查看源文件bootstrap.css文件第1992行～第2353行

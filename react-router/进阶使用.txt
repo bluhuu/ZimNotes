@@ -1,0 +1,75 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-16T16:52:21+08:00
+
+====== 进阶使用 ======
+Created Thursday 16 June 2016
+
+=== 嵌套路由 ===
+var routes = (  
+  <Route handler={App}>
+	<Route name="movies" handler={Movies}>
+	  **<Route name="movie" path=":id" handler={Movie} />**
+	</Route>
+	<Route name="books" handler={Books}>
+	  **<Route name="book" path=":id" handler={Book} />**
+	</Route>
+  </Route>
+);
+同时改造一下图书列表和电影列表组件：
+/**
+ * 图书列表组件
+ */
+var Books = React.createClass({  
+  render: function() {
+	return (
+	  <div>
+		<ul>
+		  <li key={1}><Link to="book" params=__{{id: 1}}__>活着</Link></li>
+		  <li key={2}><Link to="book" params=__{{id: 2}}__>挪威的森林</Link></li>
+		  <li key={3}><Link to="book" params=__{{id: 3}}__>从你的全世界走过</Link></li>
+		</ul>
+		<**RouteHandler** />
+	  </div>
+	);
+  }
+});
+
+=== 动态判断 ===
+var routes = (  
+  <Route handler=__{App}__>
+	<Route name=__"movies"__ path=__"/movies/:id?"__ handler=__{Movies}__ />
+	<Route name=__"books"__ path=__"/books/:id?"__ handler=__{Books}__ />
+  </Route>
+);
+/**
+ * 图书列表组件
+ */
+var Books = React.createClass({  
+  mixins: [StateMixin],
+  render: function() {
+	**var id = this.getParams().id;**
+	return id __?__ <Book id={id} /> __:__ (
+	  <div>
+		<ul>
+		  <li key={1}><Link to="**books**" params={{id: 1}}>活着</Link></li>
+		  <li key={2}><Link to="**books**" params={{id: 1}}>挪威的森林</Link></li>
+		  <li key={3}><Link to="**books**" params={{id: 1}}>从你的全世界走过</Link></li>
+		</ul>
+		<RouteHandler />
+	  </div>
+	);
+  }
+});
+/**
+ * 单本图书组件
+ */
+var Book = React.createClass({  
+  render: function() {
+	return (
+	  <article>
+	   <h1>这里是图书 id 为 __{this.props.id}__ 的详情介绍</h1>
+	  </article>
+	);
+  }
+});

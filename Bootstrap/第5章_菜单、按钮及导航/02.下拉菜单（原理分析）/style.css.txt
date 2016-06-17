@@ -1,0 +1,30 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-07T14:17:13+08:00
+
+====== style.css ======
+Created Tuesday 07 June 2016
+
+Bootstrap框架中的下拉菜单组件，其下拉菜单项默认是__隐藏__的
+
+因为“dropdown-menu”默认样式设置了“display:none”，其详细源码请查看bootstrap.css文件第3010行～第3029行：
+.dropdown-menu {
+  position: absolute;/*设置绝对定位，相对于父元素div.dropdown*/
+  top: 100%;/*让下拉菜单项在父菜单项底部，如果父元素不设置相对定位，该元素相对于body元素*/
+  left: 0;
+  z-index: 1000;/*让下拉菜单项不被其他元素遮盖住*/
+  display: none;/*默认隐藏下拉菜单项*/
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 14px;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, .15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}

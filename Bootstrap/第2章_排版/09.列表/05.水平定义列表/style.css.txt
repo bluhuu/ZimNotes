@@ -1,0 +1,28 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-06T15:36:48+08:00
+
+====== style.css ======
+
+== /*源码请查看bootstrap.css文件第608行~第621行*/ ==
+
+@media (min-width: 768px) {
+.dl-horizontal dt {
+float: left;
+width: 160px;
+overflow: hidden;
+clear: left;
+text-align: right;
+text-overflow: ellipsis;
+white-space: nowrap;
+  }
+.dl-horizontal dd {
+margin-left: 180px;
+  }
+}
+
+== 媒体查询: ==
+只有屏幕大于768px时，类名“.dl-horizontal”才具有水平定义列表效果：
+1、将dt设置了一个左浮动，并且设置了一个宽度为160px
+2、将dd设置一个margin-left的值为180px，达到水平的效果
+3、当标题宽度超过160px时，将会显示三个省略号

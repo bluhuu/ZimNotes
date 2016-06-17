@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-06T20:54:13+08:00
+
+====== 04.表单控件(输入框input) ======
+Created 星期一 06 六月 2016
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单控件——输入框input</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+<body>
+<form role="form">
+  <div class="form-group">
+	<__input type="email"__ __class="form-control"__ __placeholder="Enter email"__>
+	<input type="text" class="form-control" placeholder="Enter name">
+  </div>
+</form>   
+</body>
+</html>

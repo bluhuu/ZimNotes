@@ -1,0 +1,40 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-07T09:59:34+08:00
+
+====== style.css ======
+Created Tuesday 07 June 2016
+
+对应的样式代码请查阅bootstrap.css文件第2030行～第2039行：
+
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
+pointer-events: none;
+cursor: not-allowed;
+filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+box-shadow: none;
+opacity: .65;
+}
+同样的，其他风格按钮也具有这样的效果，只是颜色做了一定的调整，比如信息按钮(.btn-info)所示：
+/*源码请查看bootstrap.css文件第2182行～第2199行*/
+
+.btn-info.disabled,
+.btn-info[disabled],
+fieldset[disabled] .btn-info,
+.btn-info.disabled:hover,
+.btn-info[disabled]:hover,
+fieldset[disabled] .btn-info:hover,
+.btn-info.disabled:focus,
+.btn-info[disabled]:focus,
+fieldset[disabled] .btn-info:focus,
+.btn-info.disabled:active,
+.btn-info[disabled]:active,
+fieldset[disabled] .btn-info:active,
+.btn-info.disabled.active,
+.btn-info[disabled].active,
+fieldset[disabled] .btn-info.active {
+background-color: #5bc0de;
+border-color: #46b8da;
+}

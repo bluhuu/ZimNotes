@@ -1,0 +1,28 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-07T09:05:45+08:00
+
+====== 19.定制风格 ======
+Created Tuesday 07 June 2016
+{{./53b367bd0001d59c07530312.jpg}}
+{{./53b367d10001846a08020810.jpg}}
+{{./53b368510001fe2701800274.jpg}}
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>定制风格</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+<body>
+   <button class="btn" type="button">基础按钮.btn</button>  
+   <button class="btn __btn-default__" type="button">默认按钮.btn-default</button> 
+   <button class="btn __btn-primary__" type="button">主要按钮.btn-primary</button> 
+   <button class="btn __btn-success__" type="button">成功按钮.btn-success</button> 
+   <button class="btn __btn-info__" type="button">信息按钮.btn-info</button>
+   <button class="btn __btn-warning__" type="button">警告按钮.btn-warning</button> 
+   <button class="btn __btn-danger__" type="button">危险按钮.btn-danger</button> 
+   <button class="btn __btn-link__" type="button">链接按钮.btn-link</button> 
+</body>
+</html>

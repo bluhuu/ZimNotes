@@ -1,0 +1,40 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-06T17:13:24+08:00
+
+====== 01.基础表单 ======
+{{./53b230bb0001cea602970184.jpg}}
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>基础表单</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+<body>
+<form __role="form"__>
+  <div __class="form-group"__>
+	<label for="exampleInputEmail1">邮箱：</label>
+	<input type="email" __class="form-control"__ id="exampleInputEmail1" placeholder="请输入您的邮箱地址">
+  </div>
+  <div __class="form-group"__>
+	<label for="exampleInputPassword1">密码</label>
+	<input type="password" __class="form-control"__ id="exampleInputPassword1" placeholder="请输入您的邮箱密码">
+  </div>
+  <div __class="checkbox"__>
+	<label>
+	  <input type="checkbox"> 记住密码
+	</label>
+  </div>
+  <button type="submit" __class="btn btn-default"__>进入邮箱</button>
+</form>	
+</body>
+</html>
+
+主要将这些元素的margin、padding和border等进行了细化设置。
+当然表单除了这几个元素之外，还有**input**、**select**、**textarea**等元素，在Bootstrap框架中，通过定制了一个类名`**form-control**`，也就是说，如果这几个元素使用了类名“form-control”，将会实现一些设计上的定制效果。
+**1、宽度变成了100%**
+**2、设置了一个浅灰色（#ccc）的边框**
+**3、具有4px的圆角**
+**4、设置阴影效果，并且元素得到焦点之时，阴影和边框效果会有所变化**
+**5、设置了placeholder的颜色为#999**

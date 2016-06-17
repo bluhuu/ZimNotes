@@ -1,0 +1,33 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-06T15:28:19+08:00
+
+====== 04.定义列表 ======
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>定义列表</title>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+
+<body>
+<dl>
+	<dt>W3cplus</dt>
+	<dd>一个致力于推广国内前端行业的技术博客</dd>
+	<dt>慕课网</dt>
+	<dd>一个真心在做教育的网站</dd>
+</dl>
+<!--下面是代码任务部分-->
+__<dl>__
+	__<dt>__北京__</dt> <!-- 加粗 -->__
+	__<dd>__北京是中国的首都，是政治文件集中地__</dd>__
+	__<dt>__上海__</dt>__
+	__<dd>__上海号称东方的巴黎__</dd>__
+__</dl>__
+</body>
+</html>
+
+=== 说明： ===
+{{./53c5e1550001235805340200.jpg}}
+

@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-07T09:34:10+08:00
+
+====== 20.按钮大小 ======
+Created Tuesday 07 June 2016
+{{./53b36a7600014af106910605.jpg}}
+{{./53b36b220001f92302370097.jpg}}
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>按钮大小</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+<body>
+	<button class="btn btn-primary __btn-lg__" type="button">大型按钮.btn-lg</button> 
+	<button class="btn btn-primary" type="button">正常按钮</button>
+	<button class="btn btn-primary __btn-sm__" type="button">小型按钮.btn-sm</button>
+	<button class="btn btn-primary __btn-xs__" type="button">超小型按钮.btn-xs</button>
+</body>
+</html>

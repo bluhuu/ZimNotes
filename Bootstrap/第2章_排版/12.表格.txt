@@ -1,0 +1,211 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-06T16:13:33+08:00
+
+====== 12.表格 ======
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>基础表格</title>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+
+<body>
+<h1>基础表格</h1>
+<table class="table">
+   <thead>
+	 <tr>
+	   <th>表格标题</th>
+	   <th>表格标题</th>
+	   <th>表格标题</th>
+	 </tr>
+   </thead>
+   <tbody>
+	 <tr>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	 </tr>
+	 <tr>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	 </tr>
+   </tbody>
+ </table>
+<h1>斑马线表格</h1>
+<table class="table table-striped">
+   <thead>
+	 <tr>
+	   <th>表格标题</th>
+	   <th>表格标题</th>
+	   <th>表格标题</th>
+	 </tr>
+   </thead>
+   <tbody>
+	 <tr>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	 </tr>
+	 <tr>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	 </tr>
+	 <tr>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	 </tr>
+	 <tr>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	 </tr>
+   </tbody>
+ </table>
+<h1>带边框的表格</h1>
+ <table class="table table-bordered">
+   <thead>
+	 <tr>
+	   <th>表格标题</th>
+	   <th>表格标题</th>
+	   <th>表格标题</th>
+	 </tr>
+   </thead>
+   <tbody>
+	 <tr>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	 </tr>
+	 <tr>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	 </tr>
+	 <tr>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	 </tr>
+	 <tr>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	 </tr>
+   </tbody>
+ </table>
+<h1>鼠标悬浮高亮的表格</h1>
+<table class="table table-striped table-bordered table-hover">
+   <thead>
+	 <tr>
+	   <th>表格标题</th>
+	   <th>表格标题</th>
+	   <th>表格标题</th>
+	 </tr>
+   </thead>
+   <tbody>
+	 <tr>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	 </tr>
+	 <tr>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	 </tr>
+	 <tr>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	 </tr>
+	 <tr>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	 </tr>
+   </tbody>
+ </table>
+ <h1>紧凑型表格</h1>
+  <table class="table table-condensed">
+   <thead>
+	 <tr>
+	   <th>表格标题</th>
+	   <th>表格标题</th>
+	   <th>表格标题</th>
+	 </tr>
+   </thead>
+   <tbody>
+	 <tr>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	 </tr>
+	 <tr>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	 </tr>
+	 <tr>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	 </tr>
+	 <tr>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	 </tr>
+   </tbody>
+ </table>
+ <h1>响应式表格</h1>
+ <div class="table-responsive">
+   <table class="table table-bordered">
+   <thead>
+	 <tr>
+	   <th>表格标题</th>
+	   <th>表格标题</th>
+	   <th>表格标题</th>
+	 </tr>
+   </thead>
+   <tbody>
+	 <tr>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	 </tr>
+	 <tr>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	 </tr>
+	 <tr>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	 </tr>
+	 <tr>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	   <td>表格单元格</td>
+	 </tr>
+   </tbody>
+ </table>
+</div>
+</body>
+</html>
+
+=== 说明： ===
+Bootstrap为表格提供了**1种基础样式**和**4种附加样式**以及**1个支持响应式**的表格
+
+== 主要包括： ==
+.table：基础表格
+.table-striped：斑马线表格
+.table-bordered：带边框的表格
+.table-hover：鼠标悬停高亮的表格
+.table-condensed：紧凑型表格
+.table-responsive：响应式表格

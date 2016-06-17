@@ -1,0 +1,47 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-07T12:28:48+08:00
+
+====== style.css ======
+Created Tuesday 07 June 2016
+
+== 实现原理非常简单，就是利用十二分之一（1/12）的margin-left。然后有多少个offset，就有多少个margin-left。在bootstrap.css中第1205行～1241行所示： ==
+  .col-md-offset-12 {
+   margin-left: 100%;
+}
+  .col-md-offset-11 {
+	margin-left: 91.66666667%;
+  }
+  .col-md-offset-10 {
+	margin-left: 83.33333333%;
+  }
+  .col-md-offset-9 {
+	margin-left: 75%;
+  }
+  .col-md-offset-8 {
+	margin-left: 66.66666667%;
+  }
+  .col-md-offset-7 {
+	margin-left: 58.33333333%;
+  }
+  .col-md-offset-6 {
+	margin-left: 50%;
+  }
+  .col-md-offset-5 {
+	margin-left: 41.66666667%;
+  }
+  .col-md-offset-4 {
+	margin-left: 33.33333333%;
+  }
+  .col-md-offset-3 {
+	margin-left: 25%;
+  }
+  .col-md-offset-2 {
+	margin-left: 16.66666667%;
+  }
+  .col-md-offset-1 {
+	margin-left: 8.33333333%;
+  }
+  .col-md-offset-0 {
+	margin-left: 0;
+  }

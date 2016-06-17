@@ -1,0 +1,63 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-06T15:55:50+08:00
+
+====== 10.代码（一） ======
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>代码</title>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+
+<body>
+code风格：
+<div>Bootstrap的代码风格有三种：__<code>__&lt;code&gt;__</code>__、<code>&lt;pre&gt;</code>和<code>&lt;kbd&gt;</code></div>
+pre风格：
+<div>
+__<pre>__
+&lt;ul&gt;
+&lt;li&gt;...&lt;/li&gt;
+&lt;li&gt;...&lt;/li&gt;
+&lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+__</pre>__
+</div>
+kbd风格：
+<div>请输入<kbd>ctrl+c</kbd>来复制代码，然后使用<kbd>ctrl+v</kbd>来粘贴代码</div>
+<!--下面是代码任务部分-->
+<p>请使用__<kbd>ctrl+x</kbd>__复制代码，然后使用<kbd>ctrl+shift+v</kbd>将复制的代码粘贴到需要的地方。</p>
+</body>
+</html>
+{{./53c5ea520001613b05310046.jpg}}
+
+=== 说明： ===
+
+== 不管使用哪种代码风格，在代码中碰到小于号（<）要使用硬编码“&lt;”来替代，大于号(>)使用“&gt;”来替代。 ==
+
+== 三种代码风格： ==
+1、使用<code></code>来显示单行内联代码
+2、使用<pre></pre>来显示多行块代码
+3、使用<kbd></kbd>来显示用户输入代码
+
+== code风格： ==
+<div>Bootstrap的代码风格有三种：
+  <code>&lt;code&gt;</code>
+  <code>&lt;pre&gt;</code>
+  <code>&lt;kbd&gt;</code>
+</div>
+
+== pre风格： ==
+<div>
+<pre>
+&lt;ul&gt;
+&lt;li&gt;...&lt;/li&gt;
+&lt;li&gt;...&lt;/li&gt;
+&lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+</div>
+
+== kbd风格： ==
+<div>请输入<kbd>ctrl+c</kbd>来复制代码，然后使用<kbd>ctrl+v</kbd>来粘贴代码</div>

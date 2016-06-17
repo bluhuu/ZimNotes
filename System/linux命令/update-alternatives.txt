@@ -1,0 +1,42 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-07T15:18:20+08:00
+
+====== update-alternatives ======
+Created Tuesday 07 June 2016
+
+{{./092501NL-0.png}}
+editor这个可执行命令实际上是个符号连接 → /etc/alternatives/editor → /bin/nano 输入editor并回车，将执行nano
+
+__--display__  它使我们可以看到一个命令的所有可选命令
+//$ sudo update-alternatives -- display editor//
+{{./0925013622-1.png}}
+你可以看到我的机器上所有可以用来被 editor 链接的命令。
+
+下面说说 __--config__ 。这个选项使我们可以选择其中一个命令，代码如下：
+//$ sudo  update-alternatives --config editor//
+{{./0925011V8-2.png}}
+上例中，我从３代表的emacs24编辑器，修改为1代表的ed。
+
+说到这里，我们就要介绍一些概念了。首先，__update-alternatives在一般情况下是由postinst和prerm这样的安装脚本自动调用的__，所以一个alternative的状态有两种：自动和手动。每个alternative的初始状态都是自动，如果系统发现管理员手动修改了一个 alternative，它的状态就从自动变成了手动，这样安装脚本就不会更新它了。如果你希望将一个__alternative变回自动，只要执行代码：__
+//$ sudo update-alternatives --auto editor//
+
+就可以了。我们来看一下官方的命令选项：
+{{./09250151Q-3.png}}
+你注意到了吗？上面见到了”名字“。该怎样写名字呢？这就是我们要介绍的第二个概念：
+	* general name -- 这是指一系列功能相似的程序的“公用”名字（包括绝对路径），比如 [[/usr/bin/editor。]]
+	* link -- 这是指一个alternative在 /etc/alternative中的名字，比如 editor。
+	* alternative -- 顾名思议，这是指一个可选的程序所在的路径（包括绝对路径）,比如 [[/usr/bin/vim。]]
+
+__--auto , --display和--config 跟的都是link。__我们要说的第三个概念是优先级。这个比较简单，当然__优先级越高的程序越好__啦！最后一个概念是主和从的alternative。想想看， 你将/usr/bin/editor链接到vim，可是当你执行man editor时看到的却是emacs的manpage，你会做何感想呢？这就引出了__主和从alternative的概念：当更新主的 alternative时，从的alternative也会被更新。__
+
+说完这四个重要的概念后，我们介绍另外两个选项，其它的自己看文档。
+
+第一个是 --install。它的格式是：sudo update-alternatives --install __gen__ __link__ __alt__ __pri__ [--slave sgen slink salt]...
+
+gen，link，alt，pri分别是我们上面说过的。如果需要从alternative，你可以用 __--slave加在后面。如果你在向一个已经存在的alternative组中添加新的alternatives__，该命令会把这些 alternatives加入到这个已经存在的alternative组的列表中，并用新的可选命令作为新的命令；否则，将会将立一个新的自动的 alternative组。
+
+如果我们加入一个错误的alternative。我不想要这个alternative了。在这种情况下，可以执行下面的命令，代码示例：
+
+update-alternatives --remove name path
+name是一个在/etc/alternatives中的名字，也就是上面的link，而path是希望删除的可选程序名的绝对路径名（放心，这样 只是从列表中删除了这个程序，并不会真的从硬盘上删除程序的可执行文件）。如果从一个alternative组中删除了一个正在被链接的程序并且这个组仍 然没有变成空的，update-alternative会自动用一个具有其他优先级的可选程序代替原来的程序。如果这个组变成空的了，那么连这个 alternative组都会被移除。如果删除的程序没有被链接，则只有有关这个程序的信息会移除。

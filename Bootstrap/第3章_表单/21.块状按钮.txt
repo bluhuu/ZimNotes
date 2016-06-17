@@ -1,0 +1,21 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-07T09:41:15+08:00
+
+====== 21.块状按钮 ======
+Created Tuesday 07 June 2016
+{{./53b36c2b000130f202260110.jpg}}
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>块状按钮</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+<body>
+	<button class="btn btn-primary btn-lg __btn-block__" type="button">大型按钮.btn-lg</button> 
+	<button class="btn btn-primary btn-block" type="button">正常按钮</button>
+	<button class="btn btn-primary btn-sm btn-block" type="button">小型按钮.btn-sm</button>
+	<button class="btn btn-primary btn-xs btn-block" type="button">超小型按钮.btn-xs</button>   
+</body>
+</html>

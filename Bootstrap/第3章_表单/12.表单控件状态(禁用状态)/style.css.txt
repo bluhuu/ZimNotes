@@ -1,0 +1,33 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-07T05:48:32+08:00
+
+====== style.css ======
+Created 星期二 07 六月 2016
+
+/*源码请查看bootstrap.css文件第1723行～第1729行*/
+
+.__form-control__[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+cursor: not-allowed;
+background-color: #eee;
+opacity: 1;
+}
+
+/*源码请查阅bootstrap.css文件第1781行～第1794行*/
+
+input[type="radio"][disabled],
+input[type="checkbox"][disabled],
+.radio[disabled],
+.radio-inline[disabled],
+.checkbox[disabled],
+.checkbox-inline[disabled],
+fieldset[disabled] input[type="radio"],
+fieldset[disabled] input[type="checkbox"],
+fieldset[disabled] .radio,
+fieldset[disabled] .radio-inline,
+fieldset[disabled] .checkbox,
+fieldset[disabled] .checkbox-inline {
+__cursor__: not-allowed;
+}

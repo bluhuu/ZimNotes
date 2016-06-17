@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-06T13:15:32+08:00
+
+====== 02.全局样式 ======
+
+=== 说明： ===
+__其实Bootstrap的全局样式采用了“normalize.css”__，但并没有一味的全部使用此重置样式，而是在此基础上进行了一些改良，让其更适合Bootstrap的设计思想。
+你可以通过“normalize.less”（LESS版本）或“_normalize.scss”（Sass版本）进行深入的了解。
+
