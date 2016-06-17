@@ -1,0 +1,82 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-17T17:32:44+08:00
+
+====== module初步理解 ======
+Created Friday 17 June 2016
+[[http://www.cnblogs.com/dolphinX/p/3485260.html|引用]]
+node.js使用模块和包来组织，其机制实现参照了CommonJS标准，虽未完全遵守，但差距不大，使用起来非常简单。
+
+===== 什么是模块 =====
+在node.js中模块与文件是一一对应的，也就是说一个node.js文件就是一个模块，文件内容可能是我们封装好的一些JavaScript方法、JSON数据、编译过的C/C++拓展等，在[[http://www.cnblogs.com/dolphinX/p/3475090.html|关于node.js的误会]]提到过node.js的架构
+{{./pasted_image.png}}
+
+
+其中http、fs、net等都是node.js提供的核心模块，使用C/C++实现，外部用JavaScript封装。
+
+===== 创建、加载模块 =====
+* 模块在node.js中的概念很简单，看看如何创建一个我们自己的模块供开发复用。
+在node.js中创建模块非常简单，一个文件就是一个模块，所以我们创建一个test.js文件就创建了一个模块
+__test.js__
+var name='';
+function setName(n){
+	name=n;
+} 
+function printName(){
+	console.log(name);
+}
+
+* node.js使用__exports和require对象__来解决对外提供接口和引用模块的问题。
+我们可以把模块中希望被外界访问的内容定义到exports对象中，对test.js稍作修改就可以了
+__test.js__
+var name='';
+function setName(n){
+	name=n;
+} 
+function printName(){
+	console.log(name);
+}
+__exports.setName=setName;__
+__exports.printName=printName;__
+* 这样我们在相同路径下创建index.js，使用require引用一下test.js module
+__index.js__
+__var test=require('./test');__
+test.setName('Byron');
+test.printName();
+{{./pasted_image001.png}}
+
+===== exports一个对象 =====
+有时候我们希望模块对外提供的使一个对象，修改一下test.js
+__test.js__
+var Student=function(){
+	var name='';
+	 this.setName=function(n){
+		name=n;
+	}; 
+	this.printName=function(){
+		console.log(name)    ;
+	};
+};
+**exports.Student=Student;**
+这样我们对外提供了一个Student类，在使用的时候需要这样
+var Student=require('./test').Student;
+var student=new Student();
+student.setName('Byron');
+student.printName();
+require('./test').Student 很**丑陋**的样子，我们可以简单修改一下exports方式，**使require优雅一些**
+__test.js__
+var Student=function(){
+	var name='';
+	 this.setName=function(n){
+		name=n;
+	}; 
+	this.printName=function(){
+		console.log(name)    ;
+	};
+};
+**module.exports=Student;**
+这样我们的require语句就可以优雅一些了
+var Student=require('./test');
+很神奇的样子，不是说好的exports是模块公开的接口嘛，那么module.exports是什么东西？
+
+===== module.exports与exports =====
