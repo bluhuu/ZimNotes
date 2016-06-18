@@ -20,15 +20,12 @@ npm install webpack -g
 npm install webpack-dev-server -g
 
 === 常用环境（本地）（–save 命令用于将包添加至 package.json） ===
-{{{code: lang="java" linenumbers="True"
 npm install react --save
 npm install react-dom --save
 npm install babel-core
 npm install babel-loader
 npm install babel-preset-react
 npm install babel-preset-es2015
-}}}
-
 
 === 安装ant ===
 cnpm install antd 或 npm install antd

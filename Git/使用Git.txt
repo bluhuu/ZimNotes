@@ -1,0 +1,25 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-18T12:02:11+08:00
+
+====== 使用Git ======
+Created 星期六 18 六月 2016
+
+===== 添加github源 =====
+1. ssh-keygen -t rsa -C "bluhuu[[@gmail.com]]"
+2. git remote add origin git@github.com:XXXXX/XXXXX.git
+3. git push -u origin master	//第一次推送master分支的所有内容
+
+===== 添加文件 =====
+**git** add XXX
+git add file2.txt file3.txt
+
+===== 提交 =====
+**git commit -m** "XXX"
+
+===== 推送 =====
+**git push origin master**
+
+===== 状态 =====
+git status
+

@@ -12,14 +12,6 @@ Created Friday 17 June 2016
 	sudo apt-get install git
 
 
-===== 添加github源 =====
-{{{code: lang="cpp" linenumbers="True"
-git remote add origin git@github.com:XXXXX/XXXXX.git
-git push -u origin master	//第一次推送master分支的所有内容
-}}}
 
-
-===== 提交 =====
-git push origin master
 
 
