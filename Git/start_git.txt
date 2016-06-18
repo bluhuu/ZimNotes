@@ -2,16 +2,14 @@ Content-Type: text/x-zim-wiki
 Wiki-Format: zim 0.4
 Creation-Date: 2016-06-18T12:02:11+08:00
 
-====== 使用Git ======
+====== start git ======
 Created 星期六 18 六月 2016
 
-=== 添加github源 ===
-1. git remote add origin git@github.com:XXXXX/XXXXX.git
-2. git push -u origin master	//第一次推送master分支的所有内容
+=== 获取新版本 ===
+git pull
 
 === 添加文件 ===
-**git** add XXX
-git add file2.txt file3.txt
+git add file1.txt file2.txt
 
 === 提交 ===
 **git commit -m** "XXX"
@@ -28,7 +26,6 @@ git diff HEAD -- readme.txt
 
 === 历史记录 ===
 **git log** --pretty=oneline
-* 查看提交历史
 
 === 回退 ===
 **git reset** --hard HEAD^
