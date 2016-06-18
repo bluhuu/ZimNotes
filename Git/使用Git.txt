@@ -6,7 +6,7 @@ Creation-Date: 2016-06-18T12:02:11+08:00
 Created 星期六 18 六月 2016
 
 ===== 添加github源 =====
-1. ssh-keygen -t rsa -C "bluhuu[[@gmail.com]]"
+1. ssh-keygen -t rsa -C "bluhuu@gmail.com"
 2. git remote add origin git@github.com:XXXXX/XXXXX.git
 3. git push -u origin master	//第一次推送master分支的所有内容
 
