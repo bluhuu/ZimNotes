@@ -1,0 +1,122 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-18T16:09:15+08:00
+
+====== think ======
+Created 星期六 18 六月 2016
+
+===== 命名空间 =====
+hello.js
+'use strict';
+	var s = 'Hello';
+	function greet(name) {
+		console.log(s + ', ' + name + '!');
+	}
+	module.exports = greet;
+
+main.js
+	'use strict';
+	__// 引入hello模块:__
+	var greet = require('./hello'); __//CommonJS规范__
+	var s = 'Michael';
+	greet(s); __// Hello, Michael!__
+
+===== 深入了解模块原理 =====
+
+=== 闭包： ===
+	(function () {
+		// 读取的hello.js代码:
+		var s = 'Hello';
+		var name = 'world';
+	
+		console.log(s + ' ' + name + '!');
+		// hello.js代码结束
+	})();
+
+===== module.exports =====
+	__// 准备module对象:__
+	var __module__ = {
+		id: 'hello',
+		exports: {}
+	};
+	
+	var load = function (__module__) {
+		// 读取的hello.js代码:
+		function greet(name) {
+			console.log('Hello, ' + name + '!');
+		}
+	
+		__module__.exports = greet;
+		// hello.js代码结束
+		return __module__.exports;
+	};
+	
+	var __exported__ = load(module);
+	// 保存module:
+	save(__module__, __exported__);
+
+===== module.exports vs exports =====
+方法一：对module.exports赋值：
+	// hello.js
+	
+	function hello() {
+		console.log('Hello, world!');
+	}
+
+	function greet(name) {
+		console.log('Hello, ' + name + '!');
+	}
+
+	module.exports = {
+		hello: hello,
+		greet: greet
+	};
+方法二：直接使用exports：
+	// hello.js
+	
+	function hello() {
+		console.log('Hello, world!');
+	}
+	
+	function greet(name) {
+		console.log('Hello, ' + name + '!');
+	}
+	
+	exports.hello = hello;
+	exports.greet = greet;
+**分析Node的加载机制**
+1. 首先，Node会把整个待加载的hello.js文件放入一个包装函数load中执行。在执行这个load()函数前，Node准备好了module变量：
+	var module = {
+		id: 'hello',
+		exports: __{}__
+	};
+load()函数最终返回module.exports：
+	var load = function (exports, module) {
+		// hello.js的文件内容
+		...
+		// load函数返回:
+		return module.exports;
+	};
+	
+	__var exported = load(module.exports, module); //重点------------------------------------------------------------------------------------------------------------------__
+也就是说，默认情况下，Node准备的__exports__变量和__module.exports__变量实际上是__同一个变量__，并且初始化为空对象{}，于是，我们可以写：	
+	exports.foo = function () { return 'foo'; };
+	exports.bar = function () { return 'bar'; };
+也可以写：
+	module.exports.foo = function () { return 'foo'; };
+	module.exports.bar = function () { return 'bar'; };
+换句话说，Node默认给你准备了一个空对象{}，这样你可以直接往里面加东西。
+但是，如果我们要输出的是一个函数或数组，那么，只能给module.exports赋值：
+	module.exports = function () { return 'foo'; };
+
+===== 结论 =====
+
+如果要输出一个键值对象{}，可以利用exports这个已存在的空对象{}，并继续在上面添加新的键值；
+如果要输出一个函数或数组，必须直接对module.exports对象赋值。
+所以我们可以得出结论：__直接对module.exports赋值__，可以应对任何情况：
+module.exports = {
+	foo: function () { return 'foo'; }
+};
+或者：
+module.exports = function () { return 'foo'; };
+最终，我们强烈建议使用__module.exports = xxx的方式来输出模块变量，这样，你只需要记忆一种方法__。
