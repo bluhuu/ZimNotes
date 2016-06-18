@@ -9,6 +9,7 @@ Created 星期六 18 六月 2016
 git pull
 
 === 添加文件 ===
+git add  -A 
 git add file1.txt file2.txt
 
 === 提交 ===
