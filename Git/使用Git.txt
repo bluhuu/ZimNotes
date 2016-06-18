@@ -5,38 +5,49 @@ Creation-Date: 2016-06-18T12:02:11+08:00
 ====== 使用Git ======
 Created 星期六 18 六月 2016
 
-===== 添加github源 =====
-1. **ssh-keygen** -t rsa -C "bluhuu@gmail.com"
-2. git remote add origin git@github.com:XXXXX/XXXXX.git
-3. git push -u origin master	//第一次推送master分支的所有内容
+=== 添加github源 ===
+1. git remote add origin git@github.com:XXXXX/XXXXX.git
+2. git push -u origin master	//第一次推送master分支的所有内容
 
-===== 添加文件 =====
+=== 添加文件 ===
 **git** add XXX
 git add file2.txt file3.txt
 
-===== 提交 =====
+=== 提交 ===
 **git commit -m** "XXX"
 
-===== 推送 =====
+=== 推送 ===
 **git push origin master**
 
-===== 状态 =====
+=== 状态 ===
 **git status**
 
-===== 比较 =====
+=== 比较 ===
 **git diff**
+git diff HEAD -- readme.txt
 
-===== 历史记录 =====
+=== 历史记录 ===
 **git log** --pretty=oneline
 * 查看提交历史
 
-===== 回退 =====
+=== 回退 ===
 **git reset** --hard HEAD^
 git reset --hard 3628164
 * HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令git reset --hard commit_id
 
-===== 后悔药 =====
+=== 后悔药 ===
 **git reflog**
 * 查看命令历史
 
+=== 回到最近一次git commit或git add时的状态 ===
+**git checkout** -- file
+
+=== 暂存区的修改撤销掉（unstage），重新放回工作区 ===
+git reset HEAD file
+
+=== 删除文件 ===
+**git rm** file
+
+=== 从远程库克隆 ===
+git clone git@github.com:bluhuu/ZimNotes.git
 
