@@ -26,7 +26,7 @@ git merge origin/master
 git remote -v
 
 === 2. 从远程获取最新版本到本地 ===
-git fetch origin [[master:temp]]
+git fetch origin master:temp
 
 === 比较本地的仓库和远程参考的区别 ===
 
