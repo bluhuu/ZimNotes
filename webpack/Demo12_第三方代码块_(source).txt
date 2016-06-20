@@ -1,0 +1,61 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-20T17:25:57+08:00
+
+====== Demo12 第三方代码块 (source) ======
+Created Monday 20 June 2016
+
+=== 你也可以用CommonsChunkPlugin提取第三方库将其分离成一个文件。 main.js ===
+
+var $ = require('jquery');  
+$('h1').text('Hello World');
+
+== index.html ==
+<html>  
+  <body>
+	<h1></h1>
+	<script src="vendor.js"></script>
+	<script src="bundle.js"></script>
+  </body>
+</html>  
+
+== webpack.config.js ==
+
+var webpack = require('webpack');
+
+module.exports = {  
+  entry: {
+	app: './main.js',
+	**vendor: ['jquery'],**
+  },
+  output: {
+	filename: 'bundle.js'
+  },
+  plugins: [
+	new webpack.optimize.CommonsChunkPlugin(/* chunkName= */**'vendor'**, /* filename= */**'vendor.js'**)
+  ] 
+};
+
+=== 如果你想某个模块在其他模块中作为一个变量调用，比如，不需要require("jquery")，就可以用$和jQuery引用jquery模块，那么你可以试试ProvidePlugin (官方文档). ===
+
+== // main.js ==
+$('h1').text('Hello World');
+
+== // webpack.config.js ==
+var webpack = require('webpack');
+
+module.exports = {  
+  entry: {
+	app: './main.js'
+  },
+  output: {
+	filename: 'bundle.js'
+  },
+  plugins: [
+	new webpack.ProvidePlugin({
+	  $: "jquery",
+	  jQuery: "jquery",
+	  "window.jQuery": "jquery"
+	})
+  ]
+};

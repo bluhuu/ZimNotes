@@ -1,0 +1,44 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-20T17:28:30+08:00
+
+====== Demo07 UglifyJs插件 (source) ======
+Created Monday 20 June 2016
+
+=== webpack可以通过插件系统来扩展功能，比如UglifyJs Plugin 压缩js的代码。 ===
+
+== main.js ==
+
+var longVariableName = 'Hello';  
+longVariableName += ' World';  
+document.write('<h1>' + longVariableName + '</h1>');  
+
+== index.html ==
+
+<html>  
+<body>  
+  <script src="bundle.js"></script>
+</boby>  
+</html>  
+
+== webpack.config.js ==
+
+**var webpack = require('webpack');**  
+**var uglifyJsPlugin = webpack.optimize.UglifyJsPlugin;**  
+module.exports = {  
+  entry: './main.js',
+  output: {
+	filename: 'bundle.js'
+  },
+  **plugins: [**
+	**new uglifyJsPlugin({**
+	**  compress: {**
+		**warnings: false**
+	**  }**
+	**})**
+**  ]**
+};
+
+=== 启动服务器之后， main.js 将会被压缩成如下。 ===
+
+var o="Hello";o+=" World",document.write("<h1>"+o+"</h1>")  

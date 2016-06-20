@@ -1,0 +1,43 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-20T17:27:52+08:00
+
+====== Demo08 环境标记 (source)只在开发环境下运行的代码 ======
+Created Monday 20 June 2016
+
+=== 你可以通过环境标记，来启用一些只在开发环境下运行的代码 ===
+
+== main.js ==
+
+document.write('<h1>Hello World</h1>');
+
+if (__DEV__) {  
+  document.write(new Date());
+}
+
+== index.html ==
+
+<html>  
+<body>  
+  <script src="bundle.js"></script>
+</body>  
+</html>  
+
+== webpack.config.js ==
+
+var webpack = require('webpack');
+
+var devFlagPlugin = new webpack.DefinePlugin({  
+  __DEV__: JSON.stringify(JSON.parse(process.env.DEBUG || 'false'))
+});
+
+module.exports = {  
+  entry: './main.js',
+  output: {
+	filename: 'bundle.js'
+  },
+  plugins: [devFlagPlugin]
+};
+
+=== 把环境变量传给webpack ===
+$ env DEBUG=true webpack-dev-server

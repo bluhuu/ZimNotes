@@ -1,0 +1,45 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-20T17:27:24+08:00
+
+====== Demo09 代码分离(source) ======
+Created Monday 20 June 2016
+
+=== 对于一个大型大型应用来说，把所有的代码放在一个文件里效率是很低的。webpack支持将代码分成若干个代码块。尤其是在某些代码块只会在一些情况下被引用，这些代码块应该按需加载。 ===
+
+=== 首先，你可以使用 require.ensure 来定义一个分割点 (官方文档) ===
+
+== // main.js ==
+require.ensure(['./a'], function(require) {  
+  var content = require('./a');
+  document.open();
+  document.write('<h1>' + content + '</h1>');
+  document.close();
+});
+
+=== require.ensure 告诉webpack ./a.js 应该从 bundle.js 分离 然后构建成一个独立的文件。 ===
+
+== // a.js ==
+module.exports = 'Hello World';  
+
+=== 现在webpack关心依赖，输出文件和运行着的东西，你不必在 index.html 和 webpack.config.js中添加任何冗余代码。 ===
+
+<html>  
+  <body>
+	<script src="bundle.js"></script>
+  <body>
+</html>  
+webpack.config.js
+
+module.exports = {  
+  entry: './main.js',
+  output: {
+	filename: 'bundle.js'
+  }
+};
+
+=== 启动服务器 ===
+
+$ webpack-dev-server
+
+=== 表面上，你会觉得有什么区别，然而，webpack实际上把main.js和a.js 构建成了不同的代码块(bundle.js 和 1.bundle.js)，并在有需要的时候从bundle.js加载 1.bundle.js ===

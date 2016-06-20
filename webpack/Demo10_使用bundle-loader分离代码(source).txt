@@ -1,0 +1,21 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-20T17:26:57+08:00
+
+====== Demo10 使用bundle-loader分离代码(source) ======
+Created Monday 20 June 2016
+
+=== 也可以使用bundle-loader来分离代码。 ===
+
+== // main.js ==
+var load = require('bundle-loader!./a.js');
+
+load(function(file) {  
+  document.open();
+  document.write('<h1>' + file + '</h1>');
+  document.close();
+});
+
+=== require('bundle-loader!./a.js') 告诉 Webpack从另一个代码块中去加载a.js。 ===
+
+=== 现在webpack会将 main.js 构建成 bundle.js， a.js 构建成 1.bundle.js. ===

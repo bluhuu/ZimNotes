@@ -1,0 +1,35 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-20T17:30:35+08:00
+
+====== Demo02 多个入口文件 (source) ======
+Created Monday 20 June 2016
+
+=== webpack支持多个入口文件，因为这对多页面的应用来说很有用。 ===
+
+== // main1.js ==
+document.write('<h1>Hello World</h1>');
+
+== // main2.js ==
+document.write('<h2>Hello Webpack</h2>');  
+
+== index.html ==
+
+<html>  
+  <body>
+	<script src="bundle1.js"></script>
+	<script src="bundle2.js"></script>
+  </body>
+</html>  
+
+== webpack.config.js ==
+
+module.exports = {  
+  entry: {
+	bundle1: './main1.js',
+	bundle2: './main2.js'
+  },
+  output: {
+	filename: '[name].js'   //  name 是 entry 的key值
+  }
+};

@@ -1,0 +1,47 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-20T17:29:26+08:00
+
+====== Demo05 Image loader (source) ======
+Created Monday 20 June 2016
+
+=== Webpack也可以在js文件里面加载image ===
+
+== main.js ==
+
+var img1 = document.createElement("img");  
+img1.src = require("./small.png");  
+document.body.appendChild(img1);
+
+var img2 = document.createElement("img");  
+img2.src = require("./big.png");  
+document.body.appendChild(img2);  
+
+== index.html ==
+
+<html>  
+  <body>
+	<script type="text/javascript" src="bundle.js"></script>
+  </body>
+</html>  
+
+== webpack.config.js ==
+
+module.exports = {  
+  entry: './main.js',
+  output: {
+	filename: 'bundle.js'
+  },
+  module: {
+	loaders:[
+	  { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192' }
+	]
+  }
+};
+
+=== url-loader可以转换image文件. 如果图片大小小于 8192字节,如篇会转化成一个base64的Data URL; 否则就转化成普通的URL.你看到的问号标记是用来将参数传到加载器里面去的。 ===
+
+=== 启动服务器之后, small.png 和 big.png 将变成以下URL的样子. ===
+
+<img src="data:image/png;base64,iVBOR...uQmCC">  
+<img src="4853ca667a2b8b8844eb2693ac1b2578.png">  

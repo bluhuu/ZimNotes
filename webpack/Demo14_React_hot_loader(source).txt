@@ -1,0 +1,74 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-20T17:25:17+08:00
+
+====== Demo14 React hot loader(source) ======
+Created Monday 20 June 2016
+
+这个demo复制了React hot boilerplate.
+
+=== React Hot Loader是一个webpack的插件，他可以让你在编辑react组件时，立即刷新而不会丢失状态。 因为我们使用了全局的 webpack-dev-server，所以为了跑这个demo，我们还要安装一些全局的模块。 ===
+
+$ npm i -g react-hot-loader react babel-loader
+然后执行 webpack-dev-server.
+
+$ webpack-dev-server --progress --hot
+
+=== 现在你可以在浏览器中看见hello world。  --hot 选项告诉 webpack-dev-server，当组件源代码改变的时候，不重新加载整个页面的情况下替换该组件。 ===
+
+== 现在不要关闭服务器，去编辑App.js,把 'Hello World' 修改成 'Hello Webpack'，保存，去看一下浏览器发生了什么。 ==
+
+== App.js ==
+
+import React, { Component } from 'react';
+
+export default class App extends Component {  
+  render() {
+	return (
+	  <h1>Hello World</h1>
+	);
+  }
+}
+
+== index.js ==
+
+import React from 'react';  
+import App from './App';
+
+React.render(<App />, document.getElementById('root'));  
+
+== index.html ==
+
+<html>  
+  <body>
+	<div id='root'></div>
+	<script src="/static/bundle.js"></script>
+  </body>
+</html>  
+webpack.config.js
+
+var webpack = require('webpack');  
+var path = require('path');
+
+module.exports = {  
+  entry: [
+	'webpack-dev-server/client?http://localhost:8080',
+	'webpack/hot/only-dev-server',
+	'./index.js'
+  ],
+  output: {
+	filename: 'bundle.js',
+	publicPath: '/static/'
+  },
+  plugins: [
+	new webpack.HotModuleReplacementPlugin(),
+	new webpack.NoErrorsPlugin()
+  ],
+  module: {
+	loaders: [{
+	  test: /\.jsx?$/,
+	  loaders: ['react-hot-loader', 'babel-loader'],
+	  include: path.join(__dirname, '.')
+	}]
+  }
+};

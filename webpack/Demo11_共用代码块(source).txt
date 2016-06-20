@@ -1,0 +1,55 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-20T17:26:34+08:00
+
+====== Demo11 共用代码块(source) ======
+Created Monday 20 June 2016
+
+=== 当多个脚本都含有相同代码块的时候，你可以使用CommonsChunkPlugin将相同的部分题取出来，分离成一个文件。 ===
+
+== // main1.jsx ==
+var React = require('react');  
+React.render(  
+  <h1>Hello World</h1>,
+  document.getElementById('a')
+);
+
+== // main2.jsx ==
+var React = require('react');  
+React.render(  
+  <h2>Hello Webpack</h2>,
+  document.getElementById('b')
+);
+
+== index.html ==
+
+<html>  
+  <body>
+	<div id="a"></div>
+	<div id="b"></div>
+	<script src="init.js"></script>
+	<script src="bundle1.js"></script>
+	<script src="bundle2.js"></script>
+  </body>
+</html>  
+
+== webpack.config.js ==
+
+**var CommonsChunkPlugin =require("webpack/lib/optimize/CommonsChunkPlugin");**  
+module.exports = {  
+  entry: {
+	bundle1: './main1.jsx',
+	bundle2: './main2.jsx'
+  },
+  output: {
+	filename: '[name].js'
+  },
+  module: {
+	loaders:[
+	  { test: /\.js[x]?$/, exclude: /node_modules/, loader: 'babel-loader' },
+	]
+  },
+  plugins: [
+	**new CommonsChunkPlugin('init.js')**
+  ]
+}

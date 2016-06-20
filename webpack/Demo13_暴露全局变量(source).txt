@@ -1,0 +1,42 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-20T17:24:07+08:00
+
+====== Demo13 暴露全局变量(source) ======
+Created Monday 20 June 2016
+
+=== 如果你想使用全局变量，但并不想让他们包含在webpack打包文件里。你可以在webpack.config.js中配置 externals(官方文档) ===
+
+=== 比如，我们现在有一个data.js. ===
+
+var data = 'Hello World';  
+
+=== 我们可以将 data暴露成为一个全局变量 ===
+
+== // webpack.config.js ==
+module.exports = {  
+  entry: './main.jsx',
+  output: {
+	filename: 'bundle.js'
+  },
+  module: {
+	loaders:[
+	  { test: /\.js[x]?$/, exclude: /node_modules/, loader: 'babel-loader?presets[]=es2015&presets[]=react' },
+	]
+  },
+  externals: {
+	'data': 'data'
+  }
+};
+
+=== 现在，你可以在你的脚本中引用data作为一个模块变量，但实际上是一个全局变量。 ===
+
+== // main.jsx ==
+var data = require('data');  
+var React = require('react');
+
+React.render(  
+  <h1>{data}</h1>,
+  document.body
+);
+

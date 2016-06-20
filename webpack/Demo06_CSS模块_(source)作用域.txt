@@ -1,0 +1,68 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-20T17:29:04+08:00
+
+====== Demo06 CSS模块 (source)作用域 ======
+Created Monday 20 June 2016
+
+**css局部作用域**
+**:global(...)全局作用域**
+
+=== css-loader?modules （查询参数模块) 可以将CSS 模块规范化。 ===
+
+=== 这就意味着你模块的css默认是局部作用域(译者注：本例中即内部)的css。你可以通过:global(...)选择将其变成全局作用域下的css。更多信息 ===
+
+== index.html ==
+
+<html>  
+<body>  
+  <h1 class="h1">Hello World</h1>
+  <h2 class="h2">Hello Webpack</h2>
+  <div id="example"></div>
+  <script src="./bundle.js"></script>
+</body>  
+</html>  
+
+== app.css ==
+
+.h1 {
+  color:red;
+}
+
+:global(.h2) {
+  color: blue;
+}
+
+== main.jsx ==
+
+var React = require('react');  
+var style = require('./app.css');
+
+React.render(  
+  <div>
+	<h1 className={style.h1}>Hello World</h1>
+	<h2 className="h2">Hello Webpack</h2>
+  </div>,
+  document.getElementById('example')
+);
+
+== webpack.config.js ==
+
+module.exports = {  
+  entry: './main.jsx',
+  output: {
+	filename: 'bundle.js'
+  },
+  **module: {**
+	**loaders:[**
+	**  { test: /\.js[x]?$/, exclude: /node_modules/, loader: 'babel-loader' },**
+	**  { test: /\.css$/, loader: 'style-loader!css-loader?modules' }**
+	**]**
+**  }**
+};
+
+=== 启动服务器 ===
+
+== $ webpack-dev-server ==
+
+=== 访问 http://127.0.0.1:8080 , 你会发现只有h1, 因为h1的css是局部作用域的,而h2 是蓝色的,因为他的css是全局的作用域。 ===

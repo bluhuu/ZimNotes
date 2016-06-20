@@ -1,0 +1,58 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-20T17:29:48+08:00
+
+====== Demo04 CSS-loader (source) ======
+Created Monday 20 June 2016
+
+**注：在js中引用css到html，js中转**
+
+=== webpack支持在js文件里面加载css，你可以通过CSS-loader来预处理css文件。 ===
+
+== main.js ==
+
+require('./app.css');  
+
+== app.css ==
+
+body {  
+  background-color: blue;
+}
+
+== index.html ==
+
+<html>  
+  <head>
+	<script type="text/javascript" src="bundle.js"></script>
+  </head>
+  <body>
+	<h1>Hello World</h1>
+  </body>
+</html>  
+
+== webpack.config.js ==
+
+module.exports = {  
+  entry: './main.js',
+  output: {
+	filename: 'bundle.js'
+  },
+  module: {
+	loaders:[
+	  { test: /\.css$/, loader: 'style-loader!css-loader' },
+	]
+  }
+};
+
+=== 注意，你需要两个加载器来转换css文件。第一个是CSS-loader读取css文件, 另一个是Style-loader，将style标签插入到html页面。不同加载器由感叹号链接。 ===
+
+=== 启动服务器之后，index.html将会有内联样式。 ===
+
+<head>  
+  <script type="text/javascript" src="bundle.js"></script>
+  <style type="text/css">
+	body {
+	  background-color: blue;
+	}
+  </style>
+</head>  
