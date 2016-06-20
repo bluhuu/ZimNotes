@@ -1,0 +1,53 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-20T14:53:42+08:00
+
+====== let和const ======
+Created Monday 20 June 2016
+
+let和const
+
+ES6中有两个新特性：let和 const，为了理解let，我们需要记住var是创建函数生存期内的变量：
+
+function printName() {
+  if(true) {
+	var name = "Rafael";
+  }
+  console.log(name); // Rafael
+}
+不像Java或其他语言，任何变量在JS中是在一个函数内创建，它会升级到哦函数之外部，不管你在哪里定义变量，都和你在函数顶部定义一样，这个行为称为hoisting。
+
+上面代码用下面方式容易理解些：
+
+function printName() {
+  var name; // variable declaration is hoisted to the top
+  if(true) {
+	name = "Rafael";
+  }
+  console.log(name); // Rafael
+}
+那么let是如何工作呢，和hoisting有什么关系，我们导入let的代码如下：
+
+function printName() {
+  if(true) {
+	let name = "Rafael";
+  }
+  console.log(name); // ReferenceError: name is not defined
+}
+let是在一个代码块内，变量名只能在代码块中可见。
+
+function printName() {
+  var name = "Hey";
+  if(true) {
+	let name = "Rafael";
+	console.log(name); // Rafael
+  }
+  console.log(name); // Hey
+}
+总结：var是function-scoped，而let是 block-scoped.
+
+const是创建常量使用，一旦创建就一直不会被概念，如下：
+
+const SERVER_URL = "http://www.jdon.com"
+
+ES6还有其他新功能：Map, WeakMap, generators 和Proxies
