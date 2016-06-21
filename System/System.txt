@@ -13,6 +13,7 @@ Creation-Date: 2016-06-04T08:17:02+08:00
 	fcitx-pinyin、fcitx-sunpinyin、fcitx-googlepinyin，fcitx-sogoupinyin
 	fcitx-table、fcitx-table-wubi、fcitx-table-wbpy
 
+
 ==== 获取root权限 ====
 sudo -i
 sudo passwd
@@ -104,3 +105,8 @@ sudo apt-get install aria2
 ==== 分区工具Gparted ====
 sudo apt-get install gparted
 sudo gparted
+
+==== deadbeef ====
+sudo add-apt-repository ppa:starws-box/deadbeef-player
+sudo apt-get update
+sudo apt-get install deadbeef
