@@ -25,7 +25,7 @@ document.write('<h1>' + longVariableName + '</h1>');
 
 **var webpack = require('webpack');**  
 **var uglifyJsPlugin = webpack.optimize.UglifyJsPlugin;**  
-module.exports = {  
+module.exports = {
   entry: './main.js',
   output: {
 	filename: 'bundle.js'

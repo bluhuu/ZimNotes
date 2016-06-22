@@ -1,0 +1,93 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-22T12:54:30+08:00
+
+====== react+webpack 开发环境总结 ======
+Created Wednesday 22 June 2016
+
+===== 1.nodejs v8 =====
+
+===== 2.npm 基于网络的包分享发布工具（网上很多功能模块的包，可以下载使用） =====
+	**package.json**
+		1.工程名、版本
+		2.包依赖配置、开发时的包依赖配置
+		3.宏-运行、打包、代理、等等。
+  "scripts": {
+	"start": "npm run dev",
+	"dev": "dora -p 8001 --plugins webpack,hmr,proxy,livereload?enableJs=false",
+	"lint": "eslint --ext .js,.jsx src",
+	"build": "atool-build -o D:/tomcat-7.0.68/webapps/elink_scm_web/app/"
+  }
+
+===== 3.webpack 模块加载器兼打包工具（JS、css、图片、等） =====
+	加载类似于html：
+	<link rel="stylesheet" type="text/css" href="./index.css"/>
+	<script src="assets/js/jquery-1.10.2.js"></script>
+	加载器(es6->js、jsx->js)：
+	  loaders: [
+			{ test: /\.css$/, loader: 'style-loader!css-loader' },
+			{ test: /\.js$/, loader: 'jsx-loader?harmony' },
+			{ test: /\.scss$/, loader: 'style!css!sass?sourceMap'},
+			{ test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'}
+			]
+			还有less-loader、babel-loader、file-loader、json-loader、postcss-loader ...
+	打包：编译、合并、输出（可配置）
+	"build": "atool-build -o D:/tomcat-7.0.68/webapps/elink_scm_web/app/"
+	使用：
+	  import React from 'react';
+	  import App from '../component/App';
+	  import styles from './ScopedSelectors.css';
+	  import img1 from './image/small.jpg';
+	  另：var React = require('react');
+
+===== 4.React  *.jsx(语法糖) =====
+	- 特点：虚拟dom、查找要渲染的DOM节点并渲染该节点(局部刷新)
+	  ReactDOM.render(<App /> , document.getElementById('react-content'));
+	- 速度: 虚拟dom与真实dom对比（算法优化），只渲染差异位置
+	- 数据流：
+	  + Props
+	* var Name = React.createClass({
+					  xx1: function(){
+						console.log(this.props.name);
+					  }
+					  render: function() {
+						return (
+						  <h1>{this.props.name}</h1>
+						);
+					  }
+					});
+	* <Name name={XXX} />
+	  + State
+		  var LikeButton = React.createClass({
+			getInitialState: function() {
+			  return {liked: false};
+			},
+			handleClick: function(event) {
+			  this.setState({liked: !this.state.liked});
+			},
+			render: function() {
+			  var text = this.state.liked ? '喜欢' : '不喜欢';
+			  return (
+				<p onClick={this.handleClick}>
+				  你<b>{text}</b>我。点我切换状态。
+				</p>
+			  );
+			}
+		  });
+
+		  React.render(
+			<LikeButton />,
+			document.getElementById('example')
+		  );
+
+===== 5.总结： =====
+	1.react+webpack 可以实现真正的模块化设计
+	  -xx.jsx--html 结构
+			 --js   逻辑
+			 --ccs、less 样式
+			 --jpg  图片
+			 。。。
+	2.要从0开始积累可用的jsx资源库
+	3.React Native 可以实现移动端的app开发(不是浏览器)
+
+
