@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-23T17:09:05+08:00
+
+====== const ======
+Created Thursday 23 June 2016
+
+
+const声明的变量与let声明的变量类似，它们的不同之处在于，__const__声明的变量__只可以在声明时赋值__，__不可随意修改__，否则会__导致SyntaxError__（语法错误）。
+
+	const MAX_CAT_SIZE_KG = 3000;	 // 正确
+
+	MAX_CAT_SIZE_KG = 5000;		 // 语法错误（SyntaxError）
+	MAX_CAT_SIZE_KG++; 			// 虽然换了一种方式，但仍然会导致语法错误
+
+用__const声明变量后必须要赋值__，否则也抛出语法错误。
+	const theFairest;  				// 依然是语法错误，你这个倒霉蛋

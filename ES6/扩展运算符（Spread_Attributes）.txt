@@ -1,0 +1,56 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-06-23T11:26:06+08:00
+
+====== 扩展运算符（Spread Attributes） ======
+Created Thursday 23 June 2016
+
+==== 扩展运算符用三个点号表示，功能是把数组或类数组对象展开成一系列用逗号隔开的值 ====
+1. 如果你事先知道组件需要的全部 Props（属性），JSX 很容易地这样写：
+	var component = <Component foo={x} bar={y} [[/>;]]
+2. 修改 Props 是不好的，明白吗
+	var component = <Component />;
+	component.props.foo = x; // 不好
+	component.props.bar = y; // 同样不好
+3. 延展属性（Spread Attributes）
+	 var props = {};
+	 props.foo = x;
+	 props.bar = y;
+	 var component = <Component __{...props}__ [[/>;]]
+	传入对象的属性会被复制到组件内。
+	它能被多次使用，也可以和其它属性一起用。注意__顺序很重要，后面的会覆盖掉前面的__。
+	  var props = { foo: 'default' };
+	  var component = <Component {...props} foo={'override'} />;
+	  console.log(component.props.foo); // 'override'
+例1：
+var foo = function(a, b, c) {
+  console.log(a);
+  console.log(b);
+  console.log(c);
+}
+var arr = [1, 2, 3];
+//传统写法
+foo(arr[0], arr[1], arr[2]);
+
+//使用扩展运算符
+foo(...arr);
+//1
+//2
+//3
+
+例2：
+__//数组深拷贝__
+var arr2 = arr;
+var arr3 = [...arr];
+console.log(arr===arr2); //true, 说明arr和arr2指向同一个数组
+console.log(arr===arr3); //false, 说明arr3和arr指向不同数组
+
+__//把一个数组插入另一个数组字面量__
+var arr4 = [...arr, 4, 5, 6];
+console.log(arr4);//[1, 2, 3, 4, 5, 6]
+
+__//字符串转数组__
+var str = 'love';
+var arr5 = [...str];
+console.log(arr5);//[ 'l', 'o', 'v', 'e' ]
+

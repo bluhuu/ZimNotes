@@ -25,3 +25,4 @@ Created Friday 17 June 2016
 17. npm root						查看当前包的安装路径
 18. npm root -g					查看全局的包的安装路径
 19. npm outdated					检查包是否已经过时，此命令会列出所有已经过时的包，可以及时进行包的更新
+20. npm prune 						删掉
