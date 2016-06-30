@@ -1,5 +1,4 @@
 # atom
----
 https://github.com/JoelBesada/activate-power-mode.git
 https://github.com/orktes/atom-react.git
 https://github.com/kevinsawicki/monokai.git
