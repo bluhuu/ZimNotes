@@ -11,3 +11,9 @@ https://github.com/Glavin001/atom-beautify.git
 https://github.com/pvorona/atom-bracket-highlight.git
 https://github.com/webBoxio/atom-html-preview.git
 https://github.com/richrace/highlight-selected.git
+https://github.com/subtleGradient/language-javascript-jsx.git
+https://github.com/atom-community/autocomplete-paths.git
+https://github.com/webbushka/atom-react-snippets.git
+
+>https://github.com/gandm/language-babel.git  
+https://github.com/sindresorhus/atom-jshint.git  
