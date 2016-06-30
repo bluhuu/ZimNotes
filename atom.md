@@ -18,3 +18,4 @@ https://github.com/akonwi/git-plus.git
 
 >https://github.com/gandm/language-babel.git  
 https://github.com/sindresorhus/atom-jshint.git  
+ss
