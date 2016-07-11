@@ -232,7 +232,7 @@ fetch(url, {
 如果你想在fetch请求里附带cookies之类的凭证信息，可以将 credentials 参数设置成 “include” 值。
 ```javascript
 fetch(url, {  
-  credentials: 'include'  
+  credentials: 'include'
 })
 ```
 显而易见，fetch API相比起传统的 XMLHttpRequest (XHR) 要简单的多，相比起jQuery里提供ajax API也丝毫不逊色。
@@ -243,10 +243,17 @@ promotionClass(){
 	fetch('/elink_scm_web/sClassAction/query.do',{
 				method: 'POST',
 				headers: { "Content-type": "application/x-www-form-urlencoded; charset=UTF-8" },
+				// headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
 				credentials: 'include',
-				body: 'id=0&showChecked=true&node=0'
+				body:'id=0&showChecked=true&node=0'
 	}).then(function(response) {
-		return response.json();//response.text()
+		if (response.status >= 200 && response.status < 300) {
+
+			return response.json();//response.text()
+		}else{
+			console.log('Looks like there was a problem. Status Code: ' + response.status);
+			return;
+		}
 	}).then(function(data) {
 		console.log(data);
 	}).catch(function(err) {
