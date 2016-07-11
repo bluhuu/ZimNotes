@@ -23,5 +23,7 @@ Long instructions can be found here. In short steps:
 >https://github.com/gandm/language-babel.git  
 https://github.com/sindresorhus/atom-jshint.git  
 https://github.com/sindresorhus/atom-jshint.git
-https://github.com/AtomLinter/linter-jshint.git
+
 https://github.com/steelbrain/linter.git
+https://github.com/steelbrain/linter-ui-default.git
+https://github.com/AtomLinter/linter-jshint.git

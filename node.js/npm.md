@@ -1,11 +1,11 @@
-Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.4
-Creation-Date: 2016-06-17T10:44:57+08:00
-
-====== npm ======
-Created Friday 17 June 2016
-
-=== npm常用命令 ===
+#npm
+## 配置
+* smart-npm
+```bash
+npm install --global smart-npm --registry=https://registry.npm.taobao.org/
+npm install --global smart-npm@1 --registry=https://registry.npm.taobao.org/
+```
+## npm常用命令
 1. npm -h							查看npm命令的帮助信息
 2. npm init						会引导你创建一个package.json文件，包括名称、版本、作者这些信息等
 3. npm __rebuild__ moduleName			用于更改包内容后进行重建
