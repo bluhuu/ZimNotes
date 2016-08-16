@@ -89,7 +89,7 @@ sudo apt-get install caffeine
 ```
 ## XMind（思维导图）
 ```bash
-* 官方下载：http://www.xmind.net/download/linux/
+http://www.xmind.net/download/linux/
 sudo dpkg -i xmind-linux-3.4.0.201311050558_amd64.deb
 sudo apt-get -f install
 sudo dpkg -i xmind-linux-3.4.0.201311050558_amd64.deb
