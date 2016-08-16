@@ -1,12 +1,12 @@
 ## fcitx输入法
 ```bash
-	sudo add-apt-repository ppa:fcitx-team/nightly
-	sudo apt-get update
-	sudo apt-get install fcitx-table-wbpy
-	im-config
-	其它输入法：
-	fcitx-pinyin、fcitx-sunpinyin、fcitx-googlepinyin，fcitx-sogoupinyin
-	fcitx-table、fcitx-table-wubi、fcitx-table-wbpy
+sudo add-apt-repository ppa:fcitx-team/nightly
+sudo apt-get update
+sudo apt-get install fcitx-table-wbpy
+im-config
+其它输入法：
+fcitx-pinyin、fcitx-sunpinyin、fcitx-googlepinyin，fcitx-sogoupinyin
+fcitx-table、fcitx-table-wubi、fcitx-table-wbpy
 ```
 
 ## 获取root权限
