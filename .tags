@@ -1,0 +1,79 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+fetch	D:\�û�Ŀ¼\ZimNotes\ES6\fetch.md	/^# fetch$/;"	function	line:1
+基本的fetch用法	D:\�û�Ŀ¼\ZimNotes\ES6\fetch.md	/^## 基本的fetch用法$/;"	function	line:2
+处理JSON	D:\�û�Ŀ¼\ZimNotes\ES6\fetch.md	/^## 处理JSON$/;"	function	line:35
+处理基本的Text/HTML响应	D:\�û�Ŀ¼\ZimNotes\ES6\fetch.md	/^## 处理基本的Text\/HTML响应$/;"	function	line:48
+头信息和元信息(Metadata)	D:\�û�Ŀ¼\ZimNotes\ES6\fetch.md	/^## 头信息和元信息(Metadata)$/;"	function	line:61
+提交表单信息	D:\�û�Ŀ¼\ZimNotes\ES6\fetch.md	/^## 提交表单信息$/;"	function	line:84
+其它要说明的	D:\�û�Ŀ¼\ZimNotes\ES6\fetch.md	/^## 其它要说明的$/;"	function	line:104
+Fetch	D:\�û�Ŀ¼\ZimNotes\ES6\fetch.md	/^## Fetch$/;"	function	line:110
+返回数据对象的元数据(Metadata)	D:\�û�Ŀ¼\ZimNotes\ES6\fetch.md	/^## 返回数据对象的元数据(Metadata)$/;"	function	line:136
+响应的对象Response类型	D:\�û�Ŀ¼\ZimNotes\ES6\fetch.md	/^## 响应的对象Response类型$/;"	function	line:150
+串联 Promises	D:\�û�Ŀ¼\ZimNotes\ES6\fetch.md	/^## 串联 Promises$/;"	function	line:179
+用fetch执行表单数据提交	D:\�û�Ŀ¼\ZimNotes\ES6\fetch.md	/^## 用fetch执行表单数据提交$/;"	function	line:209
+在Fetch请求里发送用户身份凭证信息	D:\�û�Ŀ¼\ZimNotes\ES6\fetch.md	/^## 在Fetch请求里发送用户身份凭证信息$/;"	function	line:230
+mixin是什么	D:\�û�Ŀ¼\ZimNotes\ES6\mixin��ʲô.md	/^#mixin是什么$/;"	function	line:1
+写一个TimerMixin	D:\�û�Ŀ¼\ZimNotes\ES6\mixin��ʲô.md	/^##写一个TimerMixin$/;"	function	line:19
+sOrderLineConfirm	D:\�û�Ŀ¼\ZimNotes\Java\action\action01.java	/^public void sOrderLineConfirm(HttpServletRequest req, HttpServletResponse resp, SOrderBean bean) throws IOException  {$/;"	method	line:1	signature:(HttpServletRequest req, HttpServletResponse resp, SOrderBean bean)
+commitOrder	D:\�û�Ŀ¼\ZimNotes\Java\action\action01.js	/^commitOrder:function(){$/;"	function	line:1
+ids	D:\�û�Ŀ¼\ZimNotes\Java\action\action01.js	/^  var ids = [];$/;"	variable	line:10
+success	D:\�û�Ŀ¼\ZimNotes\Java\action\action01.js	/^        success : function(result, request) {$/;"	function	line:30
+failure	D:\�û�Ŀ¼\ZimNotes\Java\action\action01.js	/^        failure : function (result, request) {$/;"	function	line:40
+doConfirm	D:\�û�Ŀ¼\ZimNotes\Java\action\action02.js	/^doConfirm: function(){$/;"	function	line:2
+SOrderLineID	D:\�û�Ŀ¼\ZimNotes\Java\action\action02.js	/^var SOrderLineID = record.data["S_OrderLine_ID"];$/;"	variable	line:33
+orderLineID	D:\�û�Ŀ¼\ZimNotes\Java\action\action02.js	/^var orderLineID = record.data["EAI_OrderLine_ID"];$/;"	variable	line:34
+send.confirm	D:\�û�Ŀ¼\ZimNotes\Java\action\action02.js	/^var send = {confirm:linesjson};$/;"	property	line:35
+success	D:\�û�Ŀ¼\ZimNotes\Java\action\action02.js	/^  success : function(result, request) {$/;"	function	line:47
+failure	D:\�û�Ŀ¼\ZimNotes\Java\action\action02.js	/^  failure : function(result, request) {$/;"	function	line:65
+Ext.extend	D:\�û�Ŀ¼\ZimNotes\JavaScript\ext_example.md	/^##Ext.extend$/;"	function	line:1
+ExtJs中继承的实现与理解--extend	D:\�û�Ŀ¼\ZimNotes\JavaScript\ext_extend.md	/^# ExtJs中继承的实现与理解--extend$/;"	function	line:1
+Ext中实现类的继承	D:\�û�Ŀ¼\ZimNotes\JavaScript\ext_extend.md	/^## Ext中实现类的继承$/;"	function	line:3
+例子:	D:\�û�Ŀ¼\ZimNotes\JavaScript\ext_extend.md	/^###例子:$/;"	function	line:13
+例子：	D:\�û�Ŀ¼\ZimNotes\JavaScript\ext_extend.md	/^### 例子：  $/;"	function	line:56
+Ext.extend 的代码	D:\�û�Ŀ¼\ZimNotes\JavaScript\ext_extend.md	/^## Ext.extend 的代码$/;"	function	line:126
+MyEclipse快捷键大全	D:\�û�Ŀ¼\ZimNotes\myeclipse\��ݼ�.md	/^# MyEclipse快捷键大全$/;"	function	line:1
+最经典的快捷键	D:\�û�Ŀ¼\ZimNotes\myeclipse\��ݼ�.md	/^## 最经典的快捷键$/;"	function	line:17
+查看	D:\�û�Ŀ¼\ZimNotes\myeclipse\��ݼ�.md	/^## 查看$/;"	function	line:108
+窗口	D:\�û�Ŀ¼\ZimNotes\myeclipse\��ݼ�.md	/^## 窗口$/;"	function	line:115
+npm	D:\�û�Ŀ¼\ZimNotes\node.js\npm.md	/^#npm$/;"	function	line:1
+配置	D:\�û�Ŀ¼\ZimNotes\node.js\npm.md	/^## 配置$/;"	function	line:2
+npm常用命令	D:\�û�Ŀ¼\ZimNotes\node.js\npm.md	/^## npm常用命令$/;"	function	line:8
+rm命令	D:\�û�Ŀ¼\ZimNotes\System\linux����\rm.md	/^# rm命令$/;"	function	line:1
+1．命令格式：	D:\�û�Ŀ¼\ZimNotes\System\linux����\rm.md	/^## 1．命令格式：$/;"	function	line:3
+2．命令功能：	D:\�û�Ŀ¼\ZimNotes\System\linux����\rm.md	/^## 2．命令功能：$/;"	function	line:5
+3．命令参数：	D:\�û�Ŀ¼\ZimNotes\System\linux����\rm.md	/^## 3．命令参数：$/;"	function	line:7
+4．命令实例：	D:\�û�Ŀ¼\ZimNotes\System\linux����\rm.md	/^## 4．命令实例：$/;"	function	line:14
+实例一：删除文件file，系统会先询问是否删除。	D:\�û�Ŀ¼\ZimNotes\System\linux����\rm.md	/^### 实例一：删除文件file，系统会先询问是否删除。$/;"	function	line:15
+命令：	D:\�û�Ŀ¼\ZimNotes\System\linux����\rm.md	/^#### 命令：$/;"	function	line:16
+输出：	D:\�û�Ŀ¼\ZimNotes\System\linux����\rm.md	/^#### 输出：$/;"	function	line:18
+总计 4	D:\�û�Ŀ¼\ZimNotes\System\linux����\rm.md	/^##### 总计 4$/;"	function	line:20
+实例二：强行删除file，系统不再提示。	D:\�û�Ŀ¼\ZimNotes\System\linux����\rm.md	/^### 实例二：强行删除file，系统不再提示。$/;"	function	line:28
+命令：	D:\�û�Ŀ¼\ZimNotes\System\linux����\rm.md	/^#### 命令：$/;"	function	line:29
+输出：	D:\�û�Ŀ¼\ZimNotes\System\linux����\rm.md	/^#### 输出：$/;"	function	line:31
+总计 4	D:\�û�Ŀ¼\ZimNotes\System\linux����\rm.md	/^##### 总计 4$/;"	function	line:33
+实例三：删除任何.log文件；删除前逐一询问确认	D:\�û�Ŀ¼\ZimNotes\System\linux����\rm.md	/^### 实例三：删除任何.log文件；删除前逐一询问确认$/;"	function	line:38
+命令：	D:\�û�Ŀ¼\ZimNotes\System\linux����\rm.md	/^#### 命令：$/;"	function	line:39
+输出：	D:\�û�Ŀ¼\ZimNotes\System\linux����\rm.md	/^#### 输出：$/;"	function	line:41
+总计 8	D:\�û�Ŀ¼\ZimNotes\System\linux����\rm.md	/^##### 总计 8$/;"	function	line:43
+实例四：将 test1子目录及子目录中所有档案删除	D:\�û�Ŀ¼\ZimNotes\System\linux����\rm.md	/^### 实例四：将 test1子目录及子目录中所有档案删除$/;"	function	line:51
+输出：	D:\�û�Ŀ¼\ZimNotes\System\linux����\rm.md	/^#### 输出：$/;"	function	line:54
+实例五：rm -rf test2命令会将 test2 子目录及子目录中所有档案删除,并且不用一一确认	D:\�û�Ŀ¼\ZimNotes\System\linux����\rm.md	/^### 实例五：rm -rf test2命令会将 test2 子目录及子目录中所有档案删除,并且不用一一确认$/;"	function	line:73
+命令：	D:\�û�Ŀ¼\ZimNotes\System\linux����\rm.md	/^#### 命令：$/;"	function	line:74
+输出：	D:\�û�Ŀ¼\ZimNotes\System\linux����\rm.md	/^#### 输出：$/;"	function	line:76
+实例六：删除以 -f 开头的文件	D:\�û�Ŀ¼\ZimNotes\System\linux����\rm.md	/^### 实例六：删除以 -f 开头的文件$/;"	function	line:84
+命令：	D:\�û�Ŀ¼\ZimNotes\System\linux����\rm.md	/^#### 命令：$/;"	function	line:85
+输出：	D:\�û�Ŀ¼\ZimNotes\System\linux����\rm.md	/^#### 输出：$/;"	function	line:87
+实例七：自定义回收站功能	D:\�û�Ŀ¼\ZimNotes\System\linux����\rm.md	/^### 实例七：自定义回收站功能$/;"	function	line:101
+命令：	D:\�û�Ŀ¼\ZimNotes\System\linux����\rm.md	/^#### 命令：$/;"	function	line:102
+输出：	D:\�û�Ŀ¼\ZimNotes\System\linux����\rm.md	/^#### 输出：$/;"	function	line:104
+周有光的5句话	D:\�û�Ŀ¼\ZimNotes\Time\���й��5�仰.md	/^# 周有光的5句话$/;"	function	line:1
+第一句：人不是饿死而是吃死的，我从不吃补品！	D:\�û�Ŀ¼\ZimNotes\Time\���й��5�仰.md	/^## 第一句：人不是饿死而是吃死的，我从不吃补品！$/;"	function	line:4
+第二句：心宽寿长，遇到什么事情我都不生气！	D:\�û�Ŀ¼\ZimNotes\Time\���й��5�仰.md	/^## 第二句：心宽寿长，遇到什么事情我都不生气！$/;"	function	line:8
+第三句：生活越简单越好！	D:\�û�Ŀ¼\ZimNotes\Time\���й��5�仰.md	/^## 第三句：生活越简单越好！$/;"	function	line:12
+第四句：人到老年，我一直坚持“三不主义”！	D:\�û�Ŀ¼\ZimNotes\Time\���й��5�仰.md	/^## 第四句：人到老年，我一直坚持“三不主义”！$/;"	function	line:18
+第五句：夫妻生活要做到“举杯齐眉”	D:\�û�Ŀ¼\ZimNotes\Time\���й��5�仰.md	/^## 第五句：夫妻生活要做到“举杯齐眉”$/;"	function	line:22

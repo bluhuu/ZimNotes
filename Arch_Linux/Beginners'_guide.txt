@@ -1,9 +1,0 @@
-Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.4
-Creation-Date: 2016-06-24T19:55:44+08:00
-
-====== Beginners' guide ======
-Created 星期五 24 六月 2016
-
-1. BIOS 相应的选项 F12
-2. Arch菜单出现时，选 "Boot Arch Linux"  →  Enter
