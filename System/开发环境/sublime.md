@@ -1,19 +1,13 @@
-Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.4
-Creation-Date: 2016-06-18T10:10:48+08:00
-
-====== Sublime ======
-Created 星期三 08 六月 2016
-
-==== sublime ====
+## sublime
+```bash
 sudo add-apt-repository ppa:webupd8team/sublime-text-3
 sudo apt-get update
 sudo apt-get install sublime-text-installer
+```
 
-
-1. 获得 sublime-imfix.c 文件
+## 1. 获得 sublime-imfix.c 文件
+```bash
 有 GitHub 账号的，可以从 https://github.com/YoungZHU/sublime-imfix.git 获取。
-{{{code: lang="c" linenumbers="True"
 /*
 sublime-imfix.c
 Use LD_PRELOAD to interpose some function to fix sublime input method support for linux.
@@ -51,8 +45,8 @@ gdk_region_get_clipbox (const GdkRegion *region,
   rect.x = rectangle->x;
   rect.y = rectangle->y;
   rect.width = 0;
-  rect.height = rectangle->height; 
-  //The caret width is 2; 
+  rect.height = rectangle->height;
+  //The caret width is 2;
   //Maybe sometimes we will make a mistake, but for most of the time, it should be the caret.
   if(rectangle->width == 2 && GTK_IS_IM_CONTEXT(local_context)) {
         gtk_im_context_set_cursor_location(local_context, rectangle);
@@ -91,53 +85,53 @@ void gtk_im_context_set_client_window (GtkIMContext *context,
     gtk_im_context_focus_in(context);
     local_context = context;
   }
-  gdk_window_add_filter (window, event_filter, context); 
+  gdk_window_add_filter (window, event_filter, context);
 }
-
-}}}
-
-2. 安装依赖库
+```
+## 2. 安装依赖库
+```bash
 sudo apt-get install build-essential libgtk2.0-dev
-
-3 编译
+```
+## 3 编译
+```bash
 gcc -shared -o libsublime-imfix.so sublime-imfix.c `pkg-config --libs --cflags gtk+-2.0` -fPIC
 编译好后，当前目录多了一个名为： libsublime-imfix.so 的库文件。
-
-4. 将编译好的库文件移到 sublime 的安装目录下
-mv libsublime-imfix.so [[/opt/sublime_text]]
-
-5 启动 sublime
+```
+## 4. 将编译好的库文件移到 sublime 的安装目录下
+```bash
+mv libsublime-imfix.so /opt/sublime_text
+```
+## 5 启动 sublime
+```bash
 LD_PRELOAD=./libsublime-imfix.so ./sublime_text
-
-6./usr/bin/目录下
+```
+## 6./usr/bin/目录下
+```bash
 subl 文件：
-{{{code: lang="haskell" linenumbers="True"
 #!/bin/sh
-
 export LD_PRELOAD=/opt/sublime_text/libsublime-imfix.so
 exec /opt/sublime_text/sublime_text "$@"
-}}}
+```
 
-
-快速方法：
+# 快速方法：
+```bash
 git clone https://github.com/lyfeyaj/sublime-text-imfix.git
+```
 
-===== 三个附件 =====
-[[./libsublime-imfix.so]]
-**copy to** [[/opt/sublime_text/]]
-
-[[./subl]]
-**copy to** [[/usr/bin/]]
-{{{code: lang="js" linenumbers="True"
+## 三个附件
+```bash
+./libsublime-imfix.so copy to /opt/sublime_text/
+./subl copy to /usr/bin/
+```
+```js
 #!/bin/sh
 export LD_PRELOAD=/opt/sublime_text/libsublime-imfix.so
 exec /opt/sublime_text/sublime_text "$@"
-}}}
-
-
-[[./sublime-text.desktop]]
-**copy to** [[/usr/share/applications/]]
-{{{code: lang="desktop" linenumbers="True"
+```
+```bash
+./sublime-text.desktop copy to /usr/share/applications/
+```
+```bash
 [Desktop Entry]
 Version=1.0
 Type=Application
@@ -163,5 +157,4 @@ OnlyShowIn=Unity;
 Name=New File
 Exec=bash -c "LD_PRELOAD=/opt/sublime_text/libsublime-imfix.so exec /opt/sublime_text/sublime_text --command new_file"
 OnlyShowIn=Unity;
-}}}
-
+```

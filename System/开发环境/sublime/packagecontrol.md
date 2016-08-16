@@ -1,9 +1,5 @@
-Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.4
-Creation-Date: 2016-06-18T15:26:43+08:00
-
-====== packagecontrol ======
-Created 星期六 18 六月 2016
+## packagecontrol
+```bash
 install with "ctrl+`":
 import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
 
@@ -23,3 +19,4 @@ import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc5
 14. Can I Use 查询 CSS 属性兼容性；
 15. Coffee​Script Coffee​Script 代码高亮、校验和编译等；
 16. Color​Picker 跨平台取色器插件；
+```
