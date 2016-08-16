@@ -1,3 +1,10 @@
+## 交换Caps Lock和Control键
+```bash
+sudo vi /etc/default/keyboard
+XKBLAYOUT=“US”
+XKBOPTIONS="ctrl:swapcaps" or "ctrl:nocaps"
+sudo dpkg-reconfigure keyboard-configuration
+```
 ## fcitx输入法
 ```bash
 sudo add-apt-repository ppa:fcitx-team/nightly
