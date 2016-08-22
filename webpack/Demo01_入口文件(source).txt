@@ -1,37 +1,28 @@
-Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.4
-Creation-Date: 2016-06-20T17:30:59+08:00
 
-====== Demo01 入口文件(source) ======
-Created Monday 20 June 2016
 
-=== webpack读取入口文件，将它构建成bundle.js。 ===
+## webpack读取入口文件，将它构建成bundle.js。
+比如，这里的main.js是入口文件main.js
 
-== 比如，这里的main.js是入口文件。 ==
-// main.js
-document.write('<h1>Hello World</h1>');  
+document.write('<h1>Hello World</h1>');
 
 == index.html ==
 
-<html>  
+<html>
   <body>
 	<script type="text/javascript" src="bundle.js"></script>
   </body>
-</html>  
+</html>
 
 === Webpack 根据 webpack.config.js 去构建bundle.js. ===
 
-== // webpack.config.js ==
-module.exports = {  
+== // webpack.config.js
+module.exports = {
   entry: './main.js',
   output: {
 	filename: 'bundle.js'
   }
 };
 
-=== 开启服务器，访问 ===
-**
+http://127.0.0.1:8080
 
-=== http://127.0.0.1:8080 ===
-**
 $ webpack-dev-server
