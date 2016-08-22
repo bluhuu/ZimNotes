@@ -27,4 +27,6 @@ select deptno,sum(sal) from emp group by deptno;
 select sum(sal) from emp;
 ====
 select deptno,job,sum(sal) from emp group by rollup(deptno,job);
+====设置:break on deptno skip 2
+====部门号只显示一次,不同部门跳过一行
 ```
