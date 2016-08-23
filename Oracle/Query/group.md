@@ -29,4 +29,22 @@ select sum(sal) from emp;
 select deptno,job,sum(sal) from emp group by rollup(deptno,job);
 ====设置:break on deptno skip 2
 ====部门号只显示一次,不同部门跳过一行
+-- 树查询
+SELECT CDID,FCDID,
+       DECODE( NVL(LEVEL2,0),
+               0,SUBSTR('││││││',1,LEVEL1 - 1)||'└',
+               DECODE(LEVEL2 - LEVEL1,
+                      0,SUBSTR('││││││',1,LEVEL1 - 1)||'├',
+                      1,SUBSTR('││││││',1,LEVEL1 - 1)||'├',
+                        SUBSTR('││││││',1,LEVEL1 - 1)||'└'
+                      )
+              )||CDM CDM
+  FROM (
+SELECT CDID,CDM,FCDID,
+       LEVEL LEVEL1,LEAD(LEVEL,1)  OVER (ORDER BY ROWNUM) LEVEL2
+  FROM PF_MENU
+  WHERE CDM<>'-'
+CONNECT BY FCDID= PRIOR CDID START WITH  FCDID='0'
+--ORDER SIBLINGS BY CDID
+)
 ```
