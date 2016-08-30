@@ -1,0 +1,19 @@
+安装配置kylin
+1、下载 kylin 的压缩包
+    wget http://apache.fayea.com/kylin/apache-kylin-1.5.3/apache-kylin-1.5.3-HBase1.x-bin.tar.gz
+    解压
+    tar -xzvf apache-kylin-1.5.3-HBase1.x-bin.tar.gz
+    重命名
+    mv apache-kylin-1.5.3-HBase1.x-bin kylin-1.5.3
+    修改配置文件（1. export KYLIN_HOME=/home/chcit/chcit-hadoop/kylin-1.5.3 # 改成绝对路径
+                  2. export HBASE_CLASSPATH_PREFIX=${tomcat_root}/bin/bootstrap.jar:${tomcat_root}/bin/tomcat-juli.jar:                             ${tomcat_root}/lib/*:$hive_dependency:$HBASE_CLASSPATH_PREFIX# 在路径中添加$hive_dependency
+                 ）
+    vim kylin.sh 
+
+2、启动
+cd /home/chcit/chcit-hadoop/kylin-1.5.3/bin  
+   ./kylin.sh start  
+
+3、访问
+   http://192.168.20.232:7070/kylin/
+   账号：ADMIN 密码 KYLIN
