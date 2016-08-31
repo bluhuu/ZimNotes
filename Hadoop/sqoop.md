@@ -1,10 +1,14 @@
-## 一.环境介绍：
-sqoop版本:1.99.4-hadoop200  
-hadoop版本:hadoop2.2.0  
-安装路径是/usr/local/sqoop  
-## 二.sqoop1.99.4安装
-### 1.解压安装文件到/usr/local/sqoop目录
-### 2.修改环境变量 sudo vi /etc/profile
+# 一.环境介绍：
+
+sqoop版本:1.99.4-hadoop200<br>
+hadoop版本:hadoop2.2.0<br>
+安装路径是/usr/local/sqoop
+
+# 二.sqoop1.99.4安装
+
+## 1.解压安装文件到/usr/local/sqoop目录
+
+## 2.修改环境变量 sudo vi /etc/profile
 
 ```bash
 export SQOOP_HOME=/home/chcit/chcit-hadoop/sqoop-1.99.4
@@ -15,15 +19,22 @@ export LOGDIR=$SQOOP_HOME/logs
 
 使立即生效：source /etc/profile
 
-### 3.修改sqoop配置文件
-#### (1)修改/usr/local/sqoop/server/conf/sqoop.properties
-org.apache.sqoop.submission.engine.mapreduce.configuration.directory=/usr/local/hadoop2.2.0/etc/hadoop #hadoop的安装目录中的配置目录
-#### (2)修改/usr/local/sqoop/server/conf/catalina.properties
-common.loader=/usr/local/sqoop/hadoop_lib     #需要用到的Jar包目录(也可以直接引用多个目录，用‘，’隔开)
+## 3.修改sqoop配置文件
 
-### 4.成立Jar包目录
-#### (1)在sqoop根目录下新建文件夹hadoop_lib
-#### (2)把hadoop相关依赖jar包拷贝到该目录
+### (1)修改/usr/local/sqoop/server/conf/sqoop.properties
+
+org.apache.sqoop.submission.engine.mapreduce.configuration.directory=/usr/local/hadoop2.2.0/etc/hadoop #hadoop的安装目录中的配置目录
+
+### (2)修改/usr/local/sqoop/server/conf/catalina.properties
+
+common.loader=/usr/local/sqoop/hadoop_lib #需要用到的Jar包目录(也可以直接引用多个目录，用'，'隔开)
+
+## 4.成立Jar包目录
+
+### (1)在sqoop根目录下新建文件夹hadoop_lib
+
+### (2)把hadoop相关依赖jar包拷贝到该目录
+
 ```bash
 /usr/local/hadoop2.2.0/share/hadoop/common/*.jar
 /usr/local/hadoop2.2.0/share/hadoop/common/lib/*.jar
@@ -37,41 +48,52 @@ common.loader=/usr/local/sqoop/hadoop_lib     #需要用到的Jar包目录(也�
 /usr/local/hadoop2.2.0/share/hadoop/yarn/lib/*.jar
 /usr/local/hadoop2.2.0/share/hadoop/httpfs/tomcat/lib/*.jar
 ```
-#### (3)把/home/chcit/chcit-hadoop/sqoop-1.99.4/server/bin/*.jar和/home/chcit/chcit-hadoop/sqoop-1.99.4/server/lib/*.jar拷贝到该目录
 
-### 5.赋予权限
-sqoop.sh默认是没有运行权限的，所以需要给sqoop.sh赋予运行权限  
-sudo chmod 777 /usr/local/sqoop/bin/sqoop.sh  
-运行sqoop.sh,此时会提示另外一个脚本没有运行,可根据提示赋予权限给相应文件  
-如果嫌麻烦，可以用一个一劳永逸的方法，就是把整个sqoop目录赋予所有权限。  
-sudo chmod 777 -R /usr/loacl/sqoop  
+### (3)把/home/chcit/chcit-hadoop/sqoop-1.99.4/server/bin/_.jar和/home/chcit/chcit-hadoop/sqoop-1.99.4/server/lib/_.jar拷贝到该目录
 
-### 6.工具验证
+## 5.赋予权限
+
+sqoop.sh默认是没有运行权限的，所以需要给sqoop.sh赋予运行权限<br>
+sudo chmod 777 /usr/local/sqoop/bin/sqoop.sh<br>
+运行sqoop.sh,此时会提示另外一个脚本没有运行,可根据提示赋予权限给相应文件<br>
+如果嫌麻烦，可以用一个一劳永逸的方法，就是把整个sqoop目录赋予所有权限。<br>
+sudo chmod 777 -R /usr/loacl/sqoop
+
+## 6.工具验证
+
 ```bash
 cd /usr/local/sqoop/bin  
 ./sqoop2-tool verify
 ```
 
-### 7.启动sqoop server
+## 7.启动sqoop server
+
 ```bash
 cd /usr/local/sqoop/bin  
 ./sqoop2-server start
 ```
-### 8.查看日志文件，如果日志文件没有报错，说明sqoop启动成功，否则启动失败
+
+## 8.查看日志文件，如果日志文件没有报错，说明sqoop启动成功，否则启动失败
 
 ```bash
 cat /usr/local/sqoop/server/logs/catalina.out
 ```
 
-### 7.进入客户端shell
+## 7.进入客户端shell
+
 ```bash
 cd /usr/local/sqoop/bin
 ./sqoop2-shell
 ```
-## 三.sqoop1.99.4的使用
-### 1.配置客户端使用服务：set server --host 127.0.0.1 --port 12000 --webapp sqoop
-### 2.建立连接
-#### (1)建立JDBC连接
+
+# 三.sqoop1.99.4的使用
+
+## 1.配置客户端使用服务：set server --host 127.0.0.1 --port 12000 --webapp sqoop
+
+## 2.建立连接
+
+### (1)建立JDBC连接
+
 ```bash
 create link --cid 1 #我的是1，可以通过show connector查看
 Please fill following values to create new link object
@@ -88,7 +110,8 @@ entry#protocol=tcp
 New link was successfully created with validation status OK and persistent id 1
 ```
 
-#### (2)建立HDFS连接
+### (2)建立HDFS连接
+
 ```bash
 create link --cid 2
 Creating link for connector with id 1
@@ -98,7 +121,9 @@ Name: Second Link
 Link configuration HDFS URI: hdfs://nameservice1:8020/
 New link was successfully created with validation status OK and persistent id 2
 ```
-### 3.创建任务
+
+## 3.创建任务
+
 ```bash
 sqoop:000> create job -f 1 -t 2
  Creating job for links with from id 1 and to id 2
@@ -145,7 +170,8 @@ ToJob configuration
       New job was successfully created with validation status OK  and persistent id 1
 ```
 
-### 4.开始任务
+## 4.开始任务
+
 ```bash
 start job --jid 1
 附属常用shell命令：
@@ -160,15 +186,8 @@ start job --jid 1
 9.配置客户端使用服务：set server --host 127.0.0.1 --port 12000 --webapp sqoop
 ```
 
+cd ~wget <http://apache.mirrors.pair.com/db/derby/db-derby-10.11.1.1/db-derby-10.11.1.1-bin.tar.gztar> xzvf db-derby-10.11.1.1-bin.tar.gz cp db-derby-10.11.1.1-bin/lib/derby.jar $SQOOP_HOME/server/webapps/sqoop/WEB-INF/lib/ cp db-derby-10.11.1.1-bin/lib/derbyclient.jar $SQOOP_HOME/server/webapps/sqoop/WEB-INF/lib/ cd $SQOOP_HOME/server/webapps/sqoop/WEB-INF/lib/ mv derby-10.8.2.2.jar derby-10.8.2.2.jar.bak mv derbyclient-10.8.2.2.jar derbyclient-10.8.2.2.jar.bak
 
-cd ~wget http://apache.mirrors.pair.com/db/derby/db-derby-10.11.1.1/db-derby-10.11.1.1-bin.tar.gztar
-xzvf db-derby-10.11.1.1-bin.tar.gz
-cp db-derby-10.11.1.1-bin/lib/derby.jar $SQOOP_HOME/server/webapps/sqoop/WEB-INF/lib/
-cp db-derby-10.11.1.1-bin/lib/derbyclient.jar $SQOOP_HOME/server/webapps/sqoop/WEB-INF/lib/
-cd $SQOOP_HOME/server/webapps/sqoop/WEB-INF/lib/
-mv derby-10.8.2.2.jar derby-10.8.2.2.jar.bak
-mv derbyclient-10.8.2.2.jar derbyclient-10.8.2.2.jar.bak
+## 工具验证
 
-### 工具验证
-cd /usr/local/sqoop/bin
-./sqoop2-tool verify
+cd /usr/local/sqoop/bin ./sqoop2-tool verify
