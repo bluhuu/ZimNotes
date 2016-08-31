@@ -7,9 +7,9 @@ hadoop版本:hadoop2.2.0
 ### 2.修改环境变量 sudo vi /etc/profile
 
 ```bash
-export SQOOP_HOME=/usr/local/sqoop  
-export PATH=$SQOOP_HOME/bin:$PATH  
-export CATALINA_HOME=$SQOOP_HOME/server  
+export SQOOP_HOME=/home/chcit/chcit-hadoop/sqoop-1.99.4
+export PATH=.:$SQOOP_HOME/bin:$PATH
+export CATALINA_HOME=$SQOOP_HOME/server
 export LOGDIR=$SQOOP_HOME/logs
 ```
 
@@ -37,7 +37,7 @@ common.loader=/usr/local/sqoop/hadoop_lib     #需要用到的Jar包目录(也�
 /usr/local/hadoop2.2.0/share/hadoop/yarn/lib/*.jar
 /usr/local/hadoop2.2.0/share/hadoop/httpfs/tomcat/lib/*.jar
 ```
-#### (3)把/usr/local/sqoop/server/bin/*.jar和/usr/local/sqoop/server/lib/*.jar拷贝到该目录
+#### (3)把/home/chcit/chcit-hadoop/sqoop-1.99.4/server/bin/*.jar和/home/chcit/chcit-hadoop/sqoop-1.99.4/server/lib/*.jar拷贝到该目录
 
 ### 5.赋予权限
 sqoop.sh默认是没有运行权限的，所以需要给sqoop.sh赋予运行权限  
@@ -159,3 +159,16 @@ start job --jid 1
 8.查看连接器：show connector  #查看连接器的id号，用于建立连接
 9.配置客户端使用服务：set server --host 127.0.0.1 --port 12000 --webapp sqoop
 ```
+
+
+cd ~wget http://apache.mirrors.pair.com/db/derby/db-derby-10.11.1.1/db-derby-10.11.1.1-bin.tar.gztar
+xzvf db-derby-10.11.1.1-bin.tar.gz
+cp db-derby-10.11.1.1-bin/lib/derby.jar $SQOOP_HOME/server/webapps/sqoop/WEB-INF/lib/
+cp db-derby-10.11.1.1-bin/lib/derbyclient.jar $SQOOP_HOME/server/webapps/sqoop/WEB-INF/lib/
+cd $SQOOP_HOME/server/webapps/sqoop/WEB-INF/lib/
+mv derby-10.8.2.2.jar derby-10.8.2.2.jar.bak
+mv derbyclient-10.8.2.2.jar derbyclient-10.8.2.2.jar.bak
+
+### 工具验证
+cd /usr/local/sqoop/bin
+./sqoop2-tool verify

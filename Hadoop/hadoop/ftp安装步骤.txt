@@ -1,51 +1,51 @@
-Ò»£º°²×°vsftpd
+ä¸€ï¼šå®‰è£…vsftpd
 
-²é¿´ÊÇ·ñÒÑ¾­°²×°vsftpd
+æŸ¥çœ‹æ˜¯å¦å·²ç»å®‰è£…vsftpd
 
    rpm -qa | grep vsftpd
 
-Èç¹ûÃ»ÓĞ£¬¾Í°²×°£¬²¢ÉèÖÃ¿ª»úÆô¶¯
+å¦‚æœæ²¡æœ‰ï¼Œå°±å®‰è£…ï¼Œå¹¶è®¾ç½®å¼€æœºå¯åŠ¨
 
    yum -y install vsftpd
    chkconfig vsftpd on
 
 
-Èı¡¢ÅäÖÃvsftpd·şÎñÆ÷
+ä¸‰ã€é…ç½®vsftpdæœåŠ¡å™¨
 
-1.ĞŞ¸ÄÅäÖÃÎÄ¼ş£¨/etc/vsftpd/vsftpd.conf£©
+1.ä¿®æ”¹é…ç½®æ–‡ä»¶ï¼ˆ/etc/vsftpd/vsftpd.confï¼‰
 
       vim /etc/vsftpd/vsftpd.conf
-  ½«
+  å°†
       #chroot_list_enable=YES
       # (default follows)
       #chroot_list_file=/etc/vsftpd.chroot_list
 
-  ¸ÄÎª
+  æ”¹ä¸º
 
       chroot_list_enable=YES
       # (default follows)
       chroot_list_file=/etc/vsftpd/chroot_list
 
 
-2.Ìí¼Óchcit-ftpÓÃ»§,½ûÖ¹´ËÓÃ»§µÇÂ¼SSHµÄÈ¨ÏŞ,²¢ÏŞÖÆÆä·ÃÎÊÆäËüÄ¿Â¼
- 
+2.æ·»åŠ chcit-ftpç”¨æˆ·,ç¦æ­¢æ­¤ç”¨æˆ·ç™»å½•SSHçš„æƒé™,å¹¶é™åˆ¶å…¶è®¿é—®å…¶å®ƒç›®å½•
+
       useradd -d /home/chcit-ftp -g ftp -s /sbin/nologin chcit-ftp
- 
-  ÉèÖÃÓÃ»§¿ÚÁî
+
+  è®¾ç½®ç”¨æˆ·å£ä»¤
       passwd chcit-ftp
 
-3¡¢±à¼­ÎÄ¼şchroot_list:
+3ã€ç¼–è¾‘æ–‡ä»¶chroot_list:
 
        vim /etc/vsftpd/chroot_list
-   ÄÚÈİÎªftpÓÃ»§Ãû,Ã¿¸öÓÃ»§Õ¼Ò»ĞĞ,Èç£º
+   å†…å®¹ä¸ºftpç”¨æˆ·å,æ¯ä¸ªç”¨æˆ·å ä¸€è¡Œ,å¦‚ï¼š
        chcit-ftp
 
-4¡¢ÖØĞÂÆô¶¯vsftpd
+4ã€é‡æ–°å¯åŠ¨vsftpd
 
    service vsftpd restart
 
 
-×¢£º²é¿´  SElinux×´Ì¬
+æ³¨ï¼šæŸ¥çœ‹  SElinuxçŠ¶æ€
     sestatus -b | grep ftp
 
 
@@ -62,4 +62,4 @@
   tftp_use_cifs                               off
   tftp_use_nfs                                off
 
-Òª±£Ö¤ ftp_home_dir  Îª´ò¿ª×´Ì¬ £¨´ò¿ªµÄ²Ù×÷ÃüÁîÎª£ºsetsebool -P ftp_home_dir on£©
+è¦ä¿è¯ ftp_home_dir  ä¸ºæ‰“å¼€çŠ¶æ€ ï¼ˆæ‰“å¼€çš„æ“ä½œå‘½ä»¤ä¸ºï¼šsetsebool -P ftp_home_dir onï¼‰

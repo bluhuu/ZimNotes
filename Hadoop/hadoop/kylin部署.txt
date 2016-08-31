@@ -1,19 +1,19 @@
-°²×°ÅäÖÃkylin
-1¡¢ÏÂÔØ kylin µÄÑ¹Ëõ°ü
+å®‰è£…é…ç½®kylin
+1ã€ä¸‹è½½ kylin çš„å‹ç¼©åŒ…
     wget http://apache.fayea.com/kylin/apache-kylin-1.5.3/apache-kylin-1.5.3-HBase1.x-bin.tar.gz
-    ½âÑ¹
+    è§£å‹
     tar -xzvf apache-kylin-1.5.3-HBase1.x-bin.tar.gz
-    ÖØÃüÃû
+    é‡å‘½å
     mv apache-kylin-1.5.3-HBase1.x-bin kylin-1.5.3
-    ĞŞ¸ÄÅäÖÃÎÄ¼ş£¨1. export KYLIN_HOME=/home/chcit/chcit-hadoop/kylin-1.5.3 # ¸Ä³É¾ø¶ÔÂ·¾¶
-                  2. export HBASE_CLASSPATH_PREFIX=${tomcat_root}/bin/bootstrap.jar:${tomcat_root}/bin/tomcat-juli.jar:                             ${tomcat_root}/lib/*:$hive_dependency:$HBASE_CLASSPATH_PREFIX# ÔÚÂ·¾¶ÖĞÌí¼Ó$hive_dependency
-                 £©
-    vim kylin.sh 
+    ä¿®æ”¹é…ç½®æ–‡ä»¶ï¼ˆ1. export KYLIN_HOME=/home/chcit/chcit-hadoop/kylin-1.5.3 # æ”¹æˆç»å¯¹è·¯å¾„
+                  2. export HBASE_CLASSPATH_PREFIX=${tomcat_root}/bin/bootstrap.jar:${tomcat_root}/bin/tomcat-juli.jar:                             ${tomcat_root}/lib/*:$hive_dependency:$HBASE_CLASSPATH_PREFIX# åœ¨è·¯å¾„ä¸­æ·»åŠ $hive_dependency
+                 ï¼‰
+    vim kylin.sh
 
-2¡¢Æô¶¯
-cd /home/chcit/chcit-hadoop/kylin-1.5.3/bin  
-   ./kylin.sh start  
+2ã€å¯åŠ¨
+cd /home/chcit/chcit-hadoop/kylin-1.5.3/bin
+   ./kylin.sh start
 
-3¡¢·ÃÎÊ
+3ã€è®¿é—®
    http://192.168.20.232:7070/kylin/
-   ÕËºÅ£ºADMIN ÃÜÂë KYLIN
+   è´¦å·ï¼šADMIN å¯†ç  KYLIN

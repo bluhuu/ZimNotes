@@ -1,126 +1,126 @@
 
-1¡¢ĞŞ¸Ä/etc/hostsÎÄ¼ş£¨/etc/hostsÊÇipµØÖ·ºÍÆä¶ÔÓ¦Ö÷»úÃûÎÄ¼ş£¬Ê¹»úÆ÷ÖªµÀipºÍÖ÷»úÃû¶ÔÓ¦¹ØÏµ£¬£©£¬Ôö¼ÓÈçÏÂµØÖ·Ó³Éä£º
+1ã€ä¿®æ”¹/etc/hostsæ–‡ä»¶ï¼ˆ/etc/hostsæ˜¯ipåœ°å€å’Œå…¶å¯¹åº”ä¸»æœºåæ–‡ä»¶ï¼Œä½¿æœºå™¨çŸ¥é“ipå’Œä¸»æœºåå¯¹åº”å…³ç³»ï¼Œï¼‰ï¼Œå¢åŠ å¦‚ä¸‹åœ°å€æ˜ å°„ï¼š
 
- 
+
 192.168.20.231 chcit-1
 192.168.20.232 chcit-2
 192.168.20.233 chcit-3
 
-2£®(ÇĞ»»ÖÁchcitÓÃ»§)ÅäÖÃÃâÃÜÂëµÇÂ½SSH( B´æ·ÅÁËAµÄ¹«Ô¿£¬ÔòA¿ÉÒÔÃâÃÜÂëµÇÂ¼B )
+2ï¼(åˆ‡æ¢è‡³chcitç”¨æˆ·)é…ç½®å…å¯†ç ç™»é™†SSH( Bå­˜æ”¾äº†Açš„å…¬é’¥ï¼Œåˆ™Aå¯ä»¥å…å¯†ç ç™»å½•B )
 
-[chcit@chcit-1 ~]$ cd .ssh  
-[chcit@chcit-1 .ssh]$   
-[chcit@chcit-1 /]$ ssh-keygen -t rsa   
+[chcit@chcit-1 ~]$ cd .ssh
+[chcit@chcit-1 .ssh]$
+[chcit@chcit-1 /]$ ssh-keygen -t rsa
 
 
-½«¹«Ô¿ÎÄ¼şid_rsa.pubÄÚÈİ·Åµ½authorized_keysÎÄ¼şÖĞ£º
+å°†å…¬é’¥æ–‡ä»¶id_rsa.pubå†…å®¹æ”¾åˆ°authorized_keysæ–‡ä»¶ä¸­ï¼š
 
-¸ü¸Ä authorized_keys È¨ÏŞÎª 600
+æ›´æ”¹ authorized_keys æƒé™ä¸º 600
 [chcit@chcit-1 ~]# chmod 600 authorized_keys
- 
-½«ËùÓĞ½ÚµãµÄ¹«Ô¿»ã×Üµ½authorized_keysÎÄ¼şÖĞ£¬Ã¿¸ö½ÚµãÊ¹ÓÃ»ã×ÜµÄauthorized_keysÎÄ¼ş¡£
+
+å°†æ‰€æœ‰èŠ‚ç‚¹çš„å…¬é’¥æ±‡æ€»åˆ°authorized_keysæ–‡ä»¶ä¸­ï¼Œæ¯ä¸ªèŠ‚ç‚¹ä½¿ç”¨æ±‡æ€»çš„authorized_keysæ–‡ä»¶ã€‚
 
 
-3¡¢ÅäÖÃhadoop
-   core-site.xml£¬hdfs-site.xml£¬mapred-site.xml£¬yarn-site.xml£¬slaves
-   ĞŞ¸Ä HADOOP_HOME/etc/hadoop/hadoop-env.sh ÖĞµÄ export JAVA_HOME=/home/chcit/.....(ÄãµÄJDKËùÔÚµÄ¾ø¶ÔÂ·¾¶)
-   
-4¡¢½«hadoopÎÄ¼şscpµ½¸÷¸ö½Úµã
+3ã€é…ç½®hadoop
+   core-site.xmlï¼Œhdfs-site.xmlï¼Œmapred-site.xmlï¼Œyarn-site.xmlï¼Œslaves
+   ä¿®æ”¹ HADOOP_HOME/etc/hadoop/hadoop-env.sh ä¸­çš„ export JAVA_HOME=/home/chcit/.....(ä½ çš„JDKæ‰€åœ¨çš„ç»å¯¹è·¯å¾„)
 
-   
+4ã€å°†hadoopæ–‡ä»¶scpåˆ°å„ä¸ªèŠ‚ç‚¹
 
-5¡¢Ê×´ÎÆô¶¯ĞèÒªÏÈÔÚ Master ½ÚµãÖ´ĞĞ NameNode µÄ¸ñÊ½»¯£º
-   [chcit@chcit-1 bin]$ ./hdfs namenode -format  
 
-6¡¢Æô¶¯
+
+5ã€é¦–æ¬¡å¯åŠ¨éœ€è¦å…ˆåœ¨ Master èŠ‚ç‚¹æ‰§è¡Œ NameNode çš„æ ¼å¼åŒ–ï¼š
+   [chcit@chcit-1 bin]$ ./hdfs namenode -format
+
+6ã€å¯åŠ¨
    [chcit@chcit-1 sbin]$ ./start-all.sh
 
-7. ·ÃÎÊ http://192.168.20.232:50070/ £¨Èç¹û²»ÄÜ·ÃÎÊÇĞ»»µ½root¹Ø±Õ·À»ğÇ½[root@chcit-1 .]# service iptables stop£©
+7. è®¿é—® http://192.168.20.232:50070/ ï¼ˆå¦‚æœä¸èƒ½è®¿é—®åˆ‡æ¢åˆ°rootå…³é—­é˜²ç«å¢™[root@chcit-1 .]# service iptables stopï¼‰
 
 
 
 
 
-¶ş¡¢¼¯³ÉHbase
-    Hbase ÒÀÀµÓÚZooKeeper
-    1¡¢ZooKeeper ¼¯³É
+äºŒã€é›†æˆHbase
+    Hbase ä¾èµ–äºZooKeeper
+    1ã€ZooKeeper é›†æˆ
 
-       ½âÑ¹ 
+       è§£å‹
              tar -zxvf zookeeper-3.4.6.tar.gz
-       ÅäÖÃ»·¾³±äÁ¿
+       é…ç½®ç¯å¢ƒå˜é‡
 
             vim ~/ .bashrc
             export ZOOKEEPER_HOME=/home/chcit/chcit-hadoop/zookeeper-3.4.6
             exportPATH=.:$ZOOKEEPER_HOME/bin:$ZOOKEEPER_HOME/conf:$PATH
- 
-       Ê¹»·¾³±äÁ¿ÉúĞ§£º
+
+       ä½¿ç¯å¢ƒå˜é‡ç”Ÿæ•ˆï¼š
             source .bashrc
 
-       ÇĞ»»ÖÁZooKeeperµÄÅäÖÃÎÄ¼şÄ¿Â¼½øĞĞÅäÖÃ:
+       åˆ‡æ¢è‡³ZooKeeperçš„é…ç½®æ–‡ä»¶ç›®å½•è¿›è¡Œé…ç½®:
            cd /home/chcit/chcit-hadoop/zookeeper-3.4.6/conf/
 
-       ĞÂ½¨ZookeeperÅäÖÃÎÄ¼ş£º
+       æ–°å»ºZookeeperé…ç½®æ–‡ä»¶ï¼š
            cp zoo_sample.cfg zoo.cfg
-           ¶Ôzoo.cfg½øĞĞÅäÖÃ£º
+           å¯¹zoo.cfgè¿›è¡Œé…ç½®ï¼š
 
-           ĞŞ¸ÄÏî
-           dataDir=/home/chcit/chcit-hadoop/zookeeperdata 
+           ä¿®æ”¹é¡¹
+           dataDir=/home/chcit/chcit-hadoop/zookeeperdata
            clientPort=2181
 
-           ĞÂÔöÏî
+           æ–°å¢é¡¹
            server.1=chcit-2:2888:3888
            server.2=chcit-1:2888:3888
            server.3=chcit-3:2888:3888
-      ´´½¨ zookeeper ¹¤×÷Ä¿Â¼
+      åˆ›å»º zookeeper å·¥ä½œç›®å½•
           mkdir zookeeperdata
-      ÅäÖÃmyid
+      é…ç½®myid
           echo"1" > /home/chcit/chcit-hadoop/zookeeperdata myid
 
-      ´Ó½Úµã£¨slave£©¶Ë°²×°:
+      ä»èŠ‚ç‚¹ï¼ˆslaveï¼‰ç«¯å®‰è£…:
 
-         ½«hadoopÖĞzookeeper-3.4.6½øĞĞÔ¶³Ì¸´ÖÆµ½salveµÄÖ÷Ä¿Â¼£º
-         ´Ó½Úµã»·¾³±äÁ¿ÅäÖÃ£¨²ÎÕÕmaster½Úµã£©
-         ÎªÃ¿¸ö½ÚµãÉèÖÃ¶ÔÓ¦µÄmyid
+         å°†hadoopä¸­zookeeper-3.4.6è¿›è¡Œè¿œç¨‹å¤åˆ¶åˆ°salveçš„ä¸»ç›®å½•ï¼š
+         ä»èŠ‚ç‚¹ç¯å¢ƒå˜é‡é…ç½®ï¼ˆå‚ç…§masterèŠ‚ç‚¹ï¼‰
+         ä¸ºæ¯ä¸ªèŠ‚ç‚¹è®¾ç½®å¯¹åº”çš„myid
           echo"2" > /home/hadoop/zookeeperdata/myid
 
-      µ½Ã¿¸ö½ÚµãÉÏ·Ö±ğÆô¶¯zookeeper
+      åˆ°æ¯ä¸ªèŠ‚ç‚¹ä¸Šåˆ†åˆ«å¯åŠ¨zookeeper
           zkServer.sh start
 
 
-     2¡¢¼¯³ÉHbase
+     2ã€é›†æˆHbase
 
-     ÅäÖÃNTPÊ±¼äÍ¬²½·şÎñ£º
+     é…ç½®NTPæ—¶é—´åŒæ­¥æœåŠ¡ï¼š
          [chcit@CHCIT-2]$ su - root
          [root@CHCIT-2 ~]# vim /etc/ntp.conf
-         ĞŞ¸ÄÒÔÏÂÅäÖÃ£º
+         ä¿®æ”¹ä»¥ä¸‹é…ç½®ï¼š
          #restrictdefault kod nomodify notrap nopeer noquery
          restrictdefault kod nomodify
          restrict-6 default kod nomodify notrap nopeer noquery
- 
-         ĞŞ¸ÄÍê³ÉÖ®ºó£¬Æô¶¯ntpd.
+
+         ä¿®æ”¹å®Œæˆä¹‹åï¼Œå¯åŠ¨ntpd.
          [root@CHCIT-2 ~]service ntpd start
          [root@CHCIT-2 ~]chkconfig ntpd on
-         ¿Í»§¶ËÅäÖÃ£º
+         å®¢æˆ·ç«¯é…ç½®ï¼š
          [chcit@chcit-1 ~]$su - root
          [root@chcit-1~]# crontab -e
-         ÊäÈë ÒÔÏÂÃüÁî£º
+         è¾“å…¥ ä»¥ä¸‹å‘½ä»¤ï¼š
          */10 * * * * /usr/sbin/ntpdate 192.168.20.232 && /sbin/hwclock -w
-         ÎÒÃÇÃ¿¸ô10·ÖÖÓÓëÖ÷»ú¶ÔÒ»ÏÂÊ±¼ä¡£
-    °²×°HBASE
-        ½âÑ¹Ëõhbase°²×°°ü
+         æˆ‘ä»¬æ¯éš”10åˆ†é’Ÿä¸ä¸»æœºå¯¹ä¸€ä¸‹æ—¶é—´ã€‚
+    å®‰è£…HBASE
+        è§£å‹ç¼©hbaseå®‰è£…åŒ…
            tar -zxvf hbase-1.1.2-bin.tar.gz
-        ÅäÖÃ»·¾³±äÁ¿£º
+        é…ç½®ç¯å¢ƒå˜é‡ï¼š
            $ vim ~/.bashrc
            export HBASE_HOME=/hadoop/hbase-1.1.2
            exportPATH=.:$HBASE_HOME/bin:$HBASE_HOME/conf:$PATH
            $ source ~/.bashrc
-        ÇĞ»»ÖÁHBaseµÄÅäÖÃÄ¿Â¼£º
+        åˆ‡æ¢è‡³HBaseçš„é…ç½®ç›®å½•ï¼š
            $ cd /hadoop/hbase-1.1.2/conf
-        ÅäÖÃhbase-env.shÎÄ¼ş£º
+        é…ç½®hbase-env.shæ–‡ä»¶ï¼š
            $ vim hbase-env.sh
-           export HBASE_MANAGES_ZK=false (´ËÎªĞŞ¸ÄÏî)
-        ÅäÖÃhbase-site.xmlÎÄ¼ş£º
-        
+           export HBASE_MANAGES_ZK=false (æ­¤ä¸ºä¿®æ”¹é¡¹)
+        é…ç½®hbase-site.xmlæ–‡ä»¶ï¼š
+
        <configuration>
        <property>
        <name>hbase.rootdir</name>
@@ -143,18 +143,18 @@
        <value>chcit-1,chcit-2,chcit-3</value>
        </property>
        </configuration>
-    ÅäÖÃregionserversÎÄ¼ş£º
+    é…ç½®regionserversæ–‡ä»¶ï¼š
 
        $ vim regionservers
          chcit-1
          chcit-2
          chcit-3
 
-   ´Ó½ÚµãµÄÅäÖÃ:
-     Í¬masterÅäÖÃ£¬¿ÉÒÔscp¹ıÈ¥
+   ä»èŠ‚ç‚¹çš„é…ç½®:
+     åŒmasteré…ç½®ï¼Œå¯ä»¥scpè¿‡å»
 
 
-  ×¢Òâ£ºÈç¹ûHbase  libÏÂµÄhadoop*jarµÄ°æ±¾Óëhadoop°æ±¾²»Ò»ÖÂ£¬ĞèÒªÓÃhadoopÏÂµÄhadoop*jarÌæ»»hbaseÏÂµÄhadoop*jar¿ÉÒÔÓÃÏÂÃæµÄ½Å±¾Ìæ»»HbaseÏÂµÄhadoop jarµÄ°æ±¾
+  æ³¨æ„ï¼šå¦‚æœHbase  libä¸‹çš„hadoop*jarçš„ç‰ˆæœ¬ä¸hadoopç‰ˆæœ¬ä¸ä¸€è‡´ï¼Œéœ€è¦ç”¨hadoopä¸‹çš„hadoop*jaræ›¿æ¢hbaseä¸‹çš„hadoop*jarå¯ä»¥ç”¨ä¸‹é¢çš„è„šæœ¬æ›¿æ¢Hbaseä¸‹çš„hadoop jarçš„ç‰ˆæœ¬
   vim f.sh
    find -name "hadoop*jar" | sed 's/2.5.1/2.5.2/g' | sed 's/\.\///g' > f.log
    rm ./hadoop*jar
@@ -164,37 +164,18 @@
    done
    rm ./f.log
 
-  Æô¶¯£¨Ö»ĞèÒªÔÚmaster½ÚµãÆô¶¯¼´¿É£©
+  å¯åŠ¨ï¼ˆåªéœ€è¦åœ¨masterèŠ‚ç‚¹å¯åŠ¨å³å¯ï¼‰
   $ start-hbase.sh
-  Ê¹ÓÃJPS²é¿´½ø³Ì£º
+  ä½¿ç”¨JPSæŸ¥çœ‹è¿›ç¨‹ï¼š
 
    11596 Jps
    7115 ResourceManager
    6875 NameNode
-   7804 QuorumPeerMain  
-   11457 Main 
+   7804 QuorumPeerMain
+   11457 Main
    11234 HRegionServer
 
-  ½øÈëHBASEÃüÁîĞĞÄ£Ê½²¢½øĞĞÏàÓ¦²éÑ¯£º
+  è¿›å…¥HBASEå‘½ä»¤è¡Œæ¨¡å¼å¹¶è¿›è¡Œç›¸åº”æŸ¥è¯¢ï¼š
    $ hbase shell
-   ´´½¨Ò»¸ö±í£¬¿´¿´ÊÇ·ñ³É¹¦ 
+   åˆ›å»ºä¸€ä¸ªè¡¨ï¼Œçœ‹çœ‹æ˜¯å¦æˆåŠŸ
    create'test','info'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,14 +1,14 @@
-1¡¢°²×°MySQL²»×¼ĞíÔ¶³ÌÁ¬½Ó
+1ã€å®‰è£…MySQLä¸å‡†è®¸è¿œç¨‹è¿æ¥
 
-2¡¢°²×°HIVE
+2ã€å®‰è£…HIVE
     master
-    ÏÂÔØHIVEµÄÑ¹Ëõ°ü£¬½âÑ¹Ëõ
-    ÅäÖÃ hive-site.xml
-    Ïò hiveµÄlibÏÂÌí¼ÓmysqlµÄJDBCÇı¶¯jar
-    »·¾³±äÁ¿ ~/.bashrc Ìí¼ÓHIVE_HOME£¬
-    ½«HIVE scp µ½¸÷¸ö½Úµã£¬½Úµã»·¾³±äÁ¿²ÎÕÕmasterÅä·¨
-    
-    ×¢£º´Ë°æ±¾HIVEÓëhadoop ÓĞjar ³åÍ»£¬Ğè/home/chcit/chcit-hadoop/hadoop-2.5.2/share/hadoop/yarn Â·¾¶ÏÂµÄ jline-0.9.94.jar ĞèÉ¾³ı
-3.ÔËĞĞ
-   HIVE Îª¹¤¾ß ÔÚcentosÖÕ¶ËÖĞ ÊäÈë hive¼´¿Éµ÷³öhive ¿ØÖÆÌ¨
+    ä¸‹è½½HIVEçš„å‹ç¼©åŒ…ï¼Œè§£å‹ç¼©
+    é…ç½® hive-site.xml
+    å‘ hiveçš„libä¸‹æ·»åŠ mysqlçš„JDBCé©±åŠ¨jar
+    ç¯å¢ƒå˜é‡ ~/.bashrc æ·»åŠ HIVE_HOMEï¼Œ
+    å°†HIVE scp åˆ°å„ä¸ªèŠ‚ç‚¹ï¼ŒèŠ‚ç‚¹ç¯å¢ƒå˜é‡å‚ç…§masteré…æ³•
+
+    æ³¨ï¼šæ­¤ç‰ˆæœ¬HIVEä¸hadoop æœ‰jar å†²çªï¼Œéœ€/home/chcit/chcit-hadoop/hadoop-2.5.2/share/hadoop/yarn è·¯å¾„ä¸‹çš„ jline-0.9.94.jar éœ€åˆ é™¤
+3.è¿è¡Œ
+   HIVE ä¸ºå·¥å…· åœ¨centosç»ˆç«¯ä¸­ è¾“å…¥ hiveå³å¯è°ƒå‡ºhive æ§åˆ¶å°
    $hive
