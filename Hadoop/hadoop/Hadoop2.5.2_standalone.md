@@ -55,6 +55,33 @@ ssh-keygen -t rsa -P ""<br>
 cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys<br>
 现在可以登入ssh确认以后登录时不用输入密码:<br>
 ssh localhost<br>
-![localhost](Hadoop2.5.2_standalone/150318210171587.png) 登出：exit<br>
+![localhost](Hadoop2.5.2_standalone/150318210171587.png)<br>
+登出：exit<br>
 第二次登录：<br>
-![exit](Hadoop2.5.2_standalone/150318210171589.png) 登出：exit<br>
+![exit](Hadoop2.5.2_standalone/150318210171589.png)<br>
+登出：exit<br>
+
+## 五、安装Java环境
+
+安装jdk：sudo apt-get install openjdk-7-jdk<br>
+![openjdk](Hadoop2.5.2_standalone/150318210171588.png)<br>
+查看安装结果，输入命令：java -version，结果如下表示安装成功。<br>
+![java](Hadoop2.5.2_standalone/1503182101715810.png)
+
+## 六、安装hadoop2.5.2
+
+### 1、下载
+
+官网下载<http://mirror.bit.edu.cn/apache/hadoop/common/><br>
+![hadoop](Hadoop2.5.2_standalone/1503182101715811.png)<br>
+下载hadoop-2.5.2-src.tar.gz 并放到你希望的目录中， 我是放到/software/中。<br>
+![software](Hadoop2.5.2_standalone/1503182101715812.png)
+
+### 2、安装
+
+解压sudo tar xzf hadoop-2.5.2.tar.gz<br>
+![hadoop](Hadoop2.5.2_standalone/1503182101715813.png)<br>
+修改文件夹名，并且赋予用户对该文件夹的读写权限。<br>
+sudo mv hadoop-2.5.2 hadoop<br>
+sudo chmod 774 hadoop<br>
+![chmod](Hadoop2.5.2_standalone/1503182101715814.png)
