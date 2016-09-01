@@ -314,3 +314,33 @@ hdfs namenode –format
 ```
 
 除此之外，开发人员还可以通过<http://ip:50070>、<http://ip:8088>、<http://ip:19888>，通过浏览器查阅Hadoop集群中每一个节点的运行状态。
+
+### 备注
+
+```bash
+启动
+sbin/start-dfs.sh  
+sbin/start-yarn.sh  
+停止
+sbin/stop-dfs.sh  
+sbin/stop-yarn.sh
+```
+
+## 11、单独重启丢失的DataNode节点
+
+如果某个DataNode节点Dead（由于死机或人为原因等），可以在不重启整个Hadoop服务的情况下进行单独重启。方法如下：<br>
+在NameNode的hadoop-2.5.2/sbin目录下，执行命令启动HDFS DataNode
+
+```bash
+./hadoop-daemons.sh start datanode
+./yarn-daemons.sh start nodemanager
+```
+
+也可以单独启动NameNode节点，命令如下：
+
+```bash
+./hadoop-daemon.sh start namenode
+./yarn-daemon.sh start resourcemanager
+```
+
+上述四个命令都可以指定--config参数，后面跟hadoop的集群配置文件所在目录（即$HADOOP_HOME/etc/hadoop），大家可通过参数-h查看命令帮助信息
