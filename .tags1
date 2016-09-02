@@ -4,9 +4,3 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-淇敼ip	D:\用户目录\ZimNotes\Linux\linux命令\修改ip.md	/^# 淇敼ip$/;"	function	line:1
-缂栬緫ip	D:\用户目录\ZimNotes\Linux\linux命令\修改ip.md	/^## 缂栬緫ip$/;"	function	line:3
-閲嶅惎缃戠粶鏈嶅姟	D:\用户目录\ZimNotes\Linux\linux命令\修改ip.md	/^## 閲嶅惎缃戠粶鏈嶅姟$/;"	function	line:8
-ifconfig eth0 192.168.1.155 netmask 255.255.255.0	D:\用户目录\ZimNotes\Linux\linux命令\修改ip.md	/^# ifconfig eth0 192.168.1.155 netmask 255.255.255.0$/;"	function	line:18
-route add default gw 192.168.1.1	D:\用户目录\ZimNotes\Linux\linux命令\修改ip.md	/^# route add default gw 192.168.1.1$/;"	function	line:23
-hostname test1	D:\用户目录\ZimNotes\Linux\linux命令\修改ip.md	/^# hostname test1$/;"	function	line:31
