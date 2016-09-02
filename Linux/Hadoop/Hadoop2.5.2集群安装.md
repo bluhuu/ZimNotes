@@ -343,4 +343,16 @@ sbin/stop-yarn.sh
 ./yarn-daemon.sh start resourcemanager
 ```
 
-上述四个命令都可以指定--config参数，后面跟hadoop的集群配置文件所在目录（即$HADOOP_HOME/etc/hadoop），大家可通过参数-h查看命令帮助信息
+上述四个命令都可以指定--config参数，后面跟hadoop的集群配置文件所在目录（即$HADOOP_HOME/etc/hadoop），大家可通过参数-h查看命令帮助信息<br>
+注意：上面命令不会影响已经启动的hdfs或yarn服务，只会把丢失节点的服务启动起来。
+
+## 12、特别说明
+
+特别说明下，上面配置主服务器的slaves文件，使用的是ip配置，此时需要在主服务器的/etc/hosts中增加ip到主机名的映射如下：<br>
+[plain] view plain copy<br>
+10.0.1.201 anyname1<br>
+10.0.1.202 anyname2<br>
+否则，可能在执行start-dfs.sh命令时，从服务器的DateNode节点打印如下错误日志：<br>
+2015-01-16 17:06:54,375 ERROR org.apache.hadoop.hdfs.server.datanode.DataNode: Initialization failed for Block pool BP-1748412339-10.0.1.212-1420015637155 (Datanode Uuid null) service to /10.0.1.218:9000 Datanode denied communication with namenode because hostname cannot be resolved (ip=10.0.1.217, hostname=10.0.1.217): DatanodeRegistration(0.0.0.0, datanodeUuid=3ed21882-db82-462e-a71d-0dd52489d19e, infoPort=50075, ipcPort=50020, storageInfo=lv=-55;cid=CID-4237dee9-ea5e-4994-91c2-008d9e804960;nsid=358861143;c=0)<br>
+大意是无法将ip地址解析成主机名，也就是无法获取到主机名，需要在/etc/hosts中进行指定。<br>
+本文章参照了<http://blog.csdn.net/greensurfer/article/details/39450369>
