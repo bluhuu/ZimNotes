@@ -3,6 +3,7 @@
 
 git clone git@github.com:bluhuu/ZimNotes.git
 
+
 ### 1. 查看远程仓库
 git remote -v
 
