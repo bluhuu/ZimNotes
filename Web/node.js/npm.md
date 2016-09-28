@@ -3,7 +3,7 @@
 * smart-npm
 ```bash
 npm install --global smart-npm --registry=https://registry.npm.taobao.org/
-npm install --global smart-npm@1 --registry=https://registry.npm.taobao.org/
+npm install --global smart-npm@1 --registry=https://registry.npm.taobao.org/ (windows)
 ```
 ## npm常用命令
 1. npm -h							查看npm命令的帮助信息
