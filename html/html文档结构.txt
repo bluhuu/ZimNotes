@@ -1,0 +1,21 @@
+HTML文档结构
+   1、文档类型声明
+     <!doctype html>
+   2、HTML页面
+     <html></html>
+     1、头部内容
+        <head></head>
+      	1、<title></title>
+      	2、<meta charset="utf-8">
+      	   charset:编码，字符集
+     2、页面主体内容
+        <body></body>
+      	属性：
+      	  1、text
+      	     设置 页面 文本的颜色
+      	  2、bgcolor
+      	     摄者 页面 背景颜色
+
+      	     bgcolor(html元素属性)
+      	     和
+      	     background-color(css样式属性)

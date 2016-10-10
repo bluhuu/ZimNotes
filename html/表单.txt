@@ -1,0 +1,168 @@
+表单(重难点)
+	1、表单作用
+		用于显示、收集用户信息，并将信息提交给服务器
+
+		表单组成：
+		1、表单元素-负责将用户数据提交给服务器
+		2、表单控件-负责接收用户的数据(与用户进行数据交互)
+	2、表单元素
+		1、标记
+			<form></form>
+		2、属性
+			1、action
+				定义表单被提交时的动作，主要就是 服务器上处理 数据的应用程序URL
+				默认 是提交给本页
+			2、method
+				指定表单数据提交的方式
+				取值：
+					1、get(默认值)
+						向服务器端要数据时使用
+						特点：
+						1、显示提交：用户数据是可以显示在地址栏上的
+						2、提交数据长度限制：2KB
+					2、post
+						向服务器传递数据时使用
+						特点：
+						1、隐式提交：所提交的数据是看不见的-安全性较高
+						2、无数据大小限制
+			3、enctype(非重点)
+				表单数据进行编码的方式
+				取值：
+				1、application/x-www-form-urlencoded(默认值)
+				2、multipart/form-data
+					使用场合：上传文件时使用
+				3、text/plain
+	3、表单控件
+		1、作用
+			提供多种类型的表单控件，并且具备可视化的外观，可以接收用户的数据
+		2、表单控件分类
+			input组元素，textarea，选项框(select和option)，其他元素
+			1、input 元素
+				1、语法
+					<input>或<input/>
+					属性：
+						1、type
+							根据type值，创建各种类型的输入字段,如文本框，密码框，单选按钮复选框等... ...
+						2、value
+							值，要提交给服务器的值
+						3、name
+							控件的名称，服务器端使用，没有名字，无法提交
+						4、disabled
+							禁用控件，该属性无值，只要出现在控件中就表示禁用
+							<input disabled>
+				2、分类
+					1、文本框与密码框
+						文本框：type="text"
+						密码框：type="password
+
+						属性：
+							1、maxlength
+								限制输入的字符数
+							2、readonly
+								只读
+							3、name
+								以控件的缩写+功能名称组成
+								文本框和密码框的缩写：txt
+								ex:
+									用户名称:txtUsername
+									用户昵称:txtNickname
+							4、value
+					2、单选按钮 和 复选框
+						单选按钮：type="radio"
+						复选框：type="checkbox"
+
+						属性：
+							1、name
+								名称以及分组，一组单选按钮或复选框的话，名称必须一致
+								单选按钮:rdo
+								复选框：chk
+							2、value
+								值
+							3、checked
+								设置默认被选中
+					3、按钮
+						提交按钮：type="submit"
+							负责提交数据到服务器
+						重置按钮：type="reset"
+							将表单元素恢复到默认值
+						普通按钮：type="button"
+							执行客户端脚本(JS)
+						属性：
+							1、name
+								缩写：btn
+							2、value
+								按钮上的显示文本
+					4、隐藏域和文件选择框
+						1、隐藏域
+							不想给用户看，但是要提交给服务器的数据
+
+							<input type="hidden">
+							属性：
+								1、name 名称,缩写 txt
+								2、value 值
+						2、文件选择框
+							提交(上传)文件时使用
+							<input type="file">
+							属性：
+								1、name
+									缩写 ：txt
+							注意：
+								1、保证 form 的 method 属性 必须为 post
+								2、保证 form 的 enctype 属性 必须为 multipart/form-data
+			2、textarea 元素
+				多行文本框
+				1、语法
+					<textarea>文本</textarea>
+				2、属性
+					1、name
+						控件的名称，缩写 txt
+					2、readonly
+						只读
+					3、cols
+						指定文本域的列数
+						变相设置宽度
+					4、rows
+						指定文本域的行数
+						变相设置高度
+			3、选项框
+				两种：
+					1、下拉选项框
+					2、滚动列表
+				语法
+					1、<select></select>
+						功能：创建选项框(滚动列表)
+						属性：
+						1、name
+							缩写：sel
+						2、size
+							默认显示的选项数量，如果取值大于1的话，则为滚动列表
+						3、multiple
+							设置多选
+					2、<option></option>
+						选项框中的选项
+						属性：
+							1、value
+								值
+							2、selected
+								预选中
+			4、其他元素
+				1、label 元素
+					1、作用
+						关联 文本 与表单控件。
+					2、语法
+						<label>文本</label>
+						属性：
+							for ：表示与该元素相关联的表单控件的ID值
+				2、fieldset 元素
+					1、作用
+						为控件分组
+					2、语法
+						1、<fieldset></fieldset>
+							为控件分组
+						2、<legend></legend>
+							为分组指定标题
+				3、button 元素
+					语法:
+						<button>内容</button>
+					注意：
+						<button>元素放在<form>中，就是提交按钮,放在<form>之外，就是普通按钮(IE除外)
