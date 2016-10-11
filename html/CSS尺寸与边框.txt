@@ -1,0 +1,113 @@
+尺寸与边框
+	1、CSS单位
+		1、尺寸单位
+			1、%
+				占据父元素尺寸的占比
+			2、in
+				英寸，1in=2.54cm
+			3、cm
+				厘米
+			4、mm
+				毫米
+			5、px
+				像素，计算机屏幕上的一个点
+			6、pt(point)
+				磅/点
+				1pt=1/72in
+			7、em
+				1em 相当于 当前字体尺寸
+				2em 相当于 当前字体尺寸的2倍
+			注意：css中描述尺寸的单位是不能省略的。
+		2、颜色单位
+			1、rgb(r,g,b)
+				r:red
+				g:green
+				b:blue
+				r,g,b的范围分别是 0~255
+				background-color:rgb(125,28,96);
+			2、rgb(r%,g%,b%)
+			3、#rrggbb
+				由6位16进制数字表示颜色
+				16进制范围:
+					0-9 A-F
+
+					#ff0000 : 红色
+					#123456 :
+			4、#rgb
+				#rrggbb的缩写
+				#001122 --》 #012
+			5、表示英文的单词
+				red,green,blue,yellow,
+	2、尺寸属性
+		1、作用
+			尺寸属性一般用于设置元素的宽度和高度
+		2、宽度
+			属性：
+				width
+				min-width
+				max-width
+				注意：min-width/max-width 与 width 属性相冲突，最终以width属性值为准
+		3、高度
+			属性：
+				height
+				min-height
+				max-height
+		4、注意
+			1、不是所有的元素都支持修改尺寸
+				支持修改尺寸属性的元素如下：
+				1、块级元素
+				2、非块级元素中，存在width，height属性的html元素
+					table，img
+		5、溢出
+			使用尺寸属性控制元素大小时，如果内容所需的空间大小大于元素本身的空间，会导致内容溢出
+			处理溢出的属性:
+				overflow:
+				overflow-x:横向溢出处理
+				overflow-y:纵向溢出处理
+					取值：
+						1、visibile
+							默认值，溢出可见
+						2、hidden
+							隐藏
+						3、scroll
+							让元素显示滚动条，溢出时可用
+						4、auto
+							自动，溢出时显示滚动条，并可用
+	3、边框
+		1、作用
+			在元素周围绘制一条线
+		2、属性
+			1、简写方式
+				border:width style color;
+					width:边框粗细，以px为单位
+					style:边框样式
+						solid : 实线
+						dotted : 虚线
+						dashed : 虚线
+					color:边框颜色
+						合法的颜色值
+				作用：控制元素的上下左右四个边框的粗细，样式，颜色
+			2、单边定义
+				border-方向:width style color;
+				方向：
+					top：上
+					bottom：下
+					left：左
+					right：右
+			3、单属性定义
+				border-属性:值;
+				属性：
+					width : 边框粗细
+					style : 边框样式
+					color : 边框颜色
+				作用：控制四条边的对应属性
+			4、单方向单属性定义
+				border-方向-属性:值;
+			5、注意
+				1、边框颜色可取值为 transparent，意味透明
+				2、取消边框显示
+					border:0;
+					border:none;
+
+					border-方向:0;
+					border-方向:none;
