@@ -111,3 +111,41 @@
 
 					border-方向:0;
 					border-方向:none;
+			6、边框倒角
+				属性：border-radius
+					该属性为简写属性，可以设置四个角的倒角半径
+				取值：以px为单位 或 以 % 为单位
+
+				单角定义:
+					border-top-left-radius:左上角
+					border-bottom-right-radius:右下角
+					border-bottom-left-radius:左下角
+					border-top-right-radius:右上角
+			7、边框阴影
+				给元素增加阴影
+				属性：box-shadow
+				取值：多属性值列表
+					box-shadow:h-shadow v-shadow blur spread color inset;
+					h-shadow:必须 阴影的水平偏移距离，取值为正，向右偏，取值为负，向左偏
+					v-shadow:必须 阴影的垂直偏移距离，取值为正，向下偏，取值为负，向上偏
+					blur:可选，模糊距离
+					spread:可选，阴影的扩充尺寸
+					color:可选，阴影的颜色
+					inset:可选值，将默认的外阴影改为内阴影
+			8、轮廓
+				1、什么是轮廓
+					绘制于元素边框周围的一条线
+				2、属性
+					outline:width style color;
+					outline-width:宽度
+					outline-style:样式
+					outline-color:颜色
+
+					常用：
+						outline:0;
+						outline:none;
+
+			练习：
+				在作业基础上，完成以下操作
+				1、设置图像的边框倒角
+				2、鼠标悬停在图像上时，将边框由现有样式变成2px粗细，red边框颜色并且，不能有任何的位置变化
