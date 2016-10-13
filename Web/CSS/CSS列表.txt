@@ -1,0 +1,22 @@
+列表
+	1、列表项标识
+		属性：list-style-type
+		取值：
+			1、none : 无标记
+			2、disc
+			3、circle
+			4、square
+			5、... ...
+	2、列表项图像
+		属性:list-style-image
+		取值:url()
+	3、列表项位置
+		属性:list-style-position
+		取值：
+			outside : 默认值，标识位于列表项区域之外
+			inside : 标记放在列表项区域之内
+	4、列表属性
+		属性：list-style
+		取值：type url position;
+
+		常用方式：list-style:none;
