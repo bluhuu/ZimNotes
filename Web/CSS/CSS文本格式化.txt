@@ -1,0 +1,68 @@
+文本格式化
+	1、字体属性
+		1、字体
+			属性：font-family
+			取值：value,value
+			注意：
+				字体取值中包含特殊符号和中文的话，要用 "" 引起来
+			ex:
+				font-family:Arial,"microsoft yahei";
+		2、字体大小
+			属性：font-size
+		3、字体加粗
+			属性：font-weight
+			取值：
+				1、normal：正常显示，大部分标记的默认值
+				2、bold : 加粗
+				3、无单位数值
+					400~900
+					400 : normal
+					900 : bold
+		4、字体样式
+			属性：font-style
+			取值：
+				1、normal 正常
+				2、italic 斜体
+		5、小型大写字母
+			Aa Bb Cc Dd
+			属性：font-variant
+			取值：
+				1、normal
+				2、small-caps
+		6、字体属性
+			属性：font
+			取值：style variant weight size family;
+			ex:
+				font:bold 12px "Arial";
+				font:12px bold "arial";不对
+
+			注意：
+				使用font属性的话，一定要加上 family的值，否则没效果
+	2、文本属性
+		1、文本颜色
+			属性：color
+		2、文本排列
+			作用：控制元素中的文本、行内、行内块元素的水平对齐方式
+			属性：text-align
+			取值：left/center/right
+		3、文字修饰
+			属性：text-decoration
+			取值：
+				1、none
+					没有
+				2、underline
+					下划线
+				3、overline
+					上划线
+				4、line-through
+					删除线 --> <s></s>
+		4、行高
+			作用：指定一行文本的高度。如果行高高于文字本身大小，那么文本将在指定的行高范围内垂直居中显示
+			属性：line-height
+			取值：数值
+		5、首行文本缩进
+			属性：text-indent
+			取值：value
+		6、文本阴影
+			属性：text-shadow
+			取值：h-shadow v-shadow blur color;

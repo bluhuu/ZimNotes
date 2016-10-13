@@ -1,0 +1,78 @@
+渐变
+	1、什么是渐变
+		多种颜色变化的一个过程
+
+		分类：
+			1、线性渐变
+			2、径向渐变
+			3、重复渐变(线性,径向)
+		特点：
+			1、渐变都有填充方向(线性渐变)
+			2、色标(颜色，位置)
+	2、语法
+		属性：background-image
+		取值：
+			1、linear-gradient():线性渐变
+			2、radial-gradient():径向渐变
+			3、repeating-linear-gradient():重复线性渐变
+			4、repeating-radial-gradient():重复径向渐变
+	3、线性渐变
+		语法：background-image:linear-gradient(angle,color-point,color-point,...);
+		1、angle
+			渐变的方向或角度
+			取值：
+				to top : 从下向上填充渐变色
+				to right:从左向右填充渐变色
+				to bottom:从上向下填充渐变
+				to left:从右向左填充渐变色
+
+				0deg : 0度->to top
+				90deg: 90度->to right
+				180deg:180度->to bottom
+				270deg:270度->to left	\
+		2、color-point
+			色标：表示颜色及其颜色出现的位置
+			ex
+				red 0% : 开始的时候是红色
+				blue 25%:25%的时候变成蓝色
+
+				red 0px : 开始的时候是红色
+				blue 25px:到25px的位置处，变为蓝色
+		练习：创建一个 400*400的div元素，从下向上分别填充red(0%)，blue(50%)，green(100%) 颜色
+	4、径向渐变
+		语法：background-image:radial-gradient([size at position],color-point,color-point);
+		1、size at position
+			size:表示圆的半径
+			position:圆心位置，取值可以为 数值，百分比，关键字
+
+			该参数可以省略的，圆心位置在元素的正中间
+	5、重复渐变
+		语法：
+			background-image:repeating-linear-gradient(同线性渐变);
+
+			background-image:repeating-radial-gradient(同径向渐变);
+	6、浏览器兼容性
+		对不支持渐变的浏览器可以增加浏览器前缀来解决兼容性
+		Firefox : -moz-
+		Chrome&Safari :-webkit-
+		Opera:-o-
+		IE : -ms-
+
+		background-image:linear-gradient();
+
+		如果浏览器不支持 属性的话 ， 那么前缀就加在属性名称前
+		ex:
+			animation,css3中所出的新属性
+
+			-webkit-animation:值;
+			-moz-animation:值;
+			-o-animation:值;
+
+		如果浏览器支持属性但不支持值得话，那么前缀就加在值前
+		ex:
+			background-image:linear-gradient();
+			linear-gradient()是CSS3中出现的新属性值。
+
+			background-image:-webkit-linear-gradient();
+			background-image:-moz-linear-gradient();
+			background-image:-o-linear-gradient();
