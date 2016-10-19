@@ -1,0 +1,35 @@
+1、toad 如何进行表分析？
+（1）选中表名按F4，然后弹出对话框有个按钮叫Analyze table，点击后按绿色的三角符号
+（2）进行表分析的作用是整理索引，提高执行效率
+
+2、toad中如何查看sql的执行计划
+（1）通过toad中的Run explain plan for current statement或者通过快捷键Ctrl+e来看
+
+3、toad中常用快捷键
+   F4 看表的结构
+   F5 执行对话框中的SQL，注意最后需要以;结尾
+   F7 清除当前编辑框中所有的sql
+   F8 查看历史的sql语句
+   F9 执行当前行的sql
+   F10  看菜单
+
+   Ctrl + F12 保存sql为文档
+   Ctrl +.   补全table_name
+   Ctrl + t  补全table_name，或者显示字段
+   Ctrl + e  查看当前Sql的执行计划
+   Ctrl+Enter 直接执行当前sql 　　
+   Ctrl+Shift+F 格式化sql语句 　　
+   Alt+箭头上下 看sql history
+   Ctrl+F  查找
+   Ctrl+R  替换 要全部替换需要选中对话框中的Entire scope
+   Ctrl+U  将选中SQL语句全部大写
+   Ctrl+L  将选中SQL语句全部小写
+   Ctrl+B  将选中SQL语句语句注释，commet block
+   Ctrl++Shift+B  将选中SQL语句取消注释，uncommet block
+
+
+ 4、如何在toad中设置快捷键
+      View -->toad options --> Auto Replace --> Import 导入一个text文件设置一批快捷键
+      文件中的内容：
+      例如将s设置为select * from 则 s=select * from
+      View -->toad options --> Auto Replace --> Add  增加一个快捷
