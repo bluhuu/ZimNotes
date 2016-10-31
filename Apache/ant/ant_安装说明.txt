@@ -47,6 +47,11 @@ build.xml：
          <echo message="Hello,Amigo" file="logs/system.log" append="true">
 6.利用Ant构建和部署Java工程
     Ant可以代替使用javac、java和jar等命令来执行java操作，从而达到轻松的构建和部署Java工程的目的
+7.文件集
+<fileset dir="${src}" casesensitive="yes">
+   <include name="**/*.java"/>
+   <exclude name="**/*Stub*"/>
+</fileset>
 例：
 <?xml version="1.0"?>
 <!-- project元素是Ant构件文件的根元素
