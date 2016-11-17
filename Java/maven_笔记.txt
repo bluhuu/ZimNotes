@@ -1,0 +1,74 @@
+﻿src
+	-main
+		-java
+	-test
+		-java
+	-resources
+	
+mvn -v 查看maven版本
+mvn compile 编译
+mvn clean compile 删除target并编译
+mvn test 测试
+mvn package 打包
+mvn clean 删除target
+mvn install 安装jar包到本地仓库中
+
+创建目录的两种方式：
+1.archetype:generate 按照提示进行选择
+2.archetype:generate -DgroupId=组织名，公司网址的反写+项目名
+					 -DartifactId=项目名-模块名
+					 -Dversion=版本号
+					 -Dpackage=代码所在包名
+
+坐标
+	构件
+仓库
+	本地仓库和远程仓库
+镜像仓库
+	设置：D:\apache\apache-maven-3.3.9\conf\settings.xml
+	  <mirrors>
+		<mirror>
+		  <id>maven.net.cn</id>
+		  <mirrorOf>central</mirrorOf>
+		  <name>central mirror in china</name>
+		  <url>http://maven.net.cn/central/groups/public</url>
+		</mirror>
+	  </mirrors>
+仓库位置
+	设置：D:\apache\apache-maven-3.3.9\conf\settings.xml
+		<localRepository>D:/bluhuu/repo</localRepository>
+	拷贝：D:\apache\apache-maven-3.3.9\conf\settings.xml 到 D:/bluhuu/repo
+Myeclipse设置
+	添加JDK
+		Window-Preferences-Java-Installed JREs-Add..
+			JRE home:C:\Program Files\Java\jdk1.7.0_80
+			Default VM Arguments:-Dmaven.multiModuleProjectDirectory=$M2_HOME
+	设置Maven
+		Window-Preferences-MyEclipse-Maven4MyEclipse-Maven-Installations-Add..
+			D:\apache\apache-maven-3.3.9文件夹
+		Window-Preferences-MyEclipse-Maven4MyEclipse-Maven-User Settings-Browse...
+			D:\bluhuu\repo\settings.xml文件
+环境变量
+	M2_HOME=D:\apache\apache-maven-3.3.9
+	path 增加 ;%M2_HOME%\bin
+	
+6.5版开始集成Maven, 但是bug超多,只好手动安装maven3. 
+关闭Eclipse程序, 进入MyEclipse插件目录/eclipse/features, 
+删除com.genuitec.myeclipse.maven_6.5.1.zmyeclipse650200806目录, 
+接着删除plugins目录下的com.genuitec.myeclipse.maven_6.5.1.zmyeclipse650200806, org.maven.ide.components.archetype_common_2.0.0.20080331-1600, org.maven.ide.components.maven_embedder_2.1.0.20080410-2200, org.maven.ide.components.maven_model_edit_1.0.0.20080331-1600, org.maven.ide.components.maven_scm_1.0.0.20080410-2200, 
+org.maven.ide.components.nexus_indexer_1.0.0.20080331-1600, 
+org.maven.ide.components.qname_1.0.0.20080331-1600目录, 
+还有com.genuitec.eclipse.maven_6.5.1.zmyeclipse650200806.jar, 
+org.maven.ide.eclipse.central_0.9.1.zmyeclipse650200806.jar, 
+org.maven.ide.eclipse.scm_0.9.2.zmyeclipse650200806.jar, 
+org.maven.ide.eclipse_0.9.3.zmyeclipse650200806.jar 
+这四个文件. 然后加上-clean参数启动Eclipse. 
+在安装myeclipse的maven插件时一定要先在本机安装maven 
+MyEclipse 6.5安装 
+打开Help->Software Updates->Find and Install...->Search for new faatures to install->New Remote Site... 
+在打开的对话框中输入： 
+Name:m2eclipse 
+Url:http://m2eclipse.sonatype.org/sites/m2e/0.10.0.20100209-0800/ 
+安装好maven后在IDE菜单栏点击  window  --> preferences 输入maven 
+接着点击Installations -->Add  -->选择maven的安装目录 -->Apply 
+点击User Settings 选择解压后maven下conf文件夹中的settings.xml再点击Apply.

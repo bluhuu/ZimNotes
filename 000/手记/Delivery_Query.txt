@@ -1,0 +1,646 @@
+Request URL: http: //192.168.20.206:8080/elink_csp_web/deliveryAction/queryDetail.do
+    Request Method: POST
+Status Code: 200 OK
+Remote Address: 192.168 .20 .206: 8080
+
+Form Data
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
+start: 0
+limit: 25
+dateFrom: 2016 - 11 - 01
+processed: Y
+mode: vendor
+isAuxDoc: N
+appSessionID: 1479194363600.4
+    -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
+    start: 0
+limit: 25
+dateFrom: 2016 - 11 - 01
+productName: 鸡胆口服溶液
+orgID: 1000183
+warehouseID: 1000188
+
+shipmentNo: 1000138
+invoiceNo: 1000088
+
+processed: Y
+mode: vendor
+isAuxDoc: N
+appSessionID: 1479194363600.4
+    -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --{
+        "total": 7,
+        "rows": [{
+            "EAI_DeliveryLine_ID": 1000227,
+            "OrgName": "江苏省中医院",
+            "WarehouseName": "门诊药房",
+            "BPartnerName": "南京国药",
+            "DocumentNo": "1000087",
+            "OrderDocNo": "1000123",
+            "DeliveryNo": "1000138",
+            "ShipmentNo": "1000138",
+            "ShipmentLineNo": "1000105",
+            "PackageSeqNo": "0",
+            "StockOutNo": "1000088",
+            "SiteDeliveryID": "1000138",
+            "DateDelivered": "2016-11-10",
+            "Lot": "2222",
+            "GuaranteeDate": "2018-11-14",
+            "ProductionDate": "",
+            "ProductName": "鸡胆口服溶液",
+            "MedicineName": "鸡胆口服溶液",
+            "ProductSpec": "10ml×10支/盒",
+            "Manufacturer": "吉林东北亚药业",
+            "ProductCode": "3111",
+            "UOMName": "盒",
+            "Qty": 10,
+            "QtyReceived": 10,
+            "QtyRejected": 0,
+            "Price": 150,
+            "LineAmt": 1500,
+            "IsExported": "Y",
+            "ExportTime": "2016-11-10 02:27:00",
+            "IsAuxDoc": "N"
+        }, {
+            "EAI_DeliveryLine_ID": 1000228,
+            "OrgName": "江苏省中医院",
+            "WarehouseName": "门诊药房",
+            "BPartnerName": "南京国药",
+            "DocumentNo": "1000088",
+            "OrderDocNo": "1000125",
+            "DeliveryNo": "1000139",
+            "ShipmentNo": "1000139",
+            "ShipmentLineNo": "1000107",
+            "PackageSeqNo": "0",
+            "StockOutNo": "1000089",
+            "SiteDeliveryID": "1000139",
+            "DateDelivered": "2016-11-10",
+            "Lot": "202020",
+            "GuaranteeDate": "2018-11-16",
+            "ProductionDate": "",
+            "ProductName": "曲尼司特",
+            "MedicineName": "曲尼司特",
+            "ProductSpec": "0.1g×24粒/盒",
+            "Manufacturer": "中国药科大",
+            "ProductCode": "3105",
+            "UOMName": "盒",
+            "Qty": 10,
+            "QtyReceived": 10,
+            "QtyRejected": 0,
+            "Price": 4.2,
+            "LineAmt": 42,
+            "IsExported": "Y",
+            "ExportTime": "2016-11-10 03:05:51",
+            "IsAuxDoc": "N"
+        }, {
+            "EAI_DeliveryLine_ID": 1000229,
+            "OrgName": "江苏省中医院",
+            "WarehouseName": "门诊药房",
+            "BPartnerName": "南京国药",
+            "DocumentNo": "1000088",
+            "OrderDocNo": "1000125",
+            "DeliveryNo": "1000139",
+            "ShipmentNo": "1000139",
+            "ShipmentLineNo": "1000106",
+            "PackageSeqNo": "0",
+            "StockOutNo": "1000089",
+            "SiteDeliveryID": "1000139",
+            "DateDelivered": "2016-11-10",
+            "Lot": "2222",
+            "GuaranteeDate": "2018-11-14",
+            "ProductionDate": "",
+            "ProductName": "鸡胆口服溶液",
+            "MedicineName": "鸡胆口服溶液",
+            "ProductSpec": "10ml×10支/盒",
+            "Manufacturer": "吉林东北亚药业",
+            "ProductCode": "3111",
+            "UOMName": "盒",
+            "Qty": 10,
+            "QtyReceived": 10,
+            "QtyRejected": 0,
+            "Price": 150,
+            "LineAmt": 1500,
+            "IsExported": "Y",
+            "ExportTime": "2016-11-10 03:05:51",
+            "IsAuxDoc": "N"
+        }, {
+            "EAI_DeliveryLine_ID": 1000239,
+            "OrgName": "江苏省中医院",
+            "WarehouseName": "普通儿科",
+            "BPartnerName": "南京国药",
+            "DocumentNo": "1000099",
+            "OrderDocNo": "1000136",
+            "DeliveryNo": "1000145",
+            "ShipmentNo": "1000145",
+            "ShipmentLineNo": "1000118",
+            "PackageSeqNo": "0",
+            "StockOutNo": "1000090",
+            "SiteDeliveryID": "1000145",
+            "DateDelivered": "2016-11-13",
+            "Lot": "2222",
+            "GuaranteeDate": "2018-11-14",
+            "ProductionDate": "",
+            "ProductName": "鸡胆口服溶液",
+            "MedicineName": "鸡胆口服溶液",
+            "ProductSpec": "10ml×10支/盒",
+            "Manufacturer": "吉林东北亚药业",
+            "ProductCode": "3111",
+            "UOMName": "盒",
+            "Qty": 2,
+            "QtyReceived": 2,
+            "QtyRejected": 0,
+            "Price": 11.2,
+            "LineAmt": 22.4,
+            "IsExported": "Y",
+            "ExportTime": "2016-11-13 09:47:00",
+            "IsAuxDoc": "N"
+        }, {
+            "EAI_DeliveryLine_ID": 1000240,
+            "OrgName": "江苏省中医院",
+            "WarehouseName": "普通儿科",
+            "BPartnerName": "南京国药",
+            "DocumentNo": "1000099",
+            "OrderDocNo": "1000136",
+            "DeliveryNo": "1000145",
+            "ShipmentNo": "1000145",
+            "ShipmentLineNo": "1000119",
+            "PackageSeqNo": "0",
+            "StockOutNo": "1000090",
+            "SiteDeliveryID": "1000145",
+            "DateDelivered": "2016-11-13",
+            "Lot": "202020",
+            "GuaranteeDate": "2018-11-16",
+            "ProductionDate": "",
+            "ProductName": "曲尼司特",
+            "MedicineName": "曲尼司特",
+            "ProductSpec": "0.1g×24粒/盒",
+            "Manufacturer": "中国药科大",
+            "ProductCode": "3105",
+            "UOMName": "盒",
+            "Qty": 2,
+            "QtyReceived": 2,
+            "QtyRejected": 0,
+            "Price": 11.2,
+            "LineAmt": 22.4,
+            "IsExported": "Y",
+            "ExportTime": "2016-11-13 09:47:00",
+            "IsAuxDoc": "N"
+        }, {
+            "EAI_DeliveryLine_ID": 1000241,
+            "OrgName": "江苏省中医院",
+            "WarehouseName": "普通儿科",
+            "BPartnerName": "南京国药",
+            "DocumentNo": "1000100",
+            "OrderDocNo": "1000138",
+            "DeliveryNo": "1000146",
+            "ShipmentNo": "1000146",
+            "ShipmentLineNo": "1000120",
+            "PackageSeqNo": "0",
+            "StockOutNo": "1000091",
+            "SiteDeliveryID": "1000146",
+            "DateDelivered": "2016-11-13",
+            "Lot": "202020",
+            "GuaranteeDate": "2018-11-16",
+            "ProductionDate": "",
+            "ProductName": "曲尼司特",
+            "MedicineName": "曲尼司特",
+            "ProductSpec": "0.1g×24粒/盒",
+            "Manufacturer": "中国药科大",
+            "ProductCode": "3105",
+            "UOMName": "盒",
+            "Qty": 3,
+            "QtyReceived": 3,
+            "QtyRejected": 0,
+            "Price": 11.2,
+            "LineAmt": 33.6,
+            "IsExported": "Y",
+            "ExportTime": "2016-11-13 03:18:00",
+            "IsAuxDoc": "N"
+        }, {
+            "EAI_DeliveryLine_ID": 1000242,
+            "OrgName": "江苏省中医院",
+            "WarehouseName": "普通儿科",
+            "BPartnerName": "南京国药",
+            "DocumentNo": "1000101",
+            "OrderDocNo": "1000141",
+            "DeliveryNo": "1000147",
+            "ShipmentNo": "1000147",
+            "ShipmentLineNo": "1000121",
+            "PackageSeqNo": "0",
+            "StockOutNo": "1000094",
+            "SiteDeliveryID": "1000147",
+            "DateDelivered": "2016-11-15",
+            "Lot": "2222",
+            "GuaranteeDate": "2018-11-14",
+            "ProductionDate": "",
+            "ProductName": "鸡胆口服溶液",
+            "MedicineName": "鸡胆口服溶液",
+            "ProductSpec": "10ml×10支/盒",
+            "Manufacturer": "吉林东北亚药业",
+            "ProductCode": "3111",
+            "UOMName": "盒",
+            "Qty": 5,
+            "QtyReceived": 0,
+            "QtyRejected": 0,
+            "Price": 11.2,
+            "LineAmt": 56,
+            "IsExported": "Y",
+            "ExportTime": "2016-11-15 05:15:00",
+            "IsAuxDoc": "N"
+        }]
+    }
+    -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
+    Request URL: http: //192.168.20.206:8080/elink_csp_web/taxInvoiceAction/summary.do
+    productName:
+    start: 0
+limit: 10
+bpartnerID: 1057126
+queryType: ALL
+isSOTrx: Y
+sort: amt
+dir: desc
+byProduct: true
+byPrice: true
+dateFrom: 2016 - 11 - 01
+dateTo: 2016 - 11 - 16
+    -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
+    Request URL: http: //192.168.20.206:8080/elink_csp_web/taxInvoiceAction/query.do
+    start: 0
+limit: 25
+dateFrom: 2014 - 08 - 06
+dateTo: 2016 - 11 - 23
+orgID: 1000183
+validation:
+    appSessionID: 1479194363600.4 {
+        "total": 2,
+        "rows": [{
+            "EAI_TaxInvoice_ID": 1000027,
+            "DateInvoiced": "2016-11-14 00:00:00.0",
+            "InvoiceNo": "20161114",
+            "TotalAmt": 78.4,
+            "DocStatus": "CO",
+            "DocStatusName": "已确认",
+            "TotalTax": 0,
+            "EAI_Settlement_ID": 1000045,
+            "SiteSettlementID": "1000044",
+            "IsExported": "Y",
+            "ExportTime": "2016-11-14",
+            "SiteTaxInvoiceID": "1000027",
+            "AD_Org_ID": 1000183,
+            "OrgName": "江苏省中医院"
+        }, {
+            "EAI_TaxInvoice_ID": 1000040,
+            "DateInvoiced": "2016-11-15 00:00:00.0",
+            "InvoiceNo": "20161115",
+            "TotalAmt": 3042,
+            "DocStatus": "DR",
+            "DocStatusName": "草案",
+            "TotalTax": 0,
+            "EAI_Settlement_ID": 1000046,
+            "SiteSettlementID": "1000045",
+            "IsExported": "N",
+            "ExportTime": "",
+            "SiteTaxInvoiceID": "1000040",
+            "AD_Org_ID": 1000183,
+            "OrgName": "江苏省中医院"
+        }]
+    }
+
+select
+t.EAI_TaxInvoice_ID, t.EAI_Bpartner_ID, b.Name BPartnerName, t.AD_Org_ID, o.Name OrgName, t.DateInvoiced,
+    t.InvoiceNo, t.DocStatus, getreflisttrl(131, t.DocStatus) DocStatusName, t.TotalAmt, t.TotalTax, t.EAI_Settlement_ID, s.SiteSettlementID, t.IsExported, t.ExportTime, t.SiteTaxInvoiceID, t.Description
+from EAI_TaxInvoice t
+inner join AD_Org o on(t.AD_Org_ID = o.AD_Org_ID)
+inner join EAI_Bpartner b on(t.EAI_BPartner_ID = b.EAI_BPartner_ID)
+left join EAI_Settlement s on(t.EAI_Settlement_ID = s.EAI_Settlement_ID)
+where 1 = 1 AND t.IsActive = 'Y'
+AND t.DocStatus != 'VO'
+AND b.Ad_OrgBp_ID = ?
+
+    -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- - {
+        "total": 1,
+        "rows": [{
+            "EAI_TaxInvoice_ID": 1000039,
+            "DateInvoiced": "2016-11-11 00:00:00.0",
+            "InvoiceNo": "00000019",
+            "TotalAmt": 11.1,
+            "DocStatus": "CO",
+            "DocStatusName": "已确认",
+            "TotalTax": 1.61,
+            "EAI_Settlement_ID": 1000044,
+            "SiteSettlementID": "1000043",
+            "IsExported": "Y",
+            "ExportTime": "2016-11-14",
+            "SiteTaxInvoiceID": "1000007",
+            "AD_Org_ID": 1000183,
+            "OrgName": "江苏省中医院"
+        }]
+    }
+
+{
+    "total": 2,
+    "rows": [{
+        "EAI_TaxInvoice_ID": 1000027,
+        "DateInvoiced": "2016-11-14 00:00:00.0",
+        "InvoiceNo": "20161114",
+        "TotalAmt": 78.4,
+        "DocStatus": "CO",
+        "DocStatusName": "已确认",
+        "TotalTax": 0,
+        "EAI_Settlement_ID": 1000045,
+        "SiteSettlementID": "1000044",
+        "IsExported": "Y",
+        "ExportTime": "2016-11-14",
+        "SiteTaxInvoiceID": "1000027",
+        "AD_Org_ID": 1000183,
+        "OrgName": "江苏省中医院"
+    }, {
+        "EAI_TaxInvoice_ID": 1000040,
+        "DateInvoiced": "2016-11-15 00:00:00.0",
+        "InvoiceNo": "20161115",
+        "TotalAmt": 3042,
+        "DocStatus": "DR",
+        "DocStatusName": "草案",
+        "TotalTax": 0,
+        "EAI_Settlement_ID": 1000046,
+        "SiteSettlementID": "1000045",
+        "IsExported": "N",
+        "ExportTime": "",
+        "SiteTaxInvoiceID": "1000040",
+        "AD_Org_ID": 1000183,
+        "OrgName": "江苏省中医院"
+    }]
+}
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
+http: //192.168.20.206:8080/elink_csp_web/taxInvoiceAction/queryLine.do
+    start: 0
+limit: 25
+headerID: 1000040
+appSessionID: 1479352480205.8 {
+    "total": 3,
+    "rows": [{
+        "EAI_TaxInvoiceLine_ID": 1000087,
+        "EAI_TaxInvoice_ID": 1000040,
+        "EAI_OrderLine_ID": 1002285,
+        "SiteOrderLineID": "1016196",
+        "SiteOrderID": "1007657",
+        "EAI_SettlementLine_ID": 1000111,
+        "SiteTaxInvoiceLineID": "1000087",
+        "EAI_Product_ID": 1109879,
+        "ProductCode": "3111",
+        "ProductName": "鸡胆口服溶液",
+        "MedicineName": "鸡胆口服溶液",
+        "ProductSpec": "10ml×10支/盒",
+        "Manufacturer": "吉林东北亚药业",
+        "UOM": "RFY-00002",
+        "UOMName": "盒",
+        "Lot": "2222",
+        "GuaranteeDate": "2018-11-14",
+        "Qty": 10,
+        "Price": 150,
+        "LineAmt": 1500,
+        "LineTax": 0,
+        "Line": 1,
+        "TaxRate": 0,
+        "MultiplyRate": 1,
+        "DivideRate": 0
+    }, {
+        "EAI_TaxInvoiceLine_ID": 1000088,
+        "EAI_TaxInvoice_ID": 1000040,
+        "EAI_OrderLine_ID": 1002288,
+        "SiteOrderLineID": "1016199",
+        "SiteOrderID": "1007659",
+        "EAI_SettlementLine_ID": 1000112,
+        "SiteTaxInvoiceLineID": "1000088",
+        "EAI_Product_ID": 1109877,
+        "ProductCode": "3105",
+        "ProductName": "曲尼司特",
+        "MedicineName": "曲尼司特",
+        "ProductSpec": "0.1g×24粒/盒",
+        "Manufacturer": "中国药科大",
+        "UOM": "RFY-00002",
+        "UOMName": "盒",
+        "Lot": "202020",
+        "GuaranteeDate": "2018-11-16",
+        "Qty": 10,
+        "Price": 4.2,
+        "LineAmt": 42,
+        "LineTax": 0,
+        "Line": 2,
+        "TaxRate": 0,
+        "MultiplyRate": 1,
+        "DivideRate": 0
+    }, {
+        "EAI_TaxInvoiceLine_ID": 1000089,
+        "EAI_TaxInvoice_ID": 1000040,
+        "EAI_OrderLine_ID": 1002287,
+        "SiteOrderLineID": "1016198",
+        "SiteOrderID": "1007659",
+        "EAI_SettlementLine_ID": 1000113,
+        "SiteTaxInvoiceLineID": "1000089",
+        "EAI_Product_ID": 1109879,
+        "ProductCode": "3111",
+        "ProductName": "鸡胆口服溶液",
+        "MedicineName": "鸡胆口服溶液",
+        "ProductSpec": "10ml×10支/盒",
+        "Manufacturer": "吉林东北亚药业",
+        "UOM": "RFY-00002",
+        "UOMName": "盒",
+        "Lot": "2222",
+        "GuaranteeDate": "2018-11-14",
+        "Qty": 10,
+        "Price": 150,
+        "LineAmt": 1500,
+        "LineTax": 0,
+        "Line": 3,
+        "TaxRate": 0,
+        "MultiplyRate": 1,
+        "DivideRate": 0
+    }]
+}
+
+{
+    "total": 2,
+    "rows": [{
+        "EAI_TaxInvoiceLine_ID": 1000085,
+        "EAI_TaxInvoice_ID": 1000039,
+        "EAI_OrderLine_ID": 1002302,
+        "SiteOrderLineID": "1016210",
+        "SiteOrderID": "1007669",
+        "EAI_SettlementLine_ID": 1000103,
+        "SiteTaxInvoiceLineID": "1000002",
+        "EAI_Product_ID": 1111542,
+        "ProductName": "甲硝唑氯化钠注射液",
+        "ProductSpec": "100ml:0.5g/瓶",
+        "Manufacturer": "四川科伦药业股份有限公司",
+        "UOM": "RFY-00004",
+        "UOMName": "瓶",
+        "Lot": "20160720",
+        "GuaranteeDate": "2019-07-20",
+        "Qty": -1,
+        "Price": 3.7,
+        "LineAmt": -3.7,
+        "LineTax": -0.54,
+        "Line": 1,
+        "TaxRate": 17,
+        "MultiplyRate": 0,
+        "DivideRate": 1
+    }, {
+        "EAI_TaxInvoiceLine_ID": 1000086,
+        "EAI_TaxInvoice_ID": 1000039,
+        "EAI_OrderLine_ID": 1002302,
+        "SiteOrderLineID": "1016210",
+        "SiteOrderID": "1007669",
+        "EAI_SettlementLine_ID": 1000103,
+        "SiteTaxInvoiceLineID": "1000003",
+        "EAI_Product_ID": 1111542,
+        "ProductName": "甲硝唑氯化钠注射液",
+        "ProductSpec": "100ml:0.5g/瓶",
+        "Manufacturer": "四川科伦药业股份有限公司",
+        "UOM": "RFY-00004",
+        "UOMName": "瓶",
+        "Lot": "20160720",
+        "GuaranteeDate": "2019-07-20",
+        "Qty": 4,
+        "Price": 3.7,
+        "LineAmt": 14.8,
+        "LineTax": 2.15,
+        "Line": 2,
+        "TaxRate": 17,
+        "MultiplyRate": 0,
+        "DivideRate": 1
+    }]
+} {
+    "total": 2,
+    "rows": [{
+        "EAI_TaxInvoiceLine_ID": 1000085,
+        "EAI_TaxInvoice_ID": 1000039,
+        "EAI_OrderLine_ID": 1002302,
+        "SiteOrderLineID": "1016210",
+        "SiteOrderID": "1007669",
+        "EAI_SettlementLine_ID": 1000103,
+        "SiteTaxInvoiceLineID": "1000002",
+        "EAI_Product_ID": 1111542,
+        "ProductName": "甲硝唑氯化钠注射液",
+        "ProductSpec": "100ml:0.5g/瓶",
+        "Manufacturer": "四川科伦药业股份有限公司",
+        "UOM": "RFY-00004",
+        "UOMName": "瓶",
+        "Lot": "20160720",
+        "GuaranteeDate": "2019-07-20",
+        "Qty": -1,
+        "Price": 3.7,
+        "LineAmt": -3.7,
+        "LineTax": -0.54,
+        "Line": 1,
+        "TaxRate": 17,
+        "MultiplyRate": 0,
+        "DivideRate": 1
+    }, {
+        "EAI_TaxInvoiceLine_ID": 1000086,
+        "EAI_TaxInvoice_ID": 1000039,
+        "EAI_OrderLine_ID": 1002302,
+        "SiteOrderLineID": "1016210",
+        "SiteOrderID": "1007669",
+        "EAI_SettlementLine_ID": 1000103,
+        "SiteTaxInvoiceLineID": "1000003",
+        "EAI_Product_ID": 1111542,
+        "ProductName": "甲硝唑氯化钠注射液",
+        "ProductSpec": "100ml:0.5g/瓶",
+        "Manufacturer": "四川科伦药业股份有限公司",
+        "UOM": "RFY-00004",
+        "UOMName": "瓶",
+        "Lot": "20160720",
+        "GuaranteeDate": "2019-07-20",
+        "Qty": 4,
+        "Price": 3.7,
+        "LineAmt": 14.8,
+        "LineTax": 2.15,
+        "Line": 2,
+        "TaxRate": 17,
+        "MultiplyRate": 0,
+        "DivideRate": 1
+    }]
+}
+
+{
+    "total": 3,
+    "rows": [{
+        "EAI_TaxInvoiceLine_ID": 1000070,
+        "EAI_TaxInvoice_ID": 1000027,
+        "EAI_OrderLine_ID": 1002310,
+        "SiteOrderLineID": "1016226",
+        "SiteOrderID": "1007683",
+        "EAI_SettlementLine_ID": 1000108,
+        "SiteTaxInvoiceLineID": "1000070",
+        "EAI_Product_ID": 1109879,
+        "ProductCode": "3111",
+        "ProductName": "鸡胆口服溶液",
+        "MedicineName": "鸡胆口服溶液",
+        "ProductSpec": "10ml×10支/盒",
+        "Manufacturer": "吉林东北亚药业",
+        "UOM": "RFY-00002",
+        "UOMName": "盒",
+        "Lot": "2222",
+        "GuaranteeDate": "2018-11-14",
+        "Qty": 2,
+        "Price": 11.2,
+        "LineAmt": 22.4,
+        "LineTax": 0,
+        "Line": 1,
+        "TaxRate": 0,
+        "MultiplyRate": 1,
+        "DivideRate": 0
+    }, {
+        "EAI_TaxInvoiceLine_ID": 1000071,
+        "EAI_TaxInvoice_ID": 1000027,
+        "EAI_OrderLine_ID": 1002311,
+        "SiteOrderLineID": "1016227",
+        "SiteOrderID": "1007683",
+        "EAI_SettlementLine_ID": 1000109,
+        "SiteTaxInvoiceLineID": "1000071",
+        "EAI_Product_ID": 1109877,
+        "ProductCode": "3105",
+        "ProductName": "曲尼司特",
+        "MedicineName": "曲尼司特",
+        "ProductSpec": "0.1g×24粒/盒",
+        "Manufacturer": "中国药科大",
+        "UOM": "RFY-00002",
+        "UOMName": "盒",
+        "Lot": "202020",
+        "GuaranteeDate": "2018-11-16",
+        "Qty": 2,
+        "Price": 11.2,
+        "LineAmt": 22.4,
+        "LineTax": 0,
+        "Line": 2,
+        "TaxRate": 0,
+        "MultiplyRate": 1,
+        "DivideRate": 0
+    }, {
+        "EAI_TaxInvoiceLine_ID": 1000072,
+        "EAI_TaxInvoice_ID": 1000027,
+        "EAI_OrderLine_ID": 1002321,
+        "SiteOrderLineID": "1016231",
+        "SiteOrderID": "1007685",
+        "EAI_SettlementLine_ID": 1000110,
+        "SiteTaxInvoiceLineID": "1000072",
+        "EAI_Product_ID": 1109877,
+        "ProductCode": "3105",
+        "ProductName": "曲尼司特",
+        "MedicineName": "曲尼司特",
+        "ProductSpec": "0.1g×24粒/盒",
+        "Manufacturer": "中国药科大",
+        "UOM": "RFY-00002",
+        "UOMName": "盒",
+        "Lot": "202020",
+        "GuaranteeDate": "2018-11-16",
+        "Qty": 3,
+        "Price": 11.2,
+        "LineAmt": 33.6,
+        "LineTax": 0,
+        "Line": 3,
+        "TaxRate": 0,
+        "MultiplyRate": 1,
+        "DivideRate": 0
+    }]
+}
