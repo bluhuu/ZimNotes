@@ -1,0 +1,46 @@
+http://192.168.20.206:8080/elink_csp_web/tMTaxInvoiceAction/summary.do
+productName:
+start:0
+limit:10
+bpartnerID:1057127
+queryType:ALL
+isSOTrx:Y
+sort:amt
+dir:desc
+byProduct:true
+byPrice:true
+dateFrom:2016-11-01
+dateTo:2016-11-18
+{
+    "total": 2,
+    "totalAmt": "70.60",
+    "rows": [{
+        "count": 1,
+        "queryType": "ALL",
+        "Eai_Product_ID": 1110463,
+        "ProductFullName": "丹参片",
+        "ProductName": "丹参片",
+        "MedicineName": "丹参片",
+        "ProductSpec": "0.26g×100片/盒",
+        "Manufacturer": "上海雷允上药业有限公司",
+        "ProductStyleName": "RFY-00003",
+        "ProductCode": "2792",
+        "UOMName": "盒",
+        "Amt": "41.00",
+        "Qty": "-1"
+    }, {
+        "count": 2,
+        "queryType": "ALL",
+        "Eai_Product_ID": 1111542,
+        "ProductFullName": "甲硝唑氯化钠注射液",
+        "ProductName": "甲硝唑氯化钠注射液",
+        "MedicineName": "甲硝唑氯化钠注射液",
+        "ProductSpec": "100ml:0.5g/瓶",
+        "Manufacturer": "四川科伦药业股份有限公司",
+        "ProductStyleName": "RFY-00007",
+        "ProductCode": "2336",
+        "UOMName": "瓶",
+        "Amt": "29.60",
+        "Qty": "3"
+    }]
+}
