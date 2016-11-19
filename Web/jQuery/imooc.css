@@ -1,18 +1,18 @@
 .left,
     .right {
-        width: 300px;
         height: 120px;
+        width: 300px;
     }
     
     .left div,
     .right div {
-        width: 100px;
-        height: 90px;
-        padding: 5px;
-        margin: 5px;
-        float: left;
         background: #bbffaa;
         border: 1px solid #ccc;
+        float: left;
+        height: 90px;
+        margin: 5px;
+        padding: 5px;
+        width: 100px;
     }
     
     .bottom {
@@ -21,17 +21,17 @@
     
     .bottom div,
     .bottom span {
-        display: block;
-        width: 80px;
-        height: 80px;
-        margin: 5px;
         background: #bbffaa;
+        display: block;
         float: left;
         font-size: 14px;
+        height: 80px;
+        margin: 5px;
+        width: 80px;
     }
     .bottom .small {
-        width      : 60px;
-        height     : 25px;
-        font-size  : 12px;
         background : #fab;
+        font-size  : 12px;
+        height     : 25px;
+        width      : 60px;
     }
