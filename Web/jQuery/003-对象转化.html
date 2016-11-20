@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script src="http://code.jquery.com/jquery-1.11.3.js"></script>
+</head>
+
+<body>
+	<div>元素一</div>
+	<div>元素二</div>
+	<div>元素三</div>
+    
+    <script type="text/javascript">
+		var $div = $('div'); //jQuery对象
+		var div0 = $div[0]; //转化成DOM对象
+		var div1 = $div.get(1); //通过get方法，转化成DOM对象
+		div0.style.color = 'red'; //操作dom对象的属性
+		div1.style.color = 'blue';
+    </script>
+
+    <!-- 
+    	$(参数)是一个多功能的方法，通过传递不同的参数而产生不同的作用。
+		如果传递给$(DOM)函数的参数是一个DOM对象，jQuery方法会把这个DOM对象给包装成一个新的jQuery对象
+	 -->
+    <script type="text/javascript">
+    		var div = document.getElementsByTagName('div'); //dom对象
+            
+		    //将dom节点div转化为$div的jquery对象
+            $div=$(div); //jQuery对象
+            
+			var $first = $div.first(); //找到第一个div元素
+			$first.css('color', 'yellow'); //给第一个元素设置颜色
+    </script>
+</body>
+
+</html>
