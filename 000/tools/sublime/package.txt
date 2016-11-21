@@ -22,8 +22,42 @@ https://github.com/emmetio/pyv8-binaries
 --- JsFormat ------------------------------------------------------------------
 --- HTML-CSS-JS Prettify ------------------------------------------------------
 xp:https://nodejs.org/download/release/v5.12.0/
---- JSLint --------------------------------------------------------------------
+--- sublimelinter -------------------------------------------------------------
+--- sublimelinter-jshint ------------------------------------------------------
+$ npm install jshint -g
+sublimelinter：preference-package setting-sublimelinter-user
+{
+  "sublimelinter": "save-only",
+   "jshint_options":
+    {
+        // To fix column positions for JSHint errors you may want to add `"indent": 1` to your
+        // **User** "jshint_options". This issue affects users with tabs for indentation.
+        // This fix was reverted due to a conflict with using the `"white": true` option.
+        // "indent": 1,
+        // 设置 JS 执行环境为浏览器
+        "browser": true,
+         // 加载 jQuery 的全局变量（jQuery、$）
+        "jquery": true,
+        //禁止下划线的变量名
+        "nomen":true,
+         // 行尾不要分号,false表示强制需要分号结尾
+        "asi": false,
+        "white":true,
+        // 其他全局变量，我用了 SeaJS
+        "predef": [
+             "define",
+             "seajs",
+             "console"
+             ]
+    },
+    "sublimelinter_executable_map":
+{
+    "javascript":"C:/Program Files/nodejs/node.exe",
+    "css":"C:/Program Files/nodejs/node.exe"
+}
+}
 
+--- JSLint --------------------------------------------------------------------
 --- AutoFileName --------------------------------------------------------------
 --- ChineseLocalization -------------------------------------------------------
 --- Color Highlighter ---------------------------------------------------------
