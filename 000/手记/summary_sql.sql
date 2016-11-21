@@ -37,7 +37,7 @@ SELECT
 --summaryGroupByBPartner
 SELECT  
         count(t.EAI_Product_ID) count,SUM(t.LineAmt) Amt,SUM(t.Qty) Qty 
-        ,b.EAI_BPartner_ID,b.Name,b.BPartnerCode,b.Address
+        ,b.EAI_BPartner_ID,b.Name,b.BPartnerCode,b.Address,g.Name OrgName
     FROM EAI_TaxInvoiceLine t  
         inner join EAI_TaxInvoice o on (o.EAI_TaxInvoice_ID=t.EAI_TaxInvoice_ID) 
         inner join EAI_Bpartner b on (o.EAI_BPartner_ID=b.EAI_BPartner_ID) 
@@ -47,7 +47,7 @@ SELECT
         inner join AD_ORG g on (g.AD_ORG_ID=o.AD_ORG_ID) 
     WHERE o.Processed='Y' 
 --        AND DateInvoiced>=? AND DateInvoiced<=? 
-    GROUP BY b.EAI_BPartner_ID,b.Name,b.BPartnerCode,b.Address  
+    GROUP BY b.EAI_BPartner_ID,b.Name,b.BPartnerCode,b.Address,g.Name
     ORDER BY amt  desc;
 
 SELECT COUNT(1),SUM(Amt) TotalAmt FROM (SELECT  count(t.EAI_Product_ID) count,b.EAI_BPartner_ID,b.Name,b.BPartnerCode,b.Address,SUM(t.LineAmt) Amt,SUM(t.Qty) Qty FROM EAI_TaxInvoiceLine t  inner join EAI_TaxInvoice o on (o.EAI_TaxInvoice_ID=t.EAI_TaxInvoice_ID) inner join EAI_Bpartner b on (o.EAI_BPartner_ID=b.EAI_BPartner_ID) inner join eai_product_v p on (t.EAI_Product_ID=p.EAI_Product_ID) inner join EAI_ORDERLINE OL on (ol.EAI_ORDERLINE_ID=T.EAI_ORDERLINE_ID)  inner join EAI_ORDER OD on (OL.EAI_ORDER_ID=OD.EAI_ORDER_ID)  inner join AD_ORG g on (g.AD_ORG_ID=o.AD_ORG_ID) WHERE o.Processed='Y' AND DateInvoiced>=? AND DateInvoiced<=? GROUP BY b.EAI_BPartner_ID,b.Name,b.BPartnerCode,b.Address  ORDER BY amt  desc);
@@ -78,3 +78,35 @@ select TL.AD_ORG_ID, TL.EAI_TAXINVOICE_ID, TL.EAI_TAXINVOICELINE_ID, TL.lot, TL.
 select count(1) from EAI_TAXINVOICELINE TL inner join EAI_TaxInvoice TI on (TI.EAI_TaxInvoice_ID=TL.EAI_TaxInvoice_ID) inner join EAI_Bpartner BP on (TI.EAI_BPartner_ID=BP.EAI_BPartner_ID) inner join AD_ORG G on (G.AD_ORG_ID=TI.AD_ORG_ID) inner join EAI_ORDERLINE OL on (ol.EAI_ORDERLINE_ID=TL.EAI_ORDERLINE_ID) inner join EAI_ORDER O on (ol.EAI_ORDER_ID=o.EAI_ORDER_ID) inner join eai_product_v P on (TL.EAI_Product_ID=p.EAI_Product_ID) WHERE 1=1  AND TL.Processed='Y' AND TI.DateInvoiced>=? AND TI.DateInvoiced<=? AND TI.EAI_BPARTNER_ID=? AND P.EAI_PRODUCT_ID=?;
 
 select * from EAI_ORDERLINE where EAI_ORDERLINE_ID=1002321;
+
+
+
+
+--------------------------------------------------------------------
+
+select  
+    t.EAI_TaxInvoice_ID,t.EAI_Bpartner_ID,t.AD_Org_ID,t.DateInvoiced, t.InvoiceNo,t.DocStatus,getreflisttrl(131,t.DocStatus)DocStatusName
+    ,t.TotalAmt,t.TotalTax,t.EAI_Settlement_ID,t.IsExported,t.ExportTime,t.SiteTaxInvoiceID ,t.Description
+    ,b.Name BPartnerName
+    ,o.Name OrgName
+    ,s.SiteSettlementID   
+  from EAI_TaxInvoice t  
+    inner join AD_Org o on (t.AD_Org_ID=o.AD_Org_ID) 
+    inner join EAI_Bpartner b on (t.EAI_BPartner_ID=b.EAI_BPartner_ID) 
+    left join EAI_Settlement s on (t.EAI_Settlement_ID=s.EAI_Settlement_ID) 
+    where 1=1 
+        AND t.IsActive='Y' 
+        AND t.DocStatus !='VO' 
+        AND  b.Ad_OrgBp_ID = 1000188  
+    ORDER BY InvoiceNo;
+    
+    
+--- taxInvoiceAction query ----------------------------------------------------------
+select  t.EAI_TaxInvoice_ID,t.EAI_Bpartner_ID,b.Name BPartnerName,t.AD_Org_ID,o.Name OrgName,t.DateInvoiced, t.InvoiceNo,t.DocStatus
+,getreflisttrl(131,t.DocStatus)DocStatusName,t.TotalAmt,t.TotalTax,t.EAI_Settlement_ID,s.SiteSettlementID,t.IsExported,t.ExportTime
+,t.SiteTaxInvoiceID ,t.Description   
+from EAI_TaxInvoice t  
+inner join AD_Org o on (t.AD_Org_ID=o.AD_Org_ID) 
+inner join EAI_Bpartner b on (t.EAI_BPartner_ID=b.EAI_BPartner_ID) 
+left join EAI_Settlement s on (t.EAI_Settlement_ID=s.EAI_Settlement_ID) 
+where 1=1 AND t.IsActive='Y' AND t.DocStatus !='VO' AND  b.Ad_OrgBp_ID = 1000188  ORDER BY InvoiceNo
