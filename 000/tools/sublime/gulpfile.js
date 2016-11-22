@@ -11,3 +11,15 @@ gulp.task('default',function(){
          gulp.src(src).pipe(changed(dist)).pipe(gulp.dest(dist));
     });
 });
+
+// var refresh = require('gulp-livereload');  
+// var lr = require('tiny-lr');
+// var server = lr();
+
+// gulp.task('refreshChorm', function () {
+//     var server = refresh();
+//     //自动刷新浏览器
+//     gulp.watch('E:/main/FrontEnd/src/**/*.*', function (file) {
+//         server.changed(file.path);
+//     });
+// });
