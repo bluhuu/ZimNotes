@@ -2,7 +2,7 @@ commitOrder: function() { //
   // 检查是否选择了grid订单
   var records = this.gridLine.getSelectionModel().getSelections();
   console.log(records);
-  if (!records || records.length == 0) {
+  if (!records || records.length === 0) {
     App.showError("请选择一个订单行！");
     return;
   }
