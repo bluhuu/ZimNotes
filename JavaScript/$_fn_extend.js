@@ -2,12 +2,17 @@
 // 类级别你可以理解为拓展jquery类，最明显的例子是$.ajax(...),相当于静态方法。
 // 开发扩展其方法时使用$.extend方法，即jQuery.extend(object);
 $.extend({
-add:function(a,b){return a+b;},
-minus:function(a,b){return a-b;}
+	add: function(a, b) {
+		return a + b;
+	},
+	minus: function(a, b) {
+		return a - b;
+	}
 });
 // 页面中调用：
-var i = $.add(3,2);
-var j = $.minus(3,2);
+var i = $.add(3, 2);
+var j = $.minus(3, 2);
+
 // 2 对象级别
 // 对象级别则可以理解为基于对象的拓展，如$("#table").changeColor(...);
 // 这里这个changeColor呢，就是基于对象的拓展了。
@@ -27,12 +32,19 @@ $.fn.extend({
 // 页面中调用：
 $('input[type=checkbox]').check();
 $('input[type=checkbox]').uncheck();
+
 // 3、扩展
 $.xy = {
-add:function(a,b){return a+b;} ,
-minus:function(a,b){return a-b;},
-voidMethod:function(){ alert("void"); }
+	add: function(a, b) {
+		return a + b;
+	},
+	minus: function(a, b) {
+		return a - b;
+	},
+	voidMethod: function() {
+		alert("void");
+	}
 };
-var i = $.xy.add(3,2);
-var m = $.xy.minus(3,2);
+var i = $.xy.add(3, 2);
+var m = $.xy.minus(3, 2);
 $.xy.voidMethod();
