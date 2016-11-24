@@ -1,0 +1,15 @@
+1.安装ruby:
+	http://rubyinstaller.org/downloads
+	勾选Add Ruby executables to your PATH
+	注:xp安装2.00
+2.安装sass
+	https://rubygems.org/
+	Search Gems:sass 并下载
+	开始菜单中，找到刚才我们安装的ruby，打开Start Command Prompt with Ruby
+	gem install sass-3.4.22.gem
+3.配制中文build
+	C:\Ruby200\lib\ruby\gems\2.0.0\gems\sass-3.4.22\lib\sass\engine.rb
+	所有的require ...后面增加:
+	Encoding.default_external = Encoding.find('utf-8')
+4.sublime 安装sass插件
+	ctrl + b
