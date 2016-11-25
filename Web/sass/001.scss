@@ -1,11 +1,8 @@
 //sass style
 //-------------------------------
-$linkColor:         #08c #333 !default;//第一个值为默认值，第二个鼠标滑过值
-a{
-  color:nth($linkColor,1);
-
-  &:hover{
-    color:nth($linkColor,2);
-    color:nth($linkColor, 2);
+$headings: (h1: 2em, h2: 1.5em, h3: 1.2em,h4:1.0em);
+@each $header, $size in $headings {
+  #{$header} {
+    font-size: $size;
   }
 }

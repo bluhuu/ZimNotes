@@ -1,0 +1,83 @@
+// ==========================================================================
+// Sass mixin 实现 CSS 的居中效果
+// 父元素：position: relative;
+// 接收两个可选的参数，用来表示元素的宽高（$width 和 $height）
+// ==========================================================================
+@mixin center($width: null, $height: null) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    @if not $width and not $height {
+        transform: translate(-50%, -50%);
+    } @else if $width and $height {
+        width: $width;
+        height: $height;
+        margin: -($width / 2) #{0 0} -($height / 2);
+    } @else if not $height {
+        width: $width;
+        margin-left: -($width / 2);
+        transform: translateY(-50%);
+    } @else {
+        height: $height;
+        margin-top: -($height / 2);
+        transform: translateX(-50%);
+    }
+}
+@mixin center-children {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+//
+// 示例
+// --------------------------------------------------------------------------
+/**
+ * 为子元素设定定位上下文
+ */
+.parent {
+    position: relative;
+}
+
+/**
+ * 让子元素绝对居中于父容器
+ * 没有向 Sass mixin 传递参数，使用 CSS transform 属性实现居中效果
+ */
+.child-with-unknown-dimensions {
+    @include center;
+}
+
+/**
+ * 让子元素绝对居中于父容器
+ * 向 Sass mixin 传递了宽度，所以就使用负向 margin 处理水平位置，
+ * 使用 CSS transform 处理垂直位置
+ */
+.child-with-known-width {
+    @include center(400px);
+}
+
+/**
+ * 让子元素绝对居中于父容器
+ * 向 Sass mixin 传递了高度，所以就使用负向 margin 处理垂直位置，
+ * 使用 CSS transform 处理水平位置
+ */
+.child-with-known-height {
+    @include center($height: 400px);
+}
+
+/**
+ * 让子元素绝对居中于父容器
+ * 向 Sass mixin 传递了高度和宽度，所以就使用负向 margin 处理水平和垂直位置
+ */
+.child-with-known-dimensions {
+    @include center(400px, 400px);
+}
+//
+// 示例
+// --------------------------------------------------------------------------
+/**
+ * 让子元素居中于父容器，就这么简单
+ */
+.parent {
+    @include center-children;
+}
