@@ -8,7 +8,8 @@
 	开始菜单中，找到刚才我们安装的ruby，打开Start Command Prompt with Ruby
 	gem install sass-3.4.22.gem
 3.配制中文build
-	C:\Ruby200\lib\ruby\gems\2.0.0\gems\sass-3.4.22\lib\sass\engine.rb
+	xp:C:\Ruby200\lib\ruby\gems\2.0.0\gems\sass-3.4.22\lib\sass\engine.rb
+	win7:C:\Ruby23-x64\lib\ruby\gems\2.3.0\gems\sass-3.4.22\lib\sass\engine.rb
 	所有的require ...后面增加:
 	Encoding.default_external = Encoding.find('utf-8')
 4.sublime 安装sass插件
