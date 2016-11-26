@@ -13,4 +13,11 @@
 	所有的require ...后面增加:
 	Encoding.default_external = Encoding.find('utf-8')
 4.sublime 安装sass插件
-	ctrl + b
+5.升级SSL证书。
+	1.下载 http://curl.haxx.se/ca/cacert.pem.
+	2.把这个文件保存到任意一个文件夹下, 例如: C:\RailsInstaller\cacert.pem.
+	3.打开ruby的终端，输入这行代码: set SSL_CERT_FILE=C:\RailsInstaller\cacert.pem
+	4.再尝试 gem install sass 
+	5.如果成功的话,你可以永久的证书文件添加在你的控制面板。
+		cacert.pem --> cacert.crt
+	Credit and more info: https://gist.github.com/fnichol/867550
