@@ -8,6 +8,7 @@
 	gem install sass
 	gem install compass
 	gem install compass-normalize
+		注：https://necolas.github.io/normalize.css/5.0.0/normalize.css
 3.配制中文build
 	xp:C:\Ruby200\lib\ruby\gems\2.0.0\gems\sass-3.4.22\lib\sass\engine.rb
 	win7:C:\Ruby23-x64\lib\ruby\gems\2.3.0\gems\sass-3.4.22\lib\sass\engine.rb
@@ -18,7 +19,10 @@
 4.新建项目
 	compass create <my_project> -r compass-normalize --using compass-normalize
 	已经存在的项目添加compass-normalize：
-		config.rb 配置文件中加入：require 'compass-normalize'
+		config.rb 配置文件中加入：	require 'compass-normalize'
+									sourcemap = true //调试用
+5.watch scss
+	sass --watch style.scss:style.css --sourcemap
 ---------------------------------------------------------------------------------
 2.安装sass
 	https://rubygems.org/

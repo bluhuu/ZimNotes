@@ -1,0 +1,57 @@
+/*测试属性*/
+header,nav,footer,section,#top_main,#banner{
+	border:1px solid black;
+}
+/*通用*/
+body{
+	margin:0;
+	padding:0;
+	font:12px "microsoft yahei",Arial,Helvetica,sans-serif;
+	color:#666;
+}
+ul,p,h1,h2,h3,h4,h5,h6,dl,dd{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+input{
+	border:none;
+}
+a{
+	color:#666;
+	text-decoration:none;
+}
+a:hover{
+	color:#FF0700;
+	text-decoration:underline;
+}
+.lf{float:left;}
+.rt{float:right;}
+.clear{clear:both;}
+
+#top_box,#top_main,#nav,#banner,#main,#foot_box,#footer{
+	width:1211px;
+	margin:0 auto;
+}
+/********页面顶部操作***********/
+#top{
+	/*宽度，高度，背景，下边框，行高*/
+	width:100%;
+	height:30px;
+	background:#f7f7f7;
+	border-bottom:1px solid #eee;
+	line-height:30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

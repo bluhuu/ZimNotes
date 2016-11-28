@@ -1,5 +1,6 @@
 //sass style
 //-------------------------------
+/*你的样子*/
 $headings: (h1: 2em, h2: 1.5em, h3: 1.2em,h4:1.0em);
 @each $header, $size in $headings {
   #{$header} {
