@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+	<head>
+		<title>标题</title>
+		<meta charset="utf-8">
+		<style>
+			#nav{
+				/*宽度，高度，背景颜色，水平居中*/
+				width:990px;
+				height:40px;
+				background:#E64346;
+				margin:0 auto;
+			}
+			#nav>p{
+				/*宽度，高度，背景颜色*/
+				width:210px;
+				height:40px;
+				background:#CD2A2C;
+				/*取消默认margin值*/
+				margin:0;
+			}
+			#nav>p a{
+				/*左浮动，高度，行高，左内边距，文字大小，颜色，去下划线，加粗*/
+				float:left;
+				height:40px;
+				line-height:40px;
+				padding-left:15px;
+				font-size:14px;
+				color:#fff;
+				text-decoration:none;
+				font-weight:bold;
+			}
+			#nav>p b{
+				/*右浮动，宽度，高度，背景，位置微调*/
+				float:right;
+				width:20px;
+				height:20px;
+				background:url(Images/iconlist_2.png) no-repeat -65px 0;
+				margin-top:10px;
+				margin-right:10px;
+			}
+
+			/*练习2*/
+			#nav>p{
+				float:left;
+			}
+			#nav>ul{
+				float:left;
+				/*取消列表的默认样式*/
+				margin:0;
+				padding:0;
+				list-style:none;
+			}
+			#nav>ul li{
+				float:left;
+			}
+			#nav>ul li a{
+				/*左浮动，宽度，高度，行高，水平居中，文字大小，颜色，去下划线，加粗*/
+				float:left;
+				width:96px;
+				height:40px;
+				line-height:40px;
+				text-align:center;
+				font-size:14px;
+				color:#fff;
+				text-decoration:none;
+				font-weight:bold;
+			}
+			#nav>ul a:hover{
+				background:#BD2A2C;
+			}
+
+			/*练习2*/
+			ul{
+				margin:0;
+				padding:0;
+				list-style:none;
+			}
+			#main{
+				width:990px;
+				margin:0 auto;
+			}
+
+			#cate_box{
+				/*左右下边框，宽度，高度*/
+				border:2px solid #CD2A2C;
+				border-top:0;
+				width:206px;
+				height:400px;
+				/*背景颜色*/
+				background:#FAFAFA;
+				/*上内边距*/
+				padding-top:5px;
+			}
+			#cate_box a{
+				/*大小，颜色，去下划线*/
+				font-size:14px;
+				color:#333;
+				text-decoration:none;
+			}
+			#cate_box li{
+				
+			}
+			#cate_box li:hover{
+				
+			}
+			/* 作业*/
+			#sub_cate_box{
+				/*宽度，高度，边框，背景*/
+				width:750px;
+				height:400px;
+				border:1px solid #ddd;
+				background:#fff;
+				/*绝对定位*/
+				position:absolute;
+				left:195px;
+				top:3px;
+				z-index:10;
+			}
+			#cate_box{
+				/*相对定位:目的为了配合 #sub_cate_box 做绝对定位*/
+				position:relative;
+			}
+
+			#cate_box li:hover{
+				
+			}
+			#cate_box h3{
+				/*取消默认样式*/
+				margin:0;
+				font-weight:normal;
+				/*从 li 中移过来的属性*/
+				/*宽度，左内边距，上下内边距*/
+				width:186px;
+				padding:5px 0;
+				padding-left:10px;
+				/*下边框*/
+				border-bottom:1px solid #fff;
+				border-top:1px solid transparent;
+			}
+			#cate_box h3:hover{
+				/*从 li 移过来的属性*/
+				border:1px solid #ddd;
+				border-left:0;
+				border-right:0;
+				background:#fff;
+				position:relative;
+				z-index:30;
+			}
+			#sub_cate_box div.close{
+				/*宽度，高度，倒角，背景颜色，文本颜色，加粗，水平居中，垂直居中*/
+				width:20px;
+				height:20px;
+				border-radius:50%;
+				background:#555;
+				color:#fff;
+				font-weight:bold;
+				text-align:center;
+				line-height:20px;
+				cursor:pointer;
+				/*绝对定位*/
+				position:absolute;
+				right:-10px;
+				top:-10px;
+			}
+		</style>
+	</head>
+	<body>
+		<nav id="nav">
+			<!--全部商品分类-->
+			<p>
+				<a href="#">全部商品分类</a>
+				<b></b>
+			</p>
+			<!-- 主导航 -->
+			<ul>
+				<li>
+					<a href="#">首页</a>
+				</li>
+				<li>
+					<a href="#">夺宝岛</a>
+				</li>
+				<li>
+					<a href="#">京东商城</a>
+				</li>
+				<li>
+					<a href="#">团购</a>
+				</li>
+				<li>
+					<a href="#">闪购</a>
+				</li>
+			</ul>
+		</nav>
+		<section id="main">
+			<ul id="cate_box">
+				<li>
+					<h3>
+						<a href="#">图书、音像、数字商品</a>
+					</h3>
+				</li>
+				<li>
+					<h3>
+						<a href="#">家用电器</a>
+					</h3>
+					<!-- 弹出子菜单 -->
+					<div id="sub_cate_box">
+						<div class="close" onclick="document.getElementById('sub_cate_box').style.display='none'">×</div>
+					</div>
+				</li>
+				<li>
+					<h3>
+						<a href="#">图书、音像、数字商品</a>
+					</h3>
+				</li>
+			</ul>
+		</section>
+	</body>
+</html>

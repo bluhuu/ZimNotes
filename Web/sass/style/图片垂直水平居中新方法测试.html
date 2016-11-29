@@ -1,0 +1,45 @@
+<!DOCTYPE>
+<title>图片垂直水平居中新方法测试</title>
+<link rel="stylesheet" href="./图片垂直水平居中新方法测试_files/common.css" type="text/css">
+<style type="text/css">
+	.zxx_ul_image {
+		overflow: hidden;
+		zoom: 1;
+	}
+	.zxx_ul_image li {
+		float: left;
+		width: 150px;
+		height: 150px;
+		text-align: center;
+		line-height: 150px;
+		*font-size: 125px;
+		border: 1px dashed #ccc;
+	}
+	.zxx_ul_image li:after {
+		content: ' ';
+		vertical-align: middle;
+	}
+	.zxx_ul_image li img {
+		vertical-align: middle;
+	}
+</style>
+</head>
+
+<body>
+<div class="zxx_out_box">
+    <div class="zxx_in_box">
+        <h3 class="zxx_title">图片垂直水平居中新方法测试</h3>
+        <div class="zxx_main_con">
+			<ul class="zxx_ul_image">
+            	<li><img src="./图片垂直水平居中新方法测试_files/mm1.jpg"></li>
+                <li><img src="./图片垂直水平居中新方法测试_files/mm2.jpg"></li>
+                <li><img src="./图片垂直水平居中新方法测试_files/mm3.jpg"></li>
+                <li><img src="./图片垂直水平居中新方法测试_files/mm4.jpg"></li>
+                <li><img src="./图片垂直水平居中新方法测试_files/mm5.jpg"></li>
+                <li><img src="./图片垂直水平居中新方法测试_files/mm6.jpg"></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
