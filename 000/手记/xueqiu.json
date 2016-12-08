@@ -1,3 +1,14 @@
+Pricetobookratio: "5.80"    ---pb
+className: "reduce"			---code
+code: "600085"				---code
+growRate: "-0.93%"			---percentage
+hands: "0.43%"				---turnover_rate
+key: "v_sh600085"			---symbol
+name: "同仁堂"				---name
+pe_lyr: "---"				---pe_lyr
+pe_ttm: "45.35"				---pe_ttm
+price: "32.09"				---current
+
 https: //xueqiu.com/v4/stock/quote.json?code=SH600366
 	{
 		"SH600366": {
