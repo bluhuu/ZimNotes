@@ -12,3 +12,5 @@
 "text":"../../resource/lib/requirejs-text/text",
 "css":"../../resource/lib/require-css/css.min",
 ...
+
+datatable 表格与jquery 的交互应用//jquery作为常用工具，非常重要，常用方法要重点掌握
