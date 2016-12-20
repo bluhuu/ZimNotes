@@ -9,7 +9,7 @@ pe_lyr: "---"				---pe_lyr
 pe_ttm: "45.35"				---pe_ttm
 price: "32.09"				---current
 
-https: //xueqiu.com/v4/stock/quote.json?code=SH600366
+https://xueqiu.com/v4/stock/quote.json?code=SH600366
 	{
 		"SH600366": {
 			"symbol": "SH600366",
