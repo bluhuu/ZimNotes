@@ -3,6 +3,7 @@ git-plus git-time-machine split-diff
 docblockr atom-beautify monokai highlight-line highlight-selected file-icons pigments color-picker
 atom-bracket-highlight swackets
 emmet atom-alignment autoclose-html atom-terminal-panel open-in-browsers
+javascript-snippets
 ansi-to-utf8
 atom-ctags
 atom-hide-tabs
@@ -19,7 +20,6 @@ autocomplete-paths
 convert-to-utf8
 css-snippets
 csslint
-javascript-snippets
 language-freemarker
 language-javascript-jsx
 language-oracle
