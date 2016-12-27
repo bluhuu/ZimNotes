@@ -3,24 +3,29 @@ git-plus git-time-machine split-diff
 docblockr atom-beautify monokai highlight-line highlight-selected file-icons pigments color-picker
 atom-bracket-highlight swackets
 emmet atom-alignment autoclose-html atom-terminal-panel open-in-browsers
-javascript-snippets
-ansi-to-utf8
+javascript-snippets atom-jquery-snippets underscorejs-snippets
+atom-ternjs
 atom-ctags
+auto-indent
+pretty-json
+css-snippets
+qolor
+sort-lines
+language-freemarker
+
+sync-settings
+ansi-to-utf8
 atom-hide-tabs
 atom-html-preview
 atom-no-tab-close-button
 atom-react-snippets
-atom-ternjs
 atom-wrap-in-tag
-auto-indent
 autocomplete-js-import
 autocomplete-json
 autocomplete-oracle
 autocomplete-paths
 convert-to-utf8
-css-snippets
 csslint
-language-freemarker
 language-javascript-jsx
 language-oracle
 linter
@@ -30,11 +35,7 @@ markdown-preview-plus
 markdown-scroll-sync
 markdown-writer
 maximize-panes
-pretty-json
 project-manager
-qolor
 react-es6-snippets
 react-snippets
-sort-lines
 svg-preview
-sync-settings
