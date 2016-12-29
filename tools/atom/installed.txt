@@ -2,7 +2,7 @@ minimap minimap-bookmarks minimap-cursorline minimap-find-and-replace minimap-gi
 git-plus git-time-machine split-diff
 docblockr atom-beautify monokai highlight-line highlight-selected file-icons pigments color-picker
 atom-bracket-highlight swackets
-emmet atom-alignment autoclose-html atom-terminal-panel open-in-browsers
+emmet atom-alignment autoclose-html open-in-browsers
 javascript-snippets atom-jquery-snippets underscorejs-snippets
 atom-ternjs
 atom-ctags
@@ -39,3 +39,23 @@ project-manager
 react-es6-snippets
 react-snippets
 svg-preview
+├── atom-beautify@0.29.14
+├── atom-css-snippets@1.1.0
+├── atom-javascript-snippets@1.2.1
+├── atom-jquery-snippets@11.0.0
+├── atom-pigments@0.37.0
+├── atom-underscorejs@0.2.2
+├── autoclose-html@0.24.0
+├── color-picker@2.2.3
+├── css-snippets@1.1.0
+├── docblockr@0.9.1
+├── emmet-atom@2.4.3
+├── git-plus@6.0.2
+├── git-time-machine@1.5.4
+├── highlight-line@0.11.1
+├── highlight-selected@0.11.2
+├── jquery-snippets@11.0.0
+├── monokai@0.18.0
+├── open-in-browsers@0.0.19
+├── split-diff@1.1.0
+└── underscorejs-snippets@0.2.2

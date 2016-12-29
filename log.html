@@ -1,0 +1,261 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>供应链协同服务平台</title>
+	</head>
+<style>
+	html{
+	    background: url("img/BG_blue.png") no-repeat center top;
+		padding: 0;
+		margin: 0;
+	    background-size: 100% 100%;
+	    min-height: 100%;
+	    min-width: 1000px;
+
+			width: 100%;
+			display: table;
+		/*background-color: #0663c3;*/
+	}
+	body{
+	padding: 0;
+	margin: 0;
+	background:url(img/background_img.png) no-repeat center top;
+
+	width: 100%;
+	display: table;
+	    /*background: url("img/background_img.png") no-repeat;
+	    background-size: 100% 100%;
+	    min-height: 100%;
+	    min-width: 1000px;*/
+		/*background-color: #0663c3;*/
+	}
+	*{
+	    margin: 0;
+	    padding: 0;
+	    border: 0;
+	}
+	input:focus {
+	    outline:none;
+	}
+	.main{
+	    width: 1000px;
+	    margin: 0 auto;
+	}
+	.main p{
+	    text-align: center;
+	    color: #c5e1ff;
+	    font-size: 14px;
+	    height: 50px;
+	    line-height: 50px;
+	}
+	.logo{
+	    margin: 38px 0 98px 0;
+	}
+	.logoImg
+	{
+	    margin: 70px auto 56px;
+		text-align: center;
+	}
+	.logoImg a{
+	    display: inline-block;
+	    width: 469px;
+	    height: 52px;
+	}
+	.logoImg a img:first-child{
+	    width: 469px;
+	    height: 52px;
+	}
+	.logoImg a img:last-child{
+	    width: 395px;
+	    height: 28px;
+	}
+	.login{
+	    margin: 0 auto;
+	    width: 545px;
+	    height: 334px;
+	    border: 2px solid #1d96f4;
+	    border: 2px solid #1d96f4\0;
+	    *border: 2px solid #1d96f4;
+	    background-color: #fff;
+	    -webkit-border-radius: 10px;
+	    -moz-border-radius: 10px;
+	    border-radius: 10px;
+	}
+	.login p{
+	    text-align: center;
+	    margin-top: 20px;
+
+	}
+	.login p img{
+	    margin-bottom: -6px;
+	    margin-right: 5px;
+	}
+	.login h2{
+	    color: #f0f0f0;
+	    font-size: 30px;
+
+	    margin-left: 20px;
+	    height: 70px;
+	    line-height: 70px;
+	}
+	.login>div{
+	    width: 545px;
+		height: 334px;
+	    margin: 0 auto;
+	    text-align: center;
+
+	}
+	.login input[type='text']{
+	    border: 1px solid #4bc5fa;
+	    border: 1px solid #4bc5fa\0;
+	    *border: 1px solid #4bc5fa;
+	    -webkit-border-radius: 5px;
+	    -moz-border-radius: 5px;
+	    border-radius: 5px;
+	    padding-left: 55px;
+	    padding-right: 5px;
+	    height: 48px;
+	    width: 399px;
+	    /*color: #ffffff;*/
+	    background-color: rgba(76, 194, 244, 0.70);
+	    font-size: 16px;
+	    background: url("img/user.png") no-repeat;
+	    background-position: 15px 10px;
+	    margin: 0 0 30px 0;
+	    line-height: 38px;
+	}
+
+	/*.login span{*/
+	    /*border-left: 1px solid rgba(96, 222, 255, 0.67);*/
+	    /*border-top: 1px solid rgba(96, 222, 255, 0.67);*/
+	    /*border-bottom: 1px solid rgba(96, 222, 255, 0.67);*/
+	/*}*/
+	.login input[type='text']::-webkit-input-placeholder { /* WebKit browsers */
+	    /*color:    #ffffff;*/
+	}
+	.login input[type='text']:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	    /*color:    #ffffff;*/
+	}
+	.login input[type='text']::-moz-placeholder { /* Mozilla Firefox 19+ */
+	    /*color:    #ffffff;*/
+	}
+	.login input[type='text']:-ms-input-placeholder { /* Internet Explorer 10+ */
+	    /*color:    #ffffff;*/
+	}
+
+	.login input[type='password']::-webkit-input-placeholder { /* WebKit browsers */
+	    /*color:    #ffffff;*/
+	}
+	.login input[type='password']:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	    /*color:    #ffffff;*/
+	}
+	.login input[type='password']::-moz-placeholder { /* Mozilla Firefox 19+ */
+	    /*color:    #ffffff;*/
+	}
+	.login input[type='password']:-ms-input-placeholder { /* Internet Explorer 10+ */
+	    /*color:    #ffffff;*/
+	}
+	.login input[type='password']{
+	    border: 1px solid #4bc5fa;
+	    border: 1px solid #4bc5fa\0;
+	    *border: 1px solid #4bc5fa;
+	    -webkit-border-radius: 5px;
+	    -moz-border-radius: 5px;
+	    border-radius: 5px;
+	    padding-left: 53px;
+	    padding-right: 5px;
+	    height: 48px;
+	    width: 399px;
+	    /*color: #ffffff;*/
+	    background-color: rgba(76, 194, 244, 0.70);
+	    font-size: 16px;
+	    background: url("img/pwd.png") no-repeat;
+	    background-position: 19px 10px;
+	    line-height: 38px;
+	}
+	.login input[type='button']{
+	    width: 140px;
+	    height: 38px;
+	    border: 0px;
+	    -webkit-border-radius: 5px;
+	    -moz-border-radius: 5px;
+	    border-radius: 5px;
+	    background-color: #1a9ae3;
+	    color: #ffffff;
+	    font-size: 24px;
+		/*text-align: left;*/
+		margin: 0 30px;
+	}
+	.login-input{
+		margin: 59px 74px 42px 74px;
+	}
+	.login-input input:first{
+		margin-bottom: 34px;
+	}
+	#removeID {
+		color: #959798;
+		background-color: #dadcde;
+	}
+</style>
+	<body>
+
+	<div class="main">
+        <div class="logoImg">
+            <a href="#"><img src="img/title01.png" alt=""/></a><br />
+            <a href="#"><img src="img/title02.png" alt=""/></a>
+        </div>
+        <FORM onSubmit="return checkuser();" method=post name=NETSJ_Login action="">
+	        <div class="login">
+	            <!-- <h2>B2B电商平台</h2> -->
+	            <div>
+	                <!-- <p id="message"><% if(!StringUtil.isEmpty(errorMessage)){%><img src="<%=basePath%>/img/tishi.png" alt=""/><%=errorMessage%>  <%} %></p> -->
+	                <div class="login-input">
+
+						<input type="text" placeholder="登陆名" id="pName" name="user" /><br/>
+						<input type="password" placeholder="密码" id="pPwd" name="password" />
+	                </div>
+	                <input type="button" id="loginID" onclick="javascript:document.NETSJ_Login.submit();" value="登录"/>
+	                <input type="button" id="removeID" onclick="javascript:;" value="消除"/>
+	            </div>
+	        </div>
+         </FORM>
+        <p>江苏中健之康信息技术有限公司版权所有 (2016)</p>
+    </div>
+
+	<script type="text/javascript">
+			<%
+			if(!StringUtil.isEmpty(errorMessage)){
+			%>
+				var msg=document.getElementById("message");
+				var message="";
+				message="<img src="<%=basePath%>/img/tishi.png" alt=""/><%=errorMessage%>";
+				msg.innerHTML=message;
+			<%
+			}
+			%>
+	</script>
+	<script>
+	    document.onkeydown=function(event){
+	        e = event ? event :(window.event ? window.event : null);
+	        if(e.keyCode==13){
+	            //执行的方法
+	            //alert('回车检测到了');
+	            document.NETSJ_Login.submit();
+	        }
+	    }
+	</script>
+	<script type="text/javascript">
+ if (navigator.userAgent.toLowerCase().indexOf("chrome") >= 0) {
+ $(window).load(function(){
+  $('input:-webkit-autofill').each(function(){
+   var text = $(this).val();
+   var name = $(this).attr('name');
+   $(this).after(this.outerHTML).remove();
+   $('input[name=' + name + ']').val(text);
+  });
+ });
+}
+</script>
+	</body>
+</html>
