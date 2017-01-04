@@ -11,7 +11,8 @@ pretty-json
 css-snippets
 qolor
 sort-lines
-language-freemarker
+language-freemarker autoprefixer
+autocomplete-paths
 
 sync-settings
 ansi-to-utf8
@@ -23,7 +24,6 @@ atom-wrap-in-tag
 autocomplete-js-import
 autocomplete-json
 autocomplete-oracle
-autocomplete-paths
 convert-to-utf8
 csslint
 language-javascript-jsx
