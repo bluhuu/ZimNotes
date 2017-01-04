@@ -1,0 +1,95 @@
+1.https://github.com/guybedford/require-css
+2.把css.js或者css.min.js复制到项目的js目录下
+3.在require.config配置map
+map: {
+        '*': {
+            'css': 'require/css'
+        }
+    }
+4.配置css依赖：直接在shim的deps节点配置需要的css文件
+shim: {
+        bootstrap: {
+            deps: [
+                'jquery',
+                'css!../../bootstrap.min.css'
+            ]
+        },
+        bootbox: {
+            deps: ['jquery', 'bootstrap']
+        },
+        bootdatetime: {
+            deps: [
+                'jquery',
+                'bootstrap',
+                'css!../../datetimepicker'
+            ]
+        }
+    }
+以css!开头，路径为相对路径
+5.调用代码
+require(['../app/base'], function () {
+    require(['home_index']);
+});
+
+define('home_index', ['domReady', 'jquery', 'bootstrap'], function (ready, $, bootstrap) {
+    ready(function () {
+        //do something
+    })
+});
+这样便可以自动加载bootstrap.min.css
+6.base.js完整代码
+var pathToJQuery
+if ('querySelector' in document
+    && 'localStorage' in window
+    && 'addEventListener' in window) {
+    pathToJQuery = 'jquery/jquery-2.1.1.min'
+} else {
+    pathToJQuery = 'jquery/jquery-1.11.1.min'
+}
+
+require.config({
+    baseUrl: '/content/js/lib',
+    map: {
+        '*': {
+            'css': 'require/css'
+        }
+    },
+    paths: {
+        app: '../app',
+        jquery: pathToJQuery,
+        domReady: 'require/domReady',
+        json: 'common/json2',
+        jqTmpl: 'tmpl/jquery.tmpl.min',
+        pagination: 'pagination/jquery.twbsPagination.min',
+        unslider: 'unslider/unslider.min',
+        bootstrap: 'bootstrap/bootstrap.min',
+        bootbox: 'bootstrap/bootbox.min',
+        bootdatetime: 'bootstrap/bootstrap-datetimepicker.min',
+    },
+    shim: {
+        unslider: {
+            deps: [
+                'jquery'
+            ]
+        },
+        marquee: {
+            deps: ['jquery']
+        },
+        bootstrap: {
+            deps: [
+                'jquery',
+                'css!../../bootstrap.min.css'
+            ]
+        },
+        bootbox: {
+            deps: ['jquery', 'bootstrap']
+        },
+        bootdatetime: {
+            deps: [
+                'jquery',
+                'bootstrap',
+                'css!../../datetimepicker'
+            ]
+        }
+    }
+});

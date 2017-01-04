@@ -13,8 +13,8 @@
 	    min-height: 100%;
 	    min-width: 1000px;
 		width: 100%;
-		display: table;
 		background-color: #0663c3;
+		font-family: "Microsoft YaHei";
 	}
 	*{
 	    margin: 0;
@@ -63,6 +63,7 @@
 	    *border: 2px solid #1d96f4;
 	    background-color: #fff;
 	    -webkit-border-radius: 10px;
+
 	    -moz-border-radius: 10px;
 	    border-radius: 10px;
 	}
@@ -90,7 +91,8 @@
 	    text-align: center;
 
 	}
-	.login input[type='text']{
+	.login .user{
+		margin-top: 59px;
 	    border: 2px solid #cccccc;
 	    border: 2px solid #cccccc\0;
 	    *border: 2px solid #cccccc;
@@ -108,7 +110,7 @@
 	    margin: 0 0 30px 0;
 	    line-height: 38px;
 	}
-	.login input[type='password']{
+	.login .pwd{
 	    border: 2px solid #cccccc;
 	    border: 2px solid #cccccc\0;
 	    *border: 2px solid #cccccc;
@@ -125,7 +127,8 @@
 	    background-position: 19px 10px;
 	    line-height: 38px;
 	}
-	.login input[type='button']{
+	.login .btn{
+		margin-top: 200px;
 	    width: 140px;
 	    height: 38px;
 	    border: 0px;
@@ -138,9 +141,11 @@
 		margin: 0 30px;
 	}
 	.login-input{
+		text-align: center;
 		margin: 59px 74px 42px 74px;
 	}
-	.login-input input:first{
+	.login input:first{
+		margin-top: 54px;
 		margin-bottom: 34px;
 	}
 	.login-input input:focus{
@@ -148,9 +153,24 @@
 	    border: 2px solid #62cdfb\0;
 	    *border: 2px solid #62cdfb;
 	}
-	#removeID {
+	.login .removeID {
 		color: #959798;
 		background-color: #dadcde;
+	}
+	.userlable{
+		position:absolute;
+		top:-1px;
+		left:74px;
+		font-size:12px;
+	}
+	.pwdlable{
+		position:absolute;
+		top:78px;
+		left:74px;
+		font-size:12px;
+	}
+	p.pwdlable,p.userlable{
+		color: #555;
 	}
 </style>
 	<body>
@@ -158,16 +178,14 @@
         <div class="logoImg">
             <a href="#"><img src="img/text.png" alt=""/></a><br />
         </div>
-        <FORM onSubmit="return checkuser();" method=post name=NETSJ_Login action="">
-	        <div class="login">
-	            <div>
-	                <div class="login-input">
-						<input type="text" placeholder="登陆名" id="pName" name="user" /><br/>
-						<input type="password" placeholder="密码" id="pPwd" name="password" />
-	                </div>
-	                <input type="button" id="loginID" onclick="javascript:document.NETSJ_Login.submit();" value="登录" style="cursor: pointer"/>
-	                <input type="button" id="removeID" onclick="javascript:;" value="消除" style="cursor: pointer"/>
-	            </div>
+        <FORM onSubmit="return checkuser();" method="post" name="NETSJ_Login" action="">
+	        <div class="login" style="text-align:center;position:relative;">
+					<p class="userlable">出错了</p>
+					<input class="user" style="margin-top:54px;" type="text" placeholder="登陆名" id="pName" name="user"/><br/>
+					<p class="pwdlable" style="">出错了</p>
+					<input class="pwd" type="password" placeholder="密码" id="pPwd" name="password" style="margin-bottom:54px;"/>
+	                <input type="button" class = "btn" id="loginID" onclick="javascript:document.NETSJ_Login.submit();" value="登录" style="cursor: pointer"/>
+	                <input type="button" class = "btn removeID" onclick="javascript:;" value="消除" style="cursor: pointer"/>
 	        </div>
          </FORM>
         <p>江苏中健之康信息技术有限公司版权所有 (2016)</p>
