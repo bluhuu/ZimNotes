@@ -10,9 +10,8 @@ auto-indent
 pretty-json
 css-snippets
 qolor
-sort-lines
-language-freemarker autoprefixer
-autocomplete-paths
+sort-lines language-freemarker autoprefixer autocomplete-paths requirejs-snippets
+terminal-plus
 
 sync-settings
 ansi-to-utf8
