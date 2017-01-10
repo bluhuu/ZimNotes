@@ -21,6 +21,9 @@
 	    padding: 0;
 	    border: 0;
 	}
+	input{
+		box-sizing: border-box;
+	}
 	input:focus {
 	    outline:none;
 	}
@@ -36,6 +39,7 @@
 	    line-height: 50px;
 	}
 	.logo{
+
 	    margin: 38px 0 98px 0;
 	}
 	.logoImg
@@ -63,7 +67,6 @@
 	    *border: 2px solid #1d96f4;
 	    background-color: #fff;
 	    -webkit-border-radius: 10px;
-
 	    -moz-border-radius: 10px;
 	    border-radius: 10px;
 	}
@@ -79,7 +82,6 @@
 	.login h2{
 	    color: #f0f0f0;
 	    font-size: 30px;
-
 	    margin-left: 20px;
 	    height: 70px;
 	    line-height: 70px;
@@ -89,7 +91,6 @@
 		height: 334px;
 	    margin: 0 auto;
 	    text-align: center;
-
 	}
 	.login .user{
 		margin-top: 59px;
@@ -103,9 +104,7 @@
 	    padding-right: 5px;
 	    height: 48px;
 	    width: 399px;
-	    background-color: rgba(76, 194, 244, 0.70);
 	    font-size: 16px;
-	    background: url("img/user.png") no-repeat;
 	    background-position: 15px 10px;
 	    margin: 0 0 30px 0;
 	    line-height: 38px;
@@ -121,9 +120,7 @@
 	    padding-right: 5px;
 	    height: 48px;
 	    width: 399px;
-	    background-color: rgba(76, 194, 244, 0.70);
 	    font-size: 16px;
-	    background: url("img/pwd.png") no-repeat;
 	    background-position: 19px 10px;
 	    line-height: 38px;
 	}
@@ -140,18 +137,9 @@
 	    font-size: 24px;
 		margin: 0 30px;
 	}
-	.login-input{
-		text-align: center;
-		margin: 59px 74px 42px 74px;
-	}
 	.login input:first{
 		margin-top: 54px;
 		margin-bottom: 34px;
-	}
-	.login-input input:focus{
-		border: 2px solid #62cdfb;
-	    border: 2px solid #62cdfb\0;
-	    *border: 2px solid #62cdfb;
 	}
 	.login .removeID {
 		color: #959798;
@@ -172,6 +160,27 @@
 	p.pwdlable,p.userlable{
 		color: #555;
 	}
+	.pwd-position {
+		background:url("img/pwd.png") no-repeat;
+		overflow: visible;
+		z-index:3;
+		position: absolute;
+		left: 90px;
+		top:142px;
+	}
+	.user-position {
+		background:url("img/user.png") no-repeat;
+		overflow: visible;
+		z-index:3;
+		position: absolute;
+		left: 88px;
+		top:65px;
+	}
+	input:-webkit-autofill,
+	input:-webkit-autofill:focus{
+	        box-shadow: 0 0 0 1000px rgba(255, 255, 255, 1) inset !important;
+	        -webkit-box-shadow: 0 0 0 1000px rgba(255, 255, 255, 1) inset !important;
+	}
 </style>
 	<body>
 	<div class="main">
@@ -181,8 +190,10 @@
         <FORM onSubmit="return checkuser();" method="post" name="NETSJ_Login" action="">
 	        <div class="login" style="text-align:center;position:relative;">
 					<p class="userlable">出错了</p>
+					<div class="user-position" style="height:40px;width:30px;"></div>
 					<input class="user" style="margin-top:54px;" type="text" placeholder="登陆名" id="pName" name="user"/><br/>
 					<p class="pwdlable" style="">出错了</p>
+					<div class="pwd-position" style="height:40px;width:30px;"></div>
 					<input class="pwd" type="password" placeholder="密码" id="pPwd" name="password" style="margin-bottom:54px;"/>
 	                <input type="button" class = "btn" id="loginID" onclick="javascript:document.NETSJ_Login.submit();" value="登录" style="cursor: pointer"/>
 	                <input type="button" class = "btn removeID" onclick="javascript:;" value="消除" style="cursor: pointer"/>
