@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Centering in the Unknown</title>
+    <style media="screen">
+        .block {
+            text-align: center;
+            background: #c0c0c0;
+            border: #a0a0a0 solid 1px;
+            margin: 20px;
+        }
+
+        .block:before {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        .centered {
+            display: inline-block;
+            vertical-align: middle;
+            width: 300px;
+            padding: 10px 15px;
+            border: #a0a0a0 solid 1px;
+            background: #f5f5f5;
+        }
+    </style>
+    <style media="screen">
+        .something-semantic {
+            background-color: #eee;
+            height:200px;
+            display: table;
+            width: 100%;
+        }
+
+        .something-else-semantic {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <table style="width: 100%;height:200px;background-color:tan;">
+        <tr>
+            <td style="text-align: center; vertical-align: middle;">
+                Unknown stuff to be centered.
+            </td>
+        </tr>
+    </table>
+
+    <div class="something-semantic">
+        <div class="something-else-semantic">
+            Unknown stuff to be centered.
+        </div>
+    </div>
+    <div class="block" style="height: 300px;">
+
+        <div class="centered">
+            <h1>Some text</h1>
+            <p>But he stole up to us again, and suddenly clapping his hand on my shoulder, said&mdash;"Did ye see anything looking like men going towards that ship a while ago?"</p>
+        </div>
+
+    </div>
+
+    <div class="block" style="height: 200px;">
+
+        <div class="centered">
+            <h1>Some text</h1>
+            <p>But he stole up to us again, and suddenly clapping his hand on my shoulder, said&mdash;"Did ye see anything looking like men going towards that ship a while ago?"</p>
+        </div>
+
+    </div>
+
+    <div class="block" style="height: 600px;">
+
+        <div class="centered">
+            <h1>Some text</h1>
+            <p>But he stole up to us again, and suddenly clapping his hand on my shoulder, said&mdash;"Did ye see anything looking like men going towards that ship a while ago?"</p>
+        </div>
+
+    </div>
+</body>
+
+</html>
