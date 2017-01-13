@@ -1,0 +1,31 @@
+1、官网下载tomcat 7 解压缩版本
+
+2、解压tomcat，重命名为tomcat7.1,复制2个，并重命名为tomcat7.2、tomcat7.3
+
+3、进入D:\service\tomcat7.1\conf，打开tomcat-users.xml，配置用户管理，tomcat7.2和tomcat7.3一样
+    <role rolename="manager"/>
+    <role rolename="admin"/>
+    <user username="manager" password="tomcat" roles="manager"/>
+    <user username="admin" password="tomcat" roles="admin"/>
+
+4、进入D:\service\tomcat7.1\conf，打开server.xml文件,主要是修改端口.
+    <Server port="8101" shutdown="SHUTDOWN">
+
+    <Connector port="8081" protocol="HTTP/1.1"
+               connectionTimeout="20000"
+               redirectPort="8443" />
+
+    <Connector port="8201" protocol="AJP/1.3" redirectPort="8443" />
+
+5、进入D:\service\tomcat7.1\bin，打开service.bat，修改SERVICE_NAME的名字
+    rem Set default Service name
+    set SERVICE_NAME=Tomcat7.1
+    set DISPLAYNAME=Apache Tomcat 7.0 %SERVICE_NAME%
+
+6、通过查询方式，替换全部默认的tomcat7 为tomcat7.1
+
+7、重命名tomcat7.exe为tomcat7.1.exe 和tomcat7w.exe为tomcat7.1w.exe
+
+8、通过命令方式进入D:\service\tomcat7.1\bin，执行服务安装  service.bat install
+
+9、大功告成。执行service.msc查看服务安装情况。
