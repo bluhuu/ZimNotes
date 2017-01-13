@@ -1,0 +1,24 @@
+//页面宽大于1150px，出现滚动条时在左边margin一个滚动条的宽度
+@media screen and (min-width: 1150px) {
+   .wrap-outer {
+       margin-left: calc(100vw - 100%);
+   }
+}
+
+html {
+  overflow-y: scroll;
+}
+
+:root {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+:root body {
+  position: absolute;
+}
+
+body {
+  width: 100vw;
+  overflow: hidden;
+}
