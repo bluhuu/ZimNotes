@@ -11,7 +11,7 @@ pretty-json
 css-snippets
 qolor
 sort-lines language-freemarker autoprefixer autocomplete-paths requirejs-snippets
-terminal-plus
+platformio-ide-terminal
 
 sync-settings
 ansi-to-utf8
