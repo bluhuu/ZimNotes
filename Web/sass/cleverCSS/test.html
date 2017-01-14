@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>border</title>
+</head>
+<style media="screen">
+    body>div {
+        margin-left: 5px;
+        float: left;
+    }
+</style>
+<style media="screen">
+    .threeline {
+        width: 120px;
+        height: 20px;
+        border-top: 60px double red;
+        border-bottom: 20px solid black;
+    }
+</style>
+<style media="screen">
+    .div_bubble {
+        max-width: 200px;
+        min-height: 200px;
+        background: #d7d7d7;
+        /* 一个浅灰色的背景，这样可以和泡沫有一个好的视觉对比度 */
+    }
+
+    .bubble {
+        width: 200px;
+        /* 定义泡沫的宽高 */
+        height: 200px;
+        /*margin: 94px auto 50px auto;*/
+        box-shadow: inset -30px -30px 75px rgba(0, 0, 0, .2), 淡灰色渐变背景，光源位于左上方 inset 0px 0px 5px rgba(0, 0, 0, .5), 泡沫内部深灰色边界 inset 0px 0px 55px rgba(255, 255, 255, .5), 泡沫内部白色渐变效果 inset -3px -3px 5px rgba(0, 0, 0, .5), 颜色稍深的右下边缘阴影效果 0 0 50px rgba(255, 255, 255, .75);
+        /* 泡沫周围的白色发光效果，以更好地突显边缘 */
+        border-radius: 100px;
+        /* 50%的边界弧度，使其成为一个圆 */
+        background: rgba(255, 255, 255, .4);
+        /* 使我们的泡沫和背景色相比略浅 */
+        position: relative;
+        /* 使得伪元素可以据此绝对定位 */
+    }
+
+    .bubble:before {
+        /* 在泡沫的左上角加上白色的亮点，形成光斑效果 */
+        content: "";
+        display: block;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 25px;
+        left: 25px;
+        border-radius: 75px 25px;
+        box-shadow: inset 10px 10px 50px rgba(255, 255, 255, .6);
+    }
+
+    .bubble:after {
+        /* 使用:after伪元素构造泡沫内壁，形成薄薄的泡沫膜 */
+        content: "";
+        display: block;
+        position: absolute;
+        width: 190px;
+        height: 190px;
+        border-radius: 190px;
+        left: 5px;
+        top: 5px;
+        box-shadow: inset 0px -5px 5px rgba(0, 0, 0, .05);
+    }
+
+    .add {
+        width: 100px;
+        height: 100px;
+        border: 1px solid;
+        color: #ccc;
+        transition: color 0.25s;
+        position: relative;
+    }
+
+    .add:before {
+        content: " ";
+        display: block;
+        width: 60px;
+        height: 10px;
+        border-color: #ccc;
+        border-top: 10px solid;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -5px 0 0 -30px;
+    }
+
+    .add:after {
+        content: " ";
+        display: block;
+        width: 10px;
+        height: 60px;
+        border-color: #ccc;
+        border-left: 10px solid;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -30px 0 0 -5px;
+    }
+
+    .add:hover {
+        color: #f6c;
+    }
+
+    .box {
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+    }
+
+    .dotted {
+        width: 100%;
+        height: 100%;
+        border: 149px dotted #cd0000;
+    }
+    .triangle{
+        border-width: 50px 50px;
+        border-style: solid;
+        border-color: red red transparent transparent;
+        background-color: #ccc;
+    }
+</style>
+
+<body>
+    <div class="threeline"> </div>
+    <div class="div_bubble">
+        <div class="bubble"></div>
+    </div>
+    <div>
+        <div class="add"></div>
+    </div>
+    <div class="box">
+        <div class="dotted"> </div>
+    </div>
+    <div class="triangle">
+
+    </div>
+</body>
+
+</html>
