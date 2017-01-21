@@ -38,3 +38,46 @@ project-manager
 react-es6-snippets
 react-snippets
 svg-preview
+├── atom-alignment@0.12.1
+├── atom-beautify@0.29.14
+├── atom-bracket-highlight@0.3.1
+├── atom-live-server@1.2.5
+├── atom-ternjs@0.16.1
+├── auto-indent@0.5.0
+├── autoclose-html@0.24.0
+├── autocomplete-paths@1.0.5
+├── autoprefixer@3.6.0
+├── color-picker@2.2.3
+├── css-snippets@1.1.0
+├── docblockr@0.9.1
+├── emmet@2.4.3
+├── expose@0.12.2
+├── file-icons@2.0.8
+├── git-plus@6.0.2
+├── git-time-machine@1.5.4
+├── highlight-line@0.11.1
+├── highlight-selected@0.11.2
+├── javascript-snippets@1.2.1
+├── jquery-snippets@11.0.0
+├── language-freemarker@0.2.0
+├── linter@1.11.4
+├── linter-jshint@3.0.2
+├── linter-ui-default@0.0.3
+├── minimap@4.26.6
+├── minimap-bookmarks@0.4.2
+├── minimap-cursorline@0.2.0
+├── minimap-find-and-replace@4.5.1
+├── minimap-git-diff@4.3.1
+├── minimap-highlight-selected@4.5.0
+├── minimap-linter@1.6.0
+├── minimap-selection@4.4.0
+├── minimap-split-diff@0.3.2
+├── monokai@0.18.0
+├── open-in-browsers@0.0.19
+├── open-terminal-here@2.1.4
+├── pigments@0.37.0
+├── requirejs-snippets@0.1.0
+├── sort-lines@0.14.0
+├── split-diff@1.1.0
+├── swackets@0.12.1
+└── underscorejs-snippets@0.2.2
