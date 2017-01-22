@@ -43,6 +43,7 @@ svg-preview
 ├── atom-bracket-highlight@0.3.1
 ├── atom-live-server@1.2.5
 ├── atom-ternjs@0.16.1
+├── atom-wrap-in-tag@0.6.0
 ├── auto-indent@0.5.0
 ├── autoclose-html@0.24.0
 ├── autocomplete-paths@1.0.5
@@ -63,6 +64,7 @@ svg-preview
 ├── linter@1.11.4
 ├── linter-jshint@3.0.2
 ├── linter-ui-default@0.0.3
+├── markdown-image-helper@1.0.4
 ├── minimap@4.26.6
 ├── minimap-bookmarks@0.4.2
 ├── minimap-cursorline@0.2.0
