@@ -1,0 +1,3 @@
+```
+apm i atom-beautify git-plus minimap-git-diff atom-bracket-highlight git-time-machine minimap-highlight-selected atom-live-server highlight-line minimap-linter atom-ternjs highlight-selected minimap-selection atom-wrap-in-tag intentions minimap-split-diff autoclose-html javascript-snippets monokai autocomplete-paths jquery-snippets open-in-browsers auto-indent language-freemarker open-terminal-here autoprefixer linter pigments busy-signal linter-jshint requirejs-snippets color-picker linter-ui-default split-diff css-snippets markdown-folder swackets data-atom markdown-image-helper tidy-markdown docblockr minimap tree-view-git-status emmet minimap-bookmarks underscorejs-snippets expose minimap-cursorline file-icons minimap-find-and-replace
+```
