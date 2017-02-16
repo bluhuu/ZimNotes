@@ -10,3 +10,5 @@ select w.code from mysql.warehouses w inner join mysql.boxes b on b.Warehouse=w.
 SELECT * FROM Warehouses WHERE Capacity < ( SELECT COUNT(*) FROM Boxes WHERE Warehouse = Warehouses.Code );
 select * from warehouses where Capacity < (select count(*) from boxes where Warehouse = Warehouses.Code);
 select * from mysql.boxes b inner join mysql.warehouses w on b.Warehouse = w.Code where w.Location='Chicago';
+insert into mysql.warehouses(code,location,Capacity) values(6,'New York',3);
+DELETE FROM `warehouses` WHERE `code` = '6';
