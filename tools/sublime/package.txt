@@ -1,3 +1,16 @@
+—– BEGIN LICENSE —–
+Michael Barnes
+Single User License
+EA7E-821385
+8A353C41 872A0D5C DF9B2950 AFF6F667
+C458EA6D 8EA3C286 98D1D650 131A97AB
+AA919AEC EF20E143 B361B1E7 4C8B7F04
+B085E65E 2F5F5360 8489D422 FB8FC1AA
+93F6323C FD7F7544 3F39C318 D95E6480
+FCCC7561 8A4A1741 68FA4223 ADCEDE07
+200C25BE DBBC4855 C4CFB774 C5EC138C
+0FEC1CEF D9DCECEC D3A5DAD1 01316C36
+—— END LICENSE ——
 --- packagecontrol ------------------------------------------------------------
 ctrl+`
 import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
@@ -10,10 +23,15 @@ preferences->packge settings ->livereload->settings-default
      ]
 }
 --- chrome 同样安装 liveReload 插件
+--- Terminal
+--- CSSComb
 --- Sublimerge 3 --------------------------------------------------------------
 --- Origami -------------------------------------------------------------------
 --- LiveStyle -----------------------------------------------------------------
 --- gulp ----------------------------------------------------------------------
+--- Modific --- Git或SVN时很有用。Modific将对你的代码标记改变
+--- Inc Dec Value --- Alt +↑增加或Alt +↓减少
+--- FilterLines --- 使用给定的“关键字符串”或“正则表达式符号”在你的文档内搜索
 npm install gulp
 --- All Autocomplete ----------------------------------------------------------
 --- SublimeCodeIntel ----------------------------------------------------------
@@ -26,6 +44,7 @@ https://github.com/emmetio/pyv8-binaries
 xp:https://nodejs.org/download/release/v5.12.0/
 --- sublimelinter -------------------------------------------------------------
 --- sublimelinter-jshint ------------------------------------------------------
+--- CSS Extended Completions --- 类名自动补全
 $ npm install jshint -g
 sublimelinter：preference-package setting-sublimelinter-user
 {
@@ -58,8 +77,12 @@ sublimelinter：preference-package setting-sublimelinter-user
     "css":"C:/Program Files/nodejs/node.exe"
 }
 }
-
+--- Clipboard History ---
+--- Alignment ---
+--- Color​Picker
+--- IMESupport
 --- JSLint --------------------------------------------------------------------
+--- AlignTab ---
 --- AutoFileName --------------------------------------------------------------
 --- ChineseLocalization -------------------------------------------------------
 --- Color Highlighter ---------------------------------------------------------
@@ -72,6 +95,7 @@ sublimelinter：preference-package setting-sublimelinter-user
 这个插件主要应用css的浏览器兼容书写，自动分析你的css文件，解析出新的css文件，可以配置你要兼容的浏览器，不过这个插件要在之前安装nodejs
 --- BufferScroll --------------------------------------------------------------
 你可以轻松书写一个文件多个位置了
+css3
 --- CSS Comments --------------------------------------------------------------
 --- CSS Format ----------------------------------------------------------------
 --- DocBlockr -----------------------------------------------------------------
@@ -85,4 +109,10 @@ sublimelinter：preference-package setting-sublimelinter-user
 一个更好的JavaScript 语法高亮。
 --- Web Inspector -------------------------------------------------------------
 这才是真正的压轴神器，什么LiveReload那都弱爆了，一个不更新的东东，继续支持是没有前途滴！ web inspector在各个方面都比live reload做得更好，还能够单点调试！
+--- jQuery ---
+--- HTML5 ---
+
+--- HTMLattributes
+--- Trimmer
+--- TrailingSpaces
 

@@ -359,17 +359,11 @@ fieldset {
 /* line 336, ../sass/_normalize.scss */
 legend {
   box-sizing: border-box;
-  /* 1 */
   color: inherit;
-  /* 2 */
   display: table;
-  /* 1 */
   max-width: 100%;
-  /* 1 */
   padding: 0;
-  /* 3 */
   white-space: normal;
-  /* 1 */
 }
 
 /**
@@ -495,13 +489,13 @@ template {
   display: none;
 }
 
-/*测试属性*/
+/*?????/
 /* line 9, ../sass/screen.scss */
 header, nav, footer, section, #top_main, #banner {
   border: 1px solid black;
 }
 
-/*通用*/
+/*ͨ?*/
 /* line 13, ../sass/screen.scss */
 body {
   margin: 0;
@@ -555,10 +549,10 @@ a:hover {
   margin: 0 auto;
 }
 
-/********页面顶部操作***********/
+/********ҳ????????***********/
 /* line 44, ../sass/screen.scss */
 #top {
-  /*宽度，高度，背景，下边框，行高*/
+  /*??ȣ??߶ȣ?????????߿?и?/
   width: 100%;
   height: 30px;
   background: #f7f7f7;
