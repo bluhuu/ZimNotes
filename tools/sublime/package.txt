@@ -22,11 +22,6 @@ preferences->packge settings ->livereload->settings-default
       "SimpleRefresh"
      ]
 }
-
-
-
-
-ss
 --- chrome 同样安装 liveReload 插件
 --- Terminal
 --- CSSComb
