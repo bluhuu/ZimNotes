@@ -14,7 +14,9 @@ FCCC7561 8A4A1741 68FA4223 ADCEDE07
 --- packagecontrol ------------------------------------------------------------
 ctrl+`
 import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
---- liveReload ----------------------------------------------------------------
+-------------------------------------------------------------------------------
+LiveStyle
+liveReload
 preferences->packge settings ->livereload->settings-default
 {
      "enabled_plugins": [
@@ -22,97 +24,54 @@ preferences->packge settings ->livereload->settings-default
       "SimpleRefresh"
      ]
 }
---- chrome 同样安装 liveReload 插件
---- Terminal
---- CSSComb
---- Sublimerge 3 --------------------------------------------------------------
---- Origami -------------------------------------------------------------------
---- LiveStyle -----------------------------------------------------------------
---- gulp ----------------------------------------------------------------------
---- Modific --- Git或SVN时很有用。Modific将对你的代码标记改变
---- Inc Dec Value --- Alt +↑增加或Alt +↓减少
---- FilterLines --- 使用给定的“关键字符串”或“正则表达式符号”在你的文档内搜索
-npm install gulp
---- All Autocomplete ----------------------------------------------------------
---- SublimeCodeIntel ----------------------------------------------------------
---- BracketHighlighter --------------------------------------------------------
---- Emmet ---------------------------------------------------------------------
-https://github.com/emmetio/pyv8-binaries
---- JavaScript Completions ----------------------------------------------------
---- JsFormat ------------------------------------------------------------------
---- HTML-CSS-JS Prettify ------------------------------------------------------
+chrome 同样安装 liveReload 插件
+-------------------------------------------------------------------------------
 xp:https://nodejs.org/download/release/v5.12.0/
---- sublimelinter -------------------------------------------------------------
---- sublimelinter-jshint ------------------------------------------------------
---- CSS Extended Completions --- 类名自动补全
+-------------------------------------------------------------------------------
 $ npm install jshint -g
-sublimelinter：preference-package setting-sublimelinter-user
-{
-  "sublimelinter": "save-only",
-   "jshint_options":
-    {
-        // To fix column positions for JSHint errors you may want to add `"indent": 1` to your
-        // **User** "jshint_options". This issue affects users with tabs for indentation.
-        // This fix was reverted due to a conflict with using the `"white": true` option.
-        // "indent": 1,
-        // 设置 JS 执行环境为浏览器
-        "browser": true,
-         // 加载 jQuery 的全局变量（jQuery、$）
-        "jquery": true,
-        //禁止下划线的变量名
-        "nomen":true,
-         // 行尾不要分号,false表示强制需要分号结尾
-        "asi": false,
-        "white":true,
-        // 其他全局变量，我用了 SeaJS
-        "predef": [
-             "define",
-             "seajs",
-             "console"
-             ]
-    },
-    "sublimelinter_executable_map":
-{
-    "javascript":"C:/Program Files/nodejs/node.exe",
-    "css":"C:/Program Files/nodejs/node.exe"
-}
-}
---- Clipboard History ---
---- Alignment ---
---- Color​Picker
---- IMESupport
---- JSLint --------------------------------------------------------------------
---- AlignTab ---
---- AutoFileName --------------------------------------------------------------
---- ChineseLocalization -------------------------------------------------------
---- Color Highlighter ---------------------------------------------------------
---- CTags ---------------------------------------------------------------------
-实在方法跳转，跳转到你方法
-之后在win7下或者linux下安装ctags软件
-打开ctags插件包的use-setting配置"command": "d:/IDE/ctags58/ctags.exe"这个路径是下载ctags的安装路径
-这个插件能跨文件跳转，跳转到指定函数声明的地方(ctrl+alt+左键)。 使用package control 搜索ctags 进行安装（安装ctags插件就可以了， 还有一个 CTags for PHP 插件没什么用）,注意安装好插件后要需要安装ctags命令。window 下载 ctags.exe  http://vdisk.weibo.com/s/7QZd7 。 将ctags.exe文件放在一个环境变量能访问到的地方。打开cmd， 输入ctags，如果有这个命令，证明成功了。ubuntu下安装运行命令：sudo apt-get install exuberant-ctags 。然后在 sublime项目文件夹右键 ， 会出       现Ctag:Rebuild Tags 的菜单。点击它，然后会 生成.tags的文件  然后在你代码中， 光标放在某个函数上， 点击 就可以跳转到函数声明的地方。
---- Autoprefixer --------------------------------------------------------------
-这个插件主要应用css的浏览器兼容书写，自动分析你的css文件，解析出新的css文件，可以配置你要兼容的浏览器，不过这个插件要在之前安装nodejs
---- BufferScroll --------------------------------------------------------------
-你可以轻松书写一个文件多个位置了
-css3
---- CSS Comments --------------------------------------------------------------
---- CSS Format ----------------------------------------------------------------
---- DocBlockr -----------------------------------------------------------------
---- Keymaps -------------------------------------------------------------------
-快速查找所有插件的快捷键
---- ConvertToUTF8 -------------------------------------------------------------
---- EncodingHelper ------------------------------------------------------------
---- SublimeREPL ---------------------------------------------------------------
---- YouCompleteMe -------------------------------------------------------------
---- JavaScriptNext – ES6 ------------------------------------------------------
-一个更好的JavaScript 语法高亮。
---- Web Inspector -------------------------------------------------------------
-这才是真正的压轴神器，什么LiveReload那都弱爆了，一个不更新的东东，继续支持是没有前途滴！ web inspector在各个方面都比live reload做得更好，还能够单点调试！
---- jQuery ---
---- HTML5 ---
+$ npm install csslint -g
+-------------------------------------------------------------------------------
 
---- HTMLattributes
---- Trimmer
---- TrailingSpaces
-
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Alignment",
+		"AlignTab",
+		"All Autocomplete",
+		"AutoFileName",
+		"Autoprefixer",
+		"BracketHighlighter",
+		"ChineseLocalizations",
+		"Color Highlighter",
+		"ConvertToUTF8",
+		"CSS Comments",
+		"CSS Extended Completions",
+		"DocBlockr",
+		"Emmet",
+		"Git",
+		"Highlighter",
+		"HTML-CSS-JS Prettify",
+		"HTML5",
+		"HTMLAttributes",
+		"IMESupport",
+		"Inc-Dec-Value",
+		"JavaScript Completions",
+		"Jimbly's Clipboard History",
+		"jQuery",
+		"Origami",
+		"Package Control",
+		"Sort Lines By Selection",
+		"SublimeCodeIntel",
+		"SublimeLinter",
+		"SublimeLinter-csslint",
+		"SublimeLinter-jshint",
+		"Sublimerge 3",
+		"SublimeServer",
+		"Terminal",
+		"Trimmer"
+	]
+}
