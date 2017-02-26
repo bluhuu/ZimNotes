@@ -53,6 +53,7 @@ $ npm install csslint -g
 		"CSScomb",
 		"DocBlockr",
 		"doTjs Template Syntax Highlighting",
+		"EasyMotion",
 		"Emmet",
 		"FileDiffs",
 		"GBK Support",
