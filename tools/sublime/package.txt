@@ -1,3 +1,4 @@
+851dbd345e8367142d43a81ecf929e326296099e
 —– BEGIN LICENSE —–
 Michael Barnes
 Single User License
@@ -57,6 +58,7 @@ $ npm install csslint -g
 		"Emmet",
 		"FileDiffs",
 		"GBK Support",
+		"Gist",
 		"Git",
 		"GitGutter",
 		"Goto-CSS-Declaration",

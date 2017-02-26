@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>dddss</title>
+    <script src="//cdn.bootcss.com/dot/1.1.0/doT.min.js"></script>
+    <script src="//cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script id="interpolationtmpl" type="text/template">
+        <div>Hi {{=it.name}}!</div>
+        <div>{{=it.age || ''}}</div>
+    </script>
+    <script id="conditionstmpl" type="text/template">
+        {{? !it.name }}
+        <div> 你还没有名字</div>
+        {{?? }}
+        <div>Oh, I love your name, {{=it.name}}!</div>
+        {{?}}
+    </script>
+    <script id="evaluationtmpl" type="text/template">
+    	{{ for(var prop in it) { }}
+	        {{? typeof it[prop]=='object' }}
+	            <div style="font-weight: bold;" >KEY:{{= prop }}---VALUE:</div>
+	            {{ for(var prop2 in it[prop]) { }}
+	                <div style="margin-left: 20px;" >key:{{= prop2 }}---value:{{= it[prop][prop2] }}</div>
+	            {{ } }}
+	        {{?? }}
+	            <div>KEY:{{= prop }}---VALUE:{{= it[prop] }}</div>
+	        {{?}}
+    	{{ } }}
+    </script>
+</head>
+
+<body>
+    <!-- 实例1:简单 -->
+    <div id="interpolation"></div>
+    <script type="text/javascript">
+    var dataInter = {
+        "name": "Jake",
+        "age": 31
+    };
+    $("#interpolation").html(doT.template($("#interpolationtmpl").html())(dataInter));
+    </script>
+    <hr>
+    <!-- 实例二:条件判断 -->
+    <div id="condition"></div>
+    <script type="text/javascript">
+    var dataEncode = {
+        "name": "黄威",
+        "age": 31
+    };
+    var interText = doT.template($("#conditionstmpl").html());
+    $("#condition").html(interText(dataEncode));
+    </script>
+    <hr>
+    <!-- 实例三:循环+条件判断 -->
+    <div id="evaluation"></div>
+    <script type="text/javascript">
+    var dataEval = {
+        "name": "Jake",
+        "age": 31,
+        "interests": ["basketball", "hockey", "photography"],
+        "contact": {
+            "email": "jake@xyz.com",
+            "phone": "999999999"
+        }
+    };
+    var evalText = doT.template($("#evaluationtmpl").html());
+    $("#evaluation").html(evalText(dataEval));
+    </script>
+    <hr>
+</body>
+
+</html>
