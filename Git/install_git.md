@@ -5,7 +5,8 @@ install git
 sudo apt-get install git
 git config --global user.name "bluhuu"
 git config --global user.email "bluhuu@gmail.com"
-**ssh-keygen** -t rsa -C "bluhuu@gmail.com"
+ssh-keygen -t rsa -C "bluhuu@gmail.com"
+测试：ssh git@github.com
 ```
 ## 添加github源
 ```bash
