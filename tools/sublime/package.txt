@@ -49,8 +49,13 @@ $ npm install csslint -g
 		"ConvertToUTF8",
 		"CSS Comments",
 		"CSS Extended Completions",
+		"CSS3",
+		"CSScomb",
 		"DocBlockr",
+		"doTjs Template Syntax Highlighting",
 		"Emmet",
+		"FileDiffs",
+		"GBK Support",
 		"Git",
 		"GitGutter",
 		"Goto-CSS-Declaration",
@@ -63,8 +68,11 @@ $ npm install csslint -g
 		"JavaScript Completions",
 		"Jimbly's Clipboard History",
 		"jQuery",
+		"jQuery Snippets pack",
+		"JsFormat",
 		"Markdown Preview",
 		"MarkdownEditing",
+		"Minifier",
 		"Origami",
 		"Package Control",
 		"Sort Lines By Selection",
@@ -78,5 +86,3 @@ $ npm install csslint -g
 		"Trimmer"
 	]
 }
-
-
