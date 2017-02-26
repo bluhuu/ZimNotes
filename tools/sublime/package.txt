@@ -53,6 +53,7 @@ $ npm install csslint -g
 		"Emmet",
 		"Git",
 		"GitGutter",
+		"Goto-CSS-Declaration",
 		"Highlighter",
 		"HTML-CSS-JS Prettify",
 		"HTML5",
@@ -62,6 +63,8 @@ $ npm install csslint -g
 		"JavaScript Completions",
 		"Jimbly's Clipboard History",
 		"jQuery",
+		"Markdown Preview",
+		"MarkdownEditing",
 		"Origami",
 		"Package Control",
 		"Sort Lines By Selection",
@@ -75,4 +78,5 @@ $ npm install csslint -g
 		"Trimmer"
 	]
 }
+
 
