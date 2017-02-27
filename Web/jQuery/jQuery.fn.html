@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3 class="ye">new soul</h3>
+    <h3 class="ye">new soul</h3>
+    <h3 class="ye">new soul</h3>
+    <h3 class="ye">new soul</h3>
+    <script src="//cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        jQuery.fn.myPlugin = function(options) {
+            console.log("options",options);
+            $options = $.extend({
+                    html: "no messages",
+                    css: {
+                        "color": "red",
+                        "font-size": "14px"
+                    }
+                },
+                options);
+            return $(this).css({
+                "color": $options.css.color,
+
+            }).html($options.html);
+        }
+
+        $('.ye').myPlugin();
+        $('.ye').myPlugin({
+            html: "So easy,yes?",
+            css: {
+                "color": "green",
+                "font-size": "20px"
+            }
+        });
+    </script>
+</body>
+
+</html>
