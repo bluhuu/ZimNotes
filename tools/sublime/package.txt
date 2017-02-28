@@ -67,18 +67,19 @@ $ npm install csslint -g
 		"HTML5",
 		"HTMLAttributes",
 		"IMESupport",
-		"Inc-Dec-Value",
 		"JavaScript Completions",
+		"JavaScript Patterns",
+		"JavaScript Snippets",
 		"Jimbly's Clipboard History",
 		"jQuery",
 		"jQuery Snippets pack",
+		"JS Snippets",
 		"JsFormat",
 		"Markdown Preview",
 		"MarkdownEditing",
 		"Minifier",
 		"Origami",
 		"Package Control",
-		"Sort Lines By Selection",
 		"SublimeCodeIntel",
 		"SublimeLinter",
 		"SublimeLinter-csslint",
@@ -86,6 +87,7 @@ $ npm install csslint -g
 		"Sublimerge 3",
 		"SublimeServer",
 		"Terminal",
-		"Trimmer"
+		"Trimmer",
+		"Vanilla lodash Snippets"
 	]
 }
