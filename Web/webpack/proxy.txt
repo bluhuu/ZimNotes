@@ -1,0 +1,15 @@
+  devServer: {
+    contentBase: './src/',
+    historyApiFallback: true,
+    hot: true,
+    port: defaultSettings.port,
+    publicPath: defaultSettings.publicPath,
+    noInfo: false,
+    proxy: {
+      '/*': {
+          target: 'http://xxx.xxx.com',
+          host: 'xxx.xxx.com',
+          secure: false
+      }
+    }
+  }
