@@ -34,3 +34,29 @@ gulp.task('webserver', function() {
 			}
 		}));
 });
+
+
+
+var connect = require('gulp-connect');
+var proxy = require('http-proxy-middleware');
+
+gulp.task('serverName', function() {
+    connect.server({
+        root: ['path'],
+        port: 8000,
+        livereload: true,
+        middleware: function(connect, opt) {
+            return [
+                proxy('/api',  {
+                    target: 'http://localhost:8080',
+                    changeOrigin:true
+                }),
+                proxy('/otherServer', {
+                    target: 'http://IP:Port',
+                    changeOrigin:true
+                })
+            ]
+        }
+
+    });
+});
