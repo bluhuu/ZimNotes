@@ -88,6 +88,8 @@ $ npm install csslint -g
 		"SublimeServer",
 		"Terminal",
 		"Trimmer",
-		"Vanilla lodash Snippets"
+		"Vanilla lodash Snippets",
+		"Expand Selection to Quotes",
+		"ExpandRegion"
 	]
 }
