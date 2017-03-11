@@ -3,6 +3,7 @@ atom-bracket-highlight
 atom-live-server
 atom-ternjs
 atom-wrap-in-tag
+auto-id-class
 auto-indent
 autoclose-html
 autocomplete-lodash
@@ -10,6 +11,7 @@ autocomplete-paths
 autoprefixer
 busy-signal
 color-picker
+css-comb
 css-snippets
 docblockr
 double-tag
@@ -44,7 +46,6 @@ monokai
 open-in-browsers
 pigments
 platformio-ide-terminal
-README.md
 requirejs-snippets
 sort-lines
 split-diff
