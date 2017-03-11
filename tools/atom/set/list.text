@@ -1,5 +1,6 @@
 atom-beautify
 atom-bracket-highlight
+atom-css-comb
 atom-live-server
 atom-ternjs
 atom-wrap-in-tag
@@ -11,7 +12,6 @@ autocomplete-paths
 autoprefixer
 busy-signal
 color-picker
-atom-css-comb
 css-snippets
 docblockr
 double-tag
@@ -51,3 +51,4 @@ sort-lines
 split-diff
 tidy-markdown
 tree-view-git-status
+vim-mode
