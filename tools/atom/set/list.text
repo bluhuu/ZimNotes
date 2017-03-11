@@ -20,11 +20,11 @@ file-icons
 git-history
 git-plus
 git-time-machine
-highlight-line
 highlight-selected
 intentions
 javascript-snippets
 jquery-snippets
+jumpy
 language-freemarker
 line-diff-details
 linter
@@ -44,8 +44,8 @@ minimap-selection
 minimap-split-diff
 monokai
 open-in-browsers
+open-terminal-here
 pigments
-platformio-ide-terminal
 requirejs-snippets
 sort-lines
 split-diff
