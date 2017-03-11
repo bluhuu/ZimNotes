@@ -1,1 +1,18 @@
-atom-beautify atom-bracket-highlight atom-live-server atom-ternjsatom-wrap-in-tag auto-indent autoclose-html autocomplete-lodash autocomplete-paths autoprefixercolor-picker css-snippets docblockr emmet file-iconsgit-time-machinehighlight-selected javascript-snippets jquery-snippets language-freemarkerlinter linter-jshintmarkdown-image-helper markdown-scroll-syncminimap minimap-bookmarks minimap-cursorline minimap-find-and-replace minimap-git-diff minimap-highlight-selectedminimap-linter minimap-selection minimap-split-diffhighlight-line monokai lodash-snippets open-in-browsers pigmentsplatformio-ide-terminal split-diff tidy-markdown git-plusrequirejs-snippetstree-view-git-statusintentions busy-signal linter-ui-defaultdouble-tag
+atom-beautify atom-bracket-highlight atom-live-server atom-ternjs
+atom-wrap-in-tag auto-indent autoclose-html autocomplete-lodash autocomplete-paths autoprefixer
+color-picker css-snippets docblockr emmet file-icons
+git-time-machine
+highlight-selected javascript-snippets jquery-snippets language-freemarker
+linter linter-jshint
+markdown-image-helper markdown-scroll-sync
+minimap minimap-bookmarks minimap-cursorline minimap-find-and-replace minimap-git-diff minimap-highlight-selected
+minimap-linter minimap-selection minimap-split-diff
+highlight-line monokai lodash-snippets open-in-browsers pigments
+platformio-ide-terminal split-diff tidy-markdown git-plus
+
+requirejs-snippets
+
+tree-view-git-status
+intentions busy-signal linter-ui-default
+
+double-tag
