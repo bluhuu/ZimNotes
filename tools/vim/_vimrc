@@ -1,0 +1,348 @@
+set nocompatible            "vi更兼容
+source $VIMRUNTIME/vimrc_example.vim
+source $VIMRUNTIME/mswin.vim
+behave mswin
+
+" 编码设置
+set fenc=utf-8				"fenc后再w来将此文件存成不同的编码
+set encoding=cp936			"win显示为cp936
+set langmenu=utf-8
+language message utf-8
+set fileencodings=ucs-bom,utf-8,utf-16,cp936,gb18030,big5,euc-jp,euc-kr,latin1	"猜测列表
+set ffs=unix,dos
+set ff=unix                  "设置文件格式为UNIX格式
+
+"窗口大小与位置
+winpos 50 100
+set cmdheight=1
+set lines=25
+set columns=100
+
+set gfn=Bitstream\ Vera\ Sans\ Mono:h10 gfw=新宋体:h11
+
+set ignorecase              "搜索模式里忽略大小写
+set nolinebreak
+set wrap                    "折行
+set number                  "在每行前面显示行号
+set so=1                    "光标上下两侧最少保留的屏幕行数
+set sidescrolloff=1         "光标左右两侧保留的最少屏幕列数
+set sidescroll=1            "水平滚动时滚动的最少列数
+set makeprg=make            "":make" 命令使用的程序
+
+set tabstop=4               "文件里的 <Tab> 代表的空格数
+set softtabstop=4           "执行编辑操作，如插入 <Tab> 或者使用 <BS> 时，把 <Tab> 算作空格的数目
+set expandtab               "插入模式里: 插入 <Tab> 时使用合适数量的空格
+set shiftwidth=4            "缩进每一步使用的空白数目
+set smarttab                "如果打开，行首的 <Tab> 根据 'shiftwidth' 插入空白
+
+set fdc=2                   "如果非零，指定宽度的列在窗口的一侧显示，指示折叠的打开和关闭。最大值为12
+set fdm=syntax              "当前窗口使用的折叠方式
+syn on                      "开启高亮
+compiler gcc
+
+set guioptions-=T           "工具条
+"set guioptions-=r          "右滚动条
+set guioptions-=L
+set guioptions+=e           "可用来改变标签文本
+"set guioptions-=m          "菜单栏
+set guioptions+=c           "简单的选择使用控制台对话框而不是弹出式对话框
+set showtabline=1           "本选项的值指定何时显示带有标签页标签的行
+
+"set cindent                "打开C类型的缩进
+set autoindent              "自动缩进
+set ruler                   "总是在右下角显示当前光标的行列信息
+set showcmd                 "总是在右下角显示一个完整的命令已经完成的部分
+set incsearch               "在键入字符串的同时开始搜索
+set hlsearch                "高亮显示搜索的内容
+"autocmd FileType text setlocal textwidth=7
+set linespace=3             "字符之间插入的像素行数
+set foldopen-=search        " don't open folds when you search into them
+set foldopen-=undo          " don't open folds when you undo stuff
+set fsync
+set laststatus=2            "本选项的值影响最后一个窗口何时有状态行
+
+"set statusline=%t%r%h%w\ [%Y]\ [%{&ff}]\ [%{&fenc}:%{&enc}]\ [%08.8L]\ [%p%%-%P]\ [%05.5b]\ [%04.4B]\ [%08.8l]%<\ [%04.4c-%04.4v%04.4V]
+set statusline=%t%r%h%w\ [%Y]\ [%{&ff}]\ [%{&fenc}:%{&enc}]\ [%05.5b-%04.4B]\ [%05.5l/%05.5L=%p%%]%<\ [%04.4c-%04.4v%04.4V]
+
+set nocursorline            "用 CursorLine |hl-CursorLine| 高亮光标所在的屏幕行
+set nocursorcolumn          "用 CursorColumn |hl-CursorColumn| 高亮光标所在的屏幕列
+set updatecount=819222      "输入这么多个字符以后，把交换文件写入磁盘
+set undolevels=819222       "可以撤销的最大改变次数
+set history=50              "设置冒号命令与搜索命令的命令历史列表的长度
+"set nobackup                "没有备份
+"set bdir=c:\\temp
+"set autoread                " auto read when a file is changed outside
+
+set sessionoptions+=unix,slash
+colors desert
+
+set modelines=10            "如果 'modeline' 打开，'modelines' 给出检查 set 等命令的行数目
+set modeline
+
+highlight WhitespaceEOL ctermbg=red guibg=red
+match WhitespaceEOL /\s\+$/
+
+" ------------------------------------------------------------
+"  Bundle
+" ------------------------------------------------------------
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=$HOME/vimfiles/bundle/Vundle.vim/
+call vundle#begin('$HOME/vimfiles/bundle/')
+
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" Plugins
+Plugin 'vim-scripts/L9'
+Plugin 'scrooloose/nerdtree'
+Plugin 'fholgado/minibufexpl.vim'
+Plugin 'Shutnik/jshint2.vim'
+Plugin 'leshill/vim-json'
+"Plugin 'kchmck/vim-coffee-script'
+Plugin 'mislav/vimfiles'
+"Plugin 'leafgarland/typescript-vim'
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-fugitive'
+Plugin 'marijnh/tern_for_vim'
+Plugin 'Shougo/neocomplete.vim'
+"Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'msanders/snipmate.vim'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'tpope/vim-commentary'
+"Plugin 'kien/ctrlp.vim'
+Plugin 'vim-scripts/FuzzyFinder'
+Plugin 'JamshedVesuna/vim-markdown-preview'
+Plugin 'maksimr/vim-jsbeautify'
+"Plugin 'Townk/vim-autoclose'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'alvan/vim-closetag'
+Plugin 'Mark'
+Plugin 'css_color.vim'
+Plugin 'taglist.vim'
+Plugin 'othree/csscomplete.vim'
+
+" Color schemes
+Plugin 'tomasr/molokai'
+Plugin 'flazz/vim-colorschemes'
+
+" vim actions
+Plugin 'easymotion/vim-easymotion'
+
+" React
+"Plugin 'pangloss/vim-javascript'
+"Plugin 'mxw/vim-jsx'
+
+" Es6
+"Plugin 'tomtom/tlib_vim'
+"Plugin 'MarcWeber/vim-addon-mw-utils'
+"Plugin 'garbas/vim-snipmate'
+"Plugin 'isRuslan/vim-es6'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+" ------------------------------------------------------------
+" Common
+" ------------------------------------------------------------
+syntax on
+
+" ------------------------------------------------------------
+" NERDTree
+" ------------------------------------------------------------
+"NERDTree: autoload when startup vim
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+"NERDTree: C-n to open NERDTree
+map <C-\> :NERDTreeToggle<CR>
+
+" NERDTree: File highlighting
+function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
+ exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
+ exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+endfunction
+
+call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
+call NERDTreeHighlightFile('ini', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
+call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('config', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('conf', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('json', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('html', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('styl', 'cyan', 'none', 'cyan', '#151515')
+call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
+call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
+call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
+call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
+
+" ------------------------------------------------------------
+"    vim-easymotion 
+" ------------------------------------------------------------
+" " ref - https://github.com/easymotion/vim-easymotion
+
+"" By Robin 
+let g:EasyMotion_smartcase = 1
+"let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
+map <Leader><Leader>j <Plug>(easymotion-j)
+map <Leader><Leader>k <Plug>(easymotion-k)
+map <Leader><leader>h <Plug>(easymotion-linebackward)
+map <Leader><leader>l <Plug>(easymotion-lineforward)
+map <Leader><leader>. <Plug>(easymotion-repeat)
+nmap f <Plug>(easymotion-s)
+
+
+" ------------------------------------------------------------
+"  vim-jsx
+" ------------------------------------------------------------
+"let g:jsx_ext_required = 0
+"let g:jsx_pragma_required = 1
+
+" ------------------------------------------------------------
+" 
+" ------------------------------------------------------------
+" ----------------------------------------------------------------------------
+" tern_for_vim
+" ----------------------------------------------------------------------------
+let tern_show_signature_in_pum = 1
+let tern_show_argument_hints = 'on_hold'
+autocmd FileType javascript nnoremap <leader>d :TernDef<CR>
+autocmd FileType javascript setlocal omnifunc=tern#Complete
+
+" ----------------------------------------------------------------------------
+" neocomplete
+" ----------------------------------------------------------------------------
+"Note: This option must set it in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
+" Disable AutoComplPop.
+let g:acp_enableAtStartup = 0
+" Use neocomplete.
+let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+" Set minimum syntax keyword length.
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
+
+" Define dictionary.
+let g:neocomplete#sources#dictionary#dictionaries = {
+    \ 'default' : '',
+    \ 'vimshell' : $HOME.'/.vimshell_hist',
+    \ 'scheme' : $HOME.'/.gosh_completions'
+        \ }
+
+" Define keyword.
+if !exists('g:neocomplete#keyword_patterns')
+    let g:neocomplete#keyword_patterns = {}
+endif
+let g:neocomplete#keyword_patterns['default'] = '\h\w*'
+
+" Plugin key-mappings.
+inoremap <expr><C-g>     neocomplete#undo_completion()
+inoremap <expr><C-l>     neocomplete#complete_common_string()
+
+" Recommended key-mappings.
+" <CR>: close popup and save indent.
+inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+function! s:my_cr_function()
+  return neocomplete#close_popup() . "\<CR>"
+  " For no inserting <CR> key.
+  "return pumvisible() ? neocomplete#close_popup() : "\<CR>"
+endfunction
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" <C-h>, <BS>: close popup and delete backword char.
+inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><C-y>  neocomplete#close_popup()
+inoremap <expr><C-e>  neocomplete#cancel_popup()
+" Close popup by <Space>.
+"inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() : "\<Space>"
+
+" For cursor moving in insert mode(Not recommended)
+"inoremap <expr><Left>  neocomplete#close_popup() . "\<Left>"
+"inoremap <expr><Right> neocomplete#close_popup() . "\<Right>"
+"inoremap <expr><Up>    neocomplete#close_popup() . "\<Up>"
+"inoremap <expr><Down>  neocomplete#close_popup() . "\<Down>"
+" Or set this.
+"let g:neocomplete#enable_cursor_hold_i = 1
+" Or set this.
+"let g:neocomplete#enable_insert_char_pre = 1
+
+" AutoComplPop like behavior.
+"let g:neocomplete#enable_auto_select = 1
+
+" Shell like behavior(not recommended).
+"set completeopt+=longest
+"let g:neocomplete#enable_auto_select = 1
+"let g:neocomplete#disable_auto_complete = 1
+"inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<C-x>\<C-u>"
+
+" Enable omni completion.
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+" Enable heavy omni completion.
+if !exists('g:neocomplete#sources#omni#input_patterns')
+  let g:neocomplete#sources#omni#input_patterns = {}
+endif
+"let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
+"let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
+"let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+
+" For perlomni.vim setting.
+" https://github.com/c9s/perlomni.vim
+let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
+
+
+
+let vim_markdown_preview_hotkey='<C-m>'
+let vim_markdown_preview_browser='Google Chrome'
+
+"
+"   vim-jsbeautify
+"
+map <c-f> :call JsBeautify()<cr>
+" or
+autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+" for json
+autocmd FileType json noremap <buffer> <c-f> :call JsonBeautify()<cr>
+" for jsx
+autocmd FileType jsx noremap <buffer> <c-f> :call JsxBeautify()<cr>
+" for html
+autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+" for css or scss
+autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+
+autocmd FileType javascript vnoremap <buffer>  <c-f> :call RangeJsBeautify()<cr>
+autocmd FileType json vnoremap <buffer> <c-f> :call RangeJsonBeautify()<cr>
+autocmd FileType jsx vnoremap <buffer> <c-f> :call RangeJsxBeautify()<cr>
+autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<cr>
+autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
+
+"
+"   csscomplete.vim
+"
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS noci
