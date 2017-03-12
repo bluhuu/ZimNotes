@@ -1,54 +1,18 @@
-atom-beautify
-atom-bracket-highlight
-atom-css-comb
-atom-live-server
-atom-ternjs
-atom-wrap-in-tag
-auto-id-class
-auto-indent
-autoclose-html
-autocomplete-lodash
-autocomplete-paths
-autoprefixer
-busy-signal
-color-picker
-css-snippets
-docblockr
-double-tag
-emmet
-file-icons
-git-history
-git-plus
-git-time-machine
-highlight-selected
-intentions
-javascript-snippets
-jquery-snippets
-jumpy
-language-freemarker
-line-diff-details
-linter
-linter-jshint
-linter-ui-default
-lodash-snippets
-markdown-image-helper
-markdown-scroll-sync
-minimap
-minimap-bookmarks
-minimap-cursorline
-minimap-find-and-replace
-minimap-git-diff
-minimap-highlight-selected
-minimap-linter
-minimap-selection
-minimap-split-diff
-monokai
-open-in-browsers
-open-terminal-here
-pigments
-requirejs-snippets
-sort-lines
-split-diff
-tidy-markdown
-tree-view-git-status
-vim-mode
+atom-beautify/           file-icons/             minimap-bookmarks/
+atom-bracket-highlight/  git-history/            minimap-cursorline/
+atom-live-server/        git-plus/               minimap-find-and-replace/
+atom-ternjs/             git-time-machine/       minimap-git-diff/
+atom-wrap-in-tag/        highlight-selected/     minimap-highlight-selected/
+autoclose-html/          intentions/             minimap-linter/
+autocomplete-lodash/     javascript-snippets/    minimap-selection/
+autocomplete-paths/      jquery-snippets/        minimap-split-diff/
+auto-id-class/           jumpy/                  monokai/
+auto-indent/             language-freemarker/    open-in-browsers/
+autoprefixer/            line-diff-details/      open-terminal-here/
+busy-signal/             linter/                 pigments/
+color-picker/            linter-jshint/          sort-lines/
+css-snippets/            linter-ui-default/      split-diff/
+docblockr/               lodash-snippets/        tidy-markdown/
+double-tag/              markdown-image-helper/  tree-view-git-status/
+emmet/                   markdown-scroll-sync/   vim-mode/
+ex-mode/                 minimap/
