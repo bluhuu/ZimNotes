@@ -1,0 +1,55 @@
+"*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "4d57d059-d7a6-4a92-bdcb-a6db70cd5a42"
+  core:
+    packagesWithKeymapsDisabled: []
+    telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "monokai"
+    ]
+  editor:
+    fontFamily: "Monaco"
+    fontSize: 12
+    showIndentGuide: true
+    softWrap: true
+    tabLength: 4
+    zoomFontWhenCtrlScrolling: false
+  "exception-reporting":
+    userId: "64efe156-193f-4526-8a1f-956c78297edc"
+  expose:
+    useAnimations: false
+  "linter-jshint":
+    disableWhenNoJshintrcFileInPath: true
+  "linter-ui-default":
+    showPanel: true
+  minimap:
+    autoToggle: false
+    plugins:
+      bookmarks: true
+      bookmarksDecorationsZIndex: 0
+      cursorline: true
+      cursorlineDecorationsZIndex: 0
+      "find-and-replace": true
+      "find-and-replaceDecorationsZIndex": 0
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+      linter: true
+      linterDecorationsZIndex: 0
+      selection: true
+      selectionDecorationsZIndex: 0
+      "split-diff": true
+      "split-diffDecorationsZIndex": 0
+  "open-in-browsers":
+    BrowserPlus: false
+    Opera: false
+    Safari: false
+  "open-terminal-here":
+    command: "start /D \"%cd%\" powershell"
+  "split-diff":
+    ignoreWhitespace: true
+  welcome:
+    showOnStartup: false
