@@ -1,11 +1,12 @@
 var gulp = require('gulp');
-var proxyMiddleware = require('http-proxy-middleware');
+var proxy = require('http-proxy-middleware');
 var watch = require('gulp-watch');
 var browserSync = require('browser-sync').create();
 
 gulp.task('default',function(){
 	// 代理配置, 实现环境切换
-	var proxy = proxyMiddleware(['/elink_eai_web'], {target: 'http://192.168.20.206:8080/', changeOrigin: true});
+	var proxy1 = proxy(['/elink_eai_web'], {target: 'http://192.168.20.206:8080/', changeOrigin: true});
+	var proxy2 = proxy(['/elink_eai_web'], {target: 'http://192.168.20.206:8080/', changeOrigin: true});
 	// 'http://192.168.20.206:8080/elink_eai_web/v1/open'
 	browserSync.init({
 		// notify:false, //关闭页面通知
