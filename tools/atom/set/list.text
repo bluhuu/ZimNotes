@@ -15,4 +15,4 @@ css-snippets/            linter-ui-default/      split-diff/
 docblockr/               lodash-snippets/        tidy-markdown/
 double-tag/              markdown-image-helper/  tree-view-git-status/
 emmet/                   markdown-scroll-sync/   vim-mode/
-ex-mode/                 minimap/
+ex-mode/                 minimap/                open-vim/

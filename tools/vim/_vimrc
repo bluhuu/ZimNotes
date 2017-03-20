@@ -392,4 +392,6 @@ omap <Leader><Leader>s <Plug>Sneak_s
 omap <Leader><Leader>S <Plug>Sneak_S
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
-nnoremap <silent>w :exe ':silent !C:\Users\Administrator\AppData\Local\Google\Chrome\Application\chrome.exe %'<CR>
+"nnoremap <silent>w :exe ':silent !C:\Users\Administrator\AppData\Local\Google\Chrome\Application\chrome.exe %'<CR>
+nnoremap <silent> <F5> :!start C:\Users\Administrator\AppData\Local\Google\Chrome\Application\chrome.exe %:p<CR>
+
