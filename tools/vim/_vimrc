@@ -1,170 +1,173 @@
-set nocompatible            "vi¸ü¼æÈİ
+set nocompatible
 source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
 behave mswin
-
-" ±àÂëÉèÖÃ
-set fenc=utf-8				"fencºóÔÙwÀ´½«´ËÎÄ¼ş´æ³É²»Í¬µÄ±àÂë
-set encoding=cp936			"winÏÔÊ¾Îªcp936
-set langmenu=utf-8
-language message utf-8
-set fileencodings=ucs-bom,utf-8,utf-16,cp936,gb18030,big5,euc-jp,euc-kr,latin1	"²Â²âÁĞ±í
-set ffs=unix,dos
-set ff=unix                  "ÉèÖÃÎÄ¼ş¸ñÊ½ÎªUNIX¸ñÊ½
-
-"´°¿Ú´óĞ¡ÓëÎ»ÖÃ
-winpos 50 100
-set cmdheight=1
-set lines=25
-set columns=100
-
-set gfn=Bitstream\ Vera\ Sans\ Mono:h10 gfw=ĞÂËÎÌå:h11
-
-set ignorecase              "ËÑË÷Ä£Ê½ÀïºöÂÔ´óĞ¡Ğ´
-set nolinebreak
-set wrap                    "ÕÛĞĞ
-set number                  "ÔÚÃ¿ĞĞÇ°ÃæÏÔÊ¾ĞĞºÅ
-set so=1                    "¹â±êÉÏÏÂÁ½²à×îÉÙ±£ÁôµÄÆÁÄ»ĞĞÊı
-set sidescrolloff=1         "¹â±ê×óÓÒÁ½²à±£ÁôµÄ×îÉÙÆÁÄ»ÁĞÊı
-set sidescroll=1            "Ë®Æ½¹ö¶¯Ê±¹ö¶¯µÄ×îÉÙÁĞÊı
-set makeprg=make            "":make" ÃüÁîÊ¹ÓÃµÄ³ÌĞò
-
-set tabstop=4               "ÎÄ¼şÀïµÄ <Tab> ´ú±íµÄ¿Õ¸ñÊı
-set softtabstop=4           "Ö´ĞĞ±à¼­²Ù×÷£¬Èç²åÈë <Tab> »òÕßÊ¹ÓÃ <BS> Ê±£¬°Ñ <Tab> Ëã×÷¿Õ¸ñµÄÊıÄ¿
-set expandtab               "²åÈëÄ£Ê½Àï: ²åÈë <Tab> Ê±Ê¹ÓÃºÏÊÊÊıÁ¿µÄ¿Õ¸ñ
-set shiftwidth=4            "Ëõ½øÃ¿Ò»²½Ê¹ÓÃµÄ¿Õ°×ÊıÄ¿
-set smarttab                "Èç¹û´ò¿ª£¬ĞĞÊ×µÄ <Tab> ¸ù¾İ 'shiftwidth' ²åÈë¿Õ°×
-
-set fdc=2                   "Èç¹û·ÇÁã£¬Ö¸¶¨¿í¶ÈµÄÁĞÔÚ´°¿ÚµÄÒ»²àÏÔÊ¾£¬Ö¸Ê¾ÕÛµşµÄ´ò¿ªºÍ¹Ø±Õ¡£×î´óÖµÎª12
-set fdm=syntax              "µ±Ç°´°¿ÚÊ¹ÓÃµÄÕÛµş·½Ê½
-syn on                      "¿ªÆô¸ßÁÁ
-compiler gcc
-
-set guioptions-=T           "¹¤¾ßÌõ
-"set guioptions-=r          "ÓÒ¹ö¶¯Ìõ
-set guioptions-=L
-set guioptions+=e           "¿ÉÓÃÀ´¸Ä±ä±êÇ©ÎÄ±¾
-"set guioptions-=m          "²Ëµ¥À¸
-set guioptions+=c           "¼òµ¥µÄÑ¡ÔñÊ¹ÓÃ¿ØÖÆÌ¨¶Ô»°¿ò¶ø²»ÊÇµ¯³öÊ½¶Ô»°¿ò
-set showtabline=1           "±¾Ñ¡ÏîµÄÖµÖ¸¶¨ºÎÊ±ÏÔÊ¾´øÓĞ±êÇ©Ò³±êÇ©µÄĞĞ
-
-"set cindent                "´ò¿ªCÀàĞÍµÄËõ½ø
-set autoindent              "×Ô¶¯Ëõ½ø
-set ruler                   "×ÜÊÇÔÚÓÒÏÂ½ÇÏÔÊ¾µ±Ç°¹â±êµÄĞĞÁĞĞÅÏ¢
-set showcmd                 "×ÜÊÇÔÚÓÒÏÂ½ÇÏÔÊ¾Ò»¸öÍêÕûµÄÃüÁîÒÑ¾­Íê³ÉµÄ²¿·Ö
-set incsearch               "ÔÚ¼üÈë×Ö·û´®µÄÍ¬Ê±¿ªÊ¼ËÑË÷
-set hlsearch                "¸ßÁÁÏÔÊ¾ËÑË÷µÄÄÚÈİ
-"autocmd FileType text setlocal textwidth=7
-set linespace=3             "×Ö·ûÖ®¼ä²åÈëµÄÏñËØĞĞÊı
-set foldopen-=search        " don't open folds when you search into them
-set foldopen-=undo          " don't open folds when you undo stuff
-set fsync
-set laststatus=2            "±¾Ñ¡ÏîµÄÖµÓ°Ïì×îºóÒ»¸ö´°¿ÚºÎÊ±ÓĞ×´Ì¬ĞĞ
-
-"set statusline=%t%r%h%w\ [%Y]\ [%{&ff}]\ [%{&fenc}:%{&enc}]\ [%08.8L]\ [%p%%-%P]\ [%05.5b]\ [%04.4B]\ [%08.8l]%<\ [%04.4c-%04.4v%04.4V]
-set statusline=%t%r%h%w\ [%Y]\ [%{&ff}]\ [%{&fenc}:%{&enc}]\ [%05.5b-%04.4B]\ [%05.5l/%05.5L=%p%%]%<\ [%04.4c-%04.4v%04.4V]
-
-set nocursorline            "ÓÃ CursorLine |hl-CursorLine| ¸ßÁÁ¹â±êËùÔÚµÄÆÁÄ»ĞĞ
-set nocursorcolumn          "ÓÃ CursorColumn |hl-CursorColumn| ¸ßÁÁ¹â±êËùÔÚµÄÆÁÄ»ÁĞ
-set updatecount=819222      "ÊäÈëÕâÃ´¶à¸ö×Ö·ûÒÔºó£¬°Ñ½»»»ÎÄ¼şĞ´Èë´ÅÅÌ
-set undolevels=819222       "¿ÉÒÔ³·ÏúµÄ×î´ó¸Ä±ä´ÎÊı
-set history=50              "ÉèÖÃÃ°ºÅÃüÁîÓëËÑË÷ÃüÁîµÄÃüÁîÀúÊ·ÁĞ±íµÄ³¤¶È
-"set nobackup                "Ã»ÓĞ±¸·İ
-"set bdir=c:\\temp
-"set autoread                " auto read when a file is changed outside
-
-set sessionoptions+=unix,slash
-colors desert
-
-set modelines=10            "Èç¹û 'modeline' ´ò¿ª£¬'modelines' ¸ø³ö¼ì²é set µÈÃüÁîµÄĞĞÊıÄ¿
-set modeline
-
-highlight WhitespaceEOL ctermbg=red guibg=red
-match WhitespaceEOL /\s\+$/
+"å·¥ä½œç›®å½•
+cd D:\bluhuu
+let mapleader=";"
 
 " ------------------------------------------------------------
 "  Bundle
 " ------------------------------------------------------------
-set nocompatible              " be iMproved, required
+let iCanHazVundle=1
+let vundle_readme=expand('$HOME/vimfiles/bundle/Vundle.vim/README.md')
+if !filereadable(vundle_readme)
+    echo "Installing Vundle.."
+    echo ""
+    silent !mkdir -p vimfiles/bundle
+    silent !git clone https://github.com/VundleVim/Vundle.vim.git vimfiles/bundle/Vundle.vim
+    let iCanHazVundle=0
+endif
 filetype off                  " required
-
 " set the runtime path to include Vundle and initialize
 set rtp+=$HOME/vimfiles/bundle/Vundle.vim/
 call vundle#begin('$HOME/vimfiles/bundle/')
-
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
 " Plugins
 Plugin 'vim-scripts/L9'
+Plugin 'w0rp/ale'
 Plugin 'scrooloose/nerdtree'
-Plugin 'fholgado/minibufexpl.vim'
-Plugin 'Shutnik/jshint2.vim'
+Plugin 'yggdroot/indentline'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'mattn/emmet-vim'
+"Plugin 'Shutnik/jshint2.vim'
+Plugin 'tyru/open-browser.vim'
 Plugin 'leshill/vim-json'
-"Plugin 'kchmck/vim-coffee-script'
-Plugin 'mislav/vimfiles'
-"Plugin 'leafgarland/typescript-vim'
-Plugin 'tpope/vim-markdown'
+Plugin 'ervandew/supertab'
+"Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-git'
+Plugin 'gregsexton/gitv'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'Shougo/neocomplete.vim'
-"Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'msanders/snipmate.vim'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'tpope/vim-commentary'
-"Plugin 'kien/ctrlp.vim'
-Plugin 'vim-scripts/FuzzyFinder'
-Plugin 'JamshedVesuna/vim-markdown-preview'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'kien/ctrlp.vim'    "åŸç‰ˆ
+"Plugin 'vim-scripts/FuzzyFinder'
+"Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'maksimr/vim-jsbeautify'
-"Plugin 'Townk/vim-autoclose'
+Plugin 'beautify-web/js-beautify'
+Plugin 'majutsushi/tagbar'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'alvan/vim-closetag'
 Plugin 'Mark'
-Plugin 'css_color.vim'
-Plugin 'taglist.vim'
+Plugin 'ap/vim-css-color'
 Plugin 'othree/csscomplete.vim'
-
-" Color schemes
-Plugin 'tomasr/molokai'
-Plugin 'flazz/vim-colorschemes'
-
-" vim actions
+Plugin 'ai/autoprefixer'
+Plugin 'vim-autoprefixer'
+Plugin 'junegunn/vim-easy-align'
+Plugin 'sirver/ultisnips'
+Plugin 'honza/vim-snippets'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'dkprice/vim-easygrep'
+Plugin 'pangloss/vim-javascript'
+Plugin 'taglist.vim'
+Plugin 'mbbill/undotree'
+Plugin 'matze/vim-move'
+Plugin 'justinmk/vim-sneak'
+Plugin 'vim-expand-region'
+Plugin 'rking/ag.vim'
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'gregsexton/matchtag'
+"Plug 'othree/html5.vim'
+"Plug 'hail2u/vim-css3-syntax'
 
-" React
-"Plugin 'pangloss/vim-javascript'
-"Plugin 'mxw/vim-jsx'
-
-" Es6
-"Plugin 'tomtom/tlib_vim'
-"Plugin 'MarcWeber/vim-addon-mw-utils'
-"Plugin 'garbas/vim-snipmate'
-"Plugin 'isRuslan/vim-es6'
-
+"color
+Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'tomasr/molokai'
+"
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
 "
-" Brief help
 " :PluginList       - lists configured plugins
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
 " see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+"
+"-------------------------------------------------------------
 
-" ------------------------------------------------------------
-" Common
-" ------------------------------------------------------------
+" ç¼–ç è®¾ç½®
+set fenc=utf-8 encoding=utf-8
+language message utf-8
+set fileencodings=ucs-bom,utf-8,utf-16,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+set ffs=unix,dos ff=unix
+set langmenu=zh_CN
+let $LANG='zh_CN'
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
+set gfn=Bitstream\ Vera\ Sans\ Mono:h9 gfw=æ–°å®‹ä½“:h10
+"çª—å£å¤§å°ä¸ä½ç½®
+winpos 400 100
+set cmdheight=1 lines=45 columns=160
+colors desert
+
+set nolinebreak
+set wrap                    "æŠ˜è¡Œ
+set number                  "åœ¨æ¯è¡Œå‰é¢æ˜¾ç¤ºè¡Œå·
+set so=1                    "å…‰æ ‡ä¸Šä¸‹ä¸¤ä¾§æœ€å°‘ä¿ç•™çš„å±å¹•è¡Œæ•°
+set sidescrolloff=1         "å…‰æ ‡å·¦å³ä¸¤ä¾§ä¿ç•™çš„æœ€å°‘å±å¹•åˆ—æ•°
+set sidescroll=1            "æ°´å¹³æ»šåŠ¨æ—¶æ»šåŠ¨çš„æœ€å°‘åˆ—æ•°
+set makeprg=make            "":make" å‘½ä»¤ä½¿ç”¨çš„ç¨‹åº
+set tabstop=4               "æ–‡ä»¶é‡Œçš„ <Tab> ä»£è¡¨çš„ç©ºæ ¼æ•°
+set softtabstop=4           "æ‰§è¡Œç¼–è¾‘æ“ä½œï¼Œå¦‚æ’å…¥ <Tab> æˆ–è€…ä½¿ç”¨ <BS> æ—¶ï¼ŒæŠŠ <Tab> ç®—ä½œç©ºæ ¼çš„æ•°ç›®
+set expandtab               "æ’å…¥æ¨¡å¼é‡Œ: æ’å…¥ <Tab> æ—¶ä½¿ç”¨åˆé€‚æ•°é‡çš„ç©ºæ ¼
+set shiftwidth=4            "ç¼©è¿›æ¯ä¸€æ­¥ä½¿ç”¨çš„ç©ºç™½æ•°ç›®
+set smarttab                "å¦‚æœæ‰“å¼€ï¼Œè¡Œé¦–çš„ <Tab> æ ¹æ® 'shiftwidth' æ’å…¥ç©ºç™½
+set fdc=2                   "å¦‚æœéé›¶ï¼ŒæŒ‡å®šå®½åº¦çš„åˆ—åœ¨çª—å£çš„ä¸€ä¾§æ˜¾ç¤ºï¼ŒæŒ‡ç¤ºæŠ˜å çš„æ‰“å¼€å’Œå…³é—­ã€‚æœ€å¤§å€¼ä¸º12
+set fdm=syntax              "å½“å‰çª—å£ä½¿ç”¨çš„æŠ˜å æ–¹å¼
+syn on                      "å¼€å¯é«˜äº®
+compiler gcc
+
+set guioptions-=T           "å·¥å…·æ¡
+"set guioptions-=r          "å³æ»šåŠ¨æ¡
+set guioptions-=L
+set guioptions+=e           "å¯ç”¨æ¥æ”¹å˜æ ‡ç­¾æ–‡æœ¬
+"set guioptions-=m          "èœå•æ 
+set guioptions+=c           "ç®€å•çš„é€‰æ‹©ä½¿ç”¨æ§åˆ¶å°å¯¹è¯æ¡†è€Œä¸æ˜¯å¼¹å‡ºå¼å¯¹è¯æ¡†
+set showtabline=1           "æœ¬é€‰é¡¹çš„å€¼æŒ‡å®šä½•æ—¶æ˜¾ç¤ºå¸¦æœ‰æ ‡ç­¾é¡µæ ‡ç­¾çš„è¡Œ
+
+"set cindent                "æ‰“å¼€Cç±»å‹çš„ç¼©è¿›
+set autoindent              "è‡ªåŠ¨ç¼©è¿›
+set ruler                   "æ€»æ˜¯åœ¨å³ä¸‹è§’æ˜¾ç¤ºå½“å‰å…‰æ ‡çš„è¡Œåˆ—ä¿¡æ¯
+set showcmd                 "æ€»æ˜¯åœ¨å³ä¸‹è§’æ˜¾ç¤ºä¸€ä¸ªå®Œæ•´çš„å‘½ä»¤å·²ç»å®Œæˆçš„éƒ¨åˆ†
+set incsearch               "åœ¨é”®å…¥å­—ç¬¦ä¸²çš„åŒæ—¶å¼€å§‹æœç´¢
+set hlsearch                "é«˜äº®æ˜¾ç¤ºæœç´¢çš„å†…å®¹
+"autocmd FileType text setlocal textwidth=7
+set linespace=3             "å­—ç¬¦ä¹‹é—´æ’å…¥çš„åƒç´ è¡Œæ•°
+set foldopen-=search        " don't open folds when you search into them
+set foldopen-=undo          " don't open folds when you undo stuff
+set foldlevel=99
+set fsync
+set laststatus=2            "æœ¬é€‰é¡¹çš„å€¼å½±å“æœ€åä¸€ä¸ªçª—å£ä½•æ—¶æœ‰çŠ¶æ€è¡Œ
+
+"set statusline=%t%r%h%w\ [%Y]\ [%{&ff}]\ [%{&fenc}:%{&enc}]\ [%05.5b-%04.4B]\ [%05.5l/%05.5L=%p%%]%<\ [%04.4c-%04.4v%04.4V]\ %{fugitive#statusline()}\
+
+set nocursorline            "ç”¨ CursorLine |hl-CursorLine| é«˜äº®å…‰æ ‡æ‰€åœ¨çš„å±å¹•è¡Œ
+set nocursorcolumn          "ç”¨ CursorColumn |hl-CursorColumn| é«˜äº®å…‰æ ‡æ‰€åœ¨çš„å±å¹•åˆ—
+set updatecount=819222      "è¾“å…¥è¿™ä¹ˆå¤šä¸ªå­—ç¬¦ä»¥åï¼ŒæŠŠäº¤æ¢æ–‡ä»¶å†™å…¥ç£ç›˜
+set undolevels=819222       "å¯ä»¥æ’¤é”€çš„æœ€å¤§æ”¹å˜æ¬¡æ•°
+set history=50              "è®¾ç½®å†’å·å‘½ä»¤ä¸æœç´¢å‘½ä»¤çš„å‘½ä»¤å†å²åˆ—è¡¨çš„é•¿åº¦
+"set nobackup                "æ²¡æœ‰å¤‡ä»½
+set backupext=.bak
+set backupdir=c:\\temp
+"set noundofile
+set undodir=c:\\temp
+set noswapfile
+set autoread                " auto read when a file is changed outside
+
+set sessionoptions+=unix,slash
+
+set modelines=10            "å¦‚æœ 'modeline' æ‰“å¼€ï¼Œ'modelines' ç»™å‡ºæ£€æŸ¥ set ç­‰å‘½ä»¤çš„è¡Œæ•°ç›®
+set modeline
+
 syntax on
+
+"highlight WhitespaceEOL ctermbg=red guibg=red
+"match WhitespaceEOL /\s\+$/
 
 " ------------------------------------------------------------
 " NERDTree
@@ -174,7 +177,7 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 "NERDTree: C-n to open NERDTree
-map <C-\> :NERDTreeToggle<CR>
+map <leader>t :NERDTreeToggle<CR>
 
 " NERDTree: File highlighting
 function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
@@ -197,11 +200,11 @@ call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
 
 " ------------------------------------------------------------
-"    vim-easymotion 
+"    vim-easymotion
 " ------------------------------------------------------------
 " " ref - https://github.com/easymotion/vim-easymotion
 
-"" By Robin 
+"" By Robin
 let g:EasyMotion_smartcase = 1
 "let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
 map <Leader><Leader>j <Plug>(easymotion-j)
@@ -209,18 +212,9 @@ map <Leader><Leader>k <Plug>(easymotion-k)
 map <Leader><leader>h <Plug>(easymotion-linebackward)
 map <Leader><leader>l <Plug>(easymotion-lineforward)
 map <Leader><leader>. <Plug>(easymotion-repeat)
-nmap f <Plug>(easymotion-s)
+nmap <Leader>f <Plug>(easymotion-s)
 
 
-" ------------------------------------------------------------
-"  vim-jsx
-" ------------------------------------------------------------
-"let g:jsx_ext_required = 0
-"let g:jsx_pragma_required = 1
-
-" ------------------------------------------------------------
-" 
-" ------------------------------------------------------------
 " ----------------------------------------------------------------------------
 " tern_for_vim
 " ----------------------------------------------------------------------------
@@ -316,33 +310,86 @@ endif
 " https://github.com/c9s/perlomni.vim
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
-
-
+"
+"   vim_markdown_preview
+"
 let vim_markdown_preview_hotkey='<C-m>'
 let vim_markdown_preview_browser='Google Chrome'
 
 "
 "   vim-jsbeautify
 "
-map <c-f> :call JsBeautify()<cr>
+map <leader>b :call JsBeautify()<cr>
 " or
-autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+autocmd FileType javascript noremap <buffer>  <leader>b :call JsBeautify()<cr>
 " for json
-autocmd FileType json noremap <buffer> <c-f> :call JsonBeautify()<cr>
+autocmd FileType json noremap <buffer> <leader>b :call JsonBeautify()<cr>
 " for jsx
-autocmd FileType jsx noremap <buffer> <c-f> :call JsxBeautify()<cr>
+autocmd FileType jsx noremap <buffer> <leader>b :call JsxBeautify()<cr>
 " for html
-autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+autocmd FileType html noremap <buffer> <leader>b :call HtmlBeautify()<cr>
 " for css or scss
-autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+autocmd FileType css noremap <buffer> <leader>b :call CSSBeautify()<cr>
 
-autocmd FileType javascript vnoremap <buffer>  <c-f> :call RangeJsBeautify()<cr>
-autocmd FileType json vnoremap <buffer> <c-f> :call RangeJsonBeautify()<cr>
-autocmd FileType jsx vnoremap <buffer> <c-f> :call RangeJsxBeautify()<cr>
-autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<cr>
-autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
+autocmd FileType javascript vnoremap <buffer>  <leader>b :call RangeJsBeautify()<cr>
+autocmd FileType json vnoremap <buffer> <leader>b :call RangeJsonBeautify()<cr>
+autocmd FileType jsx vnoremap <buffer> <leader>b :call RangeJsxBeautify()<cr>
+autocmd FileType html vnoremap <buffer> <leader>b :call RangeHtmlBeautify()<cr>
+autocmd FileType css vnoremap <buffer> <leader>b :call RangeCSSBeautify()<cr>
+
+
+nn <silent><F2> :exec("NERDTree ".expand('%:h'))<CR>
 
 "
-"   csscomplete.vim
+"   vim-airline
 "
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS noci
+"let g:airline_theme='molokai'
+
+"è¿™ä¸ªæ˜¯å®‰è£…å­—ä½“å å¿…é¡»è®¾ç½®æ­¤é¡¹"
+let g:airline_powerline_fonts = 1
+
+ "æ‰“å¼€tablineåŠŸèƒ½,æ–¹ä¾¿æŸ¥çœ‹Bufferå’Œåˆ‡æ¢ï¼Œè¿™ä¸ªåŠŸèƒ½æ¯”è¾ƒä¸é”™"
+ "æˆ‘è¿˜çœå»äº†minibufexplæ’ä»¶ï¼Œå› ä¸ºæˆ‘ä¹ æƒ¯åœ¨1ä¸ªTabä¸‹ç”¨å¤šä¸ªbuffer"
+ let g:airline#extensions#tabline#enabled = 1
+ let g:airline#extensions#tabline#buffer_nr_show = 1
+ " å…³é—­çŠ¶æ€æ˜¾ç¤ºç©ºç™½ç¬¦å·è®¡æ•°,è¿™ä¸ªå¯¹æˆ‘ç”¨å¤„ä¸å¤§"
+ let g:airline#extensions#whitespace#enabled = 0
+ let g:airline#extensions#whitespace#symbol = '!'
+
+let g:ctrlp_custom_ignore = {
+    \ 'dir':  '\v[\/](node_modules|target|dist|extjs)|(\.(git|hg|svn|rvm|node_modules|DS_Storegit|optimized|compiled))$',
+    \ 'file': '\v\.(exe|so|dll|zip|tar|tar.gz|pyc)$',
+    \ }
+"
+" MapKey
+"
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nnoremap <F5> :UndotreeToggle<cr>
+nnoremap <C-S-Down> ddp
+nnoremap <C-S-Up> ddP
+"è®¾ç½®åˆ‡æ¢Bufferå¿«æ·é”®"
+nnoremap <silent> <leader>l :bn<CR>
+nnoremap <silent> <leader>h :bp<CR>
+"replace 'f' with 1-char Sneak
+nmap f <Plug>Sneak_f
+nmap F <Plug>Sneak_F
+xmap f <Plug>Sneak_f
+xmap F <Plug>Sneak_F
+omap f <Plug>Sneak_f
+omap F <Plug>Sneak_F
+"replace 't' with 1-char Sneak
+nmap t <Plug>Sneak_t
+nmap T <Plug>Sneak_T
+xmap t <Plug>Sneak_t
+xmap T <Plug>Sneak_T
+omap t <Plug>Sneak_t
+omap T <Plug>Sneak_T
+nmap <Leader><Leader>s <Plug>Sneak_s
+nmap <Leader><Leader>S <Plug>Sneak_S
+xmap <Leader><Leader>s <Plug>Sneak_s
+xmap <Leader><Leader>S <Plug>Sneak_S
+omap <Leader><Leader>s <Plug>Sneak_s
+omap <Leader><Leader>S <Plug>Sneak_S
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
+nnoremap <silent>w :exe ':silent !C:\Users\Administrator\AppData\Local\Google\Chrome\Application\chrome.exe %'<CR>
