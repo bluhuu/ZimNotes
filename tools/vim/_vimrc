@@ -3,7 +3,7 @@ source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
 behave mswin
 "工作目录
-cd D:\bluhuu
+cd D:\bluhuu\eai_web
 let mapleader=";"
 
 " ------------------------------------------------------------
@@ -30,7 +30,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'yggdroot/indentline'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'mattn/emmet-vim'
-"Plugin 'Shutnik/jshint2.vim'
+" Plugin 'Shutnik/jshint2.vim'
 Plugin 'tyru/open-browser.vim'
 Plugin 'leshill/vim-json'
 Plugin 'ervandew/supertab'
@@ -42,7 +42,7 @@ Plugin 'gregsexton/gitv'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'scrooloose/nerdcommenter'
+Plugin 'tomtom/tcomment_vim'
 Plugin 'kien/ctrlp.vim'    "原版
 "Plugin 'vim-scripts/FuzzyFinder'
 "Plugin 'JamshedVesuna/vim-markdown-preview'
@@ -103,7 +103,6 @@ set gfn=Bitstream\ Vera\ Sans\ Mono:h9 gfw=新宋体:h10
 "窗口大小与位置
 winpos 400 100
 set cmdheight=1 lines=45 columns=160
-colors desert
 
 set nolinebreak
 set wrap                    "折行
@@ -173,10 +172,10 @@ syntax on
 " NERDTree
 " ------------------------------------------------------------
 "NERDTree: autoload when startup vim
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+"autocmd StdinReadPre * let s:std_in=1
+"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-"NERDTree: C-n to open NERDTree
+"NERDTree: <leader>t to open NERDTree
 map <leader>t :NERDTreeToggle<CR>
 
 " NERDTree: File highlighting
@@ -343,7 +342,8 @@ nn <silent><F2> :exec("NERDTree ".expand('%:h'))<CR>
 "
 "   vim-airline
 "
-"let g:airline_theme='molokai'
+let g:airline_theme='molokai'
+colors molokai
 
 "这个是安装字体后 必须设置此项"
 let g:airline_powerline_fonts = 1
@@ -360,6 +360,12 @@ let g:ctrlp_custom_ignore = {
     \ 'dir':  '\v[\/](node_modules|target|dist|extjs)|(\.(git|hg|svn|rvm|node_modules|DS_Storegit|optimized|compiled))$',
     \ 'file': '\v\.(exe|so|dll|zip|tar|tar.gz|pyc)$',
     \ }
+" Write this in your vimrc file
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_text_changed = 0
+" You can disable this option too
+" if you don't want linters to run on opening a file
+let g:ale_lint_on_enter = 0
 "
 " MapKey
 "
@@ -393,5 +399,5 @@ omap <Leader><Leader>S <Plug>Sneak_S
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 "nnoremap <silent>w :exe ':silent !C:\Users\Administrator\AppData\Local\Google\Chrome\Application\chrome.exe %'<CR>
-nnoremap <silent> <F5> :!start C:\Users\Administrator\AppData\Local\Google\Chrome\Application\chrome.exe %:p<CR>
+nnoremap <silent> <silent>w :!start C:\Users\Administrator\AppData\Local\Google\Chrome\Application\chrome.exe %:p<CR>
 
