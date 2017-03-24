@@ -3,11 +3,9 @@ source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
 behave mswin
 "工作目录
-cd D:\bluhuu\eai_web
+" cd D:\bluhuu\eai_web
 let mapleader=";"
 
-" ------------------------------------------------------------
-"  Bundle
 " ------------------------------------------------------------
 let iCanHazVundle=1
 let vundle_readme=expand('$HOME/vimfiles/bundle/Vundle.vim/README.md')
@@ -19,11 +17,9 @@ if !filereadable(vundle_readme)
     let iCanHazVundle=0
 endif
 filetype off                  " required
-" set the runtime path to include Vundle and initialize
 set rtp+=$HOME/vimfiles/bundle/Vundle.vim/
 call vundle#begin('$HOME/vimfiles/bundle/')
 Plugin 'VundleVim/Vundle.vim'
-" Plugins
 Plugin 'vim-scripts/L9'
 Plugin 'w0rp/ale'
 Plugin 'scrooloose/nerdtree'
@@ -43,7 +39,7 @@ Plugin 'marijnh/tern_for_vim'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tomtom/tcomment_vim'
-Plugin 'kien/ctrlp.vim'    "原版
+Plugin 'kien/ctrlp.vim'
 "Plugin 'vim-scripts/FuzzyFinder'
 "Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'maksimr/vim-jsbeautify'
@@ -56,7 +52,7 @@ Plugin 'ap/vim-css-color'
 Plugin 'othree/csscomplete.vim'
 Plugin 'ai/autoprefixer'
 Plugin 'vim-autoprefixer'
-Plugin 'junegunn/vim-easy-align'
+Plugin 'godlygeek/tabular'
 Plugin 'sirver/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'easymotion/vim-easymotion'
@@ -65,29 +61,17 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'taglist.vim'
 Plugin 'mbbill/undotree'
 Plugin 'matze/vim-move'
-Plugin 'justinmk/vim-sneak'
 Plugin 'vim-expand-region'
 Plugin 'rking/ag.vim'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'gregsexton/matchtag'
-"Plug 'othree/html5.vim'
-"Plug 'hail2u/vim-css3-syntax'
-
-"color
+Plugin 'othree/html5.vim'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'tomasr/molokai'
-"
-" All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-"
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-" see :h vundle for more details or wiki for FAQ
-"
 "-------------------------------------------------------------
 
 " 编码设置
@@ -101,8 +85,8 @@ source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
 set gfn=Bitstream\ Vera\ Sans\ Mono:h9 gfw=新宋体:h10
 "窗口大小与位置
-winpos 400 100
-set cmdheight=1 lines=45 columns=160
+winpos 400 200
+set cmdheight=1 lines=35 columns=120
 
 set nolinebreak
 set wrap                    "折行
@@ -206,12 +190,12 @@ call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
 "" By Robin
 let g:EasyMotion_smartcase = 1
 "let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
-map <Leader><Leader>j <Plug>(easymotion-j)
-map <Leader><Leader>k <Plug>(easymotion-k)
-map <Leader><leader>h <Plug>(easymotion-linebackward)
-map <Leader><leader>l <Plug>(easymotion-lineforward)
-map <Leader><leader>. <Plug>(easymotion-repeat)
-nmap <Leader>f <Plug>(easymotion-s)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <leader>h <Plug>(easymotion-linebackward)
+map <leader>l <Plug>(easymotion-lineforward)
+map <leader>. <Plug>(easymotion-repeat)
+nmap f <Plug>(easymotion-s)
 
 
 " ----------------------------------------------------------------------------
@@ -309,40 +293,6 @@ endif
 " https://github.com/c9s/perlomni.vim
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
-"
-"   vim_markdown_preview
-"
-let vim_markdown_preview_hotkey='<C-m>'
-let vim_markdown_preview_browser='Google Chrome'
-
-"
-"   vim-jsbeautify
-"
-map <leader>b :call JsBeautify()<cr>
-" or
-autocmd FileType javascript noremap <buffer>  <leader>b :call JsBeautify()<cr>
-" for json
-autocmd FileType json noremap <buffer> <leader>b :call JsonBeautify()<cr>
-" for jsx
-autocmd FileType jsx noremap <buffer> <leader>b :call JsxBeautify()<cr>
-" for html
-autocmd FileType html noremap <buffer> <leader>b :call HtmlBeautify()<cr>
-" for css or scss
-autocmd FileType css noremap <buffer> <leader>b :call CSSBeautify()<cr>
-
-autocmd FileType javascript vnoremap <buffer>  <leader>b :call RangeJsBeautify()<cr>
-autocmd FileType json vnoremap <buffer> <leader>b :call RangeJsonBeautify()<cr>
-autocmd FileType jsx vnoremap <buffer> <leader>b :call RangeJsxBeautify()<cr>
-autocmd FileType html vnoremap <buffer> <leader>b :call RangeHtmlBeautify()<cr>
-autocmd FileType css vnoremap <buffer> <leader>b :call RangeCSSBeautify()<cr>
-
-
-nn <silent><F2> :exec("NERDTree ".expand('%:h'))<CR>
-
-"
-"   vim-airline
-"
-let g:airline_theme='molokai'
 colors molokai
 
 "这个是安装字体后 必须设置此项"
@@ -373,31 +323,22 @@ nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nnoremap <F5> :UndotreeToggle<cr>
 nnoremap <C-S-Down> ddp
 nnoremap <C-S-Up> ddP
-"设置切换Buffer快捷键"
-nnoremap <silent> <leader>l :bn<CR>
-nnoremap <silent> <leader>h :bp<CR>
-"replace 'f' with 1-char Sneak
-nmap f <Plug>Sneak_f
-nmap F <Plug>Sneak_F
-xmap f <Plug>Sneak_f
-xmap F <Plug>Sneak_F
-omap f <Plug>Sneak_f
-omap F <Plug>Sneak_F
-"replace 't' with 1-char Sneak
-nmap t <Plug>Sneak_t
-nmap T <Plug>Sneak_T
-xmap t <Plug>Sneak_t
-xmap T <Plug>Sneak_T
-omap t <Plug>Sneak_t
-omap T <Plug>Sneak_T
-nmap <Leader><Leader>s <Plug>Sneak_s
-nmap <Leader><Leader>S <Plug>Sneak_S
-xmap <Leader><Leader>s <Plug>Sneak_s
-xmap <Leader><Leader>S <Plug>Sneak_S
-omap <Leader><Leader>s <Plug>Sneak_s
-omap <Leader><Leader>S <Plug>Sneak_S
-xmap ga <Plug>(EasyAlign)
-nmap ga <Plug>(EasyAlign)
 "nnoremap <silent>w :exe ':silent !C:\Users\Administrator\AppData\Local\Google\Chrome\Application\chrome.exe %'<CR>
-nnoremap <silent> <silent>w :!start C:\Users\Administrator\AppData\Local\Google\Chrome\Application\chrome.exe %:p<CR>
+nnoremap <silent> <leader>w :!start C:\Users\Administrator\AppData\Local\Google\Chrome\Application\chrome.exe %:p<CR>
+"   vim-jsbeautify
+map <leader>b :call JsBeautify()<cr>
+autocmd FileType javascript noremap <buffer>  <leader>b :call JsBeautify()<cr>
+autocmd FileType json noremap <buffer> <leader>b :call JsonBeautify()<cr>
+autocmd FileType jsx noremap <buffer> <leader>b :call JsxBeautify()<cr>
+autocmd FileType html noremap <buffer> <leader>b :call HtmlBeautify()<cr>
+autocmd FileType css noremap <buffer> <leader>b :call CSSBeautify()<cr>
+autocmd FileType javascript vnoremap <buffer>  <leader>b :call RangeJsBeautify()<cr>
+autocmd FileType json vnoremap <buffer> <leader>b :call RangeJsonBeautify()<cr>
+autocmd FileType jsx vnoremap <buffer> <leader>b :call RangeJsxBeautify()<cr>
+autocmd FileType html vnoremap <buffer> <leader>b :call RangeHtmlBeautify()<cr>
+autocmd FileType css vnoremap <buffer> <leader>b :call RangeCSSBeautify()<cr>
+nn <silent><F2> :exec("NERDTree ".expand('%:h'))<CR>
+"   vim_markdown_preview
+let vim_markdown_preview_hotkey='<C-m>'
+let vim_markdown_preview_browser='Google Chrome'
 
