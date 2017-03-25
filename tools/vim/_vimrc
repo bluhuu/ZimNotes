@@ -1,10 +1,16 @@
 set nocompatible
+set t_Co=256
+" colorscheme xoria256
 source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
 behave mswin
-"工作目录
-" cd D:\bluhuu\eai_web
 let mapleader=";"
+let g:mapleader = ";"
+
+augroup myvimrc
+    au!
+    au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+augroup END
 
 " ------------------------------------------------------------
 let iCanHazVundle=1
@@ -20,6 +26,7 @@ filetype off                  " required
 set rtp+=$HOME/vimfiles/bundle/Vundle.vim/
 call vundle#begin('$HOME/vimfiles/bundle/')
 Plugin 'VundleVim/Vundle.vim'
+" Plugin 'fholgado/minibufexpl.vim'
 Plugin 'vim-scripts/L9'
 Plugin 'w0rp/ale'
 Plugin 'scrooloose/nerdtree'
@@ -29,8 +36,8 @@ Plugin 'mattn/emmet-vim'
 " Plugin 'Shutnik/jshint2.vim'
 Plugin 'tyru/open-browser.vim'
 Plugin 'leshill/vim-json'
-Plugin 'ervandew/supertab'
 "Plugin 'tpope/vim-markdown'
+"Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-git'
@@ -40,8 +47,6 @@ Plugin 'Shougo/neocomplete.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'kien/ctrlp.vim'
-"Plugin 'vim-scripts/FuzzyFinder'
-"Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'beautify-web/js-beautify'
 Plugin 'majutsushi/tagbar'
@@ -68,8 +73,10 @@ Plugin 'gregsexton/matchtag'
 Plugin 'othree/html5.vim'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'bling/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plugin 'wesq3/vim-windowswap'
+" Plugin 'xolox/vim-misc'
+" Plugin 'xolox/vim-session'
+" Plugin 'thaerkh/vim-workspace'
 call vundle#end()            " required
 filetype plugin indent on    " required
 "-------------------------------------------------------------
@@ -81,12 +88,15 @@ set fileencodings=ucs-bom,utf-8,utf-16,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 set ffs=unix,dos ff=unix
 set langmenu=zh_CN
 let $LANG='zh_CN'
+set ambiwidth=double
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
 set gfn=Bitstream\ Vera\ Sans\ Mono:h9 gfw=新宋体:h10
+" Set font according to system
 "窗口大小与位置
-winpos 400 200
-set cmdheight=1 lines=35 columns=120
+winpos 100 100
+set cmdheight=1 lines=35 columns=140
+set textwidth=180
 
 set nolinebreak
 set wrap                    "折行
@@ -103,15 +113,32 @@ set smarttab                "如果打开，行首的 <Tab> 根据 'shiftwidth' 
 set fdc=2                   "如果非零，指定宽度的列在窗口的一侧显示，指示折叠的打开和关闭。最大值为12
 set fdm=syntax              "当前窗口使用的折叠方式
 syn on                      "开启高亮
+set nopaste
 compiler gcc
 
 set guioptions-=T           "工具条
-"set guioptions-=r          "右滚动条
-set guioptions-=L
+set guioptions-=r           "右滚动条
+set guioptions-=L           " Removes left hand scroll bar
 set guioptions+=e           "可用来改变标签文本
-"set guioptions-=m          "菜单栏
+set guioptions-=m          "菜单栏
 set guioptions+=c           "简单的选择使用控制台对话框而不是弹出式对话框
 set showtabline=1           "本选项的值指定何时显示带有标签页标签的行
+set showmode                    " always show what mode we're currently editing in
+set tags=tags
+set shiftround                  " use multiple of shiftwidth when indenting with '<' and '>'
+set backspace=indent,eol,start  " allow backspacing over everything in insert mode
+set copyindent                  " copy the previous indentation on autoindenting
+set ignorecase                  " ignore case when searching
+set smartcase                   " ignore case if search pattern is all lowercase,
+" set timeout timeoutlen=200 ttimeoutlen=100
+set visualbell           " don't beep
+set noerrorbells         " don't beep
+set autowrite  "Save on buffer switch
+set mouse=a
+set iskeyword+=_,$,@,%,#,-      "带有如下符号的单词不要被换行分割
+set background=dark
+set clipboard+=unnamed      "与windows共享剪贴板
+" set list                  "显示制表位（ctrl+i）和 行尾标志（$）
 
 "set cindent                "打开C类型的缩进
 set autoindent              "自动缩进
@@ -127,20 +154,19 @@ set foldlevel=99
 set fsync
 set laststatus=2            "本选项的值影响最后一个窗口何时有状态行
 
-"set statusline=%t%r%h%w\ [%Y]\ [%{&ff}]\ [%{&fenc}:%{&enc}]\ [%05.5b-%04.4B]\ [%05.5l/%05.5L=%p%%]%<\ [%04.4c-%04.4v%04.4V]\ %{fugitive#statusline()}\
+set statusline=\ %t%r%h%w\ [%Y]\ [%{&ff}]\ [%{&fenc}:%{&enc}]\ [%05.5b-%04.4B]
+set statusline+=\ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L=%p%%\ %c
+set statusline+=\ %{exists('g:loaded_fugitive')?fugitive#statusline():''}
+function! CurDir()
+    let curdir = substitute(getcwd(), '/Users/amir/', "~/", "g")
+    return curdir
+endfunction
 
 set nocursorline            "用 CursorLine |hl-CursorLine| 高亮光标所在的屏幕行
 set nocursorcolumn          "用 CursorColumn |hl-CursorColumn| 高亮光标所在的屏幕列
 set updatecount=819222      "输入这么多个字符以后，把交换文件写入磁盘
 set undolevels=819222       "可以撤销的最大改变次数
 set history=50              "设置冒号命令与搜索命令的命令历史列表的长度
-"set nobackup                "没有备份
-set backupext=.bak
-set backupdir=c:\\temp
-"set noundofile
-set undodir=c:\\temp
-set noswapfile
-set autoread                " auto read when a file is changed outside
 
 set sessionoptions+=unix,slash
 
@@ -152,15 +178,6 @@ syntax on
 "highlight WhitespaceEOL ctermbg=red guibg=red
 "match WhitespaceEOL /\s\+$/
 
-" ------------------------------------------------------------
-" NERDTree
-" ------------------------------------------------------------
-"NERDTree: autoload when startup vim
-"autocmd StdinReadPre * let s:std_in=1
-"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
-"NERDTree: <leader>t to open NERDTree
-map <leader>t :NERDTreeToggle<CR>
 
 " NERDTree: File highlighting
 function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
@@ -190,11 +207,11 @@ call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
 "" By Robin
 let g:EasyMotion_smartcase = 1
 "let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
-map <Leader>j <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
-map <leader>h <Plug>(easymotion-linebackward)
-map <leader>l <Plug>(easymotion-lineforward)
-map <leader>. <Plug>(easymotion-repeat)
+map <Leader><Leader>j <Plug>(easymotion-j)
+map <Leader><Leader>k <Plug>(easymotion-k)
+map <leader><Leader>h <Plug>(easymotion-linebackward)
+map <leader><Leader>l <Plug>(easymotion-lineforward)
+map <leader><Leader>. <Plug>(easymotion-repeat)
 nmap f <Plug>(easymotion-s)
 
 
@@ -323,22 +340,129 @@ nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nnoremap <F5> :UndotreeToggle<cr>
 nnoremap <C-S-Down> ddp
 nnoremap <C-S-Up> ddP
+" vim-jsbeautify
+map <leader>f :call JsBeautify()<cr>
+autocmd FileType javascript noremap <buffer>  <leader>f :call JsBeautify()<cr>
+autocmd FileType json noremap <buffer> <leader>f :call JsonBeautify()<cr>
+autocmd FileType jsx noremap <buffer> <leader>f :call JsxBeautify()<cr>
+autocmd FileType html noremap <buffer> <leader>f :call HtmlBeautify()<cr>
+autocmd FileType css noremap <buffer> <leader>f :call CSSBeautify()<cr>
+autocmd FileType javascript vnoremap <buffer>  <leader>f :call RangeJsBeautify()<cr>
+autocmd FileType json vnoremap <buffer> <leader>f :call RangeJsonBeautify()<cr>
+autocmd FileType jsx vnoremap <buffer> <leader>f :call RangeJsxBeautify()<cr>
+autocmd FileType html vnoremap <buffer> <leader>f :call RangeHtmlBeautify()<cr>
+autocmd FileType css vnoremap <buffer> <leader>f :call RangeCSSBeautify()<cr>
+
+" Fast saves
+nmap <leader>w :w!<cr>
+"Easy escaping to normal model
+imap jj <esc>
+"easier window navigation
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
+nmap <M-left> <C-w>H
+nmap <M-down> <C-w>J
+nmap <M-up> <C-w>K
+nmap <M-right> <C-w>L
+nmap <C-right> :vertical resize +10<cr>
+nmap <C-left> :vertical resize -10<cr>
+nmap <C-up> :resize +10<cr>
+nmap <C-down> :resize -10<cr>
+map <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR> 
+map <leader><F8> :call DeleteAllBuffersInWindow()<CR>
+map <F8> :bd<CR>
+fun! DeleteAllBuffersInWindow()
+    let s:curWinNr = winnr()
+    if winbufnr(s:curWinNr) == 1
+        ret
+    endif
+    let s:curBufNr = bufnr("%")
+    exe "bn"
+    let s:nextBufNr = bufnr("%")
+    while s:nextBufNr != s:curBufNr
+        exe "bn"
+        exe "bdel ".s:nextBufNr
+        let s:nextBufNr = bufnr("%")
+    endwhile
+endfun
+function! Zoom ()
+    " check if is the zoomed state (tabnumber > 1 && window == 1)
+    if tabpagenr('$') > 1 && tabpagewinnr(tabpagenr(), '$') == 1
+        let l:cur_winview = winsaveview()
+        let l:cur_bufname = bufname('')
+        tabclose
+
+        " restore the view
+        if l:cur_bufname == bufname('')
+            call winrestview(cur_winview)
+        endif
+    else
+        tab split
+    endif
+endfunction
+
+nmap <leader>z :call Zoom()<CR>
+
+map <leader>t :NERDTreeToggle<CR>
+
+"Load the current buffer in Chrome
 "nnoremap <silent>w :exe ':silent !C:\Users\Administrator\AppData\Local\Google\Chrome\Application\chrome.exe %'<CR>
-nnoremap <silent> <leader>w :!start C:\Users\Administrator\AppData\Local\Google\Chrome\Application\chrome.exe %:p<CR>
-"   vim-jsbeautify
-map <leader>b :call JsBeautify()<cr>
-autocmd FileType javascript noremap <buffer>  <leader>b :call JsBeautify()<cr>
-autocmd FileType json noremap <buffer> <leader>b :call JsonBeautify()<cr>
-autocmd FileType jsx noremap <buffer> <leader>b :call JsxBeautify()<cr>
-autocmd FileType html noremap <buffer> <leader>b :call HtmlBeautify()<cr>
-autocmd FileType css noremap <buffer> <leader>b :call CSSBeautify()<cr>
-autocmd FileType javascript vnoremap <buffer>  <leader>b :call RangeJsBeautify()<cr>
-autocmd FileType json vnoremap <buffer> <leader>b :call RangeJsonBeautify()<cr>
-autocmd FileType jsx vnoremap <buffer> <leader>b :call RangeJsxBeautify()<cr>
-autocmd FileType html vnoremap <buffer> <leader>b :call RangeHtmlBeautify()<cr>
-autocmd FileType css vnoremap <buffer> <leader>b :call RangeCSSBeautify()<cr>
-nn <silent><F2> :exec("NERDTree ".expand('%:h'))<CR>
-"   vim_markdown_preview
-let vim_markdown_preview_hotkey='<C-m>'
-let vim_markdown_preview_browser='Google Chrome'
+nnoremap <silent> <leader>c :!start C:\Program Files (x86)\Google\Chrome\Application\chrome.exe %:p<CR>
+
+"Show (partial) command in the status line
+set showcmd
+
+
+
+" Swap files out of the project root
+"set nobackup                "没有备份
+set backupext=.bak
+set backupdir=c:\\temp
+set directory=c:\\temp
+set undodir=c:\\temp
+" set noundofile
+" set noswapfile
+set autoread                " auto read when a file is changed outside
+
+" Familiar commands for file/symbol browsing
+nmap <leader>b :CtrlPBuffer <cr>
+nmap <M-r> :CtrlPBufTag<cr> 
+" Open splits
+nmap <leader>vs :vsplit<cr>
+nmap <leader>sp :split<cr>
+
+map <silent> <leader><cr> :noh<cr>
+
+" Tab configuration
+" map <leader>tn :tabnew %<cr>
+" map <leader>te :tabedit
+" map <leader>tc :tabclose<cr>
+" map <leader>tm :tabmove
+
+"Auto change directory to match current file ,cd
+nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
+nnoremap <leader>ed :edit %:p:h/
+
+""""""""""""""""""""""""""""""
+" => Minibuffer plugin
+""""""""""""""""""""""""""""""
+let g:miniBufExplModSelTarget = 1
+let g:miniBufExplorerMoreThanOne = 2
+let g:miniBufExplModSelTarget = 0
+let g:miniBufExplUseSingleClick = 1
+let g:miniBufExplMapWindowNavVim = 1
+" let g:miniBufExplVSplit = 25
+" let g:miniBufExplSplitBelow=1
+map <leader>u :MBEToggle<cr>
+map <leader>x :b#<cr>
+map <S-left> :bp<cr>
+map <S-right> :bn<cr>
+map <S-up> :tabp<cr>
+map <S-down> :tabn<cr>
+" Bash like keys for the command line
+cnoremap <C-A>      <Home>
+cnoremap <C-E>      <End>
+cnoremap <C-K>      <C-U>
 
