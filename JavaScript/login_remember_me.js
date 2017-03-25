@@ -12,7 +12,7 @@ read:function (){
 		$('#remember_me').prop('checked',true);
 	}
 	if(n&&n.length >0&&p&&p.length >0){
-    	$('#password').val(p)
+    	$('#password').val(p);
 	}
 }, 
 clear : function () 
@@ -20,4 +20,4 @@ clear : function ()
 	$.cookie("usn",null,{path:"/"}); 
 	$.cookie("usp",null,{path:"/"}); 
 } 
-}
+};
