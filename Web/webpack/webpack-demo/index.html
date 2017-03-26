@@ -3,9 +3,19 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
-        <title>webpack demo</title>
+        <title><%= htmlWebpackPlugin.options.title %></title>
+<!--   我的家乡在淮安       -->
+        <script charset="utf-8">
+            <%=
+                compilation.assets[htmlWebpackPlugin.files.chunks.main.entry.substr(htmlWebpackPlugin.files.publicPath.length)].source()
+            %>
+        </script>
     </head>
     <body>
-        <script src="bundle.js" charset="utf-8"></script>
+        <% for (var k in htmlWebpackPlugin.files.chunks) { %>
+            <% if (k !== 'main') { %>
+                <script src="<%= htmlWebpackPlugin.files.chunks[k].entry %>" charset="utf-8"></script>
+            <% } %>
+        <% } %>
     </body>
 </html>
