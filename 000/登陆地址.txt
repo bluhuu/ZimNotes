@@ -1,4 +1,0 @@
-vpn:https://222.190.117.6/core/images/main1.sin
-mall_qa:10.123.234.114
-
-
