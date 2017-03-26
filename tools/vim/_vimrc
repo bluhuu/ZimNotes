@@ -23,7 +23,6 @@ Plugin 'xuyuanp/nerdtree-git-plugin'
 Plugin 'yggdroot/indentline'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'mattn/emmet-vim'
-" Plugin 'Shutnik/jshint2.vim'
 Plugin 'leshill/vim-json'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
@@ -33,7 +32,7 @@ Plugin 'marijnh/tern_for_vim'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tomtom/tcomment_vim'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'beautify-web/js-beautify'
 Plugin 'majutsushi/tagbar'
@@ -61,10 +60,12 @@ Plugin 'othree/html5.vim'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'wesq3/vim-windowswap'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'haya14busa/incsearch.vim'
 Plugin 'haya14busa/incsearch-fuzzy.vim'
 Plugin 'itspriddle/vim-stripper'
+Plugin 'ryanoasis/vim-devicons'
 if iCanHazVundle == 0
     :PluginInstall
 endif
@@ -72,6 +73,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 "--- Setting up Vundle - the vim plugin bundler end
 colors molokai
+" let g:airline_theme="molokai"
 syntax on
 "set shell=sh
 let mapleader=";"
@@ -83,11 +85,12 @@ set fileencodings=ucs-bom,utf-8,utf-16,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 set ffs=unix,dos ff=unix
 set langmenu=zh_CN
 let $LANG='zh_CN'
-set ambiwidth=double
+" set ambiwidth=double
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
-set gfn=Bitstream\ Vera\ Sans\ Mono:h9 gfw=新宋体:h10
-" Set font according to system
+" set gfn=Bitstream\ Vera\ Sans\ Mono:h9 gfw=新宋体:h10
+" set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h11
+set guifont=DejaVuSansMonoForPowerline\ NF:h10
 "窗口大小与位置
 winpos 100 100
 set cmdheight=1 lines=35 columns=140
@@ -267,7 +270,6 @@ if !exists('g:neocomplete#sources#omni#input_patterns')
   let g:neocomplete#sources#omni#input_patterns = {}
 endif
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
-
 
 "这个是安装字体后 必须设置此项"
 let g:airline_powerline_fonts = 1
