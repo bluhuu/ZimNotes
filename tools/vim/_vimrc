@@ -89,8 +89,7 @@ let $LANG='zh_CN'
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
 " set gfn=Bitstream\ Vera\ Sans\ Mono:h9 gfw=新宋体:h10
-" set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h11
-set guifont=DejaVuSansMonoForPowerline\ NF:h10
+set guifont=DejaVuSansMonoForPowerline\ NF:h11
 "窗口大小与位置
 winpos 100 100
 set cmdheight=1 lines=35 columns=140
