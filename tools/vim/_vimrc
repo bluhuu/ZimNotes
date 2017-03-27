@@ -1,9 +1,3 @@
-set t_Co=256
-source $VIMRUNTIME/vimrc_example.vim
-source $VIMRUNTIME/mswin.vim
-behave mswin
-" au! BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
-"--- Setting up Vundle - the vim plugin bundler
 let iCanHazVundle=1
 let vundle_readme=expand('$HOME/vimfiles/bundle/Vundle.vim/README.md')
 if !filereadable(vundle_readme)
@@ -11,11 +5,15 @@ if !filereadable(vundle_readme)
     silent !git clone https://github.com/VundleVim/Vundle.vim.git vimfiles/bundle/Vundle.vim
     let iCanHazVundle=0
 endif
+"""""""" 插件管理Vundle""""""""
+"关闭兼容模式
 set nocompatible
 filetype off
 set rtp+=$HOME/vimfiles/bundle/Vundle.vim/
 call vundle#begin('$HOME/vimfiles/bundle/')
 Plugin 'VundleVim/Vundle.vim'
+" -------------------------------插件列表----------------------------------
+Plugin 'alvan/vim-closetag'
 Plugin 'vim-scripts/L9'
 Plugin 'w0rp/ale'
 Plugin 'scrooloose/nerdtree'
@@ -37,7 +35,6 @@ Plugin 'maksimr/vim-jsbeautify'
 Plugin 'beautify-web/js-beautify'
 Plugin 'majutsushi/tagbar'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'alvan/vim-closetag'
 Plugin 'Mark'
 Plugin 'ap/vim-css-color'
 Plugin 'othree/csscomplete.vim'
@@ -66,362 +63,36 @@ Plugin 'haya14busa/incsearch.vim'
 Plugin 'haya14busa/incsearch-fuzzy.vim'
 Plugin 'itspriddle/vim-stripper'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'Smart-Tabs'
 if iCanHazVundle == 0
     :PluginInstall
 endif
-call vundle#end()            " required
-filetype plugin indent on    " required
-"--- Setting up Vundle - the vim plugin bundler end
-colors molokai
-" let g:airline_theme="molokai"
-syntax on
-"set shell=sh
+call vundle#end()
+filetype plugin indent on
+
 let mapleader=";"
 let g:mapleader = ";"
-" 编码设置
-set fenc=utf-8 encoding=utf-8
-language message utf-8
-set fileencodings=ucs-bom,utf-8,utf-16,cp936,gb18030,big5,euc-jp,euc-kr,latin1
-set ffs=unix,dos ff=unix
-set langmenu=zh_CN
-let $LANG='zh_CN'
-" set ambiwidth=double
-source $VIMRUNTIME/delmenu.vim
-source $VIMRUNTIME/menu.vim
-" set gfn=Bitstream\ Vera\ Sans\ Mono:h9 gfw=新宋体:h10
-set guifont=DejaVuSansMonoForPowerline\ NF:h11
-"窗口大小与位置
-winpos 100 100
-set cmdheight=1 lines=35 columns=140
-set textwidth=180
-
-" let g:NERDTreeIndicatorMapCustom = {
-"     \ "Modified"  : "✹",
-"     \ "Staged"    : "✚",
-"     \ "Untracked" : "✭",
-"     \ "Renamed"   : "➜",
-"     \ "Unmerged"  : "═",
-"     \ "Deleted"   : "✖",
-"     \ "Dirty"     : "✗",
-"     \ "Clean"     : "✔︎",
-"     \ 'Ignored'   : '☒',
-"     \ "Unknown"   : "?"
-"     \ }
-
-set nolinebreak
-set wrap                    "折行
-set number                  "在每行前面显示行号
-set so=1                    "光标上下两侧最少保留的屏幕行数
-set sidescrolloff=1         "光标左右两侧保留的最少屏幕列数
-set sidescroll=1            "水平滚动时滚动的最少列数
-set makeprg=make            "":make" 命令使用的程序
-set tabstop=4               "文件里的 <Tab> 代表的空格数
-set softtabstop=4           "执行编辑操作，如插入 <Tab> 或者使用 <BS> 时，把 <Tab> 算作空格的数目
-set expandtab               "插入模式里: 插入 <Tab> 时使用合适数量的空格
-set shiftwidth=4            "缩进每一步使用的空白数目
-set smarttab                "如果打开，行首的 <Tab> 根据 'shiftwidth' 插入空白
-set fdc=2                   "如果非零，指定宽度的列在窗口的一侧显示，指示折叠的打开和关闭。最大值为12
-set fdm=indent              "当前窗口使用的折叠方式,marker,indent
-syn on                      "开启高亮
-set nopaste
-compiler gcc
-
-set guioptions-=T           "工具条
-set guioptions-=r           "右滚动条
-set guioptions-=L           " Removes left hand scroll bar
-set guioptions+=e           "可用来改变标签文本
-set guioptions-=m          "菜单栏
-set guioptions+=c           "简单的选择使用控制台对话框而不是弹出式对话框
-set showtabline=1           "本选项的值指定何时显示带有标签页标签的行
-set showmode                    " always show what mode we're currently editing in
-set tags=tags
-set shiftround                  " use multiple of shiftwidth when indenting with '<' and '>'
-set backspace=indent,eol,start  " allow backspacing over everything in insert mode
-set copyindent                  " copy the previous indentation on autoindenting
-set ignorecase                  " ignore case when searching
-set smartcase                   " ignore case if search pattern is all lowercase,
-" set timeout timeoutlen=200 ttimeoutlen=100
-set visualbell           " don't beep
-set noerrorbells         " don't beep
-set autowrite  "Save on buffer switch
-set mouse=a
-set iskeyword+=_,$,@,%,#,-      "带有如下符号的单词不要被换行分割
-set background=dark
-set clipboard+=unnamed      "与windows共享剪贴板
-" set list                  "显示制表位（ctrl+i）和 行尾标志（$）
-
-"set cindent                "打开C类型的缩进
-set autoindent              "自动缩进
-set ruler                   "总是在右下角显示当前光标的行列信息
-set showcmd                 "总是在右下角显示一个完整的命令已经完成的部分
-set incsearch               "在键入字符串的同时开始搜索
-set hlsearch                "高亮显示搜索的内容
-"autocmd FileType text setlocal textwidth=7
-set linespace=3             "字符之间插入的像素行数
-set foldopen-=search        " don't open folds when you search into them
-set foldopen-=undo          " don't open folds when you undo stuff
-set foldlevel=99
-set fsync
-set laststatus=2            "本选项的值影响最后一个窗口何时有状态行
-
-set statusline=\ %t%r%h%w\ [%Y]\ [%{&ff}]\ [%{&fenc}:%{&enc}]\ [%05.5b-%04.4B]
-set statusline+=\ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L=%p%%\ %c
-set statusline+=\ %{exists('g:loaded_fugitive')?fugitive#statusline():''}
-function! CurDir()
-    let curdir = substitute(getcwd(), '/Users/amir/', "~/", "g")
-    return curdir
-endfunction
-
-set cursorline            "用 CursorLine |hl-CursorLine| 高亮光标所在的屏幕行
-set nocursorcolumn          "用 CursorColumn |hl-CursorColumn| 高亮光标所在的屏幕列
-set updatecount=819222      "输入这么多个字符以后，把交换文件写入磁盘
-set undolevels=819222       "可以撤销的最大改变次数
-set history=50              "设置冒号命令与搜索命令的命令历史列表的长度
-
-set sessionoptions+=unix,slash
-
-set modelines=10            "如果 'modeline' 打开，'modelines' 给出检查 set 等命令的行数目
-set modeline
-
-
-" let g:SuperTabRetainCompletionType=1    " 设置按下<Tab>后默认的补全方式
-" let g:SuperTabDefaultCompletionType="<C-X><C-O>"    " 0 - 不记录补全方式 1 - 记住直到用其他的补全命令改变它2 - 直到按ESC
-
-
-" NERDTree: File highlighting
-function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
- exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
- exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
-endfunction
-
-call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
-call NERDTreeHighlightFile('ini', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
-call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('config', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('conf', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('json', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('html', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('styl', 'cyan', 'none', 'cyan', '#151515')
-call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
-call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
-call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
-call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
-let NERDTreeChDirMode=2 "选中root即设置为当前目录
-let NERDTreeQuitOnOpen=1 "打开文件时关闭树
-let NERDTreeShowBookmarks=1 "显示书签
-let NERDTreeMinimalUI=1 "不显示帮助面板
-let NERDTreeDirArrows=1 "目录箭头 1 显示箭头 0传统+-|号
-
-" ----------------------------------------------------------------------------
-" tern_for_vim
-" ----------------------------------------------------------------------------
-let tern_show_signature_in_pum = 1
-let tern_show_argument_hints = 'on_hold'
-autocmd FileType javascript nnoremap <leader>d :TernDef<CR>
-autocmd FileType javascript setlocal omnifunc=tern#Complete
-
-" ----------------------------------------------------------------------------
-" neocomplete
-" ----------------------------------------------------------------------------
-" Disable AutoComplPop.
-let g:acp_enableAtStartup = 0
-" Use neocomplete.
-let g:neocomplete#enable_at_startup = 1
-" Use smartcase.
-let g:neocomplete#enable_smart_case = 1
-" Set minimum syntax keyword length.
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
-" Define dictionary.
-let g:neocomplete#sources#dictionary#dictionaries = {
-    \ 'default' : '',
-    \ 'vimshell' : $HOME.'/.vimshell_hist',
-    \ 'scheme' : $HOME.'/.gosh_completions'
-        \ }
-" Define keyword.
-if !exists('g:neocomplete#keyword_patterns')
-    let g:neocomplete#keyword_patterns = {}
-endif
-let g:neocomplete#keyword_patterns['default'] = '\h\w*'
-" Plugin key-mappings.
-inoremap <expr><C-g>     neocomplete#undo_completion()
-inoremap <expr><C-l>     neocomplete#complete_common_string()
-inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-function! s:my_cr_function()
-  return neocomplete#close_popup() . "\<CR>"
-endfunction
-" <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-" <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><C-y>  neocomplete#close_popup()
-inoremap <expr><C-e>  neocomplete#cancel_popup()
-" Enable omni completion.
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-" Enable heavy omni completion.
-if !exists('g:neocomplete#sources#omni#input_patterns')
-  let g:neocomplete#sources#omni#input_patterns = {}
-endif
-let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
-
-"这个是安装字体后 必须设置此项"
-let g:airline_powerline_fonts = 1
-
- "打开tabline功能,方便查看Buffer和切换，这个功能比较不错"
- "我还省去了minibufexpl插件，因为我习惯在1个Tab下用多个buffer"
- let g:airline#extensions#tabline#enabled = 1
- let g:airline#extensions#tabline#buffer_nr_show = 1
- " 关闭状态显示空白符号计数,这个对我用处不大"
- let g:airline#extensions#whitespace#enabled = 0
- let g:airline#extensions#whitespace#symbol = '!'
-
-let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\v[\/](node_modules|target|dist|extjs)|(\.(git|hg|svn|rvm|node_modules|DS_Storegit|optimized|compiled))$',
-    \ 'file': '\v\.(exe|so|dll|zip|tar|tar.gz|pyc)$',
-    \ }
-" Write this in your vimrc file
-let g:ale_lint_on_save = 1
-let g:ale_lint_on_text_changed = 0
-" You can disable this option too
-" if you don't want linters to run on opening a file
-let g:ale_lint_on_enter = 0
-"
-" MapKey
-"
-" vim-jsbeautify
-map <leader>b :call JsBeautify()<cr>
-autocmd FileType javascript noremap <buffer>  <leader>b :call JsBeautify()<cr>
-autocmd FileType json noremap <buffer> <leader>b :call JsonBeautify()<cr>
-autocmd FileType jsx noremap <buffer> <leader>b :call JsxBeautify()<cr>
-autocmd FileType html noremap <buffer> <leader>b :call HtmlBeautify()<cr>
-autocmd FileType css noremap <buffer> <leader>b :call CSSBeautify()<cr>
-autocmd FileType javascript vnoremap <buffer>  <leader>b :call RangeJsBeautify()<cr>
-autocmd FileType json vnoremap <buffer> <leader>b :call RangeJsonBeautify()<cr>
-autocmd FileType jsx vnoremap <buffer> <leader>b :call RangeJsxBeautify()<cr>
-autocmd FileType html vnoremap <buffer> <leader>b :call RangeHtmlBeautify()<cr>
-autocmd FileType css vnoremap <buffer> <leader>b :call RangeCSSBeautify()<cr>
-
-"Easy escaping to normal model
-imap jj <esc>
-"easier window navigation
-nmap <C-h> <C-w>h
-nmap <C-j> <C-w>j
-nmap <C-k> <C-w>k
-nmap <C-l> <C-w>l
-nmap <M-left> <C-w>H
-nmap <M-down> <C-w>J
-nmap <M-up> <C-w>K
-nmap <M-right> <C-w>L
-nmap <C-right> :vertical resize +10<cr>
-nmap <C-left> :vertical resize -10<cr>
-nmap <C-up> :resize +10<cr>
-nmap <C-down> :resize -10<cr>
-map <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR>
-fun! DeleteAllBuffersInWindow()
-    let s:curWinNr = winnr()
-    if winbufnr(s:curWinNr) == 1
-        ret
-    endif
-    let s:curBufNr = bufnr("%")
-    exe "bn"
-    let s:nextBufNr = bufnr("%")
-    while s:nextBufNr != s:curBufNr
-        exe "bn"
-        exe "bdel ".s:nextBufNr
-        let s:nextBufNr = bufnr("%")
-    endwhile
-endfun
-function! Zoom ()
-    " check if is the zoomed state (tabnumber > 1 && window == 1)
-    if tabpagenr('$') > 1 && tabpagewinnr(tabpagenr(), '$') == 1
-        let l:cur_winview = winsaveview()
-        let l:cur_bufname = bufname('')
-        tabclose
-
-        " restore the view
-        if l:cur_bufname == bufname('')
-            call winrestview(cur_winview)
-        endif
-    else
-        tab split
-    endif
-endfunction
-
-nmap <leader>z :call Zoom()<CR>
-nmap \ :NERDTreeToggle<CR>
-nmap <C-\> :NERDTreeFind<CR>
-nmap <leader>t :TagbarToggle<CR>
-nmap <C-m> :CtrlPBuffer <cr>
-nmap <leader>x :b#<cr>
-nmap <leader>c :!start C:\Program Files (x86)\Google\Chrome\Application\chrome.exe %:p<CR>
-nmap <leader>s :!start C:\Program Files\Git\git-bash.exe<CR>
-nmap <leader>vs :vsplit<cr>
-nmap <leader>sp :split<cr>
-nmap <leader><cr> :noh<cr>
-nmap <leader>ev :e $MYVIMRC<CR>
-nmap <leader>w :w!<cr>
-nmap <leader>e :e!<cr>
-nmap <leader>gg :Git
-nmap <leader>ga :Git add -A<cr>
-nmap <leader>gc :Git commit -m
-nmap <leader>gl :Git log --pretty=format:"\%cn - \%h - \%ar \%s"<cr>
-nmap <leader>gs :Git status<cr>
-nmap <leader>ed :edit %:p:h/
-map <leader>ss :set scrollbind<CR>
-map <leader>sn :set noscrollbind<CR>
-map <F8> :bd<CR>
-map <C-F8> :%bd<CR>
-map <leader><F8> :call DeleteAllBuffersInWindow()<CR>
-nnoremap <F9> :UndotreeToggle<cr>
-nmap <leader>f <Plug>(easymotion-s)
-
-set showcmd
-
-" Swap files out of the project root
-"set nobackup                "没有备份
-set backupext=.bak
-set backupdir=c:\\temp
-set directory=c:\\temp
-set undodir=c:\\temp
-" set noundofile
-" set noswapfile
-set autoread                " auto read when a file is changed outside
-set autowriteall
-
-" Familiar commands for file/symbol browsing
-nmap <M-r> :CtrlPBufTag<cr>
-
-" Tab configuration
-" map <leader>tn :tabnew %<cr>
-" map <leader>te :tabedit
-" map <leader>tc :tabclose<cr>
-" map <leader>tm :tabmove
-
-
-""""""""""""""""""""""""""""""
-" => Minibuffer plugin
-""""""""""""""""""""""""""""""
-let g:miniBufExplModSelTarget = 1
-let g:miniBufExplorerMoreThanOne = 2
-let g:miniBufExplModSelTarget = 0
-let g:miniBufExplUseSingleClick = 1
-let g:miniBufExplMapWindowNavVim = 1
-" let g:miniBufExplVSplit = 25
-" let g:miniBufExplSplitBelow=1
-map <S-left> :bp<cr>
-map <S-right> :bn<cr>
-map <S-up> :tabp<cr>
-map <S-down> :tabn<cr>
-" Bash like keys for the command line
-cnoremap <C-A>      <Home>
-cnoremap <C-E>      <End>
-cnoremap <C-K>      <C-U>
-map z/ <Plug>(incsearch-fuzzy-/)
-map z? <Plug>(incsearch-fuzzy-?)
-map zg/ <Plug>(incsearch-fuzzy-stay)
+cd D:\bluhuu\ZimNotes
+" 引入插件的设置
+" source $HOME/vimfiles/setting/ctrlp-funky.vim
+source $HOME/vimfiles/setting/ctrlp.vim
+source $HOME/vimfiles/setting/ale.vim
+" source $HOME/vimfiles/setting/delimitMate.vim
+"source $HOME/vimfiles/setting/gundo.vim
+source $HOME/vimfiles/setting/molokai.vim
+source $HOME/vimfiles/setting/neocomplcache.vim
+source $HOME/vimfiles/setting/NerdTree.vim
+source $HOME/vimfiles/setting/tern_for_vim.vim
+source $HOME/vimfiles/setting/vim-jsbeautify.vim
+" source $HOME/vimfiles/setting/phpqa.vim
+" source $HOME/vimfiles/setting/tabular.vim
+source $HOME/vimfiles/setting/tagbar.vim
+source $HOME/vimfiles/setting/vim-airline.vim
+source $HOME/vimfiles/setting/vim-easymotion.vim
+source $HOME/vimfiles/setting/vim-expand-region.vim
+source $HOME/vimfiles/setting/vim-multiple-cursors.vim
+" source $HOME/vimfiles/setting/vim-quickrun.vim
+" 自定义设置
+source $HOME/vimfiles/setting/custome.vim
+set runtimepath^=$HOME/vimfiles/bundle/ag.vim
+" let vundle_readme=expand('$HOME/vimfiles/bundle/Vundle.vim/README.md')
