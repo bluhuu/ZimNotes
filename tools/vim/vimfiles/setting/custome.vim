@@ -45,7 +45,6 @@ set undodir=c:\\temp
 " 关闭交换文件
 "set noswapfile
 
-
 " TODO: remove this, use gundo
 " create undo file
 " if has('persistent_undo')
@@ -87,9 +86,10 @@ set selectmode=mouse,key
 " change the terminal's title
 " set title
 " 去掉输入错误的提示声音
-set visualbell
+set novisualbell
 set noerrorbells
-set t_vb=
+" vim进行编辑时，如果命令错误，会发出一个响声，该设置去掉响声
+set vb t_vb=
 set tm=500
 
 " Remember info about open buffers on close
@@ -161,15 +161,6 @@ set foldlevel=99
 set fdc=2
 " 代码折叠自定义快捷键 <leader>zz
 let g:FoldMethod = 0
-fun! ToggleFold()
-    if g:FoldMethod == 0
-        exe "normal! zM"
-        let g:FoldMethod = 1
-    else
-        exe "normal! zR"
-        let g:FoldMethod = 0
-    endif
-endfun
 
 " 缩进配置
 " Smart indent
@@ -203,19 +194,12 @@ set ttyfast
 set nrformats=
 
 " 相对行号: 行号变成相对，可以用 nj/nk 进行跳转
-"set relativenumber number
-" au FocusLost * :set norelativenumber number
-" au FocusGained * :set relativenumber
+set relativenumber number
+au FocusLost * :set norelativenumber number
+au FocusGained * :set relativenumber
 " 插入模式下用绝对行号, 普通模式下用相对
-" autocmd InsertEnter * :set norelativenumber number
-" autocmd InsertLeave * :set relativenumber
-" function! NumberToggle()
-"   if(&relativenumber == 1)
-"     set norelativenumber number
-"   else
-"     set relativenumber
-"   endif
-" endfunc
+autocmd InsertEnter * :set norelativenumber number
+autocmd InsertLeave * :set relativenumber
 
 " 防止tmux下vim的背景色显示异常
 " Refer: http://sunaku.github.io/vim-256color-bce.html
@@ -292,18 +276,6 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
-" F2 行号开关，用于鼠标复制代码用
-" 为方便复制，用<F2>开启/关闭行号显示:
-function! HideNumber()
-  if(&relativenumber == &number)
-    set relativenumber! number!
-  elseif(&number)
-    set number!
-  else
-    set relativenumber!
-  endif
-  set number?
-endfunc
 " disbale paste mode when leaving insert mode
 au InsertLeave * set nopaste
 let g:last_active_tab = 1
@@ -321,36 +293,6 @@ au BufWinEnter *.php set mps-=<:>
 
 
 
-" 保存python文件时删除多余空格
-fun! <SID>StripTrailingWhitespaces()
-    let l = line(".")
-    let c = col(".")
-    %s/\s\+$//e
-    call cursor(l, c)
-endfun
-"autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,perl autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
-
-
-" 定义函数AutoSetFileHead，自动插入文件头
-autocmd BufNewFile *.sh,*.py exec ":call AutoSetFileHead()"
-function! AutoSetFileHead()
-    "如果文件类型为.sh文件
-    if &filetype == 'sh'
-        call setline(1, "\#!/bin/bash")
-    endif
-
-    "如果文件类型为python
-    if &filetype == 'python'
-        call setline(1, "\#!/usr/bin/env python")
-        call append(1, "\# encoding: utf-8")
-    endif
-
-    normal G
-    normal o
-    normal o
-endfunc
-
-
 " 设置可以高亮的关键字
 if has("autocmd")
   " Highlight TODO, FIXME, NOTE, etc.
@@ -366,9 +308,9 @@ endif
 
 " Set extra options when running in GUI mode
 if has("gui_running")
-    set guifont=Monaco:h14
+    set guifont=Consolas:h14
     if has("win32")
-        set guifont=DejaVuSansMonoForPowerline\ NF:h10
+        set guifont=DejaVuSansMonoForPowerline\ NF:h12
         " set gfn=Bitstream\ Vera\ Sans\ Mono:h9 gfw=新宋体:h10
     endif
     set guioptions-=T           "工具条
@@ -422,16 +364,16 @@ set ai si ci
 
 "--------------------------自定义快捷键---------------------
 imap jj <esc>
-map <space> /
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+imap <C-i> <esc>
+nmap <C-j> <C-W>j
+nmap <C-k> <C-W>k
+nmap <C-h> <C-W>h
+nmap <C-l> <C-W>l
 nmap <leader>x :b#<cr>
-map <C-n> :bnext<cr>
-map <C-p> :bprev<cr>
-map <S-up> :tabp<cr>
-map <S-down> :tabn<cr>
+nmap <C-n> :bnext<cr>
+nmap <C-p> :bprev<cr>
+nmap <S-up> :tabp<cr>
+nmap <S-down> :tabn<cr>
 nmap <M-left> <C-w>H
 nmap <M-down> <C-w>J
 nmap <M-up> <C-w>K
@@ -440,25 +382,25 @@ nmap <C-right> :vertical resize +10<cr>
 nmap <C-left> :vertical resize -10<cr>
 nmap <C-up> :resize +10<cr>
 nmap <C-down> :resize -10<cr>
-map <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR>
+nmap <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR>
 " select all
-map <Leader>sa ggVG
-map <Leader>i :noh<cr>
+nmap <Leader>sa ggVG
+nmap <Leader>i :noh<cr>
 nmap <leader>vs :vsplit<cr>
+nmap <leader>sv :vsplit<cr>
 nmap <leader>sp :split<cr>
 nmap <leader><cr> :noh<cr>
-map <leader>zz :call ToggleFold()<cr>
-map <leader>1 :bfirst<cr>
-map <leader>2 :b2<cr>
-map <leader>3 :b3<cr>
-map <leader>4 :b4<cr>
-map <leader>5 :b5<cr>
-map <leader>6 :b6<cr>
-map <leader>7 :b7<cr>
-map <leader>8 :b8<cr>
-map <leader>9 :b9<cr>
-map <leader>0 :blast<cr>
-map <leader>d :bd<cr>
+nmap <leader>1 :bfirst<cr>
+nmap <leader>2 :b2<cr>
+nmap <leader>3 :b3<cr>
+nmap <leader>4 :b4<cr>
+nmap <leader>5 :b5<cr>
+nmap <leader>6 :b6<cr>
+nmap <leader>7 :b7<cr>
+nmap <leader>8 :b8<cr>
+nmap <leader>9 :b9<cr>
+nmap <leader>0 :blast<cr>
+nmap <leader>d :bd<cr>
 " 复制选中区到系统剪切板中
 vnoremap <leader>y "+y
 " select block
@@ -467,12 +409,11 @@ nnoremap <leader>v V`}
 nnoremap <leader>w :w<CR>
 nmap <leader>e :e!<cr>
 nmap <leader>ed :edit %:p:h/
+nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
 " Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
-nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 noremap <F1> <Esc>"
-nnoremap <F2> :call HideNumber()<CR>
 " F3 显示可打印字符开关
 nnoremap <F3> :set list! list?<CR>
 " F4 换行开关
@@ -486,18 +427,15 @@ set pastetoggle=<F7>            "    when in insert mode, press <F7> to go to
 noremap H ^
 noremap L $
 " Map ; to : and save a million keystrokes 用于快速进入命令行
-nnoremap <C-;> :
 " 命令行模式增强，ctrl - a到行首， -e 到行尾
 cnoremap <C-A>      <Home>
 cnoremap <C-E>      <End>
 cnoremap <C-K>      <C-U>
 " 搜索相关
 " 进入搜索Use sane regexes"
-nnoremap / /\v
-vnoremap / /\v
-map z/ <Plug>(incsearch-fuzzy-/)
-map z? <Plug>(incsearch-fuzzy-?)
-map zg/ <Plug>(incsearch-fuzzy-stay)
+nmap z/ <Plug>(incsearch-fuzzy-/)
+nmap z? <Plug>(incsearch-fuzzy-?)
+nmap zg/ <Plug>(incsearch-fuzzy-stay)
 " Keep search pattern at the center of the screen.
 nnoremap <silent> n nzz
 nnoremap <silent> N Nzz
@@ -529,47 +467,16 @@ imap <C-d> <Del>
 " autocmd BufWritePre * :%retab!
 
 " Tab configuration
-" map <leader>tn :tabnew %<cr>
-" map <leader>te :tabedit
-" map <leader>tc :tabclose<cr>
-" map <leader>tm :tabmove
+nmap <leader>tn :tabnew %<cr>
+nmap <leader>te :tabedit
+nmap <leader>tc :tabclose<cr>
+nmap <leader>tm :tabmove
 
 " 设置为搜索时不要回卷
 " set nowrapscan
-nmap <leader>z :call Zoom()<CR>
-function! Zoom ()
-    " check if is the zoomed state (tabnumber > 1 && window == 1)
-    if tabpagenr('$') > 1 && tabpagewinnr(tabpagenr(), '$') == 1
-        let l:cur_winview = winsaveview()
-        let l:cur_bufname = bufname('')
-        tabclose
 
-        " restore the view
-        if l:cur_bufname == bufname('')
-            call winrestview(cur_winview)
-        endif
-    else
-        tab split
-    endif
-endfunction
-
-map <F8> :bd<CR>
-map <C-F8> :%bd<CR>
-map <leader><F8> :call DeleteAllBuffersInWindow()<CR>
-fun! DeleteAllBuffersInWindow()
-    let s:curWinNr = winnr()
-    if winbufnr(s:curWinNr) == 1
-        ret
-    endif
-    let s:curBufNr = bufnr("%")
-    exe "bn"
-    let s:nextBufNr = bufnr("%")
-    while s:nextBufNr != s:curBufNr
-        exe "bn"
-        exe "bdel ".s:nextBufNr
-        let s:nextBufNr = bufnr("%")
-    endwhile
-endfun
+nmap <F8> :bd<CR>
+nmap <C-F8> :%bd<CR>
 nmap <leader>c :!start C:\Program Files (x86)\Google\Chrome\Application\chrome.exe %:p<CR>
 nmap <leader>s :!start C:\Program Files\Git\git-bash.exe<CR>
 
@@ -579,15 +486,8 @@ nmap <leader>gc :Git commit -m
 nmap <leader>gl :Git log --pretty=format:"\%cn - \%h - \%ar \%s"<cr>
 nmap <leader>gs :Git status<cr>
 
-map <leader>ss :set scrollbind<CR>
-map <leader>sn :set noscrollbind<CR>
+nmap <leader>ss :set scrollbind<CR>
+nmap <leader>sn :set noscrollbind<CR>
 
 nnoremap <F9> :UndotreeToggle<cr>
 
-set statusline=\ %t%r%h%w\ [%Y]\ [%{&ff}]\ [%{&fenc}:%{&enc}]\ [%05.5b-%04.4B]
-set statusline+=\ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L=%p%%\ %c
-set statusline+=\ %{exists('g:loaded_fugitive')?fugitive#statusline():''}
-function! CurDir()
-    let curdir = substitute(getcwd(), '/Users/amir/', "~/", "g")
-    return curdir
-endfunction
