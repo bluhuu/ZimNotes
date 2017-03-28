@@ -310,7 +310,7 @@ endif
 if has("gui_running")
     set guifont=Consolas:h14
     if has("win32")
-        set guifont=DejaVuSansMonoForPowerline\ NF:h12
+        set guifont=DejaVuSansMonoForPowerline\ NF:h10
         " set gfn=Bitstream\ Vera\ Sans\ Mono:h9 gfw=新宋体:h10
     endif
     set guioptions-=T           "工具条
@@ -369,11 +369,6 @@ nmap <C-j> <C-W>j
 nmap <C-k> <C-W>k
 nmap <C-h> <C-W>h
 nmap <C-l> <C-W>l
-nmap <leader>x :b#<cr>
-nmap <C-n> :bnext<cr>
-nmap <C-p> :bprev<cr>
-nmap <S-up> :tabp<cr>
-nmap <S-down> :tabn<cr>
 nmap <M-left> <C-w>H
 nmap <M-down> <C-w>J
 nmap <M-up> <C-w>K
@@ -390,19 +385,10 @@ nmap <leader>vs :vsplit<cr>
 nmap <leader>sv :vsplit<cr>
 nmap <leader>sp :split<cr>
 nmap <leader><cr> :noh<cr>
-nmap <leader>1 :bfirst<cr>
-nmap <leader>2 :b2<cr>
-nmap <leader>3 :b3<cr>
-nmap <leader>4 :b4<cr>
-nmap <leader>5 :b5<cr>
-nmap <leader>6 :b6<cr>
-nmap <leader>7 :b7<cr>
-nmap <leader>8 :b8<cr>
-nmap <leader>9 :b9<cr>
-nmap <leader>0 :blast<cr>
-nmap <leader>d :bd<cr>
+
 " 复制选中区到系统剪切板中
 vnoremap <leader>y "+y
+vnoremap <leader>p "+p
 " select block
 nnoremap <leader>v V`}
 " Quickly save the current file
@@ -488,6 +474,3 @@ nmap <leader>gs :Git status<cr>
 
 nmap <leader>ss :set scrollbind<CR>
 nmap <leader>sn :set noscrollbind<CR>
-
-nnoremap <F9> :UndotreeToggle<cr>
-

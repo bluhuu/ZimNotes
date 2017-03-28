@@ -1,9 +1,7 @@
 let g:ctrlp_map = '<c-u>'
 let g:ctrlp_cmd = 'CtrlP'
-nmap \ :NERDTreeToggle<CR>
-nmap <C-\> :NERDTreeFind<CR>
 " nmap <C-m> :CtrlPBuffer <cr>
-map <c-e> :CtrlPMRU<CR>
+nmap <c-e> :CtrlPMRU<CR>
 nmap <M-r> :CtrlPBufTag<cr>
 let g:ctrlp_custom_ignore = {
 \ 'dir':  '\v[\/](node_modules|target|dist|extjs)|(\.(git|hg|svn|rvm|node_modules|DS_Storegit|optimized|compiled))$',

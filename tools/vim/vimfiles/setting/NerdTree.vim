@@ -1,15 +1,18 @@
-let NERDTreeWinPos=1
-let NERDTreeQuitOnOpen=1
+let NERDTreeChDirMode=2 "选中root即设置为当前目录
+let NERDTreeWinPos=0
+let NERDTreeQuitOnOpen=0 "打开文件时关闭树
+let NERDTreeShowBookmarks=0 "显示书签
+let NERDTreeMinimalUI=1 "不显示帮助面板
+let NERDTreeDirArrows=1 "目录箭头 1 显示箭头 0传统+-|号
 let NERDTreeAutoDeleteBuffer=1
-map <Tab> :NERDTreeToggle<cr>
+nmap <Tab> :NERDTreeToggle<cr>
 nmap \ :NERDTreeToggle<CR>
 nmap <C-\> :NERDTreeFind<CR>
+
 " open a NERDTree automatically when vim starts up if no files were specified
 "autocmd vimenter * if !argc() | NERDTree | endif
 " close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
-"let NERDTreeDirArrows = 0 "目录列表前不显示箭头符，避免乱码
 
 " NERDTree: File highlighting
 " function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
@@ -30,8 +33,3 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 " call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
 " call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
 " call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
-" let NERDTreeChDirMode=2 "选中root即设置为当前目录
-" let NERDTreeQuitOnOpen=1 "打开文件时关闭树
-" let NERDTreeShowBookmarks=1 "显示书签
-" let NERDTreeMinimalUI=1 "不显示帮助面板
-" let NERDTreeDirArrows=1 "目录箭头 1 显示箭头 0传统+-|号
