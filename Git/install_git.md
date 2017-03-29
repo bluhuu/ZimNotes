@@ -17,7 +17,6 @@
 
 ```bash
     ssh-keygen -t rsa -C "bluhuu@gmail.com"
-`
 ```
 
 ### 打开.ssh/id_rsa.pub，复制里面的key（全复制）

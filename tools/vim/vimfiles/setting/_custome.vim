@@ -72,9 +72,9 @@ set t_ti= t_te=
 
 
 " 鼠标暂不启用, 键盘党....
-set mouse=a
+" set mouse-=a
 " 启用鼠标
-" set mouse=a
+set mouse=a
 " Hide the mouse cursor while typing
 " set mousehide
 
@@ -114,7 +114,7 @@ set showcmd
 set showmode
 
 " 在上下移动光标时，光标的上方或下方至少会保留显示的行数
-set scrolloff=7
+set scrolloff=3
 " 水平滚动时滚动的最少列数
 set sidescroll=1
 " set winwidth=79
