@@ -1,7 +1,5 @@
 node_modules/
 bundle/
-vim/
-tools/
 .ssh/
 .cache/
 .config/
