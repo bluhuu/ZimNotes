@@ -1,6 +1,9 @@
 node_modules
 .ssh/
 .ssh
+id_rsa
+id_rsa.pub
+known_hosts
 bundle
 bundle/
 tools/vim/vimfiles/bundle/
