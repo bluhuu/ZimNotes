@@ -1,9 +1,11 @@
+D:\bluhuu\ZimNotes\tools\vim\vimfiles\setting\_vimrc
+D:\bluhuu\ZimNotes\000\doTdemo.html
+D:\bluhuu\ZimNotes\Java\createTableHive-II.sql
 D:\bluhuu\ZimNotes\.gitignore
 D:\bluhuu\ZimNotes\tools\vim\.ssh\id_rsa.pub
 D:\bluhuu\ZimNotes\tools\vim\.ssh\known_hosts
 D:\bluhuu\ZimNotes\tools\vim\.ssh\id_rsa
 C:\Users\Administrator\.gitconfig
 D:\bluhuu\ZimNotes\tools\vim\.gitconfig
-D:\bluhuu\ZimNotes\000\doTdemo.html
 D:\bluhuu\ZimNotes\tools\vim\_vimrc
 d:\bluhuu\ZimNotes\tools\vim\_vimrc

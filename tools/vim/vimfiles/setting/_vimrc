@@ -67,6 +67,7 @@ Plugin 'w0rp/ale'
 Plugin 'wesq3/vim-windowswap'
 Plugin 'yggdroot/indentline'
 Plugin 'tpope/vim-obsession'
+Plugin 'mattesgroeger/vim-bookmarks'
 if iCanHazVundle == 0
     :PluginInstall
 endif
@@ -87,6 +88,7 @@ source $HOME/vimfiles/setting/tern_for_vim.vim
 source $HOME/vimfiles/setting/vim-jsbeautify.vim
 source $HOME/vimfiles/setting/tagbar.vim
 source $HOME/vimfiles/setting/vim-airline.vim
+source $HOME/vimfiles/setting/vim-bookmarks.vim
 source $HOME/vimfiles/setting/vim-easymotion.vim
 source $HOME/vimfiles/setting/vim-expand-region.vim
 source $HOME/vimfiles/setting/vim-multiple-cursors.vim

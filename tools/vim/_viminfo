@@ -14,6 +14,16 @@
 $
 
 # Command Line History (newest to oldest):
+:Bookmark eaiApp
+|2,0,1490772046,,"Bookmark eaiApp"
+:Bookmark
+|2,0,1490772021,,"Bookmark"
+:1
+|2,0,1490771848,,"1"
+:2
+|2,0,1490771843,,"2"
+:PluginInstall
+|2,0,1490771751,,"PluginInstall"
 :reg
 |2,0,1490769979,,"reg"
 
@@ -28,9 +38,9 @@ $
 # Debug Line History (newest to oldest):
 
 # Registers:
-"0	LINE	0
-	tools/vim/.cache/
-|3,0,0,1,1,0,1490769974,"tools/vim/.cache/"
+""0	CHAR	0
+	/
+|3,1,0,0,1,0,1490771916,"/"
 "1	LINE	0
 	.ssh/
 |3,0,1,1,1,0,1490770191,".ssh/"
@@ -55,233 +65,269 @@ $
 "8	LINE	0
 	.ssh
 |3,0,8,1,1,0,1490769813,".ssh"
-""-	CHAR	0
+"-	CHAR	0
 	/
-|3,1,36,0,1,0,1490770343,"/"
+|3,0,36,0,1,0,1490770343,"/"
 
 # File marks:
-'0  4  6  D:\bluhuu\ZimNotes\.gitignore
-|4,48,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
-'1  7  16  D:\bluhuu\ZimNotes\.gitignore
-|4,49,7,16,1490769999,"D:\\bluhuu\\ZimNotes\\.gitignore"
-'2  5  16  D:\bluhuu\ZimNotes\.gitignore
-|4,50,5,16,1490769999,"D:\\bluhuu\\ZimNotes\\.gitignore"
-'3  6  0  D:\bluhuu\ZimNotes\.gitignore
-|4,51,6,0,1490769956,"D:\\bluhuu\\ZimNotes\\.gitignore"
-'4  6  0  D:\bluhuu\ZimNotes\.gitignore
-|4,52,6,0,1490769956,"D:\\bluhuu\\ZimNotes\\.gitignore"
-'5  4  0  D:\bluhuu\ZimNotes\.gitignore
-|4,53,4,0,1490769956,"D:\\bluhuu\\ZimNotes\\.gitignore"
-'6  4  0  D:\bluhuu\ZimNotes\.gitignore
-|4,54,4,0,1490769956,"D:\\bluhuu\\ZimNotes\\.gitignore"
-'7  6  3  D:\bluhuu\ZimNotes\.gitignore
-|4,55,6,3,1490767589,"D:\\bluhuu\\ZimNotes\\.gitignore"
-'8  6  3  D:\bluhuu\ZimNotes\.gitignore
-|4,56,6,3,1490767589,"D:\\bluhuu\\ZimNotes\\.gitignore"
-'9  6  3  D:\bluhuu\ZimNotes\.gitignore
-|4,57,6,3,1490767589,"D:\\bluhuu\\ZimNotes\\.gitignore"
+'0  62  0  ~\vimfiles\setting\_vimrc
+|4,48,62,0,1490772178,"~\\vimfiles\\setting\\_vimrc"
+'1  1  0  D:\bluhuu\ZimNotes\NERD_tree_1
+|4,49,1,0,1490772067,"D:\\bluhuu\\ZimNotes\\NERD_tree_1"
+'2  4  0  D:\bluhuu\ZimNotes\NERD_tree_1
+|4,50,4,0,1490772067,"D:\\bluhuu\\ZimNotes\\NERD_tree_1"
+'3  15  0  D:\bluhuu\ZimNotes\000\doTdemo.html
+|4,51,15,0,1490771924,"D:\\bluhuu\\ZimNotes\\000\\doTdemo.html"
+'4  58  0  D:\bluhuu\ZimNotes\[Vundle] Installer
+|4,52,58,0,1490771765,"D:\\bluhuu\\ZimNotes\\[Vundle] Installer"
+'5  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,53,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+'6  7  16  D:\bluhuu\ZimNotes\.gitignore
+|4,54,7,16,1490769999,"D:\\bluhuu\\ZimNotes\\.gitignore"
+'7  5  16  D:\bluhuu\ZimNotes\.gitignore
+|4,55,5,16,1490769999,"D:\\bluhuu\\ZimNotes\\.gitignore"
+'8  6  0  D:\bluhuu\ZimNotes\.gitignore
+|4,56,6,0,1490769956,"D:\\bluhuu\\ZimNotes\\.gitignore"
+'9  6  0  D:\bluhuu\ZimNotes\.gitignore
+|4,57,6,0,1490769956,"D:\\bluhuu\\ZimNotes\\.gitignore"
 
 # Jumplist (newest first):
+-'  62  0  ~\vimfiles\setting\_vimrc
+|4,39,62,0,1490772178,"~\\vimfiles\\setting\\_vimrc"
+-'  1  0  ~\vimfiles\setting\_vimrc
+|4,39,1,0,1490772148,"~\\vimfiles\\setting\\_vimrc"
+-'  1  0  D:\bluhuu\ZimNotes\NERD_tree_1
+|4,39,1,0,1490772067,"D:\\bluhuu\\ZimNotes\\NERD_tree_1"
+-'  4  0  D:\bluhuu\ZimNotes\NERD_tree_1
+|4,39,4,0,1490772067,"D:\\bluhuu\\ZimNotes\\NERD_tree_1"
+-'  24  2  D:\bluhuu\ZimNotes\NERD_tree_1
+|4,39,24,2,1490772063,"D:\\bluhuu\\ZimNotes\\NERD_tree_1"
+-'  1  0  D:\bluhuu\ZimNotes\NERD_tree_1
+|4,39,1,0,1490772063,"D:\\bluhuu\\ZimNotes\\NERD_tree_1"
+-'  15  0  D:\bluhuu\ZimNotes\000\doTdemo.html
+|4,39,15,0,1490771924,"D:\\bluhuu\\ZimNotes\\000\\doTdemo.html"
+-'  15  0  D:\bluhuu\ZimNotes\000\doTdemo.html
+|4,39,15,0,1490771924,"D:\\bluhuu\\ZimNotes\\000\\doTdemo.html"
+-'  15  0  D:\bluhuu\ZimNotes\000\doTdemo.html
+|4,39,15,0,1490771924,"D:\\bluhuu\\ZimNotes\\000\\doTdemo.html"
+-'  15  0  D:\bluhuu\ZimNotes\000\doTdemo.html
+|4,39,15,0,1490771924,"D:\\bluhuu\\ZimNotes\\000\\doTdemo.html"
+-'  4  0  D:\bluhuu\ZimNotes\Java\createTableHive-II.sql
+|4,39,4,0,1490771915,"D:\\bluhuu\\ZimNotes\\Java\\createTableHive-II.sql"
+-'  4  0  D:\bluhuu\ZimNotes\Java\createTableHive-II.sql
+|4,39,4,0,1490771915,"D:\\bluhuu\\ZimNotes\\Java\\createTableHive-II.sql"
+-'  4  0  D:\bluhuu\ZimNotes\Java\createTableHive-II.sql
+|4,39,4,0,1490771915,"D:\\bluhuu\\ZimNotes\\Java\\createTableHive-II.sql"
+-'  4  0  D:\bluhuu\ZimNotes\Java\createTableHive-II.sql
+|4,39,4,0,1490771915,"D:\\bluhuu\\ZimNotes\\Java\\createTableHive-II.sql"
+-'  19  4  D:\bluhuu\ZimNotes\000\doTdemo.html
+|4,39,19,4,1490771899,"D:\\bluhuu\\ZimNotes\\000\\doTdemo.html"
+-'  19  4  D:\bluhuu\ZimNotes\000\doTdemo.html
+|4,39,19,4,1490771899,"D:\\bluhuu\\ZimNotes\\000\\doTdemo.html"
+-'  19  4  D:\bluhuu\ZimNotes\000\doTdemo.html
+|4,39,19,4,1490771899,"D:\\bluhuu\\ZimNotes\\000\\doTdemo.html"
+-'  19  4  D:\bluhuu\ZimNotes\000\doTdemo.html
+|4,39,19,4,1490771899,"D:\\bluhuu\\ZimNotes\\000\\doTdemo.html"
+-'  1  0  D:\bluhuu\ZimNotes\000\doTdemo.html
+|4,39,1,0,1490771883,"D:\\bluhuu\\ZimNotes\\000\\doTdemo.html"
+-'  1  0  D:\bluhuu\ZimNotes\000\doTdemo.html
+|4,39,1,0,1490771883,"D:\\bluhuu\\ZimNotes\\000\\doTdemo.html"
+-'  1  0  D:\bluhuu\ZimNotes\000\doTdemo.html
+|4,39,1,0,1490771883,"D:\\bluhuu\\ZimNotes\\000\\doTdemo.html"
+-'  1  0  D:\bluhuu\ZimNotes\000\doTdemo.html
+|4,39,1,0,1490771883,"D:\\bluhuu\\ZimNotes\\000\\doTdemo.html"
+-'  1  0  D:\bluhuu\ZimNotes\Java\createTableHive-II.sql
+|4,39,1,0,1490771775,"D:\\bluhuu\\ZimNotes\\Java\\createTableHive-II.sql"
+-'  1  0  D:\bluhuu\ZimNotes\Java\createTableHive-II.sql
+|4,39,1,0,1490771775,"D:\\bluhuu\\ZimNotes\\Java\\createTableHive-II.sql"
+-'  1  0  D:\bluhuu\ZimNotes\Java\createTableHive-II.sql
+|4,39,1,0,1490771775,"D:\\bluhuu\\ZimNotes\\Java\\createTableHive-II.sql"
+-'  1  0  D:\bluhuu\ZimNotes\Java\createTableHive-II.sql
+|4,39,1,0,1490771775,"D:\\bluhuu\\ZimNotes\\Java\\createTableHive-II.sql"
+-'  1  0  D:\bluhuu\ZimNotes\Java\createTableHive-II.sql
+|4,39,1,0,1490771775,"D:\\bluhuu\\ZimNotes\\Java\\createTableHive-II.sql"
+-'  1  0  D:\bluhuu\ZimNotes\Java\createTableHive-II.sql
+|4,39,1,0,1490771775,"D:\\bluhuu\\ZimNotes\\Java\\createTableHive-II.sql"
+-'  1  0  D:\bluhuu\ZimNotes\Java\createTableHive-II.sql
+|4,39,1,0,1490771775,"D:\\bluhuu\\ZimNotes\\Java\\createTableHive-II.sql"
+-'  1  0  D:\bluhuu\ZimNotes\Java\createTableHive-II.sql
+|4,39,1,0,1490771775,"D:\\bluhuu\\ZimNotes\\Java\\createTableHive-II.sql"
+-'  58  0  D:\bluhuu\ZimNotes\[Vundle] Installer
+|4,39,58,0,1490771765,"D:\\bluhuu\\ZimNotes\\[Vundle] Installer"
+-'  58  0  D:\bluhuu\ZimNotes\[Vundle] Installer
+|4,39,58,0,1490771765,"D:\\bluhuu\\ZimNotes\\[Vundle] Installer"
+-'  58  0  D:\bluhuu\ZimNotes\[Vundle] Installer
+|4,39,58,0,1490771765,"D:\\bluhuu\\ZimNotes\\[Vundle] Installer"
+-'  58  0  D:\bluhuu\ZimNotes\[Vundle] Installer
+|4,39,58,0,1490771765,"D:\\bluhuu\\ZimNotes\\[Vundle] Installer"
+-'  58  0  D:\bluhuu\ZimNotes\[Vundle] Installer
+|4,39,58,0,1490771765,"D:\\bluhuu\\ZimNotes\\[Vundle] Installer"
+-'  58  0  D:\bluhuu\ZimNotes\[Vundle] Installer
+|4,39,58,0,1490771765,"D:\\bluhuu\\ZimNotes\\[Vundle] Installer"
+-'  58  0  D:\bluhuu\ZimNotes\[Vundle] Installer
+|4,39,58,0,1490771765,"D:\\bluhuu\\ZimNotes\\[Vundle] Installer"
+-'  58  0  D:\bluhuu\ZimNotes\[Vundle] Installer
+|4,39,58,0,1490771765,"D:\\bluhuu\\ZimNotes\\[Vundle] Installer"
+-'  58  0  D:\bluhuu\ZimNotes\[Vundle] Installer
+|4,39,58,0,1490771765,"D:\\bluhuu\\ZimNotes\\[Vundle] Installer"
+-'  58  0  D:\bluhuu\ZimNotes\[Vundle] Installer
+|4,39,58,0,1490771765,"D:\\bluhuu\\ZimNotes\\[Vundle] Installer"
+-'  58  0  D:\bluhuu\ZimNotes\[Vundle] Installer
+|4,39,58,0,1490771765,"D:\\bluhuu\\ZimNotes\\[Vundle] Installer"
+-'  58  0  D:\bluhuu\ZimNotes\[Vundle] Installer
+|4,39,58,0,1490771765,"D:\\bluhuu\\ZimNotes\\[Vundle] Installer"
+-'  58  0  D:\bluhuu\ZimNotes\[Vundle] Installer
+|4,39,58,0,1490771765,"D:\\bluhuu\\ZimNotes\\[Vundle] Installer"
+-'  58  0  D:\bluhuu\ZimNotes\[Vundle] Installer
+|4,39,58,0,1490771765,"D:\\bluhuu\\ZimNotes\\[Vundle] Installer"
+-'  58  0  D:\bluhuu\ZimNotes\[Vundle] Installer
+|4,39,58,0,1490771765,"D:\\bluhuu\\ZimNotes\\[Vundle] Installer"
+-'  58  0  D:\bluhuu\ZimNotes\[Vundle] Installer
+|4,39,58,0,1490771765,"D:\\bluhuu\\ZimNotes\\[Vundle] Installer"
 -'  4  6  D:\bluhuu\ZimNotes\.gitignore
 |4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
--'  6  0  D:\bluhuu\ZimNotes\.gitignore
-|4,39,6,0,1490770248,"D:\\bluhuu\\ZimNotes\\.gitignore"
--'  2  6  D:\bluhuu\ZimNotes\.gitignore
-|4,39,2,6,1490770248,"D:\\bluhuu\\ZimNotes\\.gitignore"
--'  7  0  D:\bluhuu\ZimNotes\.gitignore
-|4,39,7,0,1490770232,"D:\\bluhuu\\ZimNotes\\.gitignore"
--'  5  16  D:\bluhuu\ZimNotes\.gitignore
-|4,39,5,16,1490769999,"D:\\bluhuu\\ZimNotes\\.gitignore"
--'  4  0  D:\bluhuu\ZimNotes\.gitignore
-|4,39,4,0,1490769956,"D:\\bluhuu\\ZimNotes\\.gitignore"
--'  4  0  D:\bluhuu\ZimNotes\.gitignore
-|4,39,4,0,1490769956,"D:\\bluhuu\\ZimNotes\\.gitignore"
--'  3  3  D:\bluhuu\ZimNotes\.gitignore
-|4,39,3,3,1490767589,"D:\\bluhuu\\ZimNotes\\.gitignore"
--'  3  3  D:\bluhuu\ZimNotes\.gitignore
-|4,39,3,3,1490767589,"D:\\bluhuu\\ZimNotes\\.gitignore"
--'  3  3  D:\bluhuu\ZimNotes\.gitignore
-|4,39,3,3,1490767589,"D:\\bluhuu\\ZimNotes\\.gitignore"
--'  1  0  ~\.ssh\id_rsa.pub
-|4,39,1,0,1490767532,"~\\.ssh\\id_rsa.pub"
--'  1  0  ~\.ssh\id_rsa.pub
-|4,39,1,0,1490767532,"~\\.ssh\\id_rsa.pub"
--'  1  0  ~\.ssh\id_rsa.pub
-|4,39,1,0,1490767532,"~\\.ssh\\id_rsa.pub"
--'  1  0  ~\.ssh\id_rsa.pub
-|4,39,1,0,1490767532,"~\\.ssh\\id_rsa.pub"
--'  1  0  ~\.ssh\id_rsa.pub
-|4,39,1,0,1490767532,"~\\.ssh\\id_rsa.pub"
--'  1  0  ~\.ssh\id_rsa.pub
-|4,39,1,0,1490767532,"~\\.ssh\\id_rsa.pub"
--'  1  0  ~\.ssh\id_rsa.pub
-|4,39,1,0,1490767532,"~\\.ssh\\id_rsa.pub"
--'  1  0  ~\.ssh\id_rsa.pub
-|4,39,1,0,1490767532,"~\\.ssh\\id_rsa.pub"
--'  1  0  ~\.ssh\id_rsa.pub
-|4,39,1,0,1490767532,"~\\.ssh\\id_rsa.pub"
--'  1  0  ~\.ssh\id_rsa.pub
-|4,39,1,0,1490767532,"~\\.ssh\\id_rsa.pub"
--'  1  0  ~\.ssh\id_rsa.pub
-|4,39,1,0,1490767532,"~\\.ssh\\id_rsa.pub"
--'  1  0  ~\.ssh\id_rsa.pub
-|4,39,1,0,1490767532,"~\\.ssh\\id_rsa.pub"
--'  1  0  ~\.ssh\id_rsa.pub
-|4,39,1,0,1490767532,"~\\.ssh\\id_rsa.pub"
--'  1  0  ~\.ssh\id_rsa.pub
-|4,39,1,0,1490767532,"~\\.ssh\\id_rsa.pub"
--'  1  0  ~\.ssh\id_rsa.pub
-|4,39,1,0,1490767532,"~\\.ssh\\id_rsa.pub"
--'  1  0  ~\.ssh\id_rsa.pub
-|4,39,1,0,1490767532,"~\\.ssh\\id_rsa.pub"
--'  1  0  ~\.ssh\known_hosts
-|4,39,1,0,1490767196,"~\\.ssh\\known_hosts"
--'  1  0  ~\.ssh\known_hosts
-|4,39,1,0,1490767196,"~\\.ssh\\known_hosts"
--'  1  0  ~\.ssh\known_hosts
-|4,39,1,0,1490767196,"~\\.ssh\\known_hosts"
--'  1  0  ~\.ssh\known_hosts
-|4,39,1,0,1490767196,"~\\.ssh\\known_hosts"
--'  1  0  ~\.ssh\known_hosts
-|4,39,1,0,1490767196,"~\\.ssh\\known_hosts"
--'  1  0  ~\.ssh\known_hosts
-|4,39,1,0,1490767196,"~\\.ssh\\known_hosts"
--'  1  0  ~\.ssh\known_hosts
-|4,39,1,0,1490767196,"~\\.ssh\\known_hosts"
--'  1  0  ~\.ssh\known_hosts
-|4,39,1,0,1490767196,"~\\.ssh\\known_hosts"
--'  1  0  ~\.ssh\known_hosts
-|4,39,1,0,1490767196,"~\\.ssh\\known_hosts"
--'  1  0  ~\.ssh\known_hosts
-|4,39,1,0,1490767196,"~\\.ssh\\known_hosts"
--'  1  0  ~\.ssh\known_hosts
-|4,39,1,0,1490767196,"~\\.ssh\\known_hosts"
--'  1  0  ~\.ssh\known_hosts
-|4,39,1,0,1490767196,"~\\.ssh\\known_hosts"
--'  1  0  ~\.ssh\known_hosts
-|4,39,1,0,1490767196,"~\\.ssh\\known_hosts"
--'  1  0  ~\.ssh\known_hosts
-|4,39,1,0,1490767196,"~\\.ssh\\known_hosts"
--'  1  0  ~\.ssh\known_hosts
-|4,39,1,0,1490767196,"~\\.ssh\\known_hosts"
--'  1  0  ~\.ssh\known_hosts
-|4,39,1,0,1490767196,"~\\.ssh\\known_hosts"
--'  1  0  ~\.ssh\id_rsa
-|4,39,1,0,1490766473,"~\\.ssh\\id_rsa"
--'  1  0  ~\.ssh\id_rsa
-|4,39,1,0,1490766473,"~\\.ssh\\id_rsa"
--'  1  0  ~\.ssh\id_rsa
-|4,39,1,0,1490766473,"~\\.ssh\\id_rsa"
--'  1  0  ~\.ssh\id_rsa
-|4,39,1,0,1490766473,"~\\.ssh\\id_rsa"
--'  1  0  ~\.ssh\id_rsa
-|4,39,1,0,1490766473,"~\\.ssh\\id_rsa"
--'  1  0  ~\.ssh\id_rsa
-|4,39,1,0,1490766473,"~\\.ssh\\id_rsa"
--'  1  0  ~\.ssh\id_rsa
-|4,39,1,0,1490766473,"~\\.ssh\\id_rsa"
--'  1  0  ~\.ssh\id_rsa
-|4,39,1,0,1490766473,"~\\.ssh\\id_rsa"
--'  1  0  ~\.ssh\id_rsa
-|4,39,1,0,1490766473,"~\\.ssh\\id_rsa"
--'  1  0  ~\.ssh\id_rsa
-|4,39,1,0,1490766473,"~\\.ssh\\id_rsa"
--'  1  0  ~\.ssh\id_rsa
-|4,39,1,0,1490766473,"~\\.ssh\\id_rsa"
--'  1  0  ~\.ssh\id_rsa
-|4,39,1,0,1490766473,"~\\.ssh\\id_rsa"
--'  1  0  ~\.ssh\id_rsa
-|4,39,1,0,1490766473,"~\\.ssh\\id_rsa"
--'  1  0  ~\.ssh\id_rsa
-|4,39,1,0,1490766473,"~\\.ssh\\id_rsa"
--'  1  0  ~\.ssh\id_rsa
-|4,39,1,0,1490766473,"~\\.ssh\\id_rsa"
--'  1  0  ~\.ssh\id_rsa
-|4,39,1,0,1490766473,"~\\.ssh\\id_rsa"
--'  1  0  C:\Users\Administrator\.gitconfig
-|4,39,1,0,1490766329,"C:\\Users\\Administrator\\.gitconfig"
--'  1  0  C:\Users\Administrator\.gitconfig
-|4,39,1,0,1490766329,"C:\\Users\\Administrator\\.gitconfig"
--'  1  0  C:\Users\Administrator\.gitconfig
-|4,39,1,0,1490766329,"C:\\Users\\Administrator\\.gitconfig"
--'  1  0  C:\Users\Administrator\.gitconfig
-|4,39,1,0,1490766329,"C:\\Users\\Administrator\\.gitconfig"
--'  1  0  C:\Users\Administrator\.gitconfig
-|4,39,1,0,1490766329,"C:\\Users\\Administrator\\.gitconfig"
--'  1  0  C:\Users\Administrator\.gitconfig
-|4,39,1,0,1490766329,"C:\\Users\\Administrator\\.gitconfig"
--'  1  0  C:\Users\Administrator\.gitconfig
-|4,39,1,0,1490766329,"C:\\Users\\Administrator\\.gitconfig"
--'  1  0  C:\Users\Administrator\.gitconfig
-|4,39,1,0,1490766329,"C:\\Users\\Administrator\\.gitconfig"
--'  1  0  C:\Users\Administrator\.gitconfig
-|4,39,1,0,1490766329,"C:\\Users\\Administrator\\.gitconfig"
--'  1  0  C:\Users\Administrator\.gitconfig
-|4,39,1,0,1490766329,"C:\\Users\\Administrator\\.gitconfig"
--'  1  0  C:\Users\Administrator\.gitconfig
-|4,39,1,0,1490766329,"C:\\Users\\Administrator\\.gitconfig"
--'  1  0  C:\Users\Administrator\.gitconfig
-|4,39,1,0,1490766329,"C:\\Users\\Administrator\\.gitconfig"
--'  1  0  C:\Users\Administrator\.gitconfig
-|4,39,1,0,1490766329,"C:\\Users\\Administrator\\.gitconfig"
--'  1  0  C:\Users\Administrator\.gitconfig
-|4,39,1,0,1490766329,"C:\\Users\\Administrator\\.gitconfig"
--'  1  0  C:\Users\Administrator\.gitconfig
-|4,39,1,0,1490766329,"C:\\Users\\Administrator\\.gitconfig"
--'  1  0  C:\Users\Administrator\.gitconfig
-|4,39,1,0,1490766329,"C:\\Users\\Administrator\\.gitconfig"
--'  1  0  C:\Users\Administrator\.gitconfig
-|4,39,1,0,1490766329,"C:\\Users\\Administrator\\.gitconfig"
--'  1  0  C:\Users\Administrator\.gitconfig
-|4,39,1,0,1490766329,"C:\\Users\\Administrator\\.gitconfig"
--'  1  0  C:\Users\Administrator\.gitconfig
-|4,39,1,0,1490766329,"C:\\Users\\Administrator\\.gitconfig"
--'  1  0  C:\Users\Administrator\.gitconfig
-|4,39,1,0,1490766329,"C:\\Users\\Administrator\\.gitconfig"
--'  1  0  C:\Users\Administrator\.gitconfig
-|4,39,1,0,1490766329,"C:\\Users\\Administrator\\.gitconfig"
--'  1  0  C:\Users\Administrator\.gitconfig
-|4,39,1,0,1490766329,"C:\\Users\\Administrator\\.gitconfig"
--'  1  0  C:\Users\Administrator\.gitconfig
-|4,39,1,0,1490766329,"C:\\Users\\Administrator\\.gitconfig"
--'  1  0  C:\Users\Administrator\.gitconfig
-|4,39,1,0,1490766329,"C:\\Users\\Administrator\\.gitconfig"
--'  1  0  C:\Users\Administrator\.gitconfig
-|4,39,1,0,1490766329,"C:\\Users\\Administrator\\.gitconfig"
--'  1  0  C:\Users\Administrator\.gitconfig
-|4,39,1,0,1490766329,"C:\\Users\\Administrator\\.gitconfig"
--'  1  0  C:\Users\Administrator\.gitconfig
-|4,39,1,0,1490766329,"C:\\Users\\Administrator\\.gitconfig"
--'  1  0  C:\Users\Administrator\.gitconfig
-|4,39,1,0,1490766329,"C:\\Users\\Administrator\\.gitconfig"
--'  1  0  C:\Users\Administrator\.gitconfig
-|4,39,1,0,1490766329,"C:\\Users\\Administrator\\.gitconfig"
--'  1  0  C:\Users\Administrator\.gitconfig
-|4,39,1,0,1490766329,"C:\\Users\\Administrator\\.gitconfig"
--'  1  0  C:\Users\Administrator\.gitconfig
-|4,39,1,0,1490766329,"C:\\Users\\Administrator\\.gitconfig"
--'  1  0  C:\Users\Administrator\.gitconfig
-|4,39,1,0,1490766329,"C:\\Users\\Administrator\\.gitconfig"
--'  1  0  ~\.gitconfig
-|4,39,1,0,1490766302,"~\\.gitconfig"
--'  1  0  ~\.gitconfig
-|4,39,1,0,1490766302,"~\\.gitconfig"
--'  1  0  ~\.gitconfig
-|4,39,1,0,1490766302,"~\\.gitconfig"
--'  1  0  ~\.gitconfig
-|4,39,1,0,1490766302,"~\\.gitconfig"
--'  1  0  ~\.gitconfig
-|4,39,1,0,1490766302,"~\\.gitconfig"
--'  1  0  ~\.gitconfig
-|4,39,1,0,1490766302,"~\\.gitconfig"
--'  1  0  ~\.gitconfig
-|4,39,1,0,1490766302,"~\\.gitconfig"
--'  1  0  ~\.gitconfig
-|4,39,1,0,1490766302,"~\\.gitconfig"
--'  1  0  ~\.gitconfig
-|4,39,1,0,1490766302,"~\\.gitconfig"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
+-'  4  6  D:\bluhuu\ZimNotes\.gitignore
+|4,39,4,6,1490770703,"D:\\bluhuu\\ZimNotes\\.gitignore"
 
 # History of marks within files (newest to oldest):
+
+> ~\vimfiles\setting\_vimrc
+	*	1490772153	0
+	"	62	0
+
+> D:\bluhuu\ZimNotes\NERD_tree_1
+	*	1490772148	0
+	"	7	0
+	.	1	0
+	+	1	0
+
+> D:\bluhuu\ZimNotes\000\doTdemo.html
+	*	1490771918	0
+	"	15	0
+	a	9	41
+	m	9	41
+
+> D:\bluhuu\ZimNotes\ControlP
+	*	1490771916	0
+	"	1	0
+	.	1	0
+	+	1	0
+	+	2	0
+	+	1	0
+
+> D:\bluhuu\ZimNotes\Java\createTableHive-II.sql
+	*	1490771914	0
+	"	4	0
+
+> D:\bluhuu\ZimNotes\[Vundle] Installer
+	*	1490771756	0
+	"	58	0
+	.	1	0
+	+	1	0
 
 > D:\bluhuu\ZimNotes\.gitignore
 	*	1490770598	0
@@ -312,12 +358,6 @@ $
 	.	1	0
 	+	1	0
 
-> D:\bluhuu\ZimNotes\NERD_tree_1
-	*	1490767194	0
-	"	23	0
-	.	1	0
-	+	1	0
-
 > ~\.ssh\known_hosts
 	*	1490766480	0
 	"	1	0
@@ -334,24 +374,11 @@ $
 	*	1490766300	0
 	"	1	0
 
-> D:\bluhuu\ZimNotes\000\doTdemo.html
-	*	1490765464	0
-	"	9	41
-	a	9	41
-	m	9	41
-
 > ~\_vimrc
 	*	1490765407	0
 	"	1	0
 	^	1	0
 	.	1	0
-	+	1	0
-
-> D:\bluhuu\ZimNotes\ControlP
-	*	1490765406	0
-	"	1	0
-	.	1	0
-	+	2	0
 	+	1	0
 
 > d:\bluhuu\ZimNotes\__Gundo__

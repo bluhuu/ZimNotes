@@ -5,3 +5,4 @@ bundle/
 .config/
 .gitconfig
 .gitignore
+.bash_history
