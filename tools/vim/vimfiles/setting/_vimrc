@@ -1,4 +1,5 @@
 let iCanHazVundle=1
+let $HOME = "C:/Users/Administrator"
 let vundle_readme=expand('$HOME/vimfiles/bundle/Vundle.vim/README.md')
 if !filereadable(vundle_readme)
     silent !mkdir -p vimfiles/bundle
@@ -66,8 +67,13 @@ Plugin 'vim-scripts/L9'
 Plugin 'w0rp/ale'
 Plugin 'wesq3/vim-windowswap'
 Plugin 'yggdroot/indentline'
+"npm install -g esctags
+Plugin 'hushicai/tagbar-javascript.vim'
 Plugin 'tpope/vim-obsession'
 Plugin 'mattesgroeger/vim-bookmarks'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'crusoexia/vim-javascript-lib'
+Plugin 'algotech/ultisnips-javascript'
 if iCanHazVundle == 0
     :PluginInstall
 endif
