@@ -161,7 +161,6 @@ set foldlevel=99
 set fdc=2
 " 代码折叠自定义快捷键 <leader>zz
 let g:FoldMethod = 0
-let g:UltiSnipsEnableSnipMate = 1
 
 " 缩进配置
 " Smart indent
