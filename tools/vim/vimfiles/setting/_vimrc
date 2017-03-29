@@ -73,24 +73,24 @@ endif
 call vundle#end()
 filetype plugin indent on
 
-let mapleader=";"
-let g:mapleader = ";"
+let mapleader = "\<Space>"
+let g:mapleader = "\<Space>"
 " 引入插件的设置
-" source $mypath/ctrlp-funky.vim
-source $mypath/ctrlp.vim
-source $mypath/ale.vim
-source $mypath/gundo.vim
-source $mypath/molokai.vim
-source $mypath/neocomplete.vim
-source $mypath/NerdTree.vim
-source $mypath/tern_for_vim.vim
-source $mypath/vim-jsbeautify.vim
-source $mypath/tagbar.vim
-source $mypath/vim-airline.vim
-source $mypath/vim-easymotion.vim
-source $mypath/vim-expand-region.vim
-source $mypath/vim-multiple-cursors.vim
+" source $HOME/vimfiles/setting/ctrlp-funky.vim
+source $HOME/vimfiles/setting/ctrlp.vim
+source $HOME/vimfiles/setting/ale.vim
+source $HOME/vimfiles/setting/gundo.vim
+source $HOME/vimfiles/setting/molokai.vim
+source $HOME/vimfiles/setting/neocomplete.vim
+source $HOME/vimfiles/setting/NerdTree.vim
+source $HOME/vimfiles/setting/tern_for_vim.vim
+source $HOME/vimfiles/setting/vim-jsbeautify.vim
+source $HOME/vimfiles/setting/tagbar.vim
+source $HOME/vimfiles/setting/vim-airline.vim
+source $HOME/vimfiles/setting/vim-easymotion.vim
+source $HOME/vimfiles/setting/vim-expand-region.vim
+source $HOME/vimfiles/setting/vim-multiple-cursors.vim
 " 自定义设置
-source $mypath/_custome.vim
-source $mypath/_fun-me.vim
+source $HOME/vimfiles/setting/_custome.vim
+source $HOME/vimfiles/setting/_fun-me.vim
 set runtimepath^=$HOME/vimfiles/bundle/ag.vim

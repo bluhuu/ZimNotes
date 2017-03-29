@@ -1,2 +1,1 @@
-let $mypath = "D:/bluhuu/ZimNotes/tools/vim/vimfiles/setting"
-source $mypath/_vimrc
+source $HOME/vimfiles/setting/_vimrc

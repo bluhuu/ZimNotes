@@ -1,1 +1,4 @@
 node_modules
+bundle
+bundle/
+tools/vim/vimfiles/bundle/

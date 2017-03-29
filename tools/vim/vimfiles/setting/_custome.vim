@@ -387,8 +387,12 @@ nmap <leader>sp :split<cr>
 nmap <leader><cr> :noh<cr>
 
 " 复制选中区到系统剪切板中
-vnoremap <leader>y "+y
-vnoremap <leader>p "+p
+vmap <Leader>y "+y
+vmap <Leader>d "+d
+nmap <Leader>p "+p
+nmap <Leader>P "+P
+vmap <Leader>p "+p
+vmap <Leader>P "+P
 " select block
 nnoremap <leader>v V`}
 " Quickly save the current file
