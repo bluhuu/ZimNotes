@@ -1,9 +1,7 @@
-node_modules
-.ssh/
-.ssh
-id_rsa
-id_rsa.pub
-known_hosts
+node_modules/
 bundle
-bundle/
-tools/vim/vimfiles/bundle/
+.ssh/
+.cache/
+.config/
+.gitconfig
+.gitignore
