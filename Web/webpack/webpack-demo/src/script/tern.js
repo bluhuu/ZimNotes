@@ -28,3 +28,5 @@ $.ajax({
         // error callback
     }
 });
+console.log(obj)
+console.log(obj)

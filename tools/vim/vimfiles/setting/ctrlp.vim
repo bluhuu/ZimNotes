@@ -1,6 +1,6 @@
 let g:ctrlp_map = '<c-u>'
 let g:ctrlp_cmd = 'CtrlP'
-" nmap <C-m> :CtrlPBuffer <cr>
+nmap <c-b> :CtrlPBuffer<CR>
 nmap <c-e> :CtrlPMRU<CR>
 nmap <M-r> :CtrlPBufTag<cr>
 let g:ctrlp_custom_ignore = {

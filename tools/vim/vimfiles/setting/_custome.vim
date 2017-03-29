@@ -1,3 +1,29 @@
+"==========================================
+" FileEncode Settings 文件编码,格式
+"==========================================
+" 设置新文件的编码为 UTF-8
+set fenc=utf-8 encoding=utf-8
+" 解决consle输出乱码
+language message utf-8
+" 自动判断编码时，依次尝试以下编码：
+set fileencodings=ucs-bom,utf-8,utf-16,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+set ffs=unix,dos,mac ff=unix
+set helplang=cn
+set langmenu=zh_CN
+let $LANG = 'zh_CN.UTF-8'
+"解决菜单乱码
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
+"防止特殊符号无法正常显示
+" set ambiwidth=double
+"set enc=2byte-gb18030
+" 设置终端编码为gvim内部编码encoding
+set termencoding=utf-8
+
+" 如遇Unicode值大于255的文本，不必等到空格再折行
+set formatoptions+=m
+" 合并两行中文时，不在中间加空格
+set formatoptions+=B
 
 "模仿windows快捷键 Ctrl+A全选、Ctrl+C复制、Ctrl+V粘贴
 source $VIMRUNTIME/vimrc_example.vim
@@ -210,32 +236,6 @@ if &term =~ '256color'
   set t_ut=
 endif
 
-"==========================================
-" FileEncode Settings 文件编码,格式
-"==========================================
-" 设置新文件的编码为 UTF-8
-set fenc=utf-8 encoding=utf-8
-" 解决consle输出乱码
-language message utf-8
-" 自动判断编码时，依次尝试以下编码：
-set fileencodings=ucs-bom,utf-8,utf-16,cp936,gb18030,big5,euc-jp,euc-kr,latin1
-set ffs=unix,dos,mac ff=unix
-set helplang=cn
-set langmenu=zh_CN
-let $LANG = 'zh_CN.UTF-8'
-"解决菜单乱码
-source $VIMRUNTIME/delmenu.vim
-source $VIMRUNTIME/menu.vim
-"防止特殊符号无法正常显示
-" set ambiwidth=double
-"set enc=2byte-gb18030
-" 设置终端编码为gvim内部编码encoding
-set termencoding=utf-8
-
-" 如遇Unicode值大于255的文本，不必等到空格再折行
-set formatoptions+=m
-" 合并两行中文时，不在中间加空格
-set formatoptions+=B
 
 
 "==========================================
@@ -437,9 +437,6 @@ vnoremap < <gv
 vnoremap > >gv
 " w!! to sudo & write a file
 cmap w!! w !sudo tee >/dev/null %
-" 交换 ' `, 使得可以快速使用'跳到marked位置
-nnoremap ' `
-nnoremap ` '
 " remap U to <C-r> for easier redo
 nnoremap U <C-r>
 

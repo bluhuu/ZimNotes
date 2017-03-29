@@ -1,1 +1,1 @@
-" let g:UltiSnipsEnableSnipMate = 1
+let g:UltiSnipsEnableSnipMate = 1
