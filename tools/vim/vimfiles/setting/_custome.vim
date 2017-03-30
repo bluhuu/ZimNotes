@@ -39,7 +39,7 @@ syntax on
 "==========================================
 "窗口大小与位置
 winpos 300 100
-set cmdheight=1 lines=35 columns=140
+set cmdheight=1 lines=45 columns=140
 " history存储容量
 set history=2000
 set updatecount=819222      "输入这么多个字符以后，把交换文件写入磁盘
@@ -310,8 +310,8 @@ endif
 if has("gui_running")
     set guifont=Consolas:h14
     if has("win32")
-        set guifont=DejaVuSansMonoForPowerline\ NF:h10
-        " set gfn=Bitstream\ Vera\ Sans\ Mono:h9 gfw=新宋体:h10
+        " set guifont=DejaVuSansMonoForPowerline\ NF:h10
+        set gfn=Bitstream\ Vera\ Sans\ Mono:h10 gfw=新宋体:h11
     endif
     set guioptions-=T           "工具条
     set guioptions+=e           "可用来改变标签文本
@@ -361,117 +361,3 @@ set tags+=.tags
 " 跳转快捷键：<ctrl-]>跳转 <ctrl-t>返回
 au BufWritePost *.c,*.cpp,*.h,*.php,*.json,*.erl,*.sh,*.html,*.css,*.conf silent! !(ps -ef|grep ctags|grep -v grep|awk '{print $2}'|xargs -I{} kill -9 {}; rm -f .ctags1; ctags -Rf .tags1 --exclude='*.js' && mv -f .tags1 .tags) &> /dev/null &
 set ai si ci
-
-"--------------------------自定义快捷键---------------------
-imap jj <esc>
-imap <C-i> <esc>
-nmap <C-j> <C-W>j
-nmap <C-k> <C-W>k
-nmap <C-h> <C-W>h
-nmap <C-l> <C-W>l
-nmap <M-left> <C-w>H
-nmap <M-down> <C-w>J
-nmap <M-up> <C-w>K
-nmap <M-right> <C-w>L
-nmap <C-right> :vertical resize +10<cr>
-nmap <C-left> :vertical resize -10<cr>
-nmap <C-up> :resize +10<cr>
-nmap <C-down> :resize -10<cr>
-nmap <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR>
-" select all
-nmap <Leader>sa ggVG
-nmap <Leader>i :noh<cr>
-nmap <leader>vs :vsplit<cr>
-nmap <leader>sv :vsplit<cr>
-nmap <leader>sp :split<cr>
-nmap <leader><cr> :noh<cr>
-
-" 复制选中区到系统剪切板中
-vmap <Leader>y "+y
-vmap <Leader>d "+d
-nmap <Leader>p "+p
-nmap <Leader>P "+P
-vmap <Leader>p "+p
-vmap <Leader>P "+P
-" select block
-nnoremap <leader>v V`}
-" Quickly save the current file
-nnoremap <leader>w :w<CR>
-nmap <leader>e :e!<cr>
-nmap <leader>ed :edit %:p:h/
-nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
-" Quickly edit/reload the vimrc file
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
-
-noremap <F1> <Esc>"
-" F3 显示可打印字符开关
-nnoremap <F3> :set list! list?<CR>
-" F4 换行开关
-nnoremap <F4> :set wrap! wrap?<CR>
-" F6 语法开关，关闭语法可以加快大文件的展示
-nnoremap <F6> :exec exists('syntax_on') ? 'syn off' : 'syn on'<CR>
-set pastetoggle=<F7>            "    when in insert mode, press <F7> to go to
-                                "    paste mode, where you can paste mass data
-                                "    that won't be autoindented
-" Go to home and end using capitalized directions
-noremap H ^
-noremap L $
-" Map ; to : and save a million keystrokes 用于快速进入命令行
-" 命令行模式增强，ctrl - a到行首， -e 到行尾
-cnoremap <C-A>      <Home>
-cnoremap <C-E>      <End>
-cnoremap <C-K>      <C-U>
-" 搜索相关
-" 进入搜索Use sane regexes"
-nmap z/ <Plug>(incsearch-fuzzy-/)
-nmap z? <Plug>(incsearch-fuzzy-?)
-nmap zg/ <Plug>(incsearch-fuzzy-stay)
-" Keep search pattern at the center of the screen.
-nnoremap <silent> n nzz
-nnoremap <silent> N Nzz
-nnoremap <silent> * *zz
-nnoremap <silent> # #zz
-nnoremap <silent> g* g*zz
-" 调整缩进后自动选中，方便再次操作
-vnoremap < <gv
-vnoremap > >gv
-" w!! to sudo & write a file
-cmap w!! w !sudo tee >/dev/null %
-" remap U to <C-r> for easier redo
-nnoremap U <C-r>
-
-" 绑定插入模式下的方向键
-imap <C-b> <Left>
-imap <C-j> <Down>
-imap <C-k> <Up>
-imap <C-f> <Right>
-imap <C-a> <Home>
-imap <C-e> <End>
-imap <C-d> <Del>
-
-" 保存时自动将tab转换为相应长度的空格
-" 此行禁止开启，否则会导致撤销到最新时保存后，无法重做！！！
-" autocmd BufWritePre * :%retab!
-
-" Tab configuration
-nmap <leader>tn :tabnew %<cr>
-nmap <leader>te :tabedit
-nmap <leader>tc :tabclose<cr>
-nmap <leader>tm :tabmove
-
-" 设置为搜索时不要回卷
-" set nowrapscan
-
-nmap <F8> :bd<CR>
-nmap <C-F8> :%bd<CR>
-nmap <leader>c :!start C:\Program Files (x86)\Google\Chrome\Application\chrome.exe %:p<CR>
-nmap <leader>s :!start C:\Program Files\Git\git-bash.exe<CR>
-
-nmap <leader>gg :Git
-nmap <leader>ga :Git add -A<cr>
-nmap <leader>gc :Git commit -m
-nmap <leader>gl :Git log --pretty=format:"\%cn - \%h - \%ar \%s"<cr>
-nmap <leader>gs :Git status<cr>
-
-nmap <leader>ss :set scrollbind<CR>
-nmap <leader>sn :set noscrollbind<CR>

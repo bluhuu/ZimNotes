@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+*{margin:0;padding:0;}
+.box{position:absolute;left:100px;top:100px;border:1px solid #eee;width:150px;height:150px;padding:10px;cursor:move;}
+.drag{position:absolute;bottom:3px;right:3px;display:block;width:7px;height:7px;background:url(scale.png) no-repeat}
+</style>
+<script type="text/javascript" src="jquery-1.7.1.js"></script>
+<script type="text/javascript" src="jquery.resizable.js"></script>
+</head>
+
+<body>
+<div class="box">拖拽我吧！<span class="drag"></span></div>
+<script>
+$(function(){
+	$(".drag").resizable({
+		minW : 150,
+		minH : 150,
+		maxW : 500,
+		maxH : 500,
+		});
+	})
+</script>
+</body>
+</html>

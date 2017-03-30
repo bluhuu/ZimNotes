@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>纯JavaScript可调节大小的拆分视图面板插件|DEMO_jQuery之家-自由分享jQuery、html5、css3的插件库</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	 <style>
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    padding: 8px;
+    background-color: #F6F6F6;
+    box-sizing: border-box;
+  }
+
+  .split {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .content {
+    border: 1px solid #C0C0C0;
+    box-shadow: inset 0 1px 2px #e4e4e4;
+    background-color: #fff;
+  }
+
+  .gutter {
+    background-color: transparent;
+
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+
+  .gutter.gutter-horizontal {
+    cursor: col-resize;
+    background-image: url('grips/vertical.png');
+  }
+
+  .gutter.gutter-vertical {
+    cursor: row-resize;
+    background-image: url('grips/horizontal.png');
+  }
+
+  .split.split-horizontal, .gutter.gutter-horizontal {
+    height: 100%;
+    float: left;
+  }
+  </style>
+	<!--[if IE]>
+		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<!-- <article class="htmleaf-container">
+		
+	</article> -->
+  <div id="a" class="split split-horizontal">
+      <div id="c" class="split content">
+        <header class="htmleaf-header">
+          <h1>纯JavaScript可调节大小的拆分视图面板插件 <span>A lightweight, unopinionated utility for creating adjustable split views or panes</span></h1>
+          <div class="htmleaf-links">
+            <a class="htmleaf-icon icon-htmleaf-home-outline" href="http://www.htmleaf.com/" title="jQuery之家" target="_blank"><span> jQuery之家</span></a>
+            <a class="htmleaf-icon icon-htmleaf-arrow-forward-outline" href="http://www.htmleaf.com/jQuery/Layout-Interface/201512072872.html" title="返回下载页" target="_blank"><span> 返回下载页</span></a>
+          </div>
+          <div class="htmleaf-demo center">
+            <a href="index.html">DEMO1</a>
+            <a href="index2.html" class="current">DEMO2</a>
+          </div>
+        </header>
+      </div>
+      <div id="d" class="split content"></div>
+    </div>
+    <div id="b" class="split split-horizontal">
+      <div id="e" class="split content"></div>
+      <div id="f" class="split content"></div>
+    </div>
+	<script src="js/split.js"></script>
+	<script>
+    Split(['#a', '#b'], {
+      gutterSize: 8,
+      cursor: 'col-resize'
+    })
+
+    Split(['#c', '#d'], {
+      direction: 'vertical',
+      sizes: [35, 65],
+      gutterSize: 8,
+      cursor: 'row-resize'
+    })
+
+    Split(['#e', '#f'], {
+      direction: 'vertical',
+      sizes: [35, 65],
+      gutterSize: 8,
+      cursor: 'row-resize'
+    })
+</script>
+</body>
+</html>

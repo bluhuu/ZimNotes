@@ -1,5 +1,5 @@
 let iCanHazVundle=1
-" let $HOME = "C:/Users/Administrator"
+let $HOME = "C:/Users/Administrator"
 let vundle_readme=expand('$HOME/vimfiles/bundle/Vundle.vim/README.md')
 if !filereadable(vundle_readme)
     silent !mkdir -p vimfiles/bundle
@@ -74,8 +74,6 @@ Plugin 'mattesgroeger/vim-bookmarks'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'crusoexia/vim-javascript-lib'
 Plugin 'algotech/ultisnips-javascript'
-Plugin 'othree/javascript-libraries-syntax.vim'
-" Plugin 'grvcoelho/vim-javascript-snippets'
 if iCanHazVundle == 0
     :PluginInstall
 endif
@@ -85,8 +83,8 @@ filetype plugin indent on
 let mapleader = "\<Space>"
 let g:mapleader = "\<Space>"
 " 引入插件的设置
-source $mypath/_custome.vim
 " source $mypath/ctrlp-funky.vim
+source $mypath/ctrlp.vim
 source $mypath/ale.vim
 source $mypath/gundo.vim
 source $mypath/molokai.vim
@@ -95,12 +93,12 @@ source $mypath/NerdTree.vim
 source $mypath/tern_for_vim.vim
 source $mypath/vim-jsbeautify.vim
 source $mypath/tagbar.vim
-source $mypath/ultisnips.vim
 source $mypath/vim-airline.vim
 source $mypath/vim-bookmarks.vim
 source $mypath/vim-easymotion.vim
 source $mypath/vim-expand-region.vim
 source $mypath/vim-multiple-cursors.vim
-source $mypath/ctrlp.vim
+" 自定义设置
+source $mypath/_custome.vim
 source $mypath/_fun-me.vim
 set runtimepath^=$HOME/vimfiles/bundle/ag.vim

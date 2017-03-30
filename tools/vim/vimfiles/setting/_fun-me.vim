@@ -1,10 +1,10 @@
 map <leader>zz :call ToggleFold()<cr>
 nmap <leader>z :call Zoom()<CR>
 map <leader><F8> :call DeleteAllBuffersInWindow()<CR>
-nnoremap <F2> :call HideNumber()<CR>
+" nnoremap <F2> :call HideNumber()<CR>
 "autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,perl autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 set statusline=\ %t%r%h%w\ [%Y]\ [%{&ff}]\ [%{&fenc}:%{&enc}]\ [%05.5b-%04.4B]
-set statusline+=\ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L=%p%%\ %c
+set statusline+=\ \ %r%{CurDir()}%h\ \ \ Line:\ %l/%L=%p%%\ %c
 set statusline+=\ %{exists('g:loaded_fugitive')?fugitive#statusline():''}
 
 " ---ToggleFold--------------------------------------------
