@@ -5,7 +5,7 @@ let NERDTreeShowBookmarks=1 "显示书签
 let NERDTreeMinimalUI=1 "不显示帮助面板
 let NERDTreeDirArrows=0 "目录箭头 1 显示箭头 0传统+-|号
 let NERDTreeAutoDeleteBuffer=1
-nmap <Tab> :NERDTreeToggle<cr>
+" nmap <Tab> :NERDTreeToggle<cr>
 nmap \ :NERDTreeToggle<CR>
 nmap <C-\> :NERDTreeFind<CR>
 

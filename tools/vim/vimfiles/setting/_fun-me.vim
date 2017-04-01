@@ -1,5 +1,5 @@
-map <leader>zz :call ToggleFold()<cr>
-nmap <leader>z :call Zoom()<CR>
+map <leader>zc :call ToggleFold()<cr>
+nmap <leader>zz :call Zoom()<CR>
 map <leader><F8> :call DeleteAllBuffersInWindow()<CR>
 " nnoremap <F2> :call HideNumber()<CR>
 "autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,perl autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()

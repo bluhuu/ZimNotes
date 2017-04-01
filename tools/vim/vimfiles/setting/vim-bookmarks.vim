@@ -9,6 +9,8 @@ let g:bookmark_show_toggle_warning = 0 "Enables/disables warning when toggling t
 let g:bookmark_center = 1 "Enables/disables line centering when jumping to bookmark
 let g:bookmark_location_list = 0 "Use the location list to show all bookmarks
 let g:bookmark_disable_ctrlp = 0 "Disable ctrlp interface when show all bookmarks
+let g:bookmark_sign = '>>'
+let g:bookmark_annotation_sign = '##'
 
 let g:bookmark_no_default_key_mappings = 1 "disable all default key bindings
 nmap <C-F2> <Plug>BookmarkToggle

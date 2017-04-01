@@ -17,7 +17,6 @@ Plugin 'VundleVim/Vundle.vim'
 " -------------------------------插件列表----------------------------------
 " Plugin 'Mark'
 Plugin 'Shougo/neocomplete.vim'
-Plugin 'Smart-Tabs'
 Plugin 'ai/autoprefixer'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'alvan/vim-closetag'
@@ -48,19 +47,16 @@ Plugin 'othree/csscomplete.vim'
 Plugin 'othree/html5.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'rking/ag.vim'
-" Plugin 'ryanoasis/vim-devicons'
+Plugin 'ryanoasis/vim-devicons'
 Plugin 'scrooloose/nerdtree'
-" Plugin 'xuyuanp/nerdtree-git-plugin'
+Plugin 'xuyuanp/nerdtree-git-plugin'
 Plugin 'mortonfox/nerdtree-clip'
 Plugin 'sirver/ultisnips'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-surround'
-" Plugin 'vim-airline/vim-airline'
-" Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-autoprefixer'
 Plugin 'vim-expand-region'
 Plugin 'vim-scripts/L9'
@@ -73,6 +69,7 @@ Plugin 'mattesgroeger/vim-bookmarks'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'crusoexia/vim-javascript-lib'
 Plugin 'algotech/ultisnips-javascript'
+Plugin 'scrooloose/nerdcommenter'
 " Plugin 'othree/javascript-libraries-syntax.vim' 注释的也亮
 " Plugin 'grvcoelho/vim-javascript-snippets'
 if iCanHazVundle == 0
@@ -90,12 +87,12 @@ source $mypath/ale.vim
 source $mypath/gundo.vim
 source $mypath/molokai.vim
 source $mypath/neocomplete.vim
+source $mypath/nerdcommenter.vim
 source $mypath/NerdTree.vim
 source $mypath/tern_for_vim.vim
 source $mypath/vim-jsbeautify.vim
 source $mypath/tagbar.vim
 source $mypath/ultisnips.vim
-" source $mypath/vim-airline.vim
 source $mypath/vim-bookmarks.vim
 source $mypath/vim-easymotion.vim
 source $mypath/vim-expand-region.vim

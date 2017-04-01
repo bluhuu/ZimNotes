@@ -1,7 +1,7 @@
 "==========================================
 " FileEncode Settings 文件编码,格式
 "==========================================
-" 设置新文件的编码为 UTF-8
+" 设置新文件的编码为 UTF-8 会对《M-*》产生影响，要放在最前面
 set fenc=utf-8 encoding=utf-8
 " 解决consle输出乱码
 language message utf-8
@@ -220,9 +220,9 @@ set ttyfast
 set nrformats=
 
 " 相对行号: 行号变成相对，可以用 nj/nk 进行跳转
-set relativenumber number
-au FocusLost * :set norelativenumber number
-au FocusGained * :set relativenumber
+" set relativenumber number
+" au FocusLost * :set norelativenumber number
+" au FocusGained * :set relativenumber
 " 插入模式下用绝对行号, 普通模式下用相对
 autocmd InsertEnter * :set norelativenumber number
 autocmd InsertLeave * :set relativenumber
@@ -310,8 +310,8 @@ endif
 if has("gui_running")
     set guifont=Consolas:h14
     if has("win32")
-        " set guifont=DejaVuSansMonoForPowerline\ NF:h10
-        set gfn=Bitstream\ Vera\ Sans\ Mono:h10 gfw=新宋体:h11
+        set guifont=DejaVuSansMonoForPowerline\ NF:h10
+        " set gfn=Bitstream\ Vera\ Sans\ Mono:h10 gfw=新宋体:h11
     endif
     set guioptions-=T           "工具条
     set guioptions+=e           "可用来改变标签文本
@@ -339,7 +339,6 @@ set t_Co=256
 colorscheme molokai
 " colorscheme desert
 
-
 " 设置标记一列的背景颜色和数字一行颜色一致
 hi! link SignColumn   LineNr
 hi! link ShowMarksHLl DiffAdd
@@ -361,3 +360,5 @@ set tags+=.tags
 " 跳转快捷键：<ctrl-]>跳转 <ctrl-t>返回
 au BufWritePost *.c,*.cpp,*.h,*.php,*.json,*.erl,*.sh,*.html,*.css,*.conf silent! !(ps -ef|grep ctags|grep -v grep|awk '{print $2}'|xargs -I{} kill -9 {}; rm -f .ctags1; ctags -Rf .tags1 --exclude='*.js' && mv -f .tags1 .tags) &> /dev/null &
 set ai si ci
+set timeout timeoutlen=1500 ttimeoutlen=100
+

@@ -27,10 +27,12 @@ nnoremap <leader>v V`}
 " Quickly save the current file
 nnoremap <leader>w :w
 " nmap <leader>e :e!<cr>
-nmap <leader>d :edit %:p:h/
+nmap <leader>dd :edit %:p:h/
+nmap <leader>df :diffthis<CR>
+nmap <leader>dn :enew<CR>
 nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
 " Quickly edit/reload the vimrc file
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
+" nmap <silent> <leader>ev :e $MYVIMRC<CR>
 
 noremap <F1> <Esc>"
 " F3 显示可打印字符开关
@@ -89,14 +91,9 @@ nmap <leader>tm :tabmove
 
 nmap <F8> :bd<CR>
 nmap <C-F8> :%bd<CR>
-nmap <leader>c :!start C:\Users\Administrator\AppData\Local\Google\Chrome\Application\chrome.exe %:p<CR>
-nmap <leader>s :!start C:\Program Files\Git\git-bash.exe<CR>
-
-nmap <leader>gg :Git
-nmap <leader>ga :Git add -A<cr>
-nmap <leader>gc :Git commit -m
+nmap <leader>ch :!start C:\Users\Administrator\AppData\Local\Google\Chrome\Application\chrome.exe %:p<CR>
+nmap <leader>gs :!start C:\Program Files\Git\git-bash.exe<CR>
 nmap <leader>gl :Git log --pretty=format:"\%cn - \%h - \%ar \%s"<cr>
-nmap <leader>gs :Git status<cr>
 
 nmap <leader>ss :set scrollbind<CR>
 nmap <leader>sn :set noscrollbind<CR>
@@ -118,3 +115,9 @@ nnoremap <S-up> :tabp<cr>
 "设置切换tabs快捷键
 nnoremap <C-n> :bnext<cr>
 nnoremap <C-p> :bprev<cr>
+"菜单栏隐藏与显示动态切换
+map <silent> <C-F1> :if &guioptions =~# 'm' <Bar>
+        \set guioptions-=m <bar>
+    \else <Bar>
+        \set guioptions+=m <Bar>
+    \endif<CR>
