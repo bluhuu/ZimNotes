@@ -1,2 +1,4 @@
 let g:UltiSnipsEnableSnipMate = 1
-let g:UltiSnipsSnippetsDir = $mypath ."/ultisnips"
+" let g:UltiSnipsSnippetDirectories=['UltiSnips']
+" let g:UltiSnipsSnippetsDir = $mypath ."/ultisnips"
+

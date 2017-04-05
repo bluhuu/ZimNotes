@@ -28,6 +28,7 @@ set formatoptions+=B
 "模仿windows快捷键 Ctrl+A全选、Ctrl+C复制、Ctrl+V粘贴
 source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
+"设置鼠标运行模式为WINDOWS模式
 behave mswin
 
 " 开启语法高亮
@@ -310,8 +311,8 @@ endif
 if has("gui_running")
     set guifont=Consolas:h14
     if has("win32")
-        set guifont=DejaVuSansMonoForPowerline\ NF:h10
-        " set gfn=Bitstream\ Vera\ Sans\ Mono:h10 gfw=新宋体:h11
+        " set guifont=DejaVuSansMonoForPowerline\ NF:h10
+        set gfn=Bitstream\ Vera\ Sans\ Mono:h10 gfw=新宋体:h11
     endif
     set guioptions-=T           "工具条
     set guioptions+=e           "可用来改变标签文本
@@ -362,3 +363,5 @@ au BufWritePost *.c,*.cpp,*.h,*.php,*.json,*.erl,*.sh,*.html,*.css,*.conf silent
 set ai si ci
 set timeout timeoutlen=1500 ttimeoutlen=100
 
+" 自定义语法
+au BufRead,BufNewFile *.wxml set filetype=html
