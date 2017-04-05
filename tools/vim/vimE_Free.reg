@@ -1,0 +1,22 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\*\shell\Edit_with_Gvim]
+@="Edit with &Gvim"
+
+[HKEY_CLASSES_ROOT\*\shell\Edit_with_Gvim\command]
+@="D:\\FreeProgram\\vim\\vim80\\gvim.exe -p --remote-tab-silent \"%1\""
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\gvim]
+@="Gvim &Here"
+"Icon"="D:\\FreeProgram\\vim\\vim80\\gvim.exe"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\gvim\command]
+@="D:\\FreeProgram\\vim\\vim80\\gvim.exe \"%v.\""
+
+[HKEY_CLASSES_ROOT\Directory\shell\gvim]
+@="Gvim &Here"
+"Icon"="D:\\FreeProgram\\vim\\vim80\\gvim.exe"
+
+[HKEY_CLASSES_ROOT\Directory\shell\gvim\command]
+@="D:\\FreeProgram\\vim\\vim80\\gvim.exe \"%v.\""
+

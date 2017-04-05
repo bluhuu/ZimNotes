@@ -27,4 +27,6 @@ npm uninstall --global smart-npm
 18. npm root -g					        查看全局的包的安装路径
 19. npm outdated					    检查包是否已经过时，此命令会列出所有已经过时的包，可以及时进行包的更新
 20. npm prune 						    删掉
+21. npm list --depth=0                  查看所有高级的npm moudles
+22. npm list --depth=0 -global          查看所有全局安装的模块
 

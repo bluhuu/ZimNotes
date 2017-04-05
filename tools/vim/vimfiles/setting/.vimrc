@@ -1,79 +1,65 @@
-let iCanHazVundle=1
-" let $HOME = "C:/Users/Administrator"
-let vundle_readme=expand('$HOME/vimfiles/bundle/Vundle.vim/README.md')
-if !filereadable(vundle_readme)
-    silent !mkdir -p vimfiles/bundle
-    silent !git clone https://github.com/VundleVim/Vundle.vim.git vimfiles/bundle/Vundle.vim
-    let iCanHazVundle=0
-endif
-cd D:\bluhuu\ZimNotes
-"""""""" 插件管理Vundle""""""""
-"关闭兼容模式
 set nocompatible
 filetype off
-set rtp+=$HOME/vimfiles/bundle/Vundle.vim/
-call vundle#begin('$HOME/vimfiles/bundle/')
-Plugin 'VundleVim/Vundle.vim'
-" -------------------------------插件列表----------------------------------
-" Plugin 'Mark'
-Plugin 'Shougo/neocomplete.vim'
-" Plugin 'ai/autoprefixer'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'alvan/vim-closetag'
-Plugin 'ap/vim-css-color'
-Plugin 'beautify-web/js-beautify'
-Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'dkprice/vim-easygrep'
-Plugin 'drmikehenry/vim-fontsize'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'godlygeek/tabular'
-Plugin 'gregsexton/gitv'
-Plugin 'gregsexton/matchtag'
-Plugin 'hail2u/vim-css3-syntax'
-Plugin 'haya14busa/incsearch-fuzzy.vim'
-Plugin 'haya14busa/incsearch.vim'
-Plugin 'honza/vim-snippets'
-Plugin 'itspriddle/vim-stripper'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'leshill/vim-json'
-Plugin 'majutsushi/tagbar'
-Plugin 'maksimr/vim-jsbeautify'
-Plugin 'marijnh/tern_for_vim'
-Plugin 'mattn/emmet-vim'
-Plugin 'matze/vim-move'
-Plugin 'sjl/gundo.vim'
-Plugin 'othree/csscomplete.vim'
-Plugin 'othree/html5.vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'rking/ag.vim'
-" Plugin 'ryanoasis/vim-devicons'
-Plugin 'scrooloose/nerdtree'
-" Plugin 'xuyuanp/nerdtree-git-plugin'
-Plugin 'mortonfox/nerdtree-clip'
-Plugin 'sirver/ultisnips'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-git'
-Plugin 'tpope/vim-markdown'
-Plugin 'tpope/vim-surround'
-" Plugin 'vim-autoprefixer'
-Plugin 'vim-expand-region'
-Plugin 'vim-scripts/L9'
-Plugin 'w0rp/ale'
-Plugin 'wesq3/vim-windowswap'
-Plugin 'yggdroot/indentline'
-Plugin 'hushicai/tagbar-javascript.vim' "npm install -g esctags
-Plugin 'tpope/vim-obsession'
-Plugin 'mattesgroeger/vim-bookmarks'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'crusoexia/vim-javascript-lib'
-Plugin 'algotech/ultisnips-javascript'
-Plugin 'scrooloose/nerdcommenter'
-if iCanHazVundle == 0
-    :PluginInstall
-endif
-call vundle#end()
+call plug#begin('~/vimfiles/plugged')
+Plug 'Shougo/neocomplete.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'alvan/vim-closetag'
+Plug 'ap/vim-css-color'
+Plug 'beautify-web/js-beautify'     "npm -g install js-beautify
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'dkprice/vim-easygrep'
+Plug 'drmikehenry/vim-fontsize'
+Plug 'easymotion/vim-easymotion'
+Plug 'godlygeek/tabular'
+Plug 'gregsexton/gitv'
+Plug 'gregsexton/matchtag'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'haya14busa/incsearch-fuzzy.vim'
+Plug 'haya14busa/incsearch.vim'
+Plug 'honza/vim-snippets'
+Plug 'itspriddle/vim-stripper'
+Plug 'jiangmiao/auto-pairs'
+Plug 'leshill/vim-json'
+Plug 'majutsushi/tagbar'
+Plug 'maksimr/vim-jsbeautify'
+Plug 'marijnh/tern_for_vim'
+Plug 'mattn/emmet-vim'
+Plug 'matze/vim-move'
+Plug 'sjl/gundo.vim'
+Plug 'othree/csscomplete.vim'
+Plug 'othree/html5.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'rking/ag.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'mortonfox/nerdtree-clip'
+Plug 'sirver/ultisnips'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-git'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-surround'
+Plug 'vim-autoprefixer'
+Plug 'vim-expand-region'
+Plug 'vim-scripts/L9'
+Plug 'w0rp/ale'
+Plug 'wesq3/vim-windowswap'
+Plug 'yggdroot/indentline'
+Plug 'hushicai/tagbar-javascript.vim' "npm install -g esctags
+Plug 'tpope/vim-obsession'
+Plug 'mattesgroeger/vim-bookmarks'
+Plug 'jelera/vim-javascript-syntax'
+Plug 'crusoexia/vim-javascript-lib'
+Plug 'algotech/ultisnips-javascript'
+Plug 'scrooloose/nerdcommenter'
+call plug#end()
+"PlugInstall [name ...] [#threads]	Install plugins
+"PlugUpdate [name ...] [#threads]	Install or update plugins
+"PlugClean[!]	Remove unused directories (bang version will clean without prompt)
+"PlugUpgrade	Upgrade vim-plug itself
+"PlugStatus	Check the status of plugins
+"PlugDiff	Examine changes from the previous update and the pending changes
+"PlugSnapshot[!] [output path]	Generate script for restoring the current snapshot of the "plugins
 filetype plugin indent on
 
 let mapleader = ";"
