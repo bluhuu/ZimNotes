@@ -39,8 +39,8 @@ syntax on
 " General Settings 基础设置
 "==========================================
 "窗口大小与位置
-winpos 300 100
-set cmdheight=1 lines=45 columns=140
+winpos 200 100
+set cmdheight=1 lines=40 columns=130
 " history存储容量
 set history=2000
 set updatecount=819222      "输入这么多个字符以后，把交换文件写入磁盘
@@ -225,8 +225,8 @@ set nrformats=
 " au FocusLost * :set norelativenumber number
 " au FocusGained * :set relativenumber
 " 插入模式下用绝对行号, 普通模式下用相对
-autocmd InsertEnter * :set norelativenumber number
-autocmd InsertLeave * :set relativenumber
+" autocmd InsertEnter * :set norelativenumber number
+" autocmd InsertLeave * :set relativenumber
 
 " 防止tmux下vim的背景色显示异常
 " Refer: http://sunaku.github.io/vim-256color-bce.html
@@ -365,3 +365,4 @@ set timeout timeoutlen=1500 ttimeoutlen=100
 
 " 自定义语法
 au BufRead,BufNewFile *.wxml set filetype=html
+au BufRead,BufNewFile *.wxss set filetype=css
