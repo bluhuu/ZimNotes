@@ -4,7 +4,7 @@ map <leader><F8> :call DeleteAllBuffersInWindow()<CR>
 map <C-F12> <ESC>:call OpenFileLocation()<CR>
 " nnoremap <F2> :call HideNumber()<CR>
 "autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,perl autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
-set statusline=\ %t%r%h%w\ [%Y]\ [%{&ff}]\ [%{&fenc}:%{&enc}]\ [%05.5b-%04.4B]
+set statusline=\ %h%1*%m%r%w%0*\ [%Y]\ [%{&ff}]\ [%{&fenc}:%{&enc}]\ [%05.5b-%04.4B]
 set statusline+=\ \ %r%{CurDir()}%h\ \ \ Line:\ %l/%L=%p%%\ %c
 set statusline+=\ %{exists('g:loaded_fugitive')?fugitive#statusline():''}
 
