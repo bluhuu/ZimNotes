@@ -12,6 +12,8 @@ Plug 'dkprice/vim-easygrep'
 Plug 'drmikehenry/vim-fontsize'
 Plug 'easymotion/vim-easymotion'
 Plug 'godlygeek/tabular'
+Plug 'junegunn/vim-easy-align'
+Plug 'danro/rename.vim'
 Plug 'gregsexton/gitv'
 Plug 'gregsexton/matchtag'
 Plug 'hail2u/vim-css3-syntax'
@@ -30,7 +32,6 @@ Plug 'sjl/gundo.vim'
 Plug 'othree/csscomplete.vim'
 Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
-Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'mortonfox/nerdtree-clip'
 Plug 'sirver/ultisnips'
@@ -84,4 +85,3 @@ source $mypath/vim-multiple-cursors.vim
 source $mypath/ctrlp.vim
 source $mypath/_fun-me.vim
 source $mypath/_mapKey.vim
-set runtimepath^=$HOME/vimfiles/bundle/ag.vim

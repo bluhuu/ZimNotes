@@ -1,6 +1,7 @@
 map <leader>zc :call ToggleFold()<cr>
 nmap <leader>zz :call Zoom()<CR>
 map <leader><F8> :call DeleteAllBuffersInWindow()<CR>
+map <C-F12> <ESC>:call OpenFileLocation()<CR>
 " nnoremap <F2> :call HideNumber()<CR>
 "autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,perl autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 set statusline=\ %t%r%h%w\ [%Y]\ [%{&ff}]\ [%{&fenc}:%{&enc}]\ [%05.5b-%04.4B]
@@ -107,4 +108,11 @@ endfunction
 function! Multiple_cursors_after()
     exe 'NeoCompleteUnlock'
     echo 'Enabled autocomplete'
+endfunction
+function OpenFileLocation()
+    if ( expand("%") != "" )
+        execute "!start explorer /select, %"
+    else
+        execute "!start explorer /select, %:p:h"
+    endif
 endfunction
