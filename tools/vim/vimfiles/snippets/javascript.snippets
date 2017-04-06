@@ -162,7 +162,7 @@ snippet jp "JSON.parse()"
 snippet js "JSON.stringify()"
 	JSON.stringify(${1:obj})
 
-snippet le "let = "
+snippet let "let = "
 	let ${1} = ${0}
 
 # snippet for
@@ -175,7 +175,7 @@ snippet foreach "[].forEach()=>{}"
 		${0}
 	})
 
-snippet forin
+snippet forin "for in"
 	for (${1:prop} in ${2:obj}) {
 		if (${2:obj}.hasOwnProperty(${1:prop})) {
 			${0}
@@ -192,19 +192,19 @@ snippet while "while(){}"
 		${0}
 	}
 
-snippet al
+snippet ale "alert()"
 	alert(${1:msg})
 
-snippet co
+snippet confirm "confirm()"
 	confirm(${1:msg})
 
 snippet deb "debugger"
 	debugger
 
-snippet pm
+snippet prompt "prompt()"
 	prompt(${1:msg})
 
-snippet us
+snippet use "use strict"
 	'use strict'
 
 snippet imp "import from ''"
