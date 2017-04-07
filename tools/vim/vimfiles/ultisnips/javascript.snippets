@@ -1,0 +1,273 @@
+snippet afb "()=>{}"
+(${1}) => {
+	${2}
+}
+endsnippet
+
+snippet afe "()=>"
+(${1}) => ${2}
+endsnippet
+
+snippet class "class {}"
+class ${1} {
+	${0}
+}
+endsnippet
+
+snippet clex "class extens {}"
+class ${1} extends ${2} {
+	${0}
+}
+endsnippet
+
+snippet log "console.log()"
+console.log(${1:obj})
+endsnippet
+
+snippet dir "console.dir()"
+console.dir(${1:obj})
+endsnippet
+
+snippet err "console.error()"
+console.error(${1:obj})
+endsnippet
+
+snippet info "console.info()"
+console.info(${1:obj})
+endsnippet
+
+snippet warn "console.warn()"
+console.warn(${1:obj})
+endsnippet
+
+snippet con "const = "
+const ${1} = ${0}
+endsnippet
+
+snippet domae "document.addEventListener()"
+${1:document}.addEventListener('${2:event}', ${3:function})
+endsnippet
+
+snippet domac "document.appendChild()"
+${1:document}.appendChild(${2:elem})
+endsnippet
+
+snippet domca "document.classList.add()"
+${1:document}.classList.add('${2:class}')
+endsnippet
+
+snippet domcr "document.classList.remove()"
+${1:document}.classList.remove('${2:class}')
+endsnippet
+
+snippet domct "document.classList.toggle()"
+${1:document}.classList.toggle('${2:class}')
+endsnippet
+
+snippet domcdf "document.createDocumentFragment()"
+${1:document}.createDocumentFragment(${2:elem})
+endsnippet
+
+snippet domcel "document.createElement()"
+${1:document}.createElement(${2:elem})
+endsnippet
+
+snippet domga "document.getAttribute()"
+${1:document}.getAttribute('${2:attr}')
+endsnippet
+
+snippet domgi "document.getElementById()"
+${1:document}.getElementById('${2:id}')
+endsnippet
+
+snippet domgc "document.getElementsByClassName()"
+${1:document}.getElementsByClassName('${2:class}')
+endsnippet
+
+snippet domgt "document.getElementsByTagName()"
+${1:document}.getElementsByTagName('${2:tag}')
+endsnippet
+
+snippet domih "document.innerHTML = "
+${1:document}.innerHTML = '${2:html}'
+endsnippet
+
+snippet domqs "document.querySelector()"
+${1:document}.querySelector('${2:selector}')
+endsnippet
+
+snippet domqsa "document.querySelectorAll()"
+${1:document}.querySelectorAll('${2:selector}')
+endsnippet
+
+snippet domra "document.removeAttribute()"
+${1:document}.removeAttribute('${2:attr}')
+endsnippet
+
+snippet domrc "document.removeChild()"
+${1:document}.removeChild(${2:elem})
+endsnippet
+
+snippet domsa "document.setAttribute()"
+${1:document}.setAttribute('${2:attr}', ${3:value})
+endsnippet
+
+snippet domtc "document.textContent()"
+${1:document}.textContent = '${2:content}'
+endsnippet
+
+snippet if "if(){}"
+if (${1:condition}) {
+	${0}
+}
+endsnippet
+
+snippet ife "if else ..."
+if (${1:condition}) {
+	${2}
+} else {
+	${0}
+}
+endsnippet
+
+snippet ifei "if else if ..."
+if (${1:condition}) {
+	${2}
+} else if (${3:condition}) {
+	${0}
+}
+endsnippet
+
+snippet switch "switch case ..."
+switch (${1:condition}) {
+	case ${2:when}:
+		${0}
+}
+endsnippet
+
+snippet tc "try ... catch ..."
+try {
+	${1}
+} catch (${2:err}) {
+	${0}
+}
+endsnippet
+
+snippet tcf "try ... catch ... finally ..."
+try {
+	${1}
+} catch (${2:err}) {
+	${3}
+} finally {
+	${0}
+}
+endsnippet
+
+snippet tf "try ... finally ..."
+try {
+	${1}
+} finally {
+	${0}
+}
+endsnippet
+
+snippet afn "function(){}"
+function (${1}) {
+	${2}
+}
+endsnippet
+
+snippet afgn
+function* (${1}) {
+	${2}
+}
+endsnippet
+
+snippet fgn
+function* ${1:name} (${2}) {
+	${3}
+}
+endsnippet
+
+snippet fn "function name(){}"
+function ${1:name} (${2}) {
+	${3}
+}
+endsnippet
+
+snippet jp "JSON.parse()"
+JSON.parse(${1:obj})
+endsnippet
+
+snippet js "JSON.stringify()"
+JSON.stringify(${1:obj})
+endsnippet
+
+snippet let "let = "
+let ${1} = ${0}
+endsnippet
+
+# snippet for
+# for (let i = 0 i < ${1:length} i++) {
+	# ${0}
+# }
+# endsnippet
+
+snippet foreach "[].forEach()=>{}"
+${1:array}.forEach((${2:item}) => {
+	${0}
+})
+endsnippet
+
+snippet forin "for in"
+for (${1:prop} in ${2:obj}) {
+	if (${2:obj}.hasOwnProperty(${1:prop})) {
+		${0}
+	}
+}
+endsnippet
+
+snippet forof "for (let of )"
+for (let ${1:elem} of ${2:obj}) {
+	${0}
+}
+endsnippet
+
+snippet while "while(){}"
+while (${1:condition}) {
+	${0}
+}
+endsnippet
+
+snippet ale "alert()"
+alert(${1:msg})
+endsnippet
+
+snippet confirm "confirm()"
+confirm(${1:msg})
+endsnippet
+
+snippet deb "debugger"
+debugger
+endsnippet
+
+snippet prompt "prompt()"
+prompt(${1:msg})
+endsnippet
+
+snippet use "use strict"
+'use strict'
+endsnippet
+
+snippet imp "import from ''"
+import ${1:module} from '${2:path}'
+endsnippet
+
+snippet sto "setTimeout()"
+setTimeout(${2:function}, ${1:duration})
+endsnippet
+
+snippet sti "setInterval()"
+setInterval(${2:function}, ${1:duration})
+endsnippet
+
