@@ -5,7 +5,7 @@ Plug 'Shougo/neocomplete.vim'       "echo has('lua')
 Plug 'airblade/vim-gitgutter'
 Plug 'alvan/vim-closetag'
 Plug 'ap/vim-css-color'
-Plug 'beautify-web/js-beautify'     "npm -g install js-beautify
+Plug 'beautify-web/js-beautify'
 Plug 'maksimr/vim-jsbeautify'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -24,7 +24,7 @@ Plug 'honza/vim-snippets'
 Plug 'itspriddle/vim-stripper'
 Plug 'jiangmiao/auto-pairs'
 Plug 'majutsushi/tagbar'
-Plug 'hushicai/tagbar-javascript.vim' "npm install -g esctags
+Plug 'hushicai/tagbar-javascript.vim'
 Plug 'marijnh/tern_for_vim'
 Plug 'mattn/emmet-vim'
 Plug 'matze/vim-move'
@@ -42,7 +42,7 @@ Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-surround'
 Plug 'vim-expand-region'
 Plug 'vim-scripts/L9'
-Plug 'w0rp/ale'                         "npm install -g jshint csslint
+Plug 'w0rp/ale'
 Plug 'wesq3/vim-windowswap'
 Plug 'yggdroot/indentline'
 Plug 'tpope/vim-obsession'
@@ -83,4 +83,4 @@ source $mypath/vim-multiple-cursors.vim
 source $mypath/ctrlp.vim
 source $mypath/_fun-me.vim
 source $mypath/_mapKey.vim
-" npm i -g postcss-cli autoprefixer
+" npm i -g jshint csslint js-beautify esctags postcss-cli autoprefixer
