@@ -116,3 +116,38 @@ function OpenFileLocation()
         execute "!start explorer /select, %:p:h"
     endif
 endfunction
+
+" npm i -g postcss-cli autoprefixer
+vnoremap <F7> : <c-u>call PrefixVisualMyCSS()<cr>
+nnoremap <C-F7> : <c-u>call PrefixMyCSS()<cr>
+nnoremap <F7> : <c-u>call PrefixMeCSS()<cr>
+command! Prefix call PrefixMyCSS()
+
+function! PrefixVisualMyCSS()
+    echo "Add CSS vendor prefixes to visually selected block of code"
+    echo "Hit ENTER or you can add Autoprefixer CLI Options"
+    call inputsave()
+    let Options = input('Enter options:')
+    call inputrestore()
+        silent exec "'<,'>! postcss --use autoprefixer " . escape(expand(Options), '%')
+        exe
+            %s/\r\+$//e
+        exe
+endfunction
+
+function! PrefixMyCSS()
+    echo "Add vendor prefixes to CSS rules"
+    echo "Hit ENTER or you can add Autoprefixer CLI Options"
+    call inputsave()
+    let Options = input('Enter options:')
+    call inputrestore()
+        silent exec "%! postcss --use autoprefixer " . escape(expand(Options), '%')
+        exe
+            %s/\r\+$//e
+        exe
+endfunction
+
+function! PrefixMeCSS()
+    call inputrestore()
+        silent exec "!postcss % --use autoprefixer -o %"
+endfunction

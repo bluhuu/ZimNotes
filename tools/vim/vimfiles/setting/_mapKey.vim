@@ -121,3 +121,5 @@ map <silent> <C-F1> :if &guioptions =~# 'm' <Bar>
     \else <Bar>
         \set guioptions+=m <Bar>
     \endif<CR>
+nmap gcc <leader>c<Space>
+xmap gcc <leader>c<Space>

@@ -1,11 +1,12 @@
 set nocompatible
 filetype off
 call plug#begin('~/vimfiles/plugged')
-Plug 'Shougo/neocomplete.vim'
+Plug 'Shougo/neocomplete.vim'       "echo has('lua')
 Plug 'airblade/vim-gitgutter'
 Plug 'alvan/vim-closetag'
 Plug 'ap/vim-css-color'
 Plug 'beautify-web/js-beautify'     "npm -g install js-beautify
+Plug 'maksimr/vim-jsbeautify'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dkprice/vim-easygrep'
@@ -22,9 +23,8 @@ Plug 'haya14busa/incsearch.vim'
 Plug 'honza/vim-snippets'
 Plug 'itspriddle/vim-stripper'
 Plug 'jiangmiao/auto-pairs'
-Plug 'leshill/vim-json'
 Plug 'majutsushi/tagbar'
-Plug 'maksimr/vim-jsbeautify'
+Plug 'hushicai/tagbar-javascript.vim' "npm install -g esctags
 Plug 'marijnh/tern_for_vim'
 Plug 'mattn/emmet-vim'
 Plug 'matze/vim-move'
@@ -40,13 +40,11 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-surround'
-Plug 'vim-autoprefixer'
 Plug 'vim-expand-region'
 Plug 'vim-scripts/L9'
-Plug 'w0rp/ale'
+Plug 'w0rp/ale'                         "npm install -g jshint csslint
 Plug 'wesq3/vim-windowswap'
 Plug 'yggdroot/indentline'
-Plug 'hushicai/tagbar-javascript.vim' "npm install -g esctags
 Plug 'tpope/vim-obsession'
 Plug 'mattesgroeger/vim-bookmarks'
 Plug 'jelera/vim-javascript-syntax'
@@ -85,3 +83,4 @@ source $mypath/vim-multiple-cursors.vim
 source $mypath/ctrlp.vim
 source $mypath/_fun-me.vim
 source $mypath/_mapKey.vim
+" npm i -g postcss-cli autoprefixer

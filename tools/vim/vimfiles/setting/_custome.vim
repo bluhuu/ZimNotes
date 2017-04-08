@@ -243,9 +243,9 @@ endif
 " others 其它设置
 "==========================================
 " vimrc文件修改之后自动加载, windows
-autocmd! bufwritepost _vimrc source %
+" autocmd! bufwritepost _vimrc source %
 " vimrc文件修改之后自动加载, linux
-autocmd! bufwritepost .vimrc source %
+" autocmd! bufwritepost .vimrc source %
 
 " 自动补全配置
 " 让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
@@ -309,10 +309,9 @@ endif
 
 " Set extra options when running in GUI mode
 if has("gui_running")
-    set guifont=Consolas:h14
+    set guifont=Consolas:h11
     if has("win32")
-        " set guifont=DejaVuSansMonoForPowerline\ NF:h10
-        set gfn=Bitstream\ Vera\ Sans\ Mono:h10 gfw=新宋体:h11
+        set guifont=DejaVuSansMono\ NF:h10 gfw=新宋体:h11
     endif
     set guioptions-=T           "工具条
     set guioptions+=e           "可用来改变标签文本
