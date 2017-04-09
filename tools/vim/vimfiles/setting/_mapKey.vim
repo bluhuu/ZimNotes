@@ -91,7 +91,11 @@ nmap <leader>tm :tabmove
 
 nmap <F8> :bd<CR>
 nmap <C-F8> :%bd<CR>
-nmap <leader>ch :!start C:\Users\Administrator\AppData\Local\Google\Chrome\Application\chrome.exe %:p<CR>
+if filereadable(substitute("C:\Users\Administrator\AppData\Local\Google\Chrome\Application\chrome.exe"," ",expand("%<"),'g'))
+    nmap <silent> <leader>gg :!start C:\Users\Administrator\AppData\Local\Google\Chrome\Application\chrome.exe %:p<CR>
+else
+    nmap <silent> <leader>gg :!start C:\Program Files (x86)\Google\Chrome\Application\chrome.exe %:p<CR>
+endif
 nmap <leader>gs :!start C:\Program Files\Git\git-bash.exe<CR>
 nmap <leader>gl :Git log --pretty=format:"\%cn - \%h - \%ar \%s"<cr>
 

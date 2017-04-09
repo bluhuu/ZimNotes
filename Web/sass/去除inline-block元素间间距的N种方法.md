@@ -116,6 +116,12 @@ ul {
     vertical-align: top;
 }
 ```
+## 最佳方法
+```css
+.diba { display: inline-block; *display:inline; *zoom:1; }
+.diba-wrap { letter-spacing:-0.31em; *letter-spacing:normal; word-spacing:-0.43em; display:table;}
+.diba-wrap .diba{ letter-spacing: normal; word-spacing: normal; vertical-align: top; }
+```
 
 
 
