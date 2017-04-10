@@ -5,9 +5,7 @@ Plug 'Shougo/neocomplete.vim'       "echo has('lua')
 Plug 'airblade/vim-gitgutter'
 Plug 'alvan/vim-closetag'
 Plug 'ap/vim-css-color'
-Plug 'beautify-web/js-beautify'
 Plug 'maksimr/vim-jsbeautify'
-Plug 'cakebaker/scss-syntax.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dkprice/vim-easygrep'
 Plug 'drmikehenry/vim-fontsize'
@@ -17,7 +15,6 @@ Plug 'junegunn/vim-easy-align'
 Plug 'danro/rename.vim'
 Plug 'gregsexton/gitv'
 Plug 'gregsexton/matchtag'
-Plug 'hail2u/vim-css3-syntax'
 Plug 'haya14busa/incsearch-fuzzy.vim'
 Plug 'haya14busa/incsearch.vim'
 Plug 'honza/vim-snippets'
@@ -30,8 +27,6 @@ Plug 'mattn/emmet-vim'
 Plug 'matze/vim-move'
 Plug 'sjl/gundo.vim'
 Plug 'othree/csscomplete.vim'
-Plug 'othree/html5.vim'
-Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdtree'
 Plug 'mortonfox/nerdtree-clip'
 Plug 'sirver/ultisnips'
@@ -44,12 +39,8 @@ Plug 'vim-expand-region'
 Plug 'vim-scripts/L9'
 Plug 'w0rp/ale'
 Plug 'wesq3/vim-windowswap'
-Plug 'yggdroot/indentline'
 Plug 'tpope/vim-obsession'
 Plug 'mattesgroeger/vim-bookmarks'
-Plug 'jelera/vim-javascript-syntax'
-Plug 'crusoexia/vim-javascript-lib'
-Plug 'algotech/ultisnips-javascript'
 Plug 'scrooloose/nerdcommenter'
 call plug#end()
 "PlugInstall [name ...] [#threads]	Install plugins
@@ -65,7 +56,6 @@ let mapleader = ";"
 let g:mapleader = ";"
 " 引入插件的设置
 source $mypath/_custome.vim
-" source $mypath/ctrlp-funky.vim
 source $mypath/ale.vim
 source $mypath/gundo.vim
 source $mypath/molokai.vim
