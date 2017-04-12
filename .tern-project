@@ -1,6 +1,6 @@
 {
     "ecmaVersion": 5,
-    "libs": [browser, "jquery", "underscore"],
+    "libs": ["browser", "jquery", "underscore"],
     "plugins": {
         "complete_strings": {
             "maxLength": 15
@@ -22,6 +22,6 @@
         },
         "node": true,
         "node_resolve": {},
-        commonjs: true
+        "commonjs": true
     }
 }

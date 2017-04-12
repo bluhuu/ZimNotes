@@ -310,7 +310,7 @@ au BufWinEnter *.php set mps-=<:>
 if has("gui_running")
     set guifont=Consolas:h11
     if has("win32")
-        set guifont=DejaVuSansMono\ NF:h10 gfw=新宋体:h11
+        set guifont=DejaVuSansMono\ NF:h9 gfw=新宋体:h10
     endif
     set guioptions-=T           "工具条
     set guioptions+=e           "可用来改变标签文本
