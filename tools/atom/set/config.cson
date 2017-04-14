@@ -68,6 +68,13 @@
     BrowserPlus: false
     Opera: false
     Safari: false
+    fileTypes: [
+      "html"
+      "htm"
+      "xhtml"
+      "md"
+      "markdown"
+    ]
   "open-terminal-here":
     command: "start /D \"%cd%\" powershell"
   "split-diff":
