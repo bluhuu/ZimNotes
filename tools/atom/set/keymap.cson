@@ -38,3 +38,5 @@
 'atom-text-editor':
     'ctrl-alt-h':'core:move-left'
     'ctrl-alt-l':'core:move-right'
+    'ctrl-alt-j':'core:move-down'
+    'ctrl-alt-k':'core:move-up'
