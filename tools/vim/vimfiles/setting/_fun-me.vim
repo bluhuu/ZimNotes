@@ -1,5 +1,5 @@
-map <leader>zc :call ToggleFold()<cr>
-nmap <leader>zz :call Zoom()<CR>
+map <leader>zz :call ToggleFold()<cr>
+nmap <leader><F11> :call Zoom()<CR>
 map <leader><F8> :call DeleteAllBuffersInWindow()<CR>
 map <C-F12> <ESC>:call OpenFileLocation()<CR>
 " nnoremap <F2> :call HideNumber()<CR>
