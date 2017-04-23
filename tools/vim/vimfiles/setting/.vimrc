@@ -52,8 +52,8 @@ call plug#end()
 "PlugSnapshot[!] [output path]	Generate script for restoring the current snapshot of the "plugins
 filetype plugin indent on
 
-let mapleader = ";"
-let g:mapleader = ";"
+let mapleader = ","
+let g:mapleader = ","
 " 引入插件的设置
 source $mypath/_custome.vim
 source $mypath/ale.vim

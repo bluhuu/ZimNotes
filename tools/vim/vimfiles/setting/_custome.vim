@@ -39,7 +39,7 @@ syntax on
 " General Settings 基础设置
 "==========================================
 "窗口大小与位置
-winpos 200 100
+winpos 100 100
 set cmdheight=1 lines=40 columns=130
 " history存储容量
 set history=2000
@@ -310,7 +310,7 @@ au BufWinEnter *.php set mps-=<:>
 if has("gui_running")
     set guifont=Consolas:h11
     if has("win32")
-        set guifont=DejaVuSansMono\ NF:h12 gfw=新宋体:h12
+        set guifont=DejaVuSansMono\ NF:h11 gfw=新宋体:h11
     endif
     set guioptions-=T           "工具条
     set guioptions+=e           "可用来改变标签文本
