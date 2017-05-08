@@ -34,7 +34,7 @@ linter
 linter-jshint
 linter-ui-default
 lodash-snippets
-markdown-image-helper 
+markdown-image-helper
 markdown-scroll-sync
 maximize-panes
 minimap
