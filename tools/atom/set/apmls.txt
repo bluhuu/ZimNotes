@@ -18,6 +18,9 @@ double-tag
 emmet
 ex-mode
 file-icons
+git clone https://github.com/CorentinAndre/Vuejs-snippets vuejs2-snippets
+git clone https://github.com/ealves-pt/atom-vue2-autocomplete vue2-autocomplete
+git clone https://github.com/hedefalk/atom-vue language-vue
 git-diff-details
 git-plus
 git-time-machine
@@ -34,7 +37,7 @@ linter
 linter-jshint
 linter-ui-default
 lodash-snippets
-markdown-image-helper 
+markdown-image-helper
 markdown-scroll-sync
 maximize-panes
 minimap
