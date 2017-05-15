@@ -1,0 +1,94 @@
+"*":
+  "activate-power-mode":
+    comboMode:
+      enabled: false
+    particles:
+      colours: {}
+  "atom-beautify":
+    general:
+      _analyticsUserId: "4d57d059-d7a6-4a92-bdcb-a6db70cd5a42"
+  core:
+    autoHideMenuBar: true
+    customFileTypes:
+      "source.css": "wxss"
+      "text.html.basic": "wxml"
+    disabledPackages: [
+      "activate-power-mode"
+    ]
+    packagesWithKeymapsDisabled: []
+    telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "monokai"
+    ]
+  editor:
+    fontFamily: "DejaVuSansMono NF"
+    fontSize: 13
+    showIndentGuide: true
+    softWrap: true
+    tabLength: 4
+    tabType: "soft"
+    zoomFontWhenCtrlScrolling: false
+  "exception-reporting":
+    userId: "64efe156-193f-4526-8a1f-956c78297edc"
+  expose:
+    useAnimations: false
+  "git-diff-details":
+    closeAfterCopy: true
+    enableSyntaxHighlighting: true
+    keepViewToggled: false
+  "highlight-line":
+    hideHighlightOnSelect: true
+  jsonlint:
+    hideOnNoErrors: true
+  linter:
+    lintOnChange: false
+  "linter-jshint": {}
+  "linter-ui-default":
+    panelHeight: 66
+    showPanel: true
+  "markdown-preview": {}
+  minimap:
+    autoToggle: false
+    plugins:
+      bookmarks: true
+      bookmarksDecorationsZIndex: 0
+      cursorline: true
+      cursorlineDecorationsZIndex: 0
+      "find-and-replace": true
+      "find-and-replaceDecorationsZIndex": 0
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+      linter: true
+      linterDecorationsZIndex: 0
+      selection: true
+      selectionDecorationsZIndex: 0
+      "split-diff": true
+      "split-diffDecorationsZIndex": 0
+  "open-in-browsers":
+    BrowserPlus: false
+    Opera: false
+    Safari: false
+    fileTypes: [
+      "html"
+      "htm"
+      "xhtml"
+      "md"
+      "markdown"
+    ]
+  "open-terminal-here":
+    command: "\"C:\\Program Files\\Git\\git-bash.exe\" \"--cd=%cd%\""
+  "project-manager":
+    alwaysOpenInSameWindow: true
+    savePathsRelativeToHome: true
+  "split-diff":
+    diffWords: true
+    ignoreWhitespace: true
+    leftEditorColor: "red"
+    rightEditorColor: "green"
+    scrollSyncType: "Vertical + Horizontal"
+  "vim-mode": {}
+  welcome:
+    showOnStartup: false
