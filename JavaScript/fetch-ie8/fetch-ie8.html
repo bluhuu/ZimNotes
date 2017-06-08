@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-shim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/json3/3.3.2/json3.min.js"></script>
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.34.2/es6-shim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.34.2/es6-sham.min.js"></script>
+        <script src="https://wzrd.in/standalone/es7-shim@latest"></script>-->
+        <script src="https://cdn.bootcss.com/es6-promise/4.1.0/es6-promise.auto.js"></script>
+        <script src="./fetch-detector.js"></script>
+        <script src="./fetch-ie8.js"></script>
+        <script src="https://cdn.bootcss.com/fetch-jsonp/1.0.7/fetch-jsonp.js"></script>
+    </head>
+    <body>
+    
+    </body>
+    <script>
+        // var formData = new FormData();
+        // formData.append('SiteBpartnerID', '1021862');
+
+        var promise = fetch('/elink_eai_web/siteBpartnerAction/queryDetail.do', {
+            method: 'post',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+            },
+            body: "SiteBpartnerID=1021862&bb=22&cc=33",
+            credentials: "include"
+        }).then(function(value){
+            return value.json();
+        }).then(function(value){
+            console.log(value);
+        })['catch'](function(e){
+            console.log(e);
+        });
+
+    </script>
+</html>
