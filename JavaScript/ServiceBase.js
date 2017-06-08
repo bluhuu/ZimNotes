@@ -54,7 +54,7 @@ class ServiceBase {
                 if (response.status >= 200 && response.status < 300) {
                     return response
                 }
-                throw new Error(response.statusText)
+                reject(new Error(response.statusText))
             }).then((response) => {
                 return response.json()
             })
