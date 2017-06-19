@@ -40,3 +40,6 @@ fixedOnScroll.prototype.setFixedInWindow = function(id, top) {
     document.getElementById(id).style.position = "static";
   }
 }
+
+//例
+new fixedOnScroll('sidebar','tools')
