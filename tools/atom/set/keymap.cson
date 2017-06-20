@@ -40,3 +40,6 @@
     'ctrl-alt-l':'core:move-right'
     'ctrl-alt-j':'core:move-down'
     'ctrl-alt-k':'core:move-up'
+'atom-text-editor.autocomplete-active':
+    'ctrl-p':'core:move-up'
+    'ctrl-n':'core:move-down'

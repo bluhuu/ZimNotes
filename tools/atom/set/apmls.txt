@@ -1,31 +1,18 @@
-activate-power-mode
-atom-beautify
-atom-bracket-highlight
-atom-css-comb
-atom-live-server
-atom-ternjs
-atom-wrap-in-tag
-auto-indent
-autoclose-html
+git clone https://github.com/Glavin001/atom-beautify atom-beautify
+git clone https://github.com/pvorona/atom-bracket-highlight atom-bracket-highlight
+git clone https://github.com/tststs/atom-ternjs atom-ternjs
 autocomplete-lodash
 autocomplete-paths
 autoprefixer
 busy-signal
-color-picker
-css-snippets
+git clone https://github.com/dsandstrom/atom-css-snippets css-snippets
 docblockr
 double-tag
-emmet
-ex-mode
-file-icons
-git clone https://github.com/CorentinAndre/Vuejs-snippets vuejs2-snippets
-git clone https://github.com/ealves-pt/atom-vue2-autocomplete vue2-autocomplete
-git clone https://github.com/hedefalk/atom-vue language-vue
-git clone https://github.com/matthojo/language-stylus stylus
+git clone https://github.com/emmetio/emmet-atom emmet
+git clone https://github.com/file-icons/atom file-icons
 git-diff-details
-git-plus
-git-time-machine
-highlight-line
+git clone https://github.com/akonwi/git-plus git-plus
+git clone https://github.com/littlebee/git-time-machine git-time-machine
 highlight-selected
 intentions
 javascript-snippets
@@ -41,6 +28,31 @@ lodash-snippets
 markdown-image-helper
 markdown-scroll-sync
 maximize-panes
+git clone https://github.com/kevinsawicki/monokai monokai
+open-in-browsers
+open-terminal-here
+open-vim
+pigments
+project-manager
+sort-lines
+split-diff
+tree-view-git-status
+--------------------------------------------------------------------------------
+git clone https://github.com/sanusart/atom-wrap-in-tag atom-wrap-in-tag
+git clone https://github.com/mattberkowitz/autoclose-html autoclose-html
+git clone https://github.com/griiin/atom-auto-indent auto-indent
+git clone https://github.com/richrace/highlight-line highlight-line
+git clone https://github.com/thomaslindstrom/color-picker color-picker
+git clone https://github.com/jchouse/csscomb-atom atom-css-comb
+
+ex-mode
+vim-mode
+vim-surround
+atom-live-server
+git clone https://github.com/CorentinAndre/Vuejs-snippets vuejs2-snippets
+git clone https://github.com/ealves-pt/atom-vue2-autocomplete vue2-autocomplete
+git clone https://github.com/hedefalk/atom-vue language-vue
+git clone https://github.com/matthojo/language-stylus stylus
 minimap
 minimap-bookmarks
 minimap-cursorline
@@ -50,14 +62,3 @@ minimap-highlight-selected
 minimap-linter
 minimap-selection
 minimap-split-diff
-monokai
-open-in-browsers
-open-terminal-here
-open-vim
-pigments
-project-manager
-sort-lines
-split-diff
-tree-view-git-status
-vim-mode
-vim-surround
