@@ -18,7 +18,7 @@ git clone https://github.com/borisrorsvort/js-patterns-atom-snippets js-patterns
 git clone https://github.com/tcarlsen/atom-jsonlint jsonlint
 git clone https://github.com/niltonheck/language-freemarker language-freemarker
 git clone https://github.com/steelbrain/linter linter
-git clone https://github.com/AtomLinter/linter-jshint linter-jshint
+git clone https://github.com/AtomLinter/linter-eslint linter-eslint
 git clone https://github.com/bigyuki/markdown-image-helper markdown-image-helper
 git clone https://github.com/mark-hahn/markdown-scroll-sync markdown-scroll-sync
 git clone https://github.com/santip/maximize-panes maximize-panes
@@ -34,6 +34,7 @@ git clone https://github.com/webbushka/atom-react-snippets react-snippets
 git clone https://github.com/aakashns/atom-react-native-snippets react-native-snippets
 git clone https://github.com/chmaltsp/react-redux-snippets react-redux-snippets
 --------------------------------------------------------------------------------
+git clone https://github.com/AtomLinter/linter-jshint linter-jshint
 git clone https://github.com/subesokun/atom-tree-view-git-status tree-view-git-status
 git clone https://github.com/richtmat/lodash-snippets lodash-snippets
 git clone https://github.com/steelbrain/intentions intentions

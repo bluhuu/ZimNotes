@@ -35,7 +35,7 @@
     'ctrl-shift-M':'unset!'
 'atom-workspace':
     'ctrl-alt-l':'unset!'
-'atom-text-editor':
+'atom-text-editor .editor-contents--private:not(.has-selection)':
     'ctrl-b':'core:move-left'
     'ctrl-f':'core:move-right'
     'ctrl-n':'core:move-down'
@@ -46,6 +46,6 @@
 '.platform-win32, .platform-linux':
     'ctrl-h': 'find-and-replace:show'
 '.platform-win32':
-    'f12': 'fuzzy-finder:toggle-buffer-finder'
+    'ctrl-alt-l': 'fuzzy-finder:toggle-buffer-finder'
 'body':
     'ctrl-shift-n': 'application:new-file'
