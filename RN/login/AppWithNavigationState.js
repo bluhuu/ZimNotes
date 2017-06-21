@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import {
   NavigationExperimental,
-  BackAndroid,
+  BackHandler,
   TouchableHighlight,
   PixelRatio,
   StyleSheet,
@@ -9,6 +9,7 @@ import {
   View,
 } from 'react-native';
 import { connect } from 'react-redux';
+import { NavigationActions } from 'react-navigation';
 
 class AppWithNavigationState extends Component{
   constructor(props) {
@@ -17,11 +18,11 @@ class AppWithNavigationState extends Component{
   }
 
   componentDidMount() {
-    BackAndroid.addEventListener('hardwareBackPress', this.handleBackButton);
+    BackHandler.addEventListener('hardwareBackPress', this.handleBackButton);
   }
 
   componentWillUnmount() {
-    BackAndroid.removeEventListener('hardwareBackPress', this.handleBackButton);
+    BackHandler.removeEventListener('hardwareBackPress', this.handleBackButton);
   }
 
   //added to handle back button functionality on android
