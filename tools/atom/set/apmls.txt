@@ -29,6 +29,11 @@ git clone https://github.com/abe33/atom-pigments pigments
 git clone https://github.com/atom/sort-lines sort-lines
 git clone https://github.com/mupchrch/split-diff split-diff
 --------------------------------------------------------------------------------
+git clone https://github.com/orktes/atom-react react
+git clone https://github.com/webbushka/atom-react-snippets react-snippets
+git clone https://github.com/aakashns/atom-react-native-snippets react-native-snippets
+git clone https://github.com/chmaltsp/react-redux-snippets react-redux-snippets
+--------------------------------------------------------------------------------
 git clone https://github.com/subesokun/atom-tree-view-git-status tree-view-git-status
 git clone https://github.com/richtmat/lodash-snippets lodash-snippets
 git clone https://github.com/steelbrain/intentions intentions
