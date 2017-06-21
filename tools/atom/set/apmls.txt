@@ -1,43 +1,40 @@
 git clone https://github.com/Glavin001/atom-beautify atom-beautify
 git clone https://github.com/pvorona/atom-bracket-highlight atom-bracket-highlight
 git clone https://github.com/tststs/atom-ternjs atom-ternjs
-autocomplete-lodash
-autocomplete-paths
-autoprefixer
-busy-signal
+git clone https://github.com/atom-community/autocomplete-paths autocomplete-paths
+git clone https://github.com/sindresorhus/atom-autoprefixer autoprefixer
 git clone https://github.com/dsandstrom/atom-css-snippets css-snippets
-docblockr
-double-tag
+git clone https://github.com/nikhilkalige/docblockr docblockr
+git clone https://github.com/dsandstrom/atom-double-tag double-tag
 git clone https://github.com/emmetio/emmet-atom emmet
 git clone https://github.com/file-icons/atom file-icons
-git-diff-details
+git clone https://github.com/samu/git-diff-details git-diff-details
 git clone https://github.com/akonwi/git-plus git-plus
 git clone https://github.com/littlebee/git-time-machine git-time-machine
-highlight-selected
-intentions
-javascript-snippets
-jquery-snippets
-js-patterns-atom-snippets
-jsonlint
-language-freemarker
-language-viml
-linter
-linter-jshint
-linter-ui-default
-lodash-snippets
-markdown-image-helper
-markdown-scroll-sync
-maximize-panes
+git clone https://github.com/richrace/highlight-selected highlight-selected
+git clone https://github.com/zenorocha/atom-javascript-snippets javascript-snippets
+git clone https://github.com/james2doyle/atom-jquery-snippets jquery-snippets
+git clone https://github.com/borisrorsvort/js-patterns-atom-snippets js-patterns-atom-snippets
+git clone https://github.com/tcarlsen/atom-jsonlint jsonlint
+git clone https://github.com/niltonheck/language-freemarker language-freemarker
+git clone https://github.com/steelbrain/linter linter
+git clone https://github.com/AtomLinter/linter-jshint linter-jshint
+git clone https://github.com/bigyuki/markdown-image-helper markdown-image-helper
+git clone https://github.com/mark-hahn/markdown-scroll-sync markdown-scroll-sync
+git clone https://github.com/santip/maximize-panes maximize-panes
 git clone https://github.com/kevinsawicki/monokai monokai
-open-in-browsers
-open-terminal-here
-open-vim
-pigments
-project-manager
-sort-lines
-split-diff
-tree-view-git-status
+git clone https://github.com/skandasoft/open-in-browsers open-in-browsers
+git clone https://github.com/blueimp/atom-open-terminal-here open-terminal-here
+git clone https://github.com/abe33/atom-pigments pigments
+git clone https://github.com/atom/sort-lines sort-lines
+git clone https://github.com/mupchrch/split-diff split-diff
 --------------------------------------------------------------------------------
+git clone https://github.com/subesokun/atom-tree-view-git-status tree-view-git-status
+git clone https://github.com/richtmat/lodash-snippets lodash-snippets
+git clone https://github.com/steelbrain/intentions intentions
+git clone https://github.com/steelbrain/linter-ui-default linter-ui-default
+git clone https://github.com/steelbrain/busy-signal busy-signal
+git clone https://github.com/HiDeoo/autocomplete-lodash autocomplete-lodash
 git clone https://github.com/sanusart/atom-wrap-in-tag atom-wrap-in-tag
 git clone https://github.com/mattberkowitz/autoclose-html autoclose-html
 git clone https://github.com/griiin/atom-auto-indent auto-indent
@@ -45,9 +42,6 @@ git clone https://github.com/richrace/highlight-line highlight-line
 git clone https://github.com/thomaslindstrom/color-picker color-picker
 git clone https://github.com/jchouse/csscomb-atom atom-css-comb
 
-ex-mode
-vim-mode
-vim-surround
 atom-live-server
 git clone https://github.com/CorentinAndre/Vuejs-snippets vuejs2-snippets
 git clone https://github.com/ealves-pt/atom-vue2-autocomplete vue2-autocomplete
