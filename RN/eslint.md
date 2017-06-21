@@ -29,7 +29,9 @@ module.exports = {
     "extends": [
         "eslint:recommended", "plugin:react/recommended"
     ],
+    "parser": "babel-eslint",
     "parserOptions": {
+        "ecmaVersion": 6,
         "ecmaFeatures": {
             "experimentalObjectRestSpread": true,
             "jsx": true
@@ -41,7 +43,7 @@ module.exports = {
     ],
     "rules": {
         "indent": 0,
-        "linebreak-style": [ "error", "windows" ],
+        "linebreak-style": 0,
         "quotes": [ "off", "single" ],
         "semi": [ "off", "never" ],
         "react-native/no-unused-styles": 2,
@@ -52,7 +54,6 @@ module.exports = {
         "no-undef":1,
     }
 };
-
 ```
 ```json
 .eslintrc.json

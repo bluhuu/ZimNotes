@@ -1,13 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import {
-  NavigationExperimental,
-  BackHandler,
-  TouchableHighlight,
-  PixelRatio,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
+import { NavigationExperimental, BackHandler, TouchableHighlight, PixelRatio, StyleSheet, Text, View, } from 'react-native';
 import { connect } from 'react-redux';
 import { NavigationActions } from 'react-navigation';
 
@@ -42,10 +34,7 @@ class AppWithNavigationState extends Component{
     return (
           <View style={styles.container}>
             {(api.isAndroid()) &&
-              <StatusBar
-                  backgroundColor="#C2185B"
-                  barStyle="light-content"
-              />
+              <StatusBar backgroundColor="#C2185B" barStyle="light-content" />
             }
             <AppNavigator navigation={addNavigationHelpers({ dispatch, state: nav })}/>
           </View>
