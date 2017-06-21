@@ -36,10 +36,16 @@
 'atom-workspace':
     'ctrl-alt-l':'unset!'
 'atom-text-editor':
-    'ctrl-alt-h':'core:move-left'
-    'ctrl-alt-l':'core:move-right'
-    'ctrl-alt-j':'core:move-down'
-    'ctrl-alt-k':'core:move-up'
-'atom-text-editor.autocomplete-active':
-    'ctrl-p':'core:move-up'
+    'ctrl-b':'core:move-left'
+    'ctrl-f':'core:move-right'
     'ctrl-n':'core:move-down'
+    'ctrl-k':'core:move-up'
+'atom-text-editor.autocomplete-active':
+    'ctrl-n':'core:move-down'
+    'ctrl-p':'core:move-up'
+'.platform-win32, .platform-linux':
+    'ctrl-h': 'find-and-replace:show'
+'.platform-win32':
+    'f12': 'fuzzy-finder:toggle-buffer-finder'
+'body':
+    'ctrl-shift-n': 'application:new-file'
