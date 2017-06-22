@@ -1,6 +1,7 @@
 git clone https://github.com/emmetio/emmet-atom emmet
 git clone https://github.com/akonwi/git-plus git-plus
 git clone https://github.com/atom/sort-lines sort-lines
+git clone https://github.com/tststs/atom-ternjs atom-ternjs
 git clone https://github.com/blueimp/atom-open-terminal-here open-terminal-here
 git clone https://github.com/Glavin001/atom-beautify atom-beautify
 git clone https://github.com/littlebee/git-time-machine git-time-machine
@@ -39,7 +40,6 @@ git clone https://github.com/webbushka/atom-react-snippets react-snippets
 git clone https://github.com/aakashns/atom-react-native-snippets react-native-snippets
 git clone https://github.com/chmaltsp/react-redux-snippets react-redux-snippets
 --------------------------------------------------------------------------------
-git clone https://github.com/tststs/atom-ternjs atom-ternjs
 git clone https://github.com/AtomLinter/linter-jshint linter-jshint
 git clone https://github.com/subesokun/atom-tree-view-git-status tree-view-git-status
 git clone https://github.com/richtmat/lodash-snippets lodash-snippets
