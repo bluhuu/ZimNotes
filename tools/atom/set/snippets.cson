@@ -21,6 +21,7 @@
 # http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
 
 '.source.js':
+    # 微信小程序
     'showToast':
         'prefix': 'wxst'
         'body': '''
@@ -45,4 +46,15 @@
                             }
                         }
                     });
+                '''
+    # react-native
+    'RN-Image require':
+        'prefix': 'rnimage-require'
+        'body': '''
+                    <Image source={require(${1})} style={${2}}/>$0
+                '''
+    'RN-Image uri':
+        'prefix': 'rnimage-uri'
+        'body': '''
+                    <Image source={{uri: '${1}'}} style={{width: ${2}, height: ${3}}} />$0
                 '''
