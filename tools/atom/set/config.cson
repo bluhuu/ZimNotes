@@ -1,23 +1,16 @@
 "*":
-  "atom-beautify":
-    general:
-      _analyticsUserId: "4d57d059-d7a6-4a92-bdcb-a6db70cd5a42"
+  "atom-alignment":
+    alignmentSpaceChars: [
+      "=>"
+      ":="
+      "="
+      ":"
+    ]
   core:
-    autoHideMenuBar: true
     customFileTypes:
       "source.css": "wxss"
       "text.html.basic": "wxml"
-    disabledPackages: [
-      "ex-mode"
-      "vim-mode"
-      "vim-surround"
-    ]
-    packagesWithKeymapsDisabled: []
     telemetryConsent: "no"
-    themes: [
-      "one-dark-ui"
-      "monokai"
-    ]
   editor:
     fontFamily: "DejaVuSansMono NF"
     fontSize: 12
@@ -26,25 +19,17 @@
     tabLength: 4
     tabType: "soft"
     zoomFontWhenCtrlScrolling: false
-  "exception-reporting":
-    userId: "64efe156-193f-4526-8a1f-956c78297edc"
-  expose:
-    useAnimations: false
   "git-diff-details":
     closeAfterCopy: true
     enableSyntaxHighlighting: true
     keepViewToggled: false
-  "highlight-line":
-    hideHighlightOnSelect: true
   jsonlint:
     hideOnNoErrors: true
   linter:
     lintOnChange: false
-  "linter-jshint": {}
   "linter-ui-default":
     panelHeight: 68
     showPanel: true
-  "markdown-preview": {}
   minimap:
     autoToggle: false
     plugins:
@@ -75,14 +60,11 @@
       "md"
       "markdown"
     ]
-  "open-terminal-here":
-    command: "start /D \"%cd%\" powershell"
   "split-diff":
     diffWords: true
     ignoreWhitespace: true
     leftEditorColor: "red"
     rightEditorColor: "green"
     scrollSyncType: "Vertical + Horizontal"
-  "vim-mode": {}
   welcome:
     showOnStartup: false
