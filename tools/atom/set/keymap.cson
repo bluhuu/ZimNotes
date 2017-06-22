@@ -35,16 +35,16 @@
     'ctrl-shift-M':'unset!'
 'atom-workspace':
     'ctrl-alt-l':'unset!'
-'atom-text-editor .editor-contents--private:not(.has-selection)':
-    'ctrl-h':'core:move-left'
+# 'atom-text-editor .editor-contents--private:not(.has-selection)':
+'atom-text-editor':
+    'alt-down': 'expand-region:shrink'
+    'alt-up'  : 'expand-region:expand'
     'ctrl-;':'core:move-right'
-    'ctrl-n':'core:move-down'
+    'ctrl-h':'core:move-left'
     'ctrl-k':'core:move-up'
+    'ctrl-n':'core:move-down'
 'atom-text-editor.autocomplete-active':
     'ctrl-n':'core:move-down'
     'ctrl-p':'core:move-up'
 'body':
     'ctrl-shift-n': 'application:new-file'
-'atom-text-editor':
-  'alt-up'  : 'expand-region:expand'
-  'alt-down': 'expand-region:shrink'
