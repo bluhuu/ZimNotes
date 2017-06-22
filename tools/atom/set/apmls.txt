@@ -14,6 +14,7 @@ https://github.com/Freyskeyd/atom-alignment atom-alignment
 https://github.com/sanusart/atom-wrap-in-tag atom-wrap-in-tag
 https://github.com/jas-chen/atom-live-server atom-live-server
 https://github.com/littlebee/git-time-machine git-time-machine
+https://github.com/mattberkowitz/autoclose-html autoclose-html
 https://github.com/sindresorhus/atom-autoprefixer autoprefixer
 https://github.com/skandasoft/open-in-browsers open-in-browsers
 https://github.com/blueimp/atom-open-terminal-here open-terminal-here
@@ -42,13 +43,14 @@ https://github.com/bigyuki/markdown-image-helper markdown-image-helper
 https://github.com/orktes/atom-react react
 https://github.com/webbushka/atom-react-snippets react-snippets
 https://github.com/chmaltsp/react-redux-snippets react-redux-snippets
+https://github.com/Dssdiego/react-native-components react-native-components
 https://github.com/aakashns/atom-react-native-snippets react-native-snippets
+https://github.com/EQuimper/atom-react-redux-react-native-snippets react-redux-react-native-snippets
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 https://github.com/jchouse/csscomb-atom atom-css-comb
 https://github.com/richtmat/lodash-snippets lodash-snippets
 https://github.com/thomaslindstrom/color-picker color-picker
-https://github.com/mattberkowitz/autoclose-html autoclose-html
 https://github.com/HiDeoo/autocomplete-lodash autocomplete-lodash
 --------------------------------------------------------------------------------
 https://github.com/hedefalk/atom-vue language-vue

@@ -5,46 +5,29 @@
     <meta charset="UTF-8">
     <title>Basic Layout - jQuery EasyUI Demo</title>
     <style media="screen">
-    .box {
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    .row{
-      flex-basis: 100%;
-      display:flex;
-    }
-
-    .row:nth-child(2){
-      justify-content: center;
-    }
-
-    .row:nth-child(3){
-      justify-content: space-between;
-    }
-    .item{
-      background-color: #00f;
-      width: 100px;
-      height: 100px;
-    }
+        .box { display: flex; flex-wrap: wrap; }
+        .row { flex-basis: 100%; display: flex; }
+        .row:nth-child(2) { justify-content: center; }
+        .row:nth-child(3) { justify-content: space-between; }
+        .item { background-color: #00f; width: 100px; height: 100px; }
     </style>
 </head>
 
 <body>
-  <div class="box">
-  <div class="row">
-    <span class="item"></span>
-    <span class="item"></span>
-    <span class="item"></span>
-  </div>
-  <div class="row">
-    <span class="item"></span>
-  </div>
-  <div class="row">
-     <span class="item"></span>
-     <span class="item"></span>
-  </div>
-</div>
+    <div class="box">
+        <div class="row">
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item"></span>
+        </div>
+        <div class="row">
+            <span class="item"></span>
+        </div>
+        <div class="row">
+            <span class="item"></span>
+            <span class="item"></span>
+        </div>
+    </div>
 
 </body>
 

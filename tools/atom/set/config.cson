@@ -15,7 +15,7 @@
     fontFamily: "DejaVuSansMono NF"
     fontSize: 12
     showIndentGuide: true
-    softWrap: true
+    softWrap: false
     tabLength: 4
     tabType: "soft"
     zoomFontWhenCtrlScrolling: false
@@ -29,7 +29,7 @@
     lintOnChange: false
   "linter-ui-default":
     panelHeight: 68
-    showPanel: true
+    showPanel: false
   minimap:
     autoToggle: false
     plugins:
@@ -49,6 +49,8 @@
       selectionDecorationsZIndex: 0
       "split-diff": true
       "split-diffDecorationsZIndex": 0
+  "open-terminal-here":
+    command: "start /D \"%cd%\" powershell"
   "open-in-browsers":
     BrowserPlus: false
     Opera: false
