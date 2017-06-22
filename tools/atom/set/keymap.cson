@@ -39,6 +39,8 @@
     'alt-down' : 'expand-region:shrink'
     'alt-up'   : 'expand-region:expand'
     'alt-z'    : 'editor:toggle-soft-wrap'
+    'ctrl-;'   : 'editor:move-to-end-of-screen-line'
+    'ctrl-i'   : 'editor:move-to-first-character-of-line'
     'ctrl-h'   : 'core:move-left'
     'ctrl-l'   : 'core:move-right'
     'ctrl-n'   : 'core:move-down'
@@ -49,4 +51,4 @@
 'atom-text-editor:not([mini])':
     'ctrl-shift-M' : 'unset!'
 'atom-workspace atom-text-editor':
-  'ctrl-;' : 'editor:select-line'
+  'ctrl-alt-l' : 'editor:select-line'
