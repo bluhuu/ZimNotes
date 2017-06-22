@@ -22,41 +22,41 @@ https://github.com/subesokun/atom-tree-view-git-status tree-view-git-status
 --------------------------------------------------------------------------------
 https://github.com/file-icons/atom file-icons
 https://github.com/abe33/atom-pigments pigments
-https://github.com/pvorona/atom-bracket-highlight atom-bracket-highlight
 https://github.com/richrace/highlight-selected highlight-selected
+https://github.com/pvorona/atom-bracket-highlight atom-bracket-highlight
 --------------------------------------------------------------------------------
 https://github.com/steelbrain/linter linter
-https://github.com/AtomLinter/linter-eslint linter-eslint
-https://github.com/steelbrain/linter-ui-default linter-ui-default
+https://github.com/tcarlsen/atom-jsonlint jsonlint
 https://github.com/steelbrain/intentions intentions
 https://github.com/steelbrain/busy-signal busy-signal
-https://github.com/tcarlsen/atom-jsonlint jsonlint
+https://github.com/AtomLinter/linter-eslint linter-eslint
+https://github.com/steelbrain/linter-ui-default linter-ui-default
 --------------------------------------------------------------------------------
+https://github.com/dsandstrom/atom-css-snippets css-snippets
+https://github.com/james2doyle/atom-jquery-snippets jquery-snippets
 https://github.com/zenorocha/atom-javascript-snippets javascript-snippets
 https://github.com/borisrorsvort/js-patterns-atom-snippets js-patterns-atom-snippets
-https://github.com/james2doyle/atom-jquery-snippets jquery-snippets
-https://github.com/dsandstrom/atom-css-snippets css-snippets
 --------------------------------------------------------------------------------
 https://github.com/bigyuki/markdown-image-helper markdown-image-helper
 --------------------------------------------------------------------------------
 https://github.com/orktes/atom-react react
 https://github.com/webbushka/atom-react-snippets react-snippets
-https://github.com/aakashns/atom-react-native-snippets react-native-snippets
 https://github.com/chmaltsp/react-redux-snippets react-redux-snippets
+https://github.com/aakashns/atom-react-native-snippets react-native-snippets
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-https://github.com/richtmat/lodash-snippets lodash-snippets
-https://github.com/HiDeoo/autocomplete-lodash autocomplete-lodash
-https://github.com/mattberkowitz/autoclose-html autoclose-html
-https://github.com/thomaslindstrom/color-picker color-picker
 https://github.com/jchouse/csscomb-atom atom-css-comb
+https://github.com/richtmat/lodash-snippets lodash-snippets
+https://github.com/thomaslindstrom/color-picker color-picker
+https://github.com/mattberkowitz/autoclose-html autoclose-html
+https://github.com/HiDeoo/autocomplete-lodash autocomplete-lodash
 
-https://github.com/niltonheck/language-freemarker language-freemarker
-https://github.com/CorentinAndre/Vuejs-snippets vuejs2-snippets
-https://github.com/ealves-pt/atom-vue2-autocomplete vue2-autocomplete
 https://github.com/hedefalk/atom-vue language-vue
 https://github.com/matthojo/language-stylus stylus
+https://github.com/CorentinAndre/Vuejs-snippets vuejs2-snippets
+https://github.com/ealves-pt/atom-vue2-autocomplete vue2-autocomplete
+https://github.com/niltonheck/language-freemarker language-freemarker
 minimap
 minimap-bookmarks
 minimap-cursorline
