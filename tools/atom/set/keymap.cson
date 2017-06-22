@@ -31,8 +31,10 @@
 # Atom Flight Manual:
 # http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
 
-'.platform-win32':
-    'ctrl-\\' : 'fuzzy-finder:toggle-file-finder'
+'.platform-win32, .platform-linux':
+    'ctrl-\\'       : 'fuzzy-finder:toggle-file-finder'
+    'ctrl-k ctrl-g' : 'window:toggle-right-dock'
+    'ctrl-k ctrl-m' : 'window:toggle-bottom-dock'
 '.platform-win32 atom-text-editor, .platform-linux atom-text-editor':
     'ctrl-alt-a' : 'atom-alignment:align'
 'atom-text-editor':
