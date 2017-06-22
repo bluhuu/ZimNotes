@@ -38,10 +38,11 @@
 'atom-text-editor':
     'alt-down' : 'expand-region:shrink'
     'alt-up'   : 'expand-region:expand'
-    'ctrl-l'   : 'core:move-right'
+    'alt-z'    : 'editor:toggle-soft-wrap'
     'ctrl-h'   : 'core:move-left'
-    'ctrl-p'   : 'core:move-up'
+    'ctrl-l'   : 'core:move-right'
     'ctrl-n'   : 'core:move-down'
+    'ctrl-p'   : 'core:move-up'
 'atom-text-editor.autocomplete-active':
     'ctrl-n' : 'core:move-down'
     'ctrl-p' : 'core:move-up'
