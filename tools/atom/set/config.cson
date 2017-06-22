@@ -50,7 +50,7 @@
       "split-diff": true
       "split-diffDecorationsZIndex": 0
   "open-terminal-here":
-    command: "start /D \"%cd%\" powershell"
+    command: "start \"%cd%\" \"C:\\\\Program Files\\\\Git\\\\git-bash.exe\""
   "open-in-browsers":
     BrowserPlus: false
     Opera: false
