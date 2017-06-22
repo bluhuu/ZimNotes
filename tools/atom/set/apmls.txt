@@ -1,12 +1,23 @@
 git clone https://github.com/emmetio/emmet-atom emmet
 git clone https://github.com/akonwi/git-plus git-plus
 git clone https://github.com/atom/sort-lines sort-lines
-git clone https://github.com/tststs/atom-ternjs atom-ternjs
-git clone https://github.com/blueimp/atom-open-terminal-here open-terminal-here
-git clone https://github.com/Glavin001/atom-beautify atom-beautify
-git clone https://github.com/littlebee/git-time-machine git-time-machine
-git clone https://github.com/santip/maximize-panes maximize-panes
 git clone https://github.com/mupchrch/split-diff split-diff
+git clone https://github.com/tststs/atom-ternjs atom-ternjs
+git clone https://github.com/nikhilkalige/docblockr docblockr
+git clone https://github.com/griiin/atom-auto-indent auto-indent
+git clone https://github.com/santip/maximize-panes maximize-panes
+git clone https://github.com/dsandstrom/atom-double-tag double-tag
+git clone https://github.com/Glavin001/atom-beautify atom-beautify
+git clone https://github.com/aki77/atom-expand-region expand-region
+git clone https://github.com/samu/git-diff-details git-diff-details
+git clone https://github.com/Freyskeyd/atom-alignment atom-alignment
+git clone https://github.com/sanusart/atom-wrap-in-tag atom-wrap-in-tag
+git clone https://github.com/jas-chen/atom-live-server atom-live-server
+git clone https://github.com/littlebee/git-time-machine git-time-machine
+git clone https://github.com/sindresorhus/atom-autoprefixer autoprefixer
+git clone https://github.com/skandasoft/open-in-browsers open-in-browsers
+git clone https://github.com/blueimp/atom-open-terminal-here open-terminal-here
+git clone https://github.com/atom-community/autocomplete-paths autocomplete-paths
 --------------------------------------------------------------------------------
 git clone https://github.com/file-icons/atom file-icons
 git clone https://github.com/abe33/atom-pigments pigments
@@ -27,31 +38,21 @@ git clone https://github.com/dsandstrom/atom-css-snippets css-snippets
 --------------------------------------------------------------------------------
 git clone https://github.com/bigyuki/markdown-image-helper markdown-image-helper
 --------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-git clone https://github.com/atom-community/autocomplete-paths autocomplete-paths
-git clone https://github.com/sindresorhus/atom-autoprefixer autoprefixer
-git clone https://github.com/nikhilkalige/docblockr docblockr
-git clone https://github.com/dsandstrom/atom-double-tag double-tag
-git clone https://github.com/samu/git-diff-details git-diff-details
-git clone https://github.com/skandasoft/open-in-browsers open-in-browsers
---------------------------------------------------------------------------------
 git clone https://github.com/orktes/atom-react react
 git clone https://github.com/webbushka/atom-react-snippets react-snippets
 git clone https://github.com/aakashns/atom-react-native-snippets react-native-snippets
 git clone https://github.com/chmaltsp/react-redux-snippets react-redux-snippets
 --------------------------------------------------------------------------------
-git clone https://github.com/AtomLinter/linter-jshint linter-jshint
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 git clone https://github.com/subesokun/atom-tree-view-git-status tree-view-git-status
 git clone https://github.com/richtmat/lodash-snippets lodash-snippets
 git clone https://github.com/HiDeoo/autocomplete-lodash autocomplete-lodash
-git clone https://github.com/sanusart/atom-wrap-in-tag atom-wrap-in-tag
 git clone https://github.com/mattberkowitz/autoclose-html autoclose-html
-git clone https://github.com/griiin/atom-auto-indent auto-indent
 git clone https://github.com/richrace/highlight-line highlight-line
 git clone https://github.com/thomaslindstrom/color-picker color-picker
 git clone https://github.com/jchouse/csscomb-atom atom-css-comb
 
-atom-live-server
 git clone https://github.com/niltonheck/language-freemarker language-freemarker
 git clone https://github.com/CorentinAndre/Vuejs-snippets vuejs2-snippets
 git clone https://github.com/ealves-pt/atom-vue2-autocomplete vue2-autocomplete

@@ -1,59 +1,39 @@
-https://github.com/JoelBesada/activate-power-mode
-https://github.com/Glavin001/atom-beautify.git
-https://github.com/pvorona/atom-bracket-highlight
-https://github.com/jchouse/csscomb-atom
-https://github.com/jas-chen/atom-live-server
-https://github.com/tststs/atom-ternjs.git
-https://github.com/sanusart/atom-wrap-in-tag
-https://github.com/griiin/atom-auto-indent
-https://github.com/mattberkowitz/autoclose-html.git
-https://github.com/HiDeoo/autocomplete-lodash
-https://github.com/atom-community/autocomplete-paths
-https://github.com/sindresorhus/atom-autoprefixer
-https://github.com/steelbrain/busy-signal
-https://github.com/thomaslindstrom/color-picker.git
-https://github.com/dsandstrom/atom-css-snippets.git
-https://github.com/nikhilkalige/docblockr.git
-https://github.com/dsandstrom/atom-double-tag
-https://github.com/emmetio/emmet-atom.git
-https://github.com/lloeki/ex-mode
-https://github.com/file-icons/atom
-https://github.com/samu/git-diff-details
-https://github.com/akonwi/git-plus
-https://github.com/littlebee/git-time-machine.git
-https://github.com/richrace/highlight-line.git
-https://github.com/richrace/highlight-selected.git
-https://github.com/steelbrain/intentions
-https://github.com/zenorocha/atom-javascript-snippets.git
-https://github.com/james2doyle/atom-jquery-snippets.git
-https://github.com/borisrorsvort/js-patterns-atom-snippets
-https://github.com/tcarlsen/atom-jsonlint
-https://github.com/niltonheck/language-freemarker
-https://github.com/Alhadis/language-viml
-https://github.com/steelbrain/linter
-https://github.com/AtomLinter/linter-jshint
-https://github.com/steelbrain/linter-ui-default
-https://github.com/richtmat/lodash-snippets
-https://github.com/bigyuki/markdown-image-helper
-https://github.com/mark-hahn/markdown-scroll-sync
-https://github.com/santip/maximize-panes
-https://github.com/atom-minimap/minimap
-https://github.com/atom-minimap/minimap-bookmarks
-https://github.com/atom-minimap/minimap-cursorline
-https://github.com/atom-minimap/minimap-find-and-replace
-https://github.com/atom-minimap/minimap-git-diff
-https://github.com/atom-minimap/minimap-highlight-selected
-https://github.com/AtomLinter/atom-minimap-linter
-https://github.com/atom-minimap/minimap-selection
-https://github.com/mupchrch/minimap-split-diff.git
-https://github.com/kevinsawicki/monokai.git
-https://github.com/skandasoft/open-in-browsers.git
-https://github.com/blueimp/atom-open-terminal-here
-https://github.com/mattn/open-vim
-https://github.com/abe33/atom-pigments.git
-https://github.com/danielbrodin/atom-project-manager
-https://github.com/atom/sort-lines
-https://github.com/mupchrch/split-diff.git
-https://github.com/subesokun/atom-tree-view-git-status.git
-https://github.com/atom/vim-mode
-https://github.com/gepoch/vim-surround
+https://github.com/emmetio/emmet-atom emmet
+https://github.com/akonwi/git-plus git-plus
+https://github.com/atom/sort-lines sort-lines
+https://github.com/mupchrch/split-diff split-diff
+https://github.com/tststs/atom-ternjs atom-ternjs
+https://github.com/nikhilkalige/docblockr docblockr
+https://github.com/griiin/atom-auto-indent auto-indent
+https://github.com/santip/maximize-panes maximize-panes
+https://github.com/dsandstrom/atom-double-tag double-tag
+https://github.com/Glavin001/atom-beautify atom-beautify
+https://github.com/aki77/atom-expand-region expand-region
+https://github.com/samu/git-diff-details git-diff-details
+https://github.com/Freyskeyd/atom-alignment atom-alignment
+https://github.com/sanusart/atom-wrap-in-tag atom-wrap-in-tag
+https://github.com/jas-chen/atom-live-server atom-live-server
+https://github.com/littlebee/git-time-machine git-time-machine
+https://github.com/sindresorhus/atom-autoprefixer autoprefixer
+https://github.com/skandasoft/open-in-browsers open-in-browsers
+https://github.com/blueimp/atom-open-terminal-here open-terminal-here
+https://github.com/atom-community/autocomplete-paths autocomplete-paths
+https://github.com/file-icons/atom file-icons
+https://github.com/abe33/atom-pigments pigments
+https://github.com/pvorona/atom-bracket-highlight atom-bracket-highlight
+https://github.com/richrace/highlight-selected highlight-selected
+https://github.com/steelbrain/linter linter
+https://github.com/AtomLinter/linter-eslint linter-eslint
+https://github.com/steelbrain/linter-ui-default linter-ui-default
+https://github.com/steelbrain/intentions intentions
+https://github.com/steelbrain/busy-signal busy-signal
+https://github.com/tcarlsen/atom-jsonlint jsonlint
+https://github.com/zenorocha/atom-javascript-snippets javascript-snippets
+https://github.com/borisrorsvort/js-patterns-atom-snippets js-patterns-atom-snippets
+https://github.com/james2doyle/atom-jquery-snippets jquery-snippets
+https://github.com/dsandstrom/atom-css-snippets css-snippets
+https://github.com/bigyuki/markdown-image-helper markdown-image-helper
+https://github.com/orktes/atom-react react
+https://github.com/webbushka/atom-react-snippets react-snippets
+https://github.com/aakashns/atom-react-native-snippets react-native-snippets
+https://github.com/chmaltsp/react-redux-snippets react-redux-snippets

@@ -6,27 +6,27 @@ cd /d "%~dp0"
 cls
 color 2f
 echo.-----------------------------------------------------------
-echo.è¯·é€‰æ‹©ä½¿ç”¨ï¼š
+echo.ÇëÑ¡ÔñÊ¹ÓÃ£º
 echo.
-echo. 1.æ›´æ–°å…¨éƒ¨
+echo. 1.¸üÐÂÈ«²¿
 echo.
-echo. 2.list.dat æ›´æ–°
+echo. 2.list.dat ¸üÐÂ
 echo.-----------------------------------------------------------
 
 if exist "%SystemRoot%\System32\choice.exe" goto Win7Choice
 
-set /p choice=è¯·è¾“å…¥æ•°å­—å¹¶æŒ‰å›žè½¦é”®ç¡®è®¤:
+set /p choice=ÇëÊäÈëÊý×Ö²¢°´»Ø³µ¼üÈ·ÈÏ:
 
 echo.
 if %choice%==1 goto create list
 if %choice%==2 goto update
 cls
 "set choice="
-echo æ‚¨è¾“å…¥æœ‰è¯¯ï¼Œè¯·é‡æ–°é€‰æ‹©ã€‚
+echo ÄúÊäÈëÓÐÎó£¬ÇëÖØÐÂÑ¡Ôñ¡£
 goto main
 
 :Win7Choice
-choice /c 12 /n /m "è¯·è¾“å…¥ç›¸åº”æ•°å­—ï¼š"
+choice /c 12 /n /m "ÇëÊäÈëÏàÓ¦Êý×Ö£º"
 if errorlevel 2 goto update
 if errorlevel 1 goto create list
 cls
@@ -39,5 +39,5 @@ dir *. /b >list.dat
 goto end
 
 :end
-echo è¯·æŒ‰ä»»æ„é”®é€€å‡ºã€‚
+echo Çë°´ÈÎÒâ¼üÍË³ö¡£
 @Pause>nul

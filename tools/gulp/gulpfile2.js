@@ -32,4 +32,3 @@ gulp.task('sass', function() {
 });
 
 browser-sync start --proxy "127.0.0.1:8080" --files "d:/apache/apache-tomcat-6.0.48/webapps/elink_eai_web/**/*.html,d:/apache/apache-tomcat-6.0.48/webapps/elink_eai_web/**/*.js,d:/apache/apache-tomcat-6.0.48/webapps/elink_eai_web/**/*.css"
-
