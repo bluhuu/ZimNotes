@@ -36,7 +36,9 @@
     'ctrl-k ctrl-g' : 'window:toggle-right-dock'
     'ctrl-k ctrl-m' : 'window:toggle-bottom-dock'
 '.platform-win32 atom-text-editor, .platform-linux atom-text-editor':
-    'ctrl-alt-a' : 'atom-alignment:align'
+    'ctrl-alt-/'   : 'atom-alignment:align'
+    'ctrl-shift-I' : 'unset!'
+    'ctrl-alt-i'   : 'auto-indent:apply'
 'atom-text-editor':
     'alt-down' : 'expand-region:shrink'
     'alt-up'   : 'expand-region:expand'
