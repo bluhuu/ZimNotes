@@ -21,6 +21,9 @@ https://github.com/skandasoft/open-in-browsers open-in-browsers
 https://github.com/blueimp/atom-open-terminal-here open-terminal-here
 https://github.com/atom-community/autocomplete-paths autocomplete-paths
 https://github.com/subesokun/atom-tree-view-git-status tree-view-git-status
+https://github.com/DFreds/code-peek-atom code-peek
+https://github.com/facebooknuclide/hyperclick hyperclick
+https://github.com/faceair/atom-goto-definition goto-definition
 --------------------------------------------------------------------------------
 https://github.com/file-icons/atom file-icons
 https://github.com/abe33/atom-pigments pigments
@@ -59,6 +62,7 @@ https://github.com/matthojo/language-stylus stylus
 https://github.com/CorentinAndre/Vuejs-snippets vuejs2-snippets
 https://github.com/ealves-pt/atom-vue2-autocomplete vue2-autocomplete
 https://github.com/niltonheck/language-freemarker language-freemarker
+
 
 minimap
 minimap-bookmarks
