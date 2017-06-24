@@ -42,6 +42,7 @@ https://github.com/james2doyle/atom-jquery-snippets jquery-snippets
 https://github.com/zenorocha/atom-javascript-snippets javascript-snippets
 https://github.com/borisrorsvort/js-patterns-atom-snippets js-patterns-atom-snippets
 https://github.com/bigyuki/markdown-image-helper markdown-image-helper
+https://github.com/m-hall/clean-context-menu clean-context-menu
 https://github.com/orktes/atom-react react
 https://github.com/webbushka/atom-react-snippets react-snippets
 https://github.com/chmaltsp/react-redux-snippets react-redux-snippets
