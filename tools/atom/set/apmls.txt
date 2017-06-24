@@ -12,6 +12,7 @@ https://github.com/aki77/atom-expand-region expand-region
 https://github.com/samu/git-diff-details git-diff-details
 https://github.com/Freyskeyd/atom-alignment atom-alignment
 https://github.com/Zren/atom-open-recent open-recent
+https://github.com/t9md/atom-quick-highlight quick-highlight
 https://github.com/sanusart/atom-wrap-in-tag atom-wrap-in-tag
 https://github.com/jas-chen/atom-live-server atom-live-server
 https://github.com/atom-community/sync-settings sync-settings
@@ -47,6 +48,7 @@ https://github.com/chmaltsp/react-redux-snippets react-redux-snippets
 https://github.com/Shrugs/react-native-snippets react-native-snippets-horse
 https://github.com/Dssdiego/react-native-components react-native-components
 https://github.com/aakashns/atom-react-native-snippets react-native-snippets
+https://github.com/mark-hahn/find-selection find-selection
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 https://github.com/jchouse/csscomb-atom atom-css-comb
